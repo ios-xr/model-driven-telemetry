@@ -1,0 +1,520 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_ipv4_bgp_oper.bgp.config_instances.config_instance.config_instance_default_vrf.entity_configurations.entity_configuration;
+
+message bgp_config_entity_bag_KEYS {
+	string instance_name = 1;
+	string entity_type = 2;
+	string neighbor_address = 3;
+	string entity_name = 4;
+}
+
+message bgp_l2vpn_addr_t {
+	repeated uint32 l2vpn_address = 1;
+}
+
+message bgp_l2vpn_mspw_addr_t {
+	repeated uint32 l2vpn_address = 1;
+}
+
+message bgp_ipv4_srpolicy_addr_t {
+	repeated uint32 ipv4_srpolicy_address = 1;
+}
+
+message bgp_ipv6_srpolicy_addr_t {
+	repeated uint32 ipv6_srpolicy_address = 1;
+}
+
+message bgp_addrtype {
+	string afi = 1;
+	string ipv4_address = 2;
+	string ipv4_mcast_address = 3;
+	string ipv4_label_address = 4;
+	string ipv4_tunnel_address = 5;
+	string ipv4_mdt_address = 6;
+	string ipv4vpn_address = 7;
+	string ipv4vpna_mcastddress = 8;
+	string ipv6_address = 9;
+	string ipv6_mcast_address = 10;
+	string ipv6_label_address = 11;
+	string ipv6vpn_address = 12;
+	string ipv6vpn_mcast_address = 13;
+	bgp_l2vpn_addr_t l2vpn_vpls_address = 14;
+	string rt_constraint_address = 15;
+	string ipv6mvpn_address = 16;
+	string ipv4mvpn_address = 17;
+	string l2vpn_evpn_address = 18;
+	string ls_ls_address = 19;
+	bgp_l2vpn_mspw_addr_t l2vpn_mspw_address = 20;
+	string ipv4_flowspec_address = 21;
+	string ipv6_flowspec_address = 22;
+	string ipv4vpn_flowspec_address = 23;
+	string ipv6vpn_flowspec_address = 24;
+	bgp_ipv4_srpolicy_addr_t ipv4_sr_policy_address = 25;
+	bgp_ipv6_srpolicy_addr_t ipv6_sr_policy_address = 26;
+}
+
+message bgp_config_entid__item {
+	uint32 address_family_identifier = 1;
+	string configuration_type = 2;
+	bgp_addrtype neighbor_address = 3;
+	string group_name = 4;
+}
+
+message bgp_config_entid_ {
+	repeated bgp_config_entid__item bgp_config_entid_ = 1;
+}
+
+message bgp_config_info_ {
+	bool is_item_configured = 1;
+	bgp_config_entid_ inheritance_chain = 2;
+}
+
+message bgp_af_indep_ {
+	uint32 remote_as_number_xx = 1;
+	uint32 remote_as_number_yy = 2;
+	uint32 configured_speaker_id = 3;
+	uint32 tcp_mss = 4;
+	uint32 min_advertisement_interval = 5;
+	uint32 min_advertisement_interval_msecs = 6;
+	string description = 7;
+	uint32 ebgp_hop_count = 8;
+	uint32 bmp_servers = 9;
+	bool is_ebgp_multihop_bgp_mpls_forwarding_disabled = 10;
+	string keychain = 11;
+	uint32 local_as_number_xx = 12;
+	uint32 local_as_number_yy = 13;
+	bool local_as_no_prepend = 14;
+	string password = 15;
+	uint32 socket_buffer_receive_size = 16;
+	uint32 bgp_buffer_receive_size = 17;
+	uint32 socket_buffer_send_size = 18;
+	uint32 bgp_buffer_send_size = 19;
+	bool adminstrative_shutdown = 20;
+	uint32 keepalive_interval = 21;
+	uint32 hold_time_value = 22;
+	uint32 min_acc_hold_time_value = 23;
+	bgp_addrtype local_ip_address = 24;
+	uint32 msg_log_in_buf_count = 25;
+	uint32 msg_log_out_buf_count = 26;
+	string route_updates_source = 27;
+	uint32 dmz_link_bandwidth = 28;
+	uint32 ebgp_recv_dmz = 29;
+	string ebgp_send_dmz_mode = 30;
+	uint32 ttl_security = 31;
+	uint32 suppress4_byte_as = 32;
+	uint32 capability_negotiation_suppressed = 33;
+	string session_open_mode = 34;
+	uint32 bfd = 35;
+	uint32 bfd_mininterval = 36;
+	uint32 bfd_multiplier = 37;
+	uint32 tos_type_info = 38;
+	uint32 tos_value_info = 39;
+	uint32 nsr_disabled = 40;
+	uint32 graceful_restart_disabled = 41;
+	uint32 nbr_restart_time = 42;
+	uint32 nbr_stale_path_time = 43;
+	bool nbr_enforce_first_as_status = 44;
+	uint32 nbr_cluster_id_type_info = 45;
+	uint32 nbr_cluster_id_info = 46;
+	bool ignore_connected_check = 47;
+	bool internal_vpn_client = 48;
+	uint32 addpath_send_capability = 49;
+	uint32 update_error_handling_no_reset = 50;
+	uint32 addpath_receive_capability = 51;
+	uint32 egress_peer_engineering = 52;
+	uint32 prefix_validation_disable = 53;
+	uint32 bestpath_use_origin_as_validity = 54;
+	uint32 prefix_validation_allow_invalid = 55;
+	uint32 prefix_validation_signal_ibgp = 56;
+	bool neighbor_update_filter_exists = 57;
+	uint32 neighbor_update_filter_message_buffer_count = 58;
+	bool neighbor_update_filter_message_buffer_is_non_circular = 59;
+	bool neighbor_update_filter_logging_disable = 60;
+	string neighbor_update_filter_attribute_filter_group_name = 61;
+	uint32 graceful_shutdown_exists = 62;
+	uint32 graceful_shutdown_loc_pref = 63;
+	uint32 graceful_shutdown_as_prepends = 64;
+	uint32 graceful_shutdown_activate = 65;
+	string neighbor_remote_as_list_group_name = 66;
+	uint32 max_peers = 67;
+	uint32 idle_watch_time = 68;
+	bgp_config_info_ remote_as_info = 69;
+	bgp_config_info_ speaker_id_info = 70;
+	bgp_config_info_ min_advertisement_info = 71;
+	bgp_config_info_ description_info = 72;
+	bgp_config_info_ ebgp_hop_count_info = 73;
+	bgp_config_info_ tcpmss_info = 74;
+	bgp_config_info_ bmp_servers_info = 75;
+	bgp_config_info_ keychain_info = 76;
+	bgp_config_info_ local_as_info = 77;
+	bgp_config_info_ password_info = 78;
+	bgp_config_info_ receive_buffer_info = 79;
+	bgp_config_info_ send_buffer_info = 80;
+	bgp_config_info_ shutdown_info = 81;
+	bgp_config_info_ timers_info = 82;
+	bgp_config_info_ local_address_info = 83;
+	bgp_config_info_ msg_log_in_info = 84;
+	bgp_config_info_ msg_log_out_info = 85;
+	bgp_config_info_ update_source_info = 86;
+	bgp_config_info_ dmz_link_bandwidth_info = 87;
+	bgp_config_info_ ebgp_recv_dmz_info = 88;
+	bgp_config_info_ ebgp_send_dmz_info = 89;
+	bgp_config_info_ ttl_security_info = 90;
+	bgp_config_info_ suppress4_bbyte_as_info = 91;
+	bgp_config_info_ session_open_mode_info = 92;
+	bgp_config_info_ bfd_info = 93;
+	bgp_config_info_ bfd_mininterval_info = 94;
+	bgp_config_info_ bfd_multiplier_info = 95;
+	bgp_config_info_ tos_info = 96;
+	bgp_config_info_ nsr_disabled_info = 97;
+	bgp_config_info_ graceful_restart_disabled_info = 98;
+	bgp_config_info_ nbr_restart_time_info = 99;
+	bgp_config_info_ nbr_stale_path_time_info = 100;
+	bgp_config_info_ nbr_enforce_first_as_info = 101;
+	bgp_config_info_ cluster_id_info = 102;
+	bgp_config_info_ ignore_connected_info = 103;
+	bgp_config_info_ internal_vpn_client_info = 104;
+	bgp_config_info_ addpath_send_capability_info = 105;
+	bgp_config_info_ addpath_receive_capability_info = 106;
+	bgp_config_info_ egress_peer_engineering_info = 107;
+	bgp_config_info_ update_error_handling_no_reset_info = 108;
+	bgp_config_info_ prefix_validation_disable_info = 109;
+	bgp_config_info_ prefix_validation_use_validit_info = 110;
+	bgp_config_info_ prefix_validation_allow_invalid_info = 111;
+	bgp_config_info_ prefix_validation_signal_ibgp_info = 112;
+	bgp_config_info_ neighbor_update_filter_exists_info = 113;
+	bgp_config_info_ neighbor_update_filter_message_buffer_count_info = 114;
+	bgp_config_info_ neighbor_update_filter_syslog_disable_info = 115;
+	bgp_config_info_ neighbor_update_filter_attribute_info = 116;
+	bgp_config_info_ graceful_shutdown_info = 117;
+	bgp_config_info_ graceful_shutdown_loc_pref_info = 118;
+	bgp_config_info_ graceful_shutdown_as_prepends_info = 119;
+	bgp_config_info_ graceful_shutdown_activate_info = 120;
+	bgp_config_info_ capability_negotiation_suppressed_info = 121;
+	bool local_as_replace_as = 122;
+	bool local_as_dual_as = 123;
+	bgp_config_info_ neighbor_remote_as_list_info = 124;
+	bgp_config_info_ max_peers_info = 125;
+	bgp_config_info_ idle_watch_time_info = 126;
+}
+
+message bgp_af_dep_ {
+	uint32 has_orf_capability = 1;
+	bool is_default_originate_not_disabled = 2;
+	string default_originate_route_policy = 3;
+	uint32 max_prefixes = 4;
+	uint32 max_prefix_warn_threshold = 5;
+	bool is_max_prefix_warn_only = 6;
+	uint32 max_prefix_restart_time = 7;
+	bgp_addrtype orr_root_address = 8;
+	bool is_max_prefix_discard_extra_paths = 9;
+	bool is_next_hop_self_disabled = 10;
+	bool is_next_hop_unchanged = 11;
+	bool permanent_network = 12;
+	string route_policy_in = 13;
+	string route_policy_out = 14;
+	string prefix_orf_filter = 15;
+	bool remove_private_as_out = 16;
+	bool entire_aspath_out = 17;
+	bool remove_private_asin = 18;
+	bool entire_aspath_in = 19;
+	bool client_route_reflector = 20;
+	bool accept_route_legacy_pe_rt = 21;
+	bool is_af_enabled = 22;
+	bool send_community_attribute = 23;
+	bool send_graceful_shut_community_attributes = 24;
+	bool send_extended_community_attribute = 25;
+	bool soft_reconfig_not_disabled = 26;
+	bool alway_use_soft_reconfig = 27;
+	string site_of_origin = 28;
+	uint32 default_weight = 29;
+	uint32 default_allowas = 30;
+	uint32 af_long_lived_graceful_restart_stale_time_send = 31;
+	uint32 af_long_lived_graceful_restart_stale_time_accept = 32;
+	uint32 af_long_lived_graceful_restart_capable = 33;
+	bool is_as_override_disabled = 34;
+	bool is_aigp_enabled = 35;
+	bool is_aigp_cost_community_enabled = 36;
+	uint32 is_aigp_cost_community_id = 37;
+	uint32 is_aigp_cost_community_transitive = 38;
+	uint32 aigp_cost_community_poi = 39;
+	bool is_aigp_med_enabled = 40;
+	bool accept_own = 41;
+	bool multipath = 42;
+	bool is_fspec_valid_enabled = 43;
+	bool is_next_hop_unchanged_mpath = 44;
+	bool is_send_mcast_attr_enabled = 45;
+	uint32 advertise_v4 = 46;
+	uint32 advertise_v6 = 47;
+	uint32 advertise_l2vpn_evpn = 48;
+	uint32 advertise_disable = 49;
+	uint32 advertise_def_vrf_imp_disable_v4 = 50;
+	uint32 advertise_def_vrf_imp_disable_v6 = 51;
+	uint32 advertise_vrf_re_imp_disable_v4 = 52;
+	uint32 advertise_vrf_re_imp_disable_v6 = 53;
+	uint32 encapsulation_type = 54;
+	bool import = 55;
+	bool import_stitching = 56;
+	bool import_reoriginate = 57;
+	bool import_reoriginate_stitching = 58;
+	uint32 advertise_local_labeled_route = 59;
+	uint32 enforce_multiple_labels = 60;
+	bgp_config_info_ orf_capability_info = 61;
+	bgp_config_info_ default_originate_info = 62;
+	bgp_config_info_ max_prefixes_info = 63;
+	bgp_config_info_ orr_info = 64;
+	bgp_config_info_ next_hop_self_info = 65;
+	bgp_config_info_ next_hop_unchanged_info = 66;
+	bgp_config_info_ route_policy_in_info = 67;
+	bgp_config_info_ route_policy_out_info = 68;
+	bgp_config_info_ prefix_filter_info = 69;
+	bgp_config_info_ remove_private_as_info = 70;
+	bgp_config_info_ remove_private_as_in_info = 71;
+	bgp_config_info_ route_reflector_info = 72;
+	bgp_config_info_ legacy_pe_rt_info = 73;
+	bgp_config_info_ af_enabled_info = 74;
+	bgp_config_info_ send_community_info = 75;
+	bgp_config_info_ send_graceful_shutdown_community_info = 76;
+	bgp_config_info_ send_extended_community_info = 77;
+	bgp_config_info_ soft_reconfig_info = 78;
+	bgp_config_info_ so_o_info = 79;
+	bgp_config_info_ weight_info = 80;
+	bgp_config_info_ allowas_in_info = 81;
+	bgp_config_info_ af_long_lived_graceful_start_stale_time_info = 82;
+	bgp_config_info_ af_long_lived_graceful_start_capable_info = 83;
+	bgp_config_info_ as_override_info = 84;
+	bgp_config_info_ aigp_info = 85;
+	bgp_config_info_ aigp_cost_community_info = 86;
+	bgp_config_info_ aigp_med = 87;
+	bgp_config_info_ accept_own_info = 88;
+	bgp_config_info_ multipath_info = 89;
+	bgp_config_info_ fspec_valid_info = 90;
+	bgp_config_info_ next_hop_unchanged_mpath_info = 91;
+	bgp_config_info_ permanent_network_info = 92;
+	bgp_config_info_ send_mcast_attr_info = 93;
+	bgp_config_info_ advertise_v4_afi_info = 94;
+	bgp_config_info_ advertise_v6_afi_info = 95;
+	bgp_config_info_ advertise_l2vpn_evpn_afi_info = 96;
+	bgp_config_info_ advertise_dis_info = 97;
+	bgp_config_info_ advertise_def_vrf_imp_disable_afi_v4_info = 98;
+	bgp_config_info_ advertise_def_vrf_imp_disable_afi_v6_info = 99;
+	bgp_config_info_ advertise_vrf_re_imp_disable_afi_v4_info = 100;
+	bgp_config_info_ advertise_vrf_re_imp_disable_afi_v6_info = 101;
+	bgp_config_info_ af_encapsulation_type_info = 102;
+	bgp_config_info_ import_afi_info = 103;
+	bgp_config_info_ advertise_local_labeled_route_info = 104;
+	bgp_config_info_ enforce_multiple_labels_info = 105;
+}
+
+message bgp_config_entity_bag {
+	bgp_addrtype neighbor_address = 50;
+	string group_name = 51;
+	string configuration_type = 52;
+	uint32 address_family_identifier = 53;
+	bgp_af_indep_ af_independent_config = 54;
+	repeated bgp_af_dep_ af_dependent_config = 55;
+}
+

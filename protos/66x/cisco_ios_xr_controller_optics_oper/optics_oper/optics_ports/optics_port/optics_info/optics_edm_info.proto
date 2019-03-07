@@ -1,0 +1,581 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_controller_optics_oper.optics_oper.optics_ports.optics_port.optics_info;
+
+message optics_edm_info_KEYS {
+	string name = 1;
+}
+
+message optics_edm_network_srlg_structure {
+	uint32 set_number = 1;
+	repeated uint32 network_srlg = 2;
+}
+
+message optics_edm_network_srlg_info {
+	repeated optics_edm_network_srlg_structure network_srlg_array = 1;
+}
+
+message lane_alarm_detail {
+	bool is_detected = 1;
+	uint32 counter = 2;
+}
+
+message lane_edm_alarm_info {
+	lane_alarm_detail high_rx_power = 1;
+	lane_alarm_detail low_rx_power = 2;
+	lane_alarm_detail high_tx_power = 3;
+	lane_alarm_detail low_tx_power = 4;
+	lane_alarm_detail high_lbc = 5;
+}
+
+message optics_edm_lane_data {
+	uint32 lane_index = 1;
+	uint32 laser_bias_current_percent = 2;
+	uint32 laser_bias_current_milli_amps = 3;
+	sint32 transmit_power = 4;
+	sint32 receive_power = 5;
+	sint32 receive_signal_power = 6;
+	sint32 transmit_signal_power = 7;
+	sint32 output_frequency = 8;
+	lane_edm_alarm_info lane_alarm_info = 9;
+	sint32 frequency_offset = 10;
+}
+
+message optics_alarm_detail {
+	bool is_detected = 1;
+	uint32 counter = 2;
+}
+
+message optics_edm_alarm_info {
+	optics_alarm_detail high_rx_power = 1;
+	optics_alarm_detail low_rx_power = 2;
+	optics_alarm_detail high_tx_power = 3;
+	optics_alarm_detail low_tx_power = 4;
+	optics_alarm_detail high_lbc = 5;
+	optics_alarm_detail low_temperature = 6;
+	optics_alarm_detail high_temperature = 7;
+	optics_alarm_detail low_voltage = 8;
+	optics_alarm_detail high_voltage = 9;
+	optics_alarm_detail high_rx1_power = 10;
+	optics_alarm_detail high_rx2_power = 11;
+	optics_alarm_detail high_rx3_power = 12;
+	optics_alarm_detail high_rx4_power = 13;
+	optics_alarm_detail low_rx1_power = 14;
+	optics_alarm_detail low_rx2_power = 15;
+	optics_alarm_detail low_rx3_power = 16;
+	optics_alarm_detail low_rx4_power = 17;
+	optics_alarm_detail high_tx1_power = 18;
+	optics_alarm_detail high_tx2_power = 19;
+	optics_alarm_detail high_tx3_power = 20;
+	optics_alarm_detail high_tx4_power = 21;
+	optics_alarm_detail low_tx1_power = 22;
+	optics_alarm_detail low_tx2_power = 23;
+	optics_alarm_detail low_tx3_power = 24;
+	optics_alarm_detail low_tx4_power = 25;
+	optics_alarm_detail high_tx1lbc = 26;
+	optics_alarm_detail high_tx2lbc = 27;
+	optics_alarm_detail high_tx3lbc = 28;
+	optics_alarm_detail high_tx4lbc = 29;
+	optics_alarm_detail low_tx1lbc = 30;
+	optics_alarm_detail low_tx2lbc = 31;
+	optics_alarm_detail low_tx3lbc = 32;
+	optics_alarm_detail low_tx4lbc = 33;
+	optics_alarm_detail rx_los = 34;
+	optics_alarm_detail tx_los = 35;
+	optics_alarm_detail rx_lol = 36;
+	optics_alarm_detail tx_lol = 37;
+	optics_alarm_detail tx_fault = 38;
+	optics_alarm_detail hidgd = 39;
+	optics_alarm_detail oorcd = 40;
+	optics_alarm_detail osnr = 41;
+	optics_alarm_detail wvlool = 42;
+	optics_alarm_detail mea = 43;
+	optics_alarm_detail imp_removal = 44;
+	optics_alarm_detail rx_loc = 45;
+	optics_alarm_detail amp_gain_deg_low = 46;
+	optics_alarm_detail amp_gain_deg_high = 47;
+	optics_alarm_detail txpwr_mismatch = 48;
+}
+
+message ots_edm_alarm_info {
+	optics_alarm_detail low_tx_power = 1;
+	optics_alarm_detail low_rx_power = 2;
+	optics_alarm_detail rx_los_p = 3;
+	optics_alarm_detail rx_loc = 4;
+	optics_alarm_detail amp_gain_deg_low = 5;
+	optics_alarm_detail amp_gain_deg_high = 6;
+	optics_alarm_detail auto_laser_shut = 7;
+	optics_alarm_detail auto_power_red = 8;
+	optics_alarm_detail auto_ampli_ctrl_disabled = 9;
+	optics_alarm_detail auto_ampli_ctrl_config_mismatch = 10;
+	optics_alarm_detail switch_to_protect = 11;
+	optics_alarm_detail auto_ampli_ctrl_running = 12;
+}
+
+message optics_transceiver_data {
+	string vendor_info = 1;
+	string adapter_vendor_info = 2;
+	string date = 3;
+	string optics_vendor_rev = 4;
+	string optics_serial_no = 5;
+	string optics_vendor_part = 6;
+	string optics_type = 7;
+	string vendor_name = 8;
+	string oui_no = 9;
+	string optics_pid = 10;
+	string optics_vid = 11;
+	string connector_type = 12;
+	string otn_application_code = 13;
+	string sonet_application_code = 14;
+	string ethernet_compliance_code = 15;
+	sint32 internal_temperature = 16;
+}
+
+message optics_ext_param {
+	sint32 snr_lane1 = 1;
+	sint32 snr_lane2 = 2;
+	sint32 isi_correction_lane1 = 3;
+	sint32 isi_correction_lane2 = 4;
+	sint32 pam_rate_lane1 = 5;
+	sint32 pam_rate_lane2 = 6;
+	string pre_fec_ber = 7;
+	string uncorrected_ber = 8;
+	sint32 tec_current_lane1 = 9;
+	sint32 tec_current_lane2 = 10;
+	sint32 laser_diff_frequency_lane1 = 11;
+	sint32 laser_diff_frequency_lane2 = 12;
+	sint32 laser_diff_temperature_lane1 = 13;
+	sint32 laser_diff_temperature_lane2 = 14;
+	string pre_fec_ber_latched_min = 15;
+	string pre_fec_ber_latched_max = 16;
+	string pre_fec_ber_accumulated = 17;
+	string pre_fec_ber_instantaneous = 18;
+	string uncorrected_ber_latched_min = 19;
+	string uncorrected_ber_latched_max = 20;
+	string uncorrected_ber_accumulated = 21;
+	string uncorrected_ber_instantaneous = 22;
+}
+
+message optics_ext_threshold_param {
+	sint32 snr_alarm_high_threshold = 1;
+	sint32 snr_alarm_low_threshold = 2;
+	sint32 snr_warn_high_threshold = 3;
+	sint32 snr_warn_low_threshold = 4;
+	sint32 isi_correction_alarm_high_threshold = 5;
+	sint32 isi_correction_alarm_low_threshold = 6;
+	sint32 isi_correction_warn_high_threshold = 7;
+	sint32 isi_correction_warn_low_threshold = 8;
+	sint32 pam_rate_alarm_high_threshold = 9;
+	sint32 pam_rate_alarm_low_threshold = 10;
+	sint32 pam_rate_warn_high_threshold = 11;
+	sint32 pam_rate_warn_low_threshold = 12;
+	string pre_fec_ber_alarm_high_threshold = 13;
+	string pre_fec_ber_alarm_low_threshold = 14;
+	string pre_fec_ber_warn_high_threshold = 15;
+	string pre_fec_ber_warn_low_threshold = 16;
+	string uncorrected_ber_alarm_high_threshold = 17;
+	string uncorrected_ber_alarm_low_threshold = 18;
+	string uncorrected_ber_warn_high_threshold = 19;
+	string uncorrected_ber_warn_low_threshold = 20;
+	sint32 tec_current_alarm_high_threshold = 21;
+	sint32 tec_current_alarm_low_threshold = 22;
+	sint32 tec_current_warn_high_threshold = 23;
+	sint32 tec_current_warn_low_threshold = 24;
+	sint32 laser_diff_frequency_alarm_high_threshold = 25;
+	sint32 laser_diff_frequency_alarm_low_threshold = 26;
+	sint32 laser_diff_frequency_warn_high_threshold = 27;
+	sint32 laser_diff_frequency_warn_low_threshold = 28;
+	sint32 laser_diff_temperature_alarm_high_threshold = 29;
+	sint32 laser_diff_temperature_alarm_low_threshold = 30;
+	sint32 laser_diff_temperature_warn_high_threshold = 31;
+	sint32 laser_diff_temperature_warn_low_threshold = 32;
+	string pre_fec_ber_latched_min_alarm_high_threshold = 33;
+	string pre_fec_ber_latched_min_alarm_low_threshold = 34;
+	string pre_fec_ber_latched_min_warn_high_threshold = 35;
+	string pre_fec_ber_latched_min_warn_low_threshold = 36;
+	string pre_fec_ber_latched_max_alarm_high_threshold = 37;
+	string pre_fec_ber_latched_max_alarm_low_threshold = 38;
+	string pre_fec_ber_latched_max_warn_high_threshold = 39;
+	string pre_fec_ber_latched_max_warn_low_threshold = 40;
+	string pre_fec_ber_accumulated_alarm_high_threshold = 41;
+	string pre_fec_ber_accumulated_alarm_low_threshold = 42;
+	string pre_fec_ber_accumulated_warn_high_threshold = 43;
+	string pre_fec_ber_accumulated_warn_low_threshold = 44;
+	string pre_fec_ber_instantaneous_alarm_high_threshold = 45;
+	string pre_fec_ber_instantaneous_alarm_low_threshold = 46;
+	string pre_fec_ber_instantaneous_warn_high_threshold = 47;
+	string pre_fec_ber_instantaneous_warn_low_threshold = 48;
+	string uncorrected_ber_latched_min_alarm_high_threshold = 49;
+	string uncorrected_ber_latched_min_alarm_low_threshold = 50;
+	string uncorrected_ber_latched_min_warn_high_threshold = 51;
+	string uncorrected_ber_latched_min_warn_low_threshold = 52;
+	string uncorrected_ber_latched_max_alarm_high_threshold = 53;
+	string uncorrected_ber_latched_max_alarm_low_threshold = 54;
+	string uncorrected_ber_latched_max_warn_high_threshold = 55;
+	string uncorrected_ber_latched_max_warn_low_threshold = 56;
+	string uncorrected_ber_accumulated_alarm_high_threshold = 57;
+	string uncorrected_ber_accumulated_alarm_low_threshold = 58;
+	string uncorrected_ber_accumulated_warn_high_threshold = 59;
+	string uncorrected_ber_accumulated_warn_low_threshold = 60;
+	string uncorrected_ber_instantaneous_alarm_high_threshold = 61;
+	string uncorrected_ber_instantaneous_alarm_low_threshold = 62;
+	string uncorrected_ber_instantaneous_warn_high_threshold = 63;
+	string uncorrected_ber_instantaneous_warn_low_threshold = 64;
+}
+
+message ext_param_edm_alarm_info {
+	optics_alarm_detail lo_snr = 1;
+	optics_alarm_detail hi_snr1 = 2;
+	optics_alarm_detail lo_snr1 = 3;
+	optics_alarm_detail hi_snr2 = 4;
+	optics_alarm_detail lo_isi1 = 5;
+	optics_alarm_detail hi_isi1 = 6;
+	optics_alarm_detail lo_isi2 = 7;
+	optics_alarm_detail hi_isi2 = 8;
+	optics_alarm_detail lo_pam1 = 9;
+	optics_alarm_detail hi_pam1 = 10;
+	optics_alarm_detail lo_pam2 = 11;
+	optics_alarm_detail hi_pam2 = 12;
+	optics_alarm_detail lo_tec1 = 13;
+	optics_alarm_detail hi_tec1 = 14;
+	optics_alarm_detail lo_tec2 = 15;
+	optics_alarm_detail hi_tec2 = 16;
+	optics_alarm_detail lo_laser_freq1 = 17;
+	optics_alarm_detail hi_laser_freq1 = 18;
+	optics_alarm_detail lo_laser_freq2 = 19;
+	optics_alarm_detail hi_laser_freq2 = 20;
+	optics_alarm_detail hi_pre_fecber_cur_acc = 21;
+	optics_alarm_detail hi_pre_fecber_min = 22;
+	optics_alarm_detail hi_pre_fecber_max = 23;
+	optics_alarm_detail hi_pre_fecber_prior_acc = 24;
+	optics_alarm_detail hi_pre_fecber_cur = 25;
+	optics_alarm_detail hi_uncorrected_ber_cur_acc = 26;
+	optics_alarm_detail hi_uncorrected_ber_min = 27;
+	optics_alarm_detail hi_uncorrected_ber_max = 28;
+	optics_alarm_detail hi_uncorrected_ber_prior_acc = 29;
+	optics_alarm_detail hi_uncorrected_ber_cur = 30;
+}
+
+message optics_ains_hw_info {
+	string ains_state = 1;
+	uint32 ains_timer_minutes = 2;
+	uint32 ains_remaining_secs = 3;
+}
+
+message optics_edm_info {
+	string transport_admin_state = 50;
+	bool optics_present = 51;
+	string optics_type = 52;
+	string derived_optics_type = 53;
+	string optics_module = 54;
+	string dwdm_carrier_band = 55;
+	string dwdm_carrier_channel = 56;
+	string dwdm_carrier_frequency = 57;
+	string dwdm_carrier_wavelength = 58;
+	uint32 grey_wavelength = 59;
+	sint32 rx_low_threshold = 60;
+	sint32 rx_high_threshold = 61;
+	sint32 lbc_high_threshold = 62;
+	sint32 tx_low_threshold = 63;
+	sint32 tx_high_threshold = 64;
+	sint32 lbc_th_high_default = 65;
+	sint32 lbc_th_low_default = 66;
+	sint32 temp_low_threshold = 67;
+	sint32 temp_high_threshold = 68;
+	sint32 volt_low_threshold = 69;
+	sint32 volt_high_threshold = 70;
+	sint32 cd = 71;
+	sint32 cd_min = 72;
+	sint32 cd_max = 73;
+	sint32 cd_low_threshold = 74;
+	sint32 cd_high_threshold = 75;
+	string osnr_low_threshold = 76;
+	string dgd_high_threshold = 77;
+	string polarization_mode_dispersion = 78;
+	string second_order_polarization_mode_dispersion = 79;
+	string optical_signal_to_noise_ratio = 80;
+	string polarization_dependent_loss = 81;
+	string polarization_change_rate = 82;
+	string differential_group_delay = 83;
+	string phase_noise = 84;
+	uint32 pm_enable = 85;
+	string laser_state = 86;
+	string modulation_type = 87;
+	string led_state = 88;
+	optics_edm_network_srlg_info network_srlg_info = 89;
+	repeated optics_edm_lane_data lane_data = 90;
+	string controller_state = 91;
+	string form_factor = 92;
+	string phy_type = 93;
+	optics_edm_alarm_info optics_alarm_info = 94;
+	ots_edm_alarm_info ots_alarm_info = 95;
+	sint32 cfg_tx_power = 96;
+	bool cfg_tx_power_configurable = 97;
+	sint32 temperature = 98;
+	sint32 voltage = 99;
+	bool display_volt_temp = 100;
+	bool cd_configurable = 101;
+	string optics_fec = 102;
+	sint32 skip_snmp_pm_table = 103;
+	string port_type = 104;
+	string port_status = 105;
+	sint32 rx_voa_attenuation = 106;
+	sint32 tx_voa_attenuation = 107;
+	sint32 ampli_gain = 108;
+	sint32 ampli_tilt = 109;
+	bool rx_power_th_configurable = 110;
+	bool tx_power_th_configurable = 111;
+	sint32 rx_voa_attenuation_config_val = 112;
+	sint32 tx_voa_attenuation_config_val = 113;
+	string ampli_control_mode_config_val = 114;
+	string ampli_gain_range_config_val = 115;
+	sint32 ampli_gain_config_val = 116;
+	sint32 ampli_tilt_config_val = 117;
+	sint32 ampli_channel_power_config_val = 118;
+	sint32 channel_power_max_delta_config_val = 119;
+	sint32 ampli_gain_thr_deg_low_config_val = 120;
+	sint32 ampli_gain_thr_deg_high_config_val = 121;
+	bool osri_config_val = 122;
+	bool tx_config_val = 123;
+	bool rx_config_val = 124;
+	sint32 rx_thr_fail_low_delta_val = 125;
+	string safety_control_mode_config_val = 126;
+	sint32 total_rx_power = 127;
+	sint32 total_tx_power = 128;
+	optics_transceiver_data transceiver_info = 129;
+	bool is_bo_configured = 130;
+	bool is_ext_param_valid = 131;
+	optics_ext_param ext_param_val = 132;
+	optics_ext_threshold_param ext_param_threshold_val = 133;
+	ext_param_edm_alarm_info extended_alarm_alarm_info = 134;
+	bool alarm_detected = 135;
+	sint32 rx_low_warning_threshold = 136;
+	sint32 rx_high_warning_threshold = 137;
+	sint32 tx_low_warning_threshold = 138;
+	sint32 tx_high_warning_threshold = 139;
+	sint32 lbc_th_high_warning_default = 140;
+	sint32 lbc_th_low_warning_default = 141;
+	sint32 temp_low_warning_threshold = 142;
+	sint32 temp_high_warning_threshold = 143;
+	sint32 volt_low_warning_threshold = 144;
+	sint32 volt_high_warning_threshold = 145;
+	string description = 146;
+	string ampli_gain_range = 147;
+	string safety_control_mode = 148;
+	bool osri = 149;
+	bool tx_enable = 150;
+	bool rx_enable = 151;
+	bool is_optics_type_string_valid = 152;
+	string optics_type_str = 153;
+	sint32 rx_low_threshold_current = 154;
+	sint32 rx_span_loss = 155;
+	sint32 tx_span_loss = 156;
+	optics_ains_hw_info ains_info = 157;
+	string baud_rate = 158;
+	string bits_per_symbol = 159;
+	sint32 rx_low_threshold_delta = 160;
+	uint32 wait_to_restore = 161;
+}
+

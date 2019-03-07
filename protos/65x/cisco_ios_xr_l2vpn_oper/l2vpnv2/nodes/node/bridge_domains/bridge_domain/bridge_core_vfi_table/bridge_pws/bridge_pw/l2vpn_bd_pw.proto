@@ -1,0 +1,670 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_l2vpn_oper.l2vpnv2.nodes.node.bridge_domains.bridge_domain.bridge_core_vfi_table.bridge_pws.bridge_pw;
+
+message l2vpn_bd_pw_KEYS {
+	string node_id = 1;
+	string bridge_domain_group_name = 2;
+	string bridge_domain_name = 3;
+	string neighbor = 4;
+	string pw_type = 5;
+	uint32 pseudowire_id = 6;
+	uint32 ve_id_vpls_id_0_3 = 7;
+	uint32 vpls_id_4_7 = 8;
+}
+
+message l2vpn_peer {
+	string type = 1;
+	string ipv4_peer_id = 2;
+	string ipv6_peer_id = 3;
+	uint32 internal_label = 4;
+}
+
+message l2vpn_vpls_id_auto {
+	uint32 asn = 1;
+	uint32 vpn_id = 2;
+}
+
+message l2vpn_vpls_id_2byte_as {
+	uint32 two_byte_as = 1;
+	uint32 four_byte_index = 2;
+}
+
+message l2vpn_vpls_id_v4addr {
+	string ipv4_address = 1;
+	uint32 two_byte_index = 2;
+}
+
+message l2vpn_vpls_id {
+	string vpls_id_type = 1;
+	l2vpn_vpls_id_auto auto = 2;
+	l2vpn_vpls_id_2byte_as two_byte_as = 3;
+	l2vpn_vpls_id_v4addr v4_addr = 4;
+}
+
+message l2fib_stats_bag_mspw {
+	uint64 received_packets = 1;
+	uint64 received_bytes = 2;
+}
+
+message l2vpn_atom {
+	bool is_pseudowire_headend = 1;
+	uint32 local_label = 2;
+	uint32 remote_label = 3;
+	uint32 local_group_id = 4;
+	uint32 remote_group_id = 5;
+	uint32 local_cv_type = 6;
+	uint32 local_c_ctype = 7;
+	uint32 remote_cv_type = 8;
+	uint32 remote_c_ctype = 9;
+	uint32 local_veid = 10;
+	uint32 remote_veid = 11;
+	uint32 local_ceid = 12;
+	uint32 remote_ceid = 13;
+	string source_address = 14;
+	string remote_source_address = 15;
+	string local_ldp_id = 16;
+	string remote_ldp_id = 17;
+	string saii = 18;
+	string taii = 19;
+	l2vpn_vpls_id local_agi = 20;
+	l2vpn_vpls_id remote_agi = 21;
+	bool is_sai_itype2 = 22;
+	uint32 local_saii_gbl_id = 23;
+	uint32 local_saiiac_id = 24;
+	bool is_tai_itype2 = 25;
+	uint32 local_taii_gbl_id = 26;
+	uint32 local_taiiac_id = 27;
+	uint32 rem_saii_gbl_id = 28;
+	uint32 rem_saiiac_id = 29;
+	uint32 rem_taii_gbl_id = 30;
+	uint32 rem_taiiac_id = 31;
+	string rem_saii = 32;
+	string rem_taii = 33;
+	bool lsd_rewrite_failed = 34;
+	bool ldp_label_advertisment_failed = 35;
+	l2fib_stats_bag_mspw multi_segment_pseudowire_stats = 36;
+}
+
+message l2vpn_l2tpv3 {
+	string l2tp_class_name = 1;
+	string ipv4_source_address = 2;
+	string ipv6_source_address = 3;
+	bool path_mtu_enabled = 4;
+	uint32 path_mtu_max_value = 5;
+	bool dont_fragment_bit = 6;
+	string tos_mode = 7;
+	uint32 tos = 8;
+	uint32 ttl = 9;
+	uint32 local_session_id = 10;
+	uint32 remote_session_id = 11;
+	uint32 local_cookie_size = 12;
+	uint32 remote_cookie_size = 13;
+	uint32 local_cookie_low_value = 14;
+	uint32 remote_cookie_low_value = 15;
+	uint32 local_cookie_high_value = 16;
+	uint32 remote_cookie_high_value = 17;
+	bool remote_circuit_status_up = 18;
+	string tunnel_state = 19;
+	uint32 local_secondary_cookie_size = 20;
+	uint32 local_secondary_cookie_low_value = 21;
+	uint32 local_secondary_cookie_high_value = 22;
+}
+
+message l2vpn_encap_pw {
+	string encapsulation = 1;
+	l2vpn_atom atom = 2;
+	l2vpn_l2tpv3 l2tpv3 = 3;
+}
+
+message l2vpn_ethernet {
+	uint32 xconnect_tags = 1;
+}
+
+message l2vpn_efp_range {
+	uint32 lower = 1;
+	uint32 upper = 2;
+}
+
+message l2vpn_vlan {
+	uint32 xconnect_tags = 1;
+	uint32 vlan_rewrite_tag = 2;
+	uint32 simple_efp = 3;
+	uint32 encapsulation_type = 4;
+	uint32 outer_tag = 5;
+	repeated l2vpn_efp_range vlan_range = 6;
+	repeated uint32 rewrite_tag = 7;
+}
+
+message l2vpn_tdm_option {
+	uint32 payload_bytes = 1;
+	uint32 bit_rate = 2;
+	string rtp = 3;
+	string timestamp_mode = 4;
+	uint32 signalling_packets = 5;
+	uint32 cas = 6;
+	uint32 rtp_header_payload_type = 7;
+	uint32 timestamp_clock_freq = 8;
+	uint32 ssrc = 9;
+}
+
+message l2vpn_tdm {
+	string timeslot_group = 1;
+	uint32 timeslot_rate = 2;
+	string tdm_mode = 3;
+	l2vpn_tdm_option tdm_options = 4;
+}
+
+message l2vpn_atm {
+	uint32 maximum_number_cells_packed = 1;
+	uint32 maximum_number_cells_un_packed = 2;
+	string atm_mode = 3;
+	uint32 vpi = 4;
+	uint32 vci = 5;
+}
+
+message l2vpn_fr {
+	string fr_mode = 1;
+	uint32 dlci = 2;
+}
+
+message item_iflist_if {
+	string interface_name = 1;
+	string replicate_status = 2;
+}
+
+message item_iflist_ifl {
+	string interface_list_name = 1;
+	uint32 interface_list_id = 2;
+	repeated item_iflist_if interface = 3;
+}
+
+message l2vpn_pwhe {
+	bool is_valid = 1;
+	item_iflist_ifl interface_list = 2;
+	uint32 internal_label = 3;
+}
+
+message l2vpn_interface_params {
+	string type = 1;
+	l2vpn_ethernet ethernet = 2;
+	l2vpn_vlan vlan = 3;
+	l2vpn_tdm tdm = 4;
+	l2vpn_atm atm = 5;
+	l2vpn_fr fr = 6;
+	l2vpn_pwhe pseudowire_ether = 7;
+	l2vpn_pwhe pseudowire_iw = 8;
+}
+
+message l2vpn_interface {
+	string name = 1;
+	uint32 mtu = 2;
+	uint32 payload_bytes = 3;
+	l2vpn_interface_params parameters = 4;
+}
+
+message l2vpn_mpls_prefpath {
+	string policy_name = 1;
+}
+
+message l2vpn_pw_mpls_prefpath {
+	string option = 1;
+	uint32 next_hop_ip = 2;
+	uint32 te_tunnel_interface_number = 3;
+	uint32 ip_tunnel_interface_number = 4;
+	uint32 tp_tunnel_interface_number = 5;
+	l2vpn_mpls_prefpath srte_policy = 6;
+}
+
+message l2vpn_ms_pw_tlv_info {
+	uint32 pw_id = 1;
+	string local_address = 2;
+	string remote_address = 3;
+	string description = 4;
+}
+
+message l2vpn_ms_pw {
+	uint32 pw_status = 1;
+	repeated l2vpn_ms_pw_tlv_info tlv = 2;
+	l2vpn_ms_pw_tlv_info status_tlv = 3;
+}
+
+message l2fib_stats_bag_counters {
+	uint64 packet_counts = 1;
+	uint64 byte_counts = 2;
+}
+
+message l2fib_stats_bag_imp {
+	l2fib_stats_bag_counters imposition_stat = 1;
+	l2fib_stats_bag_counters imposition_mtu_drop = 2;
+	l2fib_stats_bag_counters impostion_tail_drop = 3;
+	l2fib_stats_bag_counters l2fsbi_drop = 4;
+	l2fib_stats_bag_counters multicast = 5;
+	l2fib_stats_bag_counters broadcast = 6;
+	l2fib_stats_bag_counters known_unicast = 7;
+	l2fib_stats_bag_counters unknown_unicast = 8;
+}
+
+message l2fib_stats_bag_disp {
+	l2fib_stats_bag_counters disposition_stat = 1;
+	l2fib_stats_bag_counters disposition_mtu_drop = 2;
+	l2fib_stats_bag_counters disposition_tail_drop = 3;
+	l2fib_stats_bag_counters multicast_drop = 4;
+	l2fib_stats_bag_counters unicast_drop = 5;
+	l2fib_stats_bag_counters broadcast_drop = 6;
+	l2fib_stats_bag_counters received_drops = 7;
+	l2fib_stats_bag_counters dai_drop = 8;
+	l2fib_stats_bag_counters ipsg_drop = 9;
+	l2fib_stats_bag_counters disposition_oo_o_drops = 10;
+	l2fib_stats_bag_counters disposition_p2mp_stats = 11;
+	l2fib_stats_bag_counters known_unicast = 12;
+	l2fib_stats_bag_counters mac_move = 13;
+}
+
+message l2fib_stats_bag_seq_num {
+	uint32 sequence_number_sent = 1;
+	uint32 sequence_number_expected = 2;
+	uint64 bypassed_inbound_sequence_packet = 3;
+	uint64 bypassed_out_sequence_packet = 4;
+}
+
+message l2fib_stats_bag_forwarding {
+	l2fib_stats_bag_imp impostion_stats = 1;
+	l2fib_stats_bag_disp dispostion_stats = 2;
+	l2fib_stats_bag_seq_num sequence_number = 3;
+}
+
+message l2vpn_p2mp_pw {
+	bool local_available = 1;
+	uint32 local_label = 2;
+	string local_ptree_type = 3;
+	uint32 local_tunnel_id = 4;
+	string local_extended_tunnel_id = 5;
+	uint32 local_p2mp_id = 6;
+	uint32 local_flags = 7;
+	bool remote_available = 8;
+	uint32 remote_label = 9;
+	string remote_ptree_type = 10;
+	uint32 remote_tunnel_id = 11;
+	string remote_extended_tunnel_id = 12;
+	uint32 remote_p2mp_id = 13;
+	uint32 remote_flags = 14;
+}
+
+message l2vpn_pw {
+	l2vpn_peer peer_id = 1;
+	string local_source_address = 2;
+	string ipv6_local_source_address = 3;
+	uint64 pseudo_wire_id = 4;
+	bool is_pwr_type = 5;
+	bool is_evpn_vpws_type = 6;
+	uint32 xconnect_id = 7;
+	string state = 8;
+	string pseudo_wire_state = 9;
+	string protocol = 10;
+	string pw_class_name = 11;
+	uint32 tag_rewrite = 12;
+	string interworking = 13;
+	string fe_ctype = 14;
+	uint32 evpn_src_acid = 15;
+	string sequencing_type = 16;
+	bool resync_enabled = 17;
+	uint32 resync_threshold = 18;
+	l2vpn_encap_pw encapsulation_info = 19;
+	string local_control_word = 20;
+	string remote_control_word = 21;
+	string local_pseudo_wire_type = 22;
+	string remote_pseudo_wire_type = 23;
+	l2vpn_interface local_interface = 24;
+	l2vpn_interface remote_interface = 25;
+	uint32 imposed_vlan_id = 26;
+	string time_created = 27;
+	string time_elapsed_creation = 28;
+	string last_time_status_changed = 29;
+	string time_elapsed_status_changed = 30;
+	string last_time_status_down = 31;
+	uint32 time_elapsed_status_down = 32;
+	bool shutdown = 33;
+	bool data_path_down = 34;
+	bool use_tunnel_path = 35;
+	bool odn_configured = 36;
+	bool pseudo_wire_type_mismatched = 37;
+	bool payload_bytes_mismatched = 38;
+	bool bitrate_mismatched = 39;
+	bool rtp_mismatched = 40;
+	bool diff_ts_mismatched = 41;
+	bool sig_pkts_mismatched = 42;
+	bool cas_mismatched = 43;
+	bool payload_type_mismatched = 44;
+	bool freq_mismatched = 45;
+	bool ssrc_mismatched = 46;
+	bool mtu_mismatched = 47;
+	bool illegal_control_word = 48;
+	bool ad_remote_down = 49;
+	bool not_supported_qinq = 50;
+	bool local_label_failed = 51;
+	bool remote_label_failed = 52;
+	l2vpn_pw_mpls_prefpath preferred_path = 53;
+	bool preferred_path_disable_fallback = 54;
+	bool backup_pw = 55;
+	bool primary_pw = 56;
+	bool backup_active = 57;
+	bool backup_force_active = 58;
+	bool disable_never = 59;
+	uint32 disable_delay = 60;
+	string primary_peer_id = 61;
+	uint64 primary_pseudo_wire_id = 62;
+	uint32 number_ma_cwithdraw_message_sent = 63;
+	uint32 num_ma_cwithdraw_msg_received = 64;
+	uint32 out_of_memory_state = 65;
+	bool transport_lsp_down = 66;
+	bool mac_limit_oper_down = 67;
+	bool pw_status_use = 68;
+	l2vpn_ms_pw local_signalling = 69;
+	l2vpn_ms_pw remote_signalling = 70;
+	bool auto_discovery = 71;
+	uint32 ad_method = 72;
+	bool pwlsd_rewrite_failed = 73;
+	bool ldp_label_advertise_failed = 74;
+	bool is_vfi = 75;
+	bool is_multi_segment_pseudowire = 76;
+	bool pw_redundancy_one_way = 77;
+	l2fib_stats_bag_forwarding statistics = 78;
+	string load_balance = 79;
+	string pw_flow_label_type = 80;
+	string pw_flow_label_type_cfg = 81;
+	bool pw_flow_label_code17_disabled = 82;
+	bool is_flow_label_static = 83;
+	bool is_partially_programmed = 84;
+	uint32 pw_redundancy_initial_delay = 85;
+	bool bridge_pw_type_mismatch = 86;
+	l2vpn_p2mp_pw p2mp_pw = 87;
+	uint32 required_bw = 88;
+	uint32 admited_bw = 89;
+	uint32 forward_class = 90;
+	string table_policy_name = 91;
+}
+
+message l2vpn_bd_mac {
+	string mac = 1;
+	string pbb_bmac = 2;
+	string nh_addr = 3;
+}
+
+message l2vpn_bag_storm_control_type {
+	bool bd_policer = 1;
+	bool unicast = 2;
+	bool multicast = 3;
+	bool broadcast = 4;
+}
+
+message l2vpn_bridge_sec_param {
+	uint32 mac_limit = 1;
+	string mac_limit_action = 2;
+	string mac_limit_notification = 3;
+	uint32 mac_aging_time = 4;
+	string mac_aging_mode = 5;
+	bool mac_flooding = 6;
+	bool mac_learning = 7;
+	bool learn_disabled_mac_limit_action = 8;
+	bool flood_uu_disabled_mac_limit_action = 9;
+	bool mac_limit_reached = 10;
+	uint32 mac_limit_threshold = 11;
+	bool flood_unknown_unicast_enabled = 12;
+	bool mac_port_down_flush_enabled = 13;
+	uint32 split_horizon_group_id = 14;
+	bool is_ip_source_guard_enabled = 15;
+	bool is_ipsg_logging_enabled = 16;
+	bool is_dai_enabled = 17;
+	bool is_dai_logging_enabled = 18;
+	bool is_dai_addr_validate_source_mac_enabled = 19;
+	bool is_dai_addr_validate_destination_mac_enabled = 20;
+	bool is_dai_addr_validate_ipv4_enabled = 21;
+	bool is_mac_secure_enabled = 22;
+	string mac_secure_action = 23;
+	bool is_mac_secure_logging_enabled = 24;
+	bool is_mac_secure_accept_shutdown_enabled = 25;
+	bool is_mac_secure_threshold_enabled = 26;
+	uint32 dai_address_validation_mask = 27;
+	bool dhcpv4_snoop = 28;
+	string dhcpv4_profile_name = 29;
+	bool igm_pv4_disabled = 30;
+	string igm_pv4_profile_name = 31;
+	string mld_profile_name = 32;
+	bool mmrp_flood_optimization = 33;
+	l2vpn_bag_storm_control_type storm_control = 34;
+	string unicast_storm_control_rate_unit = 35;
+	uint64 unicast_storm_control_pps = 36;
+	uint64 unicast_storm_control_kb_ps = 37;
+	string multicast_storm_control_rate_unit = 38;
+	uint64 multicast_storm_control_pps = 39;
+	uint64 multicast_storm_control_kb_ps = 40;
+	string broadcast_storm_control_rate_unit = 41;
+	uint64 broadcast_storm_control_pps = 42;
+	uint64 broadcast_storm_control_kb_ps = 43;
+}
+
+message l2vpn_bridge_port_sec_param {
+	l2vpn_bridge_sec_param base = 1;
+	l2vpn_bag_storm_control_type storm_control = 2;
+	string unicast_storm_control_rate_unit = 3;
+	uint64 unicast_storm_control_pps = 4;
+	uint64 unicast_storm_control_kb_ps = 5;
+	string multicast_storm_control_rate_unit = 6;
+	uint64 multicast_storm_control_pps = 7;
+	uint64 multicast_storm_control_kb_ps = 8;
+	string broadcast_storm_control_rate_unit = 9;
+	uint64 broadcast_storm_control_pps = 10;
+	uint64 broadcast_storm_control_kb_ps = 11;
+	bool dhcpv4_trust = 12;
+}
+
+message l2vpn_bd_pw {
+	l2vpn_pw pseudowire = 50;
+	repeated l2vpn_bd_mac static_mac = 51;
+	bool is_access = 52;
+	l2vpn_bridge_port_sec_param security_parameters = 53;
+}
+
