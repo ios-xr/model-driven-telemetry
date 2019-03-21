@@ -211,7 +211,7 @@ message vpdn_history_entry_KEYS {
 }
 
 message vpdn_history_entry {
-	string username = 50;
+	string username_xr = 50;
 	string domain_name = 51;
 	uint32 mid = 52;
 	string nas = 53;

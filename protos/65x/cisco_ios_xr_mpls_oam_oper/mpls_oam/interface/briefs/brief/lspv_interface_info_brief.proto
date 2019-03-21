@@ -209,7 +209,7 @@ message lspv_interface_info_brief_KEYS {
 }
 
 message lspv_interface_info_brief {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string state = 51;
 	uint32 mtu = 52;
 	uint32 prefix_length = 53;

@@ -209,17 +209,13 @@ message ipv6_nd_slaac_intfs_info_KEYS {
 	string interface_name = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bag_timespec {
 	uint32 seconds = 1;
 }
 
 message ipv6_nd_prefixQ {
-	in6_addr_td prefix_address = 1;
-	in6_addr_td eui64 = 2;
+	string prefix_address = 1;
+	string eui64 = 2;
 	uint32 valid_life_time = 3;
 	uint32 preferred_life_time = 4;
 	uint32 prefix_len = 5;
@@ -228,7 +224,7 @@ message ipv6_nd_prefixQ {
 }
 
 message ipv6_nd_ra_info {
-	in6_addr_td address = 1;
+	string address = 1;
 	bag_timespec elapsed_ra_time = 2;
 	uint32 hops = 3;
 	uint32 flags = 4;

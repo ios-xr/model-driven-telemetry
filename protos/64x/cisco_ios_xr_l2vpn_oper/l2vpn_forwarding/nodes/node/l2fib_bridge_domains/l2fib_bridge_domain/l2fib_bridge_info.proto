@@ -319,7 +319,7 @@ message l2fib_bridge_bvi_info {
 	string bvi_name = 3;
 	uint32 bvi_shg_id = 4;
 	uint32 irb_plat_data_len = 5;
-	repeated bytes irb_plat_data = 6;
+	bytes irb_plat_data = 6;
 }
 
 message l2fib_nhop_info {

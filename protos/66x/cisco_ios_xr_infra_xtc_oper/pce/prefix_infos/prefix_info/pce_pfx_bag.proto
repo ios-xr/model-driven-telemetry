@@ -269,7 +269,7 @@ message pce_pfx_entry {
 }
 
 message pce_pfx_bag {
-	uint32 node_identifier = 50;
+	uint32 node_identifier_xr = 50;
 	pce_node_pid_bag node_protocol_identifier = 51;
 	repeated pce_pfx_entry address = 52;
 }

@@ -209,17 +209,13 @@ message vrrp_vrouter_info_KEYS {
 	uint32 virtual_router_id = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_bag_addr_ {
-	in6_addr_td ipv6_address = 1;
+	string ipv6_address = 1;
 }
 
 message vrrp_trackitem_info {
 	string interface = 1;
-	uint32 virtual_router_id = 2;
+	uint32 virtual_router_id_xr = 2;
 	uint32 tracked_item_type = 3;
 	string tracked_item_index = 4;
 	uint32 state = 5;
@@ -239,8 +235,8 @@ message vrrp_state_change_info_type {
 }
 
 message vrrp_vrouter_info {
-	string interface_name = 50;
-	uint32 virtual_router_id = 51;
+	string interface_name_xr = 50;
+	uint32 virtual_router_id_xr = 51;
 	uint32 version = 52;
 	string address_family = 53;
 	string session_name = 54;
@@ -255,10 +251,10 @@ message vrrp_vrouter_info {
 	uint32 configured_down_address_count = 63;
 	repeated string ipv4_configured_down_address = 64;
 	repeated ipv6_bag_addr_ ipv6_configured_down_address = 65;
-	in6_addr_td virtual_linklocal_ipv6_address = 66;
+	string virtual_linklocal_ipv6_address = 66;
 	string primary_state = 67;
 	string master_ip_address = 68;
-	in6_addr_td master_ipv6_address = 69;
+	string master_ipv6_address = 69;
 	uint32 master_priority = 70;
 	string vrrp_state = 71;
 	string authentication_type = 72;
@@ -305,13 +301,13 @@ message vrrp_vrouter_info {
 	uint32 bfd_interval = 113;
 	uint32 bfd_multiplier = 114;
 	string bfd_cfg_remote_ip = 115;
-	in6_addr_td bfd_configured_remote_ipv6_address = 116;
+	string bfd_configured_remote_ipv6_address = 116;
 	bool state_from_checkpoint = 117;
 	vrrp_bag_timestamp resign_sent_time = 118;
 	vrrp_bag_timestamp resign_received_time = 119;
 	repeated vrrp_state_change_info_type state_change_history = 120;
 	string interface_ipv4_address = 121;
-	in6_addr_td interface_ipv6_address = 122;
+	string interface_ipv6_address = 122;
 	string virtual_mac_address = 123;
 	string virtual_mac_address_state = 124;
 }

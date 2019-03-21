@@ -229,7 +229,7 @@ message mpls_lm_stats_counters_32_bit {
 }
 
 message mpls_lm_stats_link_info {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string link_address = 51;
 	mpls_lm_stats_counters incoming_path_statistics = 52;
 	mpls_lm_stats_counters incoming_reservation_statistics = 53;

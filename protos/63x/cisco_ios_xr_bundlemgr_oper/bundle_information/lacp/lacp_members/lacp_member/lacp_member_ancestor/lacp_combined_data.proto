@@ -212,14 +212,10 @@ message bm_mac_addr_st {
 	string address = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bm_addr {
 	string af = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message bm_bundle_bfd_data {

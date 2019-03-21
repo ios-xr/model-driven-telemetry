@@ -218,7 +218,7 @@ message ipv6_dhcpv6d_server_interface_reference_item {
 	string server_reference_interface_name = 1;
 }
 
-message ipv6_dhcpv6d_server_interface_reference {
+message ipv6_dhcpv6d_server_interface_reference_entry {
 	repeated ipv6_dhcpv6d_server_interface_reference_item ipv6_dhcpv6d_server_interface_reference = 1;
 }
 
@@ -232,7 +232,7 @@ message ipv6_dhcpv6d_server_profile {
 	string aftr_name = 56;
 	string framed_addr_pool_name = 57;
 	string delegated_prefix_pool_name = 58;
-	ipv6_dhcpv6d_server_interface_reference interface_references = 59;
+	ipv6_dhcpv6d_server_interface_reference_entry interface_references = 59;
 	bool rapid_commit = 60;
 }
 

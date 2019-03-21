@@ -226,7 +226,7 @@ message ldp_discovery_link_brief_info {
 	string address_family = 51;
 	string address_family_set = 52;
 	string interface = 53;
-	string interface_name = 54;
+	string interface_name_xr = 54;
 	repeated ldp_hello_brief_info hello_information = 55;
 }
 

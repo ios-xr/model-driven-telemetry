@@ -230,12 +230,12 @@ message key_id_item {
 	lifetime accept_lifetime = 7;
 }
 
-message key_id {
+message key_id_entry {
 	repeated key_id_item key_id = 8;
 }
 
 message key_chain {
 	string accept_tolerance = 50;
-	key_id key = 51;
+	key_id_entry key = 51;
 }
 

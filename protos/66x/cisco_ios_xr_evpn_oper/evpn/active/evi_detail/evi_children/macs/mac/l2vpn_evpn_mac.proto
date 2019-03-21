@@ -214,7 +214,7 @@ message l2vpn_evpn_mac_KEYS {
 
 message l2vpn_evpn_evi_summary {
 	uint32 ethernet_vpn_id = 1;
-	uint32 encapsulation = 2;
+	uint32 encapsulation_xr = 2;
 	string bd_name = 3;
 	string type = 4;
 }
@@ -228,9 +228,9 @@ message l2vpn_label_path_buffer {
 
 message l2vpn_evpn_mac {
 	l2vpn_evpn_evi_summary evpn_instance = 50;
-	uint32 ethernet_tag = 51;
-	string mac_address = 52;
-	string ip_address = 53;
+	uint32 ethernet_tag_xr = 51;
+	string mac_address_xr = 52;
+	string ip_address_xr = 53;
 	uint32 local_label = 54;
 	uint32 num_paths = 55;
 	repeated l2vpn_label_path_buffer path_buffer = 56;

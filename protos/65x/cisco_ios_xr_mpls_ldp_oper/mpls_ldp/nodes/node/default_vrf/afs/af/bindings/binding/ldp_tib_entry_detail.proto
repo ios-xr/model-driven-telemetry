@@ -237,7 +237,7 @@ message ldp_tib_entry_remote {
 
 message ldp_tib_entry_detail {
 	ldp_vrf_info vrf = 50;
-	ldp_ip_addr_t_union prefix = 51;
+	ldp_ip_addr_t_union prefix_xr = 51;
 	uint32 prefix_length = 52;
 	uint32 local_label = 53;
 	uint32 le_local_binding_revision = 54;

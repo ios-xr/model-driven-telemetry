@@ -286,7 +286,7 @@ message pce_lsp_autoroute_bag {
 message pce_lsp_bag {
 	string source_address = 50;
 	string destination_address = 51;
-	string symbolic_name = 52;
+	string symbolic_name_xr = 52;
 	uint32 session_internal_lsp_id = 53;
 	uint32 stateful_request_parameter_id = 54;
 	uint32 request_queue_size = 55;

@@ -213,6 +213,6 @@ message client_entry {
 	uint32 open_flags = 51;
 	uint32 location = 52;
 	uint32 client_id = 53;
-	string times = 54;
+	bytes times = 54;
 }
 

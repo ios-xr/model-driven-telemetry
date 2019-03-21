@@ -209,14 +209,10 @@ message srms_mi_t_b_KEYS {
 	uint32 prefix = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message addr {
 	string af = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message srms_mi_t_b {

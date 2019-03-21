@@ -218,8 +218,23 @@ message span_bag_src_info_ {
 	string mirror_interval = 5;
 }
 
+message span_bag_dst_id_nexthop_v4_ {
+	string ipv4_address = 1;
+	string vrf_name = 2;
+}
+
+message span_bag_dst_id_nexthop_v6_ {
+	string ipv6_address = 1;
+	string vrf_name = 2;
+}
+
 message span_bag_dst_id {
 	string destination_class = 1;
+	string interface = 2;
+	uint32 pseudowire_id = 3;
+	span_bag_dst_id_nexthop_v4_ ipv4_address_and_vrf = 4;
+	span_bag_dst_id_nexthop_v6_ ipv6_address_and_vrf = 5;
+	uint32 invalid_value = 6;
 }
 
 message span_ma_attachment_bag {

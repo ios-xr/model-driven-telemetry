@@ -214,7 +214,7 @@ message mpls_te_tunnels_autobw_status {
 }
 
 message mpls_te_tunnels_autobw_brief {
-	string tunnel_name = 50;
+	string tunnel_name_xr = 50;
 	string signaled_name = 51;
 	uint32 tunnel_lsp_id = 52;
 	mpls_te_tunnels_autobw_status auto_bandwidth_status = 53;

@@ -221,12 +221,12 @@ message lldp_addr_entry_item {
 	uint32 if_num = 3;
 }
 
-message lldp_addr_entry {
+message lldp_addr_entry_entry {
 	repeated lldp_addr_entry_item lldp_addr_entry = 1;
 }
 
 message lldp_interface {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 tx_enabled = 51;
 	uint32 rx_enabled = 52;
 	string tx_state = 53;
@@ -235,6 +235,6 @@ message lldp_interface {
 	string port_id = 56;
 	uint32 port_id_sub_type = 57;
 	string port_description = 58;
-	lldp_addr_entry local_network_addresses = 59;
+	lldp_addr_entry_entry local_network_addresses = 59;
 }
 

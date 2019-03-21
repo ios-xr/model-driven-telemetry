@@ -222,7 +222,7 @@ message rip_path_bd {
 
 message rip_show_route_bd {
 	string destination_address = 50;
-	uint32 prefix_length = 51;
+	uint32 prefix_length_xr = 51;
 	uint32 distance = 52;
 	uint32 bgp_count = 53;
 	uint32 route_type = 54;

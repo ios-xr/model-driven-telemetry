@@ -224,9 +224,9 @@ message pim_rl_rp_range_bag {
 }
 
 message pim_rl_bag {
-	pim_addrtype rp_address = 50;
+	pim_addrtype rp_address_xr = 50;
 	string protocol = 51;
-	string client = 52;
+	string client_xr = 52;
 	pim_addrtype source_of_information = 53;
 	uint64 expires = 54;
 	repeated pim_rl_rp_range_bag group_range = 55;

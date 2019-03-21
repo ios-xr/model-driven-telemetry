@@ -212,7 +212,7 @@ message arp_gmp_route_entry_KEYS {
 
 message arp_gmp_route_entry {
 	string ip_address = 50;
-	uint32 prefix_length = 51;
+	uint32 prefix_length_xr = 51;
 	string interface_name_xr = 52;
 	repeated string interface_name = 53;
 }

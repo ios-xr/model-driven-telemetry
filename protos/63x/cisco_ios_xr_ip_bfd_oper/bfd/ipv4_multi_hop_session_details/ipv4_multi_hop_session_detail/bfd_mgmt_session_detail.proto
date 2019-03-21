@@ -211,15 +211,11 @@ message bfd_mgmt_session_detail_KEYS {
 	string vrf_name = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ip_addr_t_union {
 	string afi = 1;
 	uint32 dummy = 2;
 	string ipv4 = 3;
-	in6_addr_td ipv6 = 4;
+	string ipv6 = 4;
 }
 
 message bfd_mgmt_session_state_time {

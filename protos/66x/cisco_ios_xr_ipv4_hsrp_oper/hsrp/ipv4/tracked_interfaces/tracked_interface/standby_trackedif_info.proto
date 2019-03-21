@@ -215,7 +215,7 @@ message standby_trackedif_info {
 	uint32 hsrp_group_number = 51;
 	uint32 priority_decrement = 52;
 	bool interface_up_flag = 53;
-	string tracked_interface_name = 54;
+	string tracked_interface_name_xr = 54;
 	bool is_object = 55;
 }
 

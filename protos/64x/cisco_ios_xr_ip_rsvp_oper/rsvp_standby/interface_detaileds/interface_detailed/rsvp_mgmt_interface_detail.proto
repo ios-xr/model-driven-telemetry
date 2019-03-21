@@ -268,7 +268,7 @@ message rsvp_mgmt_nbor {
 }
 
 message rsvp_mgmt_interface_detail {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	rsvp_mgmt_dste_mode_interface_bw bandwidth_information = 51;
 	rsvp_mgmt_interface_flags flags = 52;
 	uint32 signalling_ip_tos = 53;

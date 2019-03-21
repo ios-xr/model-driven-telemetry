@@ -207,12 +207,8 @@ package cisco_ios_xr_evpn_oper.evpn.active.summary;
 message l2vpn_evpn_summary_KEYS {
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_evpn_summary {
-	in6_addr_td router_id = 50;
+	string router_id = 50;
 	uint32 as = 51;
 	uint32 ev_is = 52;
 	uint32 local_mac_routes = 53;

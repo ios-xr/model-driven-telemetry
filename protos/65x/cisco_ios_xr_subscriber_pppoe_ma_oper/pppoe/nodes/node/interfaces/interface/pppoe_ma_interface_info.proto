@@ -218,8 +218,8 @@ message pppoe_ma_tags_ale_info {
 message pppoe_ma_tags_info {
 	string service_name = 1;
 	uint32 max_payload = 2;
-	string host_uniq = 3;
-	string relay_session_id = 4;
+	bytes host_uniq = 3;
+	bytes relay_session_id = 4;
 	string remote_id = 5;
 	string circuit_id = 6;
 	sint32 is_iwf = 7;
@@ -241,7 +241,7 @@ message pppoe_ma_tags_info {
 }
 
 message pppoe_ma_interface_info {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string access_interface_name = 51;
 	string bba_group_name = 52;
 	uint32 session_id = 53;

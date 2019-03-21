@@ -209,14 +209,10 @@ message pim_mstatic_bag_KEYS {
 	uint32 prefix_length = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pim_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message pim_mstatic_bag {
@@ -224,7 +220,7 @@ message pim_mstatic_bag {
 	pim_addrtype nexthop = 51;
 	string interface_name = 52;
 	uint32 distance = 53;
-	uint32 prefix_length = 54;
+	uint32 prefix_length_xr = 54;
 	bool is_via_lsm = 55;
 }
 

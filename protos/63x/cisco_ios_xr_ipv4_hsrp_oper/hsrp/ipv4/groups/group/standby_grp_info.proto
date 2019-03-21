@@ -209,12 +209,8 @@ message standby_grp_info_KEYS {
 	uint32 group_number = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_bag_addr_ {
-	in6_addr_td ipv6_address = 1;
+	string ipv6_address = 1;
 }
 
 message hsrp_bag_timestamp {
@@ -267,17 +263,17 @@ message standby_grp_info {
 	uint32 min_delay_time = 66;
 	uint32 reload_delay_time = 67;
 	string virtual_ip_address = 68;
-	in6_addr_td virtual_linklocal_ipv6_address = 69;
+	string virtual_linklocal_ipv6_address = 69;
 	string active_ip_address = 70;
-	in6_addr_td active_ipv6_address = 71;
+	string active_ipv6_address = 71;
 	string active_mac_address = 72;
 	string standby_ip_address = 73;
-	in6_addr_td standby_ipv6_address = 74;
+	string standby_ipv6_address = 74;
 	string standby_mac_address = 75;
 	string hsrp_router_state = 76;
 	repeated string secondary_address = 77;
 	repeated ipv6_bag_addr_ global_address = 78;
-	string interface_name = 79;
+	string interface_name_xr = 79;
 	string interface = 80;
 	uint32 router_priority = 81;
 	uint32 active_priority = 82;
@@ -307,7 +303,7 @@ message standby_grp_info {
 	bool bfd_enabled = 106;
 	string bfd_interface = 107;
 	string bfd_peer_ip_address = 108;
-	in6_addr_td bfd_peer_ipv6_address = 109;
+	string bfd_peer_ipv6_address = 109;
 	string bfd_session_state = 110;
 	uint32 bfd_interval = 111;
 	uint32 bfd_multiplier = 112;

@@ -217,7 +217,7 @@ message pim_addrtype {
 }
 
 message pim_nbr_bag {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	repeated pim_addrtype neighbor_address_xr = 51;
 	uint64 uptime = 52;
 	uint64 expires = 53;

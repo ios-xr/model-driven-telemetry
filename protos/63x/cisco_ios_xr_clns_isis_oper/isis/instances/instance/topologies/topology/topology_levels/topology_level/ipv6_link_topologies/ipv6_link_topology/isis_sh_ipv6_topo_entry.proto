@@ -213,10 +213,6 @@ message isis_sh_ipv6_topo_entry_KEYS {
 	string system_id = 6;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message neighbor_snpa_item {
 	string value = 1;
 }
@@ -224,7 +220,7 @@ message neighbor_snpa_item {
 message isis_sh_rep_el {
 	string repair_element_node_id = 1;
 	string repair_ipv4_addr = 2;
-	in6_addr_td repair_ipv6_addr = 3;
+	string repair_ipv6_addr = 3;
 	uint32 repair_label = 4;
 	uint32 repair_element_type = 5;
 	uint32 repair_strict_spf_label = 6;
@@ -233,13 +229,13 @@ message isis_sh_rep_el {
 message isis_sh_ipv6_frr_backup {
 	string neighbor_id = 1;
 	string egress_interface = 2;
-	in6_addr_td neighbor_address = 3;
+	string neighbor_address = 3;
 	string tunnel_egress_interface = 4;
 	neighbor_snpa_item neighbor_snpa = 5;
 	string remote_lfa_system_id = 6;
-	in6_addr_td remote_lfa_router_id = 7;
+	string remote_lfa_router_id = 7;
 	string remote_lfa_system_pid = 8;
-	in6_addr_td remote_lfa_router_pid = 9;
+	string remote_lfa_router_pid = 9;
 	uint32 total_backup_distance = 10;
 	uint32 segment_routing_sid_value = 11;
 	uint32 num_sid = 12;
@@ -263,7 +259,7 @@ message isis_sh_ipv6_frr_backup {
 message isis_sh_ipv6_path {
 	string neighbor_id = 1;
 	string egress_interface = 2;
-	in6_addr_td neighbor_address = 3;
+	string neighbor_address = 3;
 	neighbor_snpa_item neighbor_snpa = 4;
 	uint32 tag = 5;
 	isis_sh_ipv6_frr_backup frr_backup = 6;
@@ -302,7 +298,7 @@ message isis_per_priority_counts {
 }
 
 message isis_sh_ipv6_topo_entry {
-	in6_addr_td source_address = 50;
+	string source_address = 50;
 	bool is_participant = 51;
 	bool is_overloaded = 52;
 	bool is_attached = 53;

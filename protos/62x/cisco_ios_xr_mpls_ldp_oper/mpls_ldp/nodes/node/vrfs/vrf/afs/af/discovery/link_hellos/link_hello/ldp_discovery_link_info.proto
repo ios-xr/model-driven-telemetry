@@ -258,7 +258,7 @@ message ldp_discovery_link_info {
 	repeated ldp_discovery_link_af_info discovery_link_af = 51;
 	uint32 next_hello = 52;
 	string interface = 53;
-	string interface_name = 54;
+	string interface_name_xr = 54;
 	ldp_vrf_info vrf = 55;
 	bool quick_start_disabled = 56;
 }

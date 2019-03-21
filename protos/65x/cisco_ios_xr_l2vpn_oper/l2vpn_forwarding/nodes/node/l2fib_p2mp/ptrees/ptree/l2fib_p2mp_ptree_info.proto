@@ -214,9 +214,9 @@ message l2fib_p2mp_ptree_info_KEYS {
 }
 
 message l2fib_p2mp_ptree_info {
-	uint32 lsm_id = 50;
-	uint32 tunnel_id = 51;
-	uint32 p2mp_id = 52;
-	string extended_tunnel_id = 53;
+	uint32 lsm_id_xr = 50;
+	uint32 tunnel_id_xr = 51;
+	uint32 p2mp_id_xr = 52;
+	string extended_tunnel_id_xr = 53;
 }
 

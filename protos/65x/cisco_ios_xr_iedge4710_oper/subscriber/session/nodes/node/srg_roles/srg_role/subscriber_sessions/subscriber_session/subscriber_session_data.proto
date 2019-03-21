@@ -266,7 +266,7 @@ message subscriber_session_data {
 	string session_ipv6_address = 61;
 	string session_ipv6_prefix = 62;
 	string delegated_ipv6_prefix = 63;
-	string ipv6_interface_id = 64;
+	bytes ipv6_interface_id = 64;
 	string mac_address = 65;
 	string account_session_id = 66;
 	string nas_port = 67;

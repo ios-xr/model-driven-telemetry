@@ -209,7 +209,7 @@ message l2vpn_index_info_KEYS {
 }
 
 message l2vpn_index_info {
-	uint32 pool_id = 50;
+	uint32 pool_id_xr = 50;
 	string application_type = 51;
 	uint32 allocated_ids = 52;
 	uint32 zombied_ids = 53;

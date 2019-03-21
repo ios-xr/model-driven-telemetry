@@ -211,19 +211,15 @@ message igmp_edm_groups_et_bag_KEYS {
 	string source_address = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message igmp_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message igmp_edm_groups_bag {
-	igmp_addrtype group_address = 1;
-	string interface_name = 2;
+	igmp_addrtype group_address_xr = 1;
+	string interface_name_xr = 2;
 	uint64 uptime = 3;
 	sint32 expiration_time = 4;
 	igmp_addrtype last_reporter = 5;

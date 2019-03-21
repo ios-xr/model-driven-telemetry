@@ -210,7 +210,7 @@ message l2vpn_group_KEYS {
 }
 
 message l2vpn_group {
-	string group_name = 50;
+	string group_name_xr = 50;
 	uint32 number_xconnects = 51;
 }
 

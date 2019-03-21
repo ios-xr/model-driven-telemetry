@@ -258,14 +258,10 @@ message pce_node_pid_bag {
 	repeated pce_srgb_info_bag srgb_information = 7;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pce_ip_addr_type {
 	string af_name = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message pce_sid_bag {
@@ -300,8 +296,8 @@ message pce_ipv4_link_bag {
 }
 
 message pce_ipv6_link_bag {
-	in6_addr_td local_ipv6_address = 1;
-	in6_addr_td remote_ipv6_address = 2;
+	string local_ipv6_address = 1;
+	string remote_ipv6_address = 2;
 	pce_igp_info_bag local_igp_information = 3;
 	pce_node_pid_bag remote_node_protocol_identifier = 4;
 	uint32 igp_metric = 5;
@@ -312,7 +308,7 @@ message pce_ipv6_link_bag {
 }
 
 message pce_xtc_node_bag {
-	uint32 node_identifier = 50;
+	uint32 node_identifier_xr = 50;
 	pce_node_pid_bag node_protocol_identifier = 51;
 	repeated pce_prefix_bag prefixe = 52;
 	repeated pce_ipv4_link_bag ipv4_link = 53;

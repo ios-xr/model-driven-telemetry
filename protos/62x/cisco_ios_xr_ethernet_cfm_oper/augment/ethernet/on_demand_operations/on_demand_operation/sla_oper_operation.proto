@@ -220,6 +220,7 @@ message sla_oper_packet_padding {
 
 message sla_oper_packet_priority {
 	string priority_type = 1;
+	uint32 cos = 2;
 }
 
 message sla_cfg_metric_type {
@@ -256,8 +257,19 @@ message sla_oper_operation_profile {
 	uint32 flr_calculation_interval = 10;
 }
 
+message sla_oper_cfg_operation_specific {
+	string profile_name = 1;
+}
+
+message sla_oper_od_operation_specific {
+	uint32 ondemand_operation_id = 1;
+	uint32 probe_count = 2;
+}
+
 message sla_oper_operation_specific_opts {
 	string oper_type = 1;
+	sla_oper_cfg_operation_specific configured_operation_options = 2;
+	sla_oper_od_operation_specific ondemand_operation_options = 3;
 }
 
 message sla_oper_operation {

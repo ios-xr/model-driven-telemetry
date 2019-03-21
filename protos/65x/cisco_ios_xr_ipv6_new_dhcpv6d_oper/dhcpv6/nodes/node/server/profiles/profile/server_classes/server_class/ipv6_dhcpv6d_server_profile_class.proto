@@ -211,7 +211,7 @@ message ipv6_dhcpv6d_server_profile_class_KEYS {
 }
 
 message ipv6_dhcpv6d_server_profile_class {
-	string class_name = 50;
+	string class_name_xr = 50;
 	string domain_name = 51;
 	uint32 profile_dns = 52;
 	repeated string profile_dns_address = 53;

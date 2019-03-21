@@ -211,10 +211,6 @@ message ospfv3_edm_interface_KEYS {
 	string interface_name = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_interface_nbr {
 	string interface_neighbor_id = 1;
 	uint32 interface_neighbor_cost = 2;
@@ -255,7 +251,7 @@ message ospfv3_edm_interface {
 	bool is_interface_line_up = 51;
 	bool is_interface_ip_security_required = 52;
 	bool is_interface_ip_security_active = 53;
-	in6_addr_td interface_address = 54;
+	string interface_address = 54;
 	uint32 interface_number = 55;
 	string interface_router_id = 56;
 	string network_type = 57;
@@ -269,9 +265,9 @@ message ospfv3_edm_interface {
 	uint32 interface_priority = 65;
 	bool is_designated_router = 66;
 	string designated_router_id = 67;
-	in6_addr_td designated_router_address = 68;
+	string designated_router_address = 68;
 	string backup_designated_router_id = 69;
-	in6_addr_td backup_designated_router_address = 70;
+	string backup_designated_router_address = 70;
 	uint32 network_lsa_flush_timer = 71;
 	bool is_interface_lsa_filtered = 72;
 	uint32 hello_interval = 73;

@@ -224,14 +224,14 @@ message pim_bsr_crp_bag_item {
 	string protocol = 6;
 }
 
-message pim_bsr_crp_bag {
+message pim_bsr_crp_bag_entry {
 	repeated pim_bsr_crp_bag_item pim_bsr_crp_bag = 1;
 }
 
 message pim_bsr_rp_cache_bag {
-	pim_addrtype group_prefix = 50;
+	pim_addrtype group_prefix_xr = 50;
 	uint32 group_prefix_length = 51;
 	uint32 candidate_rp_group_count = 52;
-	pim_bsr_crp_bag candidate_rp_list = 53;
+	pim_bsr_crp_bag_entry candidate_rp_list = 53;
 }
 

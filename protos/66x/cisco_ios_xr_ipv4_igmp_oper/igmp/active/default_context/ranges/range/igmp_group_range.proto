@@ -216,7 +216,7 @@ message igmp_addrtype {
 }
 
 message igmp_group_range {
-	igmp_addrtype group_address = 50;
+	igmp_addrtype group_address_xr = 50;
 	uint32 prefix_length = 51;
 	string protocol = 52;
 	bool is_stale = 53;

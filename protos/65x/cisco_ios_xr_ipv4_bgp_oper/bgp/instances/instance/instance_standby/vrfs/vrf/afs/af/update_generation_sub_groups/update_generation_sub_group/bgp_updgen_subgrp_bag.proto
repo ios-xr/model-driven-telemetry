@@ -246,11 +246,11 @@ message bgp_updgen_subgrp_bag {
 	uint32 process_id = 50;
 	string update_vrf_name = 51;
 	string update_group_af_name = 52;
-	uint32 sub_group_index = 53;
-	uint32 sub_group_id = 54;
+	uint32 sub_group_index_xr = 53;
+	uint32 sub_group_id_xr = 54;
 	uint32 parent_sub_group_index = 55;
 	uint32 parent_sub_group_id = 56;
-	uint32 update_group_index = 57;
+	uint32 update_group_index_xr = 57;
 	uint32 update_main_table_version = 58;
 	uint32 update_vrf_table_rib_version = 59;
 	uint32 current_update_limit_sub_group = 60;

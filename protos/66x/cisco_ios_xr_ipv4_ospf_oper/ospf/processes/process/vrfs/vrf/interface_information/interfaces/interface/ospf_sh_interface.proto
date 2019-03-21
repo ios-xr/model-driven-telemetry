@@ -278,7 +278,7 @@ message ospf_sh_if_adj_sid {
 }
 
 message ospf_sh_interface {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string interface_state = 51;
 	bool interface_line_state = 52;
 	string interface_address = 53;

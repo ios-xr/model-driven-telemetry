@@ -211,10 +211,6 @@ message ospfv3_edm_neighbor_KEYS {
 	string neighbor_address = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_neighbor_retrans {
 	uint32 database_descriptor_retransmissions = 1;
 	uint32 area_flood_index = 2;
@@ -262,7 +258,7 @@ message ospfv3_edm_neighbor_bfd {
 }
 
 message ospfv3_edm_neighbor {
-	in6_addr_td neighbor_address = 50;
+	string neighbor_address_xr = 50;
 	uint32 neighbor_interface_id = 51;
 	uint32 neighbor_dr_priority = 52;
 	string neighbor_state = 53;

@@ -210,7 +210,7 @@ message l2tp_hist_fail_stats_bag_data_KEYS {
 message l2tp_hist_fail_stats_bag_data {
 	repeated uint32 pkt_timeout = 50;
 	uint32 sess_down_tmout = 51;
-	string tx_counters = 52;
-	string rx_counters = 53;
+	bytes tx_counters = 52;
+	bytes rx_counters = 53;
 }
 

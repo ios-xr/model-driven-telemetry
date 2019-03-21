@@ -243,12 +243,8 @@ message ptp_bag_mac_addr_type {
 	string macaddr = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ptp_bag_ipv6_addr_type {
-	in6_addr_td ipv6_address = 1;
+	string ipv6_address = 1;
 }
 
 message ptp_bag_address {

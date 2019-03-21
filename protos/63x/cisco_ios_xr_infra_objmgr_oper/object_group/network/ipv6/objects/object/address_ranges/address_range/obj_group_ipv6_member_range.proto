@@ -210,12 +210,8 @@ message obj_group_ipv6_member_range_KEYS {
 	string end_address = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message obj_group_ipv6_member_range {
-	in6_addr_td start_address = 50;
-	in6_addr_td end_address = 51;
+	string start_address_xr = 50;
+	string end_address_xr = 51;
 }
 

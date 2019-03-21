@@ -294,7 +294,7 @@ message l2fib_monitor_session_info {
 	l2fib_base_info base = 1;
 	uint32 xcid = 2;
 	string session_name = 3;
-	string hardware_information = 4;
+	bytes hardware_information = 4;
 	bool bound = 5;
 }
 

@@ -234,7 +234,7 @@ message vlan_trunk_l3_sub_intfs {
 }
 
 message vlan_trunk {
-	string interface = 50;
+	string interface_xr = 50;
 	string state = 51;
 	uint32 mtu = 52;
 	vlan_trunk_l2_sub_intfs layer2_sub_interfaces = 53;

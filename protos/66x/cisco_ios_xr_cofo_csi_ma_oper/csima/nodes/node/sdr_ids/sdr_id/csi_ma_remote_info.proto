@@ -226,7 +226,7 @@ message csi_helper_pub_ {
 }
 
 message csi_ma_remote_info {
-	uint32 sdr_id = 50;
+	uint32 sdr_id_xr = 50;
 	csi_helper_pub_ pub_data = 51;
 	string state = 52;
 }

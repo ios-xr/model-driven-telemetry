@@ -224,7 +224,7 @@ message l2vpn_evpn_ead {
 	uint32 ethernet_vpnid = 50;
 	string type = 51;
 	repeated uint32 ethernet_segment_identifier = 52;
-	uint32 ethernet_tag = 53;
+	uint32 ethernet_tag_xr = 53;
 	string local_next_hop = 54;
 	uint32 local_label = 55;
 	bool is_local_ead = 56;

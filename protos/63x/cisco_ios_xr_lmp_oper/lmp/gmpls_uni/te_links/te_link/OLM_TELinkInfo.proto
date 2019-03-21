@@ -208,14 +208,10 @@ message OLM_TELinkInfo_KEYS {
 	string controller_name = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message OLMAddrU {
 	string address_type = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 	uint32 unnumbered_address = 4;
 }
 

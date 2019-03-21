@@ -216,7 +216,7 @@ message pim_addrtype {
 }
 
 message pim_bidir_df_state_bag {
-	pim_addrtype rp_address = 50;
+	pim_addrtype rp_address_xr = 50;
 	string pim_interface_name = 51;
 	string election_state = 52;
 	uint64 time_seconds = 53;

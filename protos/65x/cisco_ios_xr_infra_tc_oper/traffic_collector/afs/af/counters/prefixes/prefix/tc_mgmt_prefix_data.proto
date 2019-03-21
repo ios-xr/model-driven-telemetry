@@ -227,7 +227,7 @@ message tc_mgmt_count_stats {
 
 message tc_mgmt_prefix_data {
 	string prefix = 50;
-	uint32 label = 51;
+	uint32 label_xr = 51;
 	uint32 ldp_label = 52;
 	bool is_active = 53;
 	tc_mgmt_count_stats base_counter_statistics = 54;

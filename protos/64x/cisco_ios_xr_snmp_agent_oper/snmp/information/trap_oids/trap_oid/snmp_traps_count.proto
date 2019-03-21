@@ -210,6 +210,6 @@ message snmp_traps_count_KEYS {
 
 message snmp_traps_count {
 	uint32 trap_oid_count = 50;
-	string trap_oid = 51;
+	string trap_oid_xr = 51;
 }
 

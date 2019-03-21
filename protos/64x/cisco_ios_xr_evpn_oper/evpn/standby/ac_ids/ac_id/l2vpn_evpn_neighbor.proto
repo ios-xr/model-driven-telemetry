@@ -210,7 +210,7 @@ message l2vpn_evpn_neighbor_KEYS {
 }
 
 message l2vpn_evpn_neighbor {
-	uint32 evi = 50;
+	uint32 evi_xr = 50;
 	string neighbor = 51;
 }
 

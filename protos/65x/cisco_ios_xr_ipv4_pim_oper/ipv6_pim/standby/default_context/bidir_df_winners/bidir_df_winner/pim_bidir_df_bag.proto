@@ -216,7 +216,7 @@ message pim_addrtype {
 }
 
 message pim_bidir_df_bag {
-	pim_addrtype rp_address = 50;
+	pim_addrtype rp_address_xr = 50;
 	string pim_interface_name = 51;
 	pim_addrtype df_winner = 52;
 	bool are_we_df = 53;

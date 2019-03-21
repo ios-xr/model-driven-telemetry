@@ -207,11 +207,26 @@ package cisco_ios_xr_crypto_ssh_oper.ssh.session.brief;
 message ssh_session_brief_KEYS {
 }
 
-message session_brief_info {
+message session_brief_info_item {
+	uint32 session_id = 1;
+	uint32 channel_id = 2;
+	bool vty_assigned = 3;
+	uint32 vty_line_number = 4;
+	string node_name = 5;
+	string session_state = 6;
+	string user_id = 7;
+	string host_address = 8;
+	string version = 9;
+	string authentication_type = 10;
+	string connection_type = 11;
+}
+
+message session_brief_info_entry {
+	repeated session_brief_info_item session_brief_info = 12;
 }
 
 message ssh_session_brief {
-	session_brief_info session_brief_info = 50;
-	session_brief_info session_brief_info_1 = 51;
+	session_brief_info_entry incoming_sessions = 50;
+	session_brief_info_entry outgoing_sessions = 51;
 }
 

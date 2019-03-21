@@ -210,12 +210,8 @@ message ospfv3_edm_area_KEYS {
 	uint32 area_id = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_area_range {
-	in6_addr_td range_prefix = 1;
+	string range_prefix = 1;
 	uint32 range_prefix_length = 2;
 	uint32 net_cost = 3;
 	string status = 4;

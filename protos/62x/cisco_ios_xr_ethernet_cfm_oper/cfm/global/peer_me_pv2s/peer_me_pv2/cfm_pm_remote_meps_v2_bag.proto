@@ -228,12 +228,32 @@ message cfm_pm_timestamp {
 	uint32 nanoseconds = 2;
 }
 
+message cfm_bag_mdid_mac_name {
+	string mac_address = 1;
+	uint32 integer = 2;
+}
+
 message cfm_bag_mdid_v2 {
 	string mdid_format_value = 1;
+	string dns_like_name = 2;
+	cfm_bag_mdid_mac_name mac_name = 3;
+	string string_name = 4;
+	bytes mdid_data = 5;
+}
+
+message cfm_bag_sman_vpnid_name {
+	uint32 oui = 1;
+	uint32 index = 2;
 }
 
 message cfm_bag_sman_v2 {
 	string short_ma_name_format_value = 1;
+	uint32 vlan_id_name = 2;
+	string string_name = 3;
+	uint32 integer_name = 4;
+	cfm_bag_sman_vpnid_name vpn_id_name = 5;
+	string icc_based = 6;
+	bytes short_ma_name_data = 7;
 }
 
 message cfm_pm_ccm_hdr_v2 {
@@ -251,19 +271,22 @@ message cfm_pm_ccm_hdr_v2 {
 
 message cfm_pm_chassis_id_val {
 	string chassis_id_format = 1;
+	string chassis_id_string = 2;
+	string chassis_id_mac = 3;
+	bytes chassis_id_raw = 4;
 }
 
 message cfm_pm_chassis_id {
 	string chassis_id_type = 1;
 	uint32 chassis_id_type_value = 2;
 	cfm_pm_chassis_id_val chassis_id_value = 3;
-	string chassis_id = 4;
+	bytes chassis_id = 4;
 }
 
 message cfm_pm_sender_id {
 	cfm_pm_chassis_id chassis_id = 1;
-	string management_address_domain = 2;
-	string management_address = 3;
+	bytes management_address_domain = 2;
+	bytes management_address = 3;
 }
 
 message cfm_pm_mep_name {
@@ -271,14 +294,14 @@ message cfm_pm_mep_name {
 }
 
 message cfm_pm_org_spec_tlv {
-	string oui = 1;
+	bytes oui = 1;
 	uint32 subtype = 2;
-	string value = 3;
+	bytes value = 3;
 }
 
 message cfm_pm_unknown_tlv {
 	uint32 typecode = 1;
-	string value = 2;
+	bytes value = 2;
 }
 
 message cfm_pm_ccm_v2 {
@@ -290,7 +313,7 @@ message cfm_pm_ccm_v2 {
 	string additional_interface_status = 6;
 	repeated cfm_pm_org_spec_tlv organization_specific_tlv = 7;
 	repeated cfm_pm_unknown_tlv unknown_tlv = 8;
-	string raw_data = 9;
+	bytes raw_data = 9;
 }
 
 message cfm_pm_remote_mep_stats {

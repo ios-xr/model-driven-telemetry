@@ -209,20 +209,16 @@ message ipv6_dhcpv6d_relay_route_binding_KEYS {
 	string client_id = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_dhcpv6d_relay_route_binding {
 	string duid = 50;
-	uint32 client_id = 51;
+	uint32 client_id_xr = 51;
 	uint32 prefix_length = 52;
-	in6_addr_td prefix = 53;
+	string prefix = 53;
 	string vrf_name = 54;
 	uint32 lifetime = 55;
 	uint32 rem_life_time = 56;
 	string interface_name = 57;
-	in6_addr_td next_hop_addr = 58;
+	string next_hop_addr = 58;
 	uint32 ia_id = 59;
 	string relay_profile_name = 60;
 }

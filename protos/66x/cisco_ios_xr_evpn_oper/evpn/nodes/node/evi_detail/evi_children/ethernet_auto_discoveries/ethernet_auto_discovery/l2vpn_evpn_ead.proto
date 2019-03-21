@@ -218,7 +218,7 @@ message l2vpn_evpn_ead_KEYS {
 
 message l2vpn_evpn_evi_summary {
 	uint32 ethernet_vpn_id = 1;
-	uint32 encapsulation = 2;
+	uint32 encapsulation_xr = 2;
 	string bd_name = 3;
 	string type = 4;
 }
@@ -233,7 +233,7 @@ message l2vpn_label_path_buffer {
 message l2vpn_evpn_ead {
 	l2vpn_evpn_evi_summary evpn_instance = 50;
 	repeated uint32 ethernet_segment_identifier = 51;
-	uint32 ethernet_tag = 52;
+	uint32 ethernet_tag_xr = 52;
 	string local_next_hop = 53;
 	uint32 local_label = 54;
 	bool is_local_ead = 55;

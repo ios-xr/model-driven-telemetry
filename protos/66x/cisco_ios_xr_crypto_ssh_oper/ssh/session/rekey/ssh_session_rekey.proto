@@ -214,12 +214,12 @@ message session_rekey_info_item {
 	string volume_to_rekey = 4;
 }
 
-message session_rekey_info {
+message session_rekey_info_entry {
 	repeated session_rekey_info_item session_rekey_info = 1;
 }
 
 message ssh_session_rekey {
-	session_rekey_info incoming_sessions = 50;
-	session_rekey_info outgoing_connections = 51;
+	session_rekey_info_entry incoming_sessions = 50;
+	session_rekey_info_entry outgoing_connections = 51;
 }
 

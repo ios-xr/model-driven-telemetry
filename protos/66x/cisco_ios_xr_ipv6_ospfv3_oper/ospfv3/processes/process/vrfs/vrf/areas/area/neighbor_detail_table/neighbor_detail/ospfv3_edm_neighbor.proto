@@ -259,7 +259,7 @@ message ospfv3_edm_neighbor_bfd {
 }
 
 message ospfv3_edm_neighbor {
-	string neighbor_address = 50;
+	string neighbor_address_xr = 50;
 	uint32 neighbor_interface_id = 51;
 	uint32 neighbor_dr_priority = 52;
 	string neighbor_state = 53;

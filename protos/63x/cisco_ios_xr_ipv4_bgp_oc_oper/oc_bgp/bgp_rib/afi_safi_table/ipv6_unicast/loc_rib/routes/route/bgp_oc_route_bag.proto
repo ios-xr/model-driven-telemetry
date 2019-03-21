@@ -210,14 +210,10 @@ message bgp_oc_route_bag_KEYS {
 	uint32 path_id = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bgp_oc_addrtype {
 	string afi = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message bgp_oc_prefixtype {

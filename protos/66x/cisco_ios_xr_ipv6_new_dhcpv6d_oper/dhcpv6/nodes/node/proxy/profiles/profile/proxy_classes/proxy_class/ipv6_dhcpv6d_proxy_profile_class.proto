@@ -211,7 +211,7 @@ message ipv6_dhcpv6d_proxy_profile_class_KEYS {
 }
 
 message ipv6_dhcpv6d_proxy_profile_class {
-	string class_name = 50;
+	string class_name_xr = 50;
 	repeated string profile_helper_address = 51;
 	repeated string vrf_name = 52;
 }

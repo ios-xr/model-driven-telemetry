@@ -210,7 +210,7 @@ message pim_jpstats_bag_KEYS {
 }
 
 message pim_jpstats_bag {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 mtu = 51;
 	uint32 transmitted = 52;
 	uint32 transmitted100 = 53;

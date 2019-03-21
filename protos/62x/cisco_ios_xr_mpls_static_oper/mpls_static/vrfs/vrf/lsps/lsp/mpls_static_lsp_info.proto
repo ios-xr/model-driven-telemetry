@@ -253,7 +253,7 @@ message mpls_static_lbl_info {
 }
 
 message mpls_static_lsp_info {
-	string lsp_name = 50;
+	string lsp_name_xr = 50;
 	mpls_static_lbl_info label = 51;
 }
 

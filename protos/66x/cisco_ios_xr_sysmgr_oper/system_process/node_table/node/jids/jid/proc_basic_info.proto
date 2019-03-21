@@ -220,7 +220,7 @@ message proc_cpu_time {
 }
 
 message proc_basic_info {
-	uint32 job_id = 50;
+	uint32 job_id_xr = 50;
 	uint32 process_id = 51;
 	string process_name = 52;
 	string executable = 53;

@@ -725,11 +725,11 @@ message stats_bag_id_td {
 message stats_bag_block_st {
 	string type = 1;
 	uint32 count = 2;
-	string data = 3;
+	bytes data = 3;
 }
 
 message stats_bag_element_st {
-	string key = 1;
+	bytes key = 1;
 	repeated stats_bag_block_st block_array = 2;
 }
 

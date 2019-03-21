@@ -250,7 +250,7 @@ message ospfv3_runtime_stats {
 	ospfv3_spf_time global_time = 2;
 	uint32 rib_add_routes = 3;
 	uint32 rib_delete_routes = 4;
-	string reason_flags = 5;
+	bytes reason_flags = 5;
 	string lsa_changes = 6;
 	repeated ospfv3_lsa_change lsa = 7;
 	repeated ospfv3_edm_spf_area_stats area_stat = 8;

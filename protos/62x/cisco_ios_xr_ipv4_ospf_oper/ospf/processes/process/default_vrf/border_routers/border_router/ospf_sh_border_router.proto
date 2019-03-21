@@ -220,7 +220,7 @@ message ospf_sh_br_path {
 }
 
 message ospf_sh_border_router {
-	string border_router_id = 50;
+	string border_router_id_xr = 50;
 	repeated ospf_sh_br_path border_router_path = 51;
 }
 

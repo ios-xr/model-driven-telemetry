@@ -218,7 +218,7 @@ message l2fib_base_info {
 message l2fib_prefix_info {
 	uint32 proto = 1;
 	uint32 prefix_length = 2;
-	repeated string prefix = 3;
+	bytes prefix = 3;
 }
 
 message l2fib_mcast_bag_counters {
@@ -259,8 +259,8 @@ message l2fib_mcast_leaf_info {
 	uint32 bridge_id = 53;
 	uint32 xid_count = 54;
 	uint32 platform_data_length = 55;
-	repeated string platform_data = 56;
-	string hardware_information = 57;
+	bytes platform_data = 56;
+	bytes hardware_information = 57;
 	repeated string bridge_domain_name = 58;
 	l2fib_platform_stats_bag forward_stats = 59;
 	l2fib_mcast_irb_info irb_info = 60;

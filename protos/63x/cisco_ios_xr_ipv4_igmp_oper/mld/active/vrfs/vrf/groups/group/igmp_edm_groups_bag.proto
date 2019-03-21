@@ -210,19 +210,15 @@ message igmp_edm_groups_bag_KEYS {
 	string interface_name = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message igmp_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message igmp_edm_groups_bag {
-	igmp_addrtype group_address = 50;
-	string interface_name = 51;
+	igmp_addrtype group_address_xr = 50;
+	string interface_name_xr = 51;
 	uint64 uptime = 52;
 	sint32 expiration_time = 53;
 	igmp_addrtype last_reporter = 54;

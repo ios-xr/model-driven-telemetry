@@ -214,12 +214,8 @@ message l2vpn_evpn_ead_KEYS {
 	uint32 ethernet_tag = 7;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_label_path_buffer {
-	in6_addr_td next_hop = 1;
+	string next_hop = 1;
 	uint32 output_label = 2;
 	string srte_tunnel = 3;
 }
@@ -228,8 +224,8 @@ message l2vpn_evpn_ead {
 	uint32 ethernet_vpnid = 50;
 	string type = 51;
 	repeated uint32 ethernet_segment_identifier = 52;
-	uint32 ethernet_tag = 53;
-	in6_addr_td local_next_hop = 54;
+	uint32 ethernet_tag_xr = 53;
+	string local_next_hop = 54;
 	uint32 local_label = 55;
 	bool is_local_ead = 56;
 	uint32 encap = 57;

@@ -221,8 +221,8 @@ message l2fib_mac_db_info {
 	uint32 element_type = 50;
 	string node_id = 51;
 	uint32 topology_id = 52;
-	string mac_address = 53;
-	uint32 interface_handle = 54;
+	string mac_address_xr = 53;
+	uint32 interface_handle_xr = 54;
 	uint32 xcid = 55;
 	uint32 generation = 56;
 	l2fib_ip_addr_t addr = 57;

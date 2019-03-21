@@ -209,7 +209,7 @@ message icpe_oper_topo_csfl_type_KEYS {
 }
 
 message icpe_oper_topo_dsfl {
-	string interface_name = 1;
+	string interface_name_xr = 1;
 	string interface_handle = 2;
 	bool discovery_running = 3;
 }
@@ -221,12 +221,12 @@ message icpe_oper_topo_remote_sfl {
 	bool remote_is_local_host = 4;
 	uint32 icl_id = 5;
 	string interface_handle = 6;
-	string interface_name = 7;
+	string interface_name_xr = 7;
 }
 
 message icpe_oper_topo_local_sfl {
 	uint32 icl_id = 1;
-	string interface_name = 2;
+	string interface_name_xr = 2;
 	string display_name = 3;
 	bool redundant = 4;
 	bool active = 5;
@@ -250,7 +250,7 @@ message icpe_oper_topo_sattun {
 }
 
 message icpe_oper_topo_csfl_type {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string interface_handle = 51;
 	uint32 redundancy_iccp_group = 52;
 	bool is_physical = 53;

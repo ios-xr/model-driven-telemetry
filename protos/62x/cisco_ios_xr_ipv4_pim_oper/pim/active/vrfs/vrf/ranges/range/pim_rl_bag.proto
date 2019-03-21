@@ -212,6 +212,8 @@ message pim_rl_bag_KEYS {
 
 message pim_addrtype {
 	string af_name = 1;
+	string ipv4_address = 2;
+	string ipv6_address = 3;
 }
 
 message pim_rl_rp_range_bag {

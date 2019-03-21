@@ -215,18 +215,14 @@ message l2vpn_evpn_label_KEYS {
 	uint32 ethernet_tag = 8;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_label_path_buffer {
-	in6_addr_td next_hop = 1;
+	string next_hop = 1;
 	uint32 output_label = 2;
 	string srte_tunnel = 3;
 }
 
 message l2vpn_evpn_label {
-	uint32 evi = 50;
+	uint32 evi_xr = 50;
 	repeated uint32 esi = 51;
 	uint32 tag = 52;
 	uint32 internal_label = 53;

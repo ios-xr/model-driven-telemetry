@@ -225,7 +225,7 @@ message icpe_oper_package_info {
 }
 
 message icpe_oper_sat_package_information_type {
-	uint32 satellite_id = 50;
+	uint32 satellite_id_xr = 50;
 	icpe_oper_package_info install_package_info = 51;
 	string package_support = 52;
 }

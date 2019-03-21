@@ -211,6 +211,6 @@ message rsi_srlg_name_value_show_KEYS {
 
 message rsi_srlg_name_value_show {
 	uint32 srlg_value = 50;
-	string srlg_name = 51;
+	string srlg_name_xr = 51;
 }
 

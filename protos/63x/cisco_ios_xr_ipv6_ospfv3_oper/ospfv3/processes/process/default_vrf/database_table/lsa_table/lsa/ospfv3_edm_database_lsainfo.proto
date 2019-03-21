@@ -247,10 +247,6 @@ message ospfv3_edm_db_detail {
 	string lsa_sync_state = 19;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_database {
 	ospfv3_edm_db_header lsa_header = 1;
 	ospfv3_edm_db_detail lsa_detail = 2;
@@ -259,7 +255,7 @@ message ospfv3_edm_database {
 	uint32 reference_type = 5;
 	uint32 reference_lsa_id = 6;
 	uint32 lsa_router_id = 7;
-	in6_addr_td prefix = 8;
+	string prefix = 8;
 	uint32 prefix_length = 9;
 	string interface_name = 10;
 	bool is_virtual_link = 11;
@@ -298,7 +294,7 @@ message ospfv3_edm_lsa_network {
 message ospfv3_edm_lsa_iapfx {
 	ospfv3_edm_db_header lsa_header = 1;
 	ospfv3_edm_db_detail lsa_detail = 2;
-	in6_addr_td prefix = 3;
+	string prefix = 3;
 	uint32 prefix_length = 4;
 	string priority = 5;
 }
@@ -312,18 +308,18 @@ message ospfv3_edm_lsa_iartr {
 message ospfv3_edm_lsa_external {
 	ospfv3_edm_db_header lsa_header = 1;
 	ospfv3_edm_db_detail lsa_detail = 2;
-	in6_addr_td prefix = 3;
+	string prefix = 3;
 	uint32 prefix_length = 4;
 	string metric_type = 5;
 	uint32 tos_cost = 6;
 	bool is_forwarding_address_set = 7;
-	in6_addr_td forwarding_address = 8;
+	string forwarding_address = 8;
 	uint32 external_tag = 9;
 	string priority = 10;
 }
 
 message ospfv3_edm_prefix {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 ospfv3_prefix_length = 2;
 	uint32 ospfv3_prefix_options = 3;
 	uint32 ospfv3_prefix_metric = 4;
@@ -338,7 +334,7 @@ message ospfv3_edm_lsa_link {
 	uint32 virtual_link_id = 5;
 	bool is_sham_link = 6;
 	uint32 sham_link_id = 7;
-	in6_addr_td lsa_link_local = 8;
+	string lsa_link_local = 8;
 	uint32 router_priority = 9;
 	repeated ospfv3_edm_prefix prefix = 10;
 }

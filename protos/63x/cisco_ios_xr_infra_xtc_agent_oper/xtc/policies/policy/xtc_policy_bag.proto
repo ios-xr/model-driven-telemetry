@@ -208,20 +208,16 @@ message xtc_policy_bag_KEYS {
 	uint32 id = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message xtc_ip_addr_type {
 	string af_name = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message xtc_prefix_sid_type {
 	string sid_type = 1;
 	uint32 label = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message xtc_policy_bsid_bag {

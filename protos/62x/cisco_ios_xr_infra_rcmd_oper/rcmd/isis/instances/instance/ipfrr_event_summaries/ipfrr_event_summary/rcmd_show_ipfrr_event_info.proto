@@ -235,7 +235,7 @@ message rcmd_show_ipfrr_rlfa_pq_node {
 }
 
 message rcmd_show_ipfrr_event_info {
-	uint32 event_id = 50;
+	uint32 event_id_xr = 50;
 	string trigger_time = 51;
 	uint32 trigger_spf_run = 52;
 	uint32 wait_time = 53;

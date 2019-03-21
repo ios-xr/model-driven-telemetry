@@ -313,7 +313,7 @@ message pce_ipv6_link_bag {
 }
 
 message pce_xtc_node_bag {
-	uint32 node_identifier = 50;
+	uint32 node_identifier_xr = 50;
 	pce_node_pid_bag node_protocol_identifier = 51;
 	repeated pce_prefix_bag prefixe = 52;
 	repeated pce_ipv4_link_bag ipv4_link = 53;

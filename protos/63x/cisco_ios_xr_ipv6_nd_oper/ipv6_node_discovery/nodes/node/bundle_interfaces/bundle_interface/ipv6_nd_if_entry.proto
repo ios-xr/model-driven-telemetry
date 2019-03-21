@@ -231,12 +231,8 @@ message ipv6_nd_if_params {
 	uint32 dropped_glean_req_count = 19;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_nd_addr {
-	in6_addr_td ipv6_address = 1;
+	string ipv6_address = 1;
 }
 
 message ipv6_nd_gspnode {

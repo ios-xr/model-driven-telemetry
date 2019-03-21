@@ -215,7 +215,7 @@ message igmp_addrtype {
 }
 
 message igmp_edm_idb_bag {
-	string interface_name = 1;
+	string interface_name_xr = 1;
 	uint32 state = 2;
 	igmp_addrtype address = 3;
 	uint32 prefix_length = 4;

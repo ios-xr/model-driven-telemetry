@@ -224,7 +224,7 @@ message pm_probe_sample_bag {
 }
 
 message pm_intf_probe_history_bag {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 interface_handle = 51;
 	repeated pm_probe_sample_bag history = 52;
 }

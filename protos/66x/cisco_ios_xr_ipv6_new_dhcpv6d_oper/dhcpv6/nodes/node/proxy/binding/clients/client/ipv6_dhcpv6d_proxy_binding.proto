@@ -216,7 +216,7 @@ message bag_dhcpv6d_addr_attrb_item {
 	uint32 remaining_lease_time = 4;
 }
 
-message bag_dhcpv6d_addr_attrb {
+message bag_dhcpv6d_addr_attrb_entry {
 	repeated bag_dhcpv6d_addr_attrb_item bag_dhcpv6d_addr_attrb = 1;
 }
 
@@ -226,10 +226,10 @@ message bag_dhcpv6d_ia_id_pd_info_item {
 	uint32 flags = 3;
 	uint32 total_address = 4;
 	string state = 5;
-	bag_dhcpv6d_addr_attrb addresses = 6;
+	bag_dhcpv6d_addr_attrb_entry addresses = 6;
 }
 
-message bag_dhcpv6d_ia_id_pd_info {
+message bag_dhcpv6d_ia_id_pd_info_entry {
 	repeated bag_dhcpv6d_ia_id_pd_info_item bag_dhcpv6d_ia_id_pd_info = 1;
 }
 
@@ -240,7 +240,7 @@ message ipv6_dhcpv6d_proxy_binding {
 	string vrf_name = 53;
 	string mac_address = 54;
 	uint32 ia_id_p_ds = 55;
-	bag_dhcpv6d_ia_id_pd_info ia_id_pd = 56;
+	bag_dhcpv6d_ia_id_pd_info_entry ia_id_pd = 56;
 	string interface_name = 57;
 	string access_vrf_name = 58;
 	uint32 proxy_binding_tags = 59;

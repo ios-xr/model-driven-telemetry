@@ -221,7 +221,7 @@ message taskmap {
 }
 
 message taskgroup_det {
-	string name = 50;
+	string name_xr = 50;
 	taskmap included_task_ids = 51;
 	taskmap task_map = 52;
 }

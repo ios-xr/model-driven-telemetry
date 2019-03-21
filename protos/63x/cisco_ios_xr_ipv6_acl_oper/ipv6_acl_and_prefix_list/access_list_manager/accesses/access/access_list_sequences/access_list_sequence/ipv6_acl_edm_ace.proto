@@ -209,12 +209,8 @@ message ipv6_acl_edm_ace_KEYS {
 	uint32 sequence_number = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_acl_bag_nh_info {
-	in6_addr_td next_hop = 1;
+	string next_hop = 1;
 	string vrf_name = 2;
 	string track_name = 3;
 	string status = 4;
@@ -224,7 +220,7 @@ message ipv6_acl_bag_nh_info {
 
 message ipv6_acl_bag_hw_nh_info {
 	string type = 1;
-	in6_addr_td next_hop = 2;
+	string next_hop = 2;
 	uint32 table_id = 3;
 	string vrf_name = 4;
 }
@@ -242,12 +238,12 @@ message ipv6_acl_edm_ace {
 	string is_protocol_operator = 53;
 	sint32 is_ipv6_protocol_type = 54;
 	sint32 is_ipv6_protocol2_type = 55;
-	in6_addr_td is_source_address_in_numbers = 56;
+	string is_source_address_in_numbers = 56;
 	uint32 is_source_address_prefix_length = 57;
-	in6_addr_td source_mask = 58;
-	in6_addr_td is_destination_address_in_numbers = 59;
+	string source_mask = 58;
+	string is_destination_address_in_numbers = 59;
 	uint32 is_destination_address_prefix_length = 60;
-	in6_addr_td destination_mask = 61;
+	string destination_mask = 61;
 	string is_source_operator = 62;
 	uint32 is_source_port1 = 63;
 	uint32 is_source_port2 = 64;

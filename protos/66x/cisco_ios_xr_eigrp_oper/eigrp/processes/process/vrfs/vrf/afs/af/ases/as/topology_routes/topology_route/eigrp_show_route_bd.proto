@@ -256,7 +256,7 @@ message eigrp_show_path_bd {
 	uint32 internal_tag = 29;
 	bool extended_communities_present = 30;
 	uint32 extended_communities_length = 31;
-	repeated string extended_communities = 32;
+	string extended_communities = 32;
 	bool external_information_present = 33;
 	uint32 external_router_id = 34;
 	bool external_this_system = 35;
@@ -280,7 +280,7 @@ message eigrp_show_route_bd {
 	uint32 as_number = 51;
 	string router_id = 52;
 	bool active = 53;
-	eigrp_prefix_bd prefix = 54;
+	eigrp_prefix_bd prefix_xr = 54;
 	uint32 successors = 55;
 	bool successors_present = 56;
 	uint32 old_metric = 57;

@@ -234,9 +234,9 @@ message iedge_accnt_data {
 message iedge_oper_coa_data {
 	bool request_acked = 1;
 	string request_time = 2;
-	string coa_request_attributes = 3;
+	bytes coa_request_attributes = 3;
 	string reply_time = 4;
-	string coa_reply_attributes = 5;
+	bytes coa_reply_attributes = 5;
 }
 
 message iedge_aaa_attr {
@@ -319,7 +319,7 @@ message subscriber_session_data {
 	string session_ipv6_address = 61;
 	string session_ipv6_prefix = 62;
 	string delegated_ipv6_prefix = 63;
-	string ipv6_interface_id = 64;
+	bytes ipv6_interface_id = 64;
 	string mac_address = 65;
 	string account_session_id = 66;
 	string nas_port = 67;

@@ -210,14 +210,10 @@ message sse_pfilter_ea_ace_brief_KEYS {
 	uint32 sequence_number = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message sse_pfilter_next_hop_addr_type {
 	string address_type = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message sse_pfilter_ea_ace_data_brief {

@@ -209,7 +209,7 @@ message icpe_sdacp_cfg_sfl_KEYS {
 }
 
 message icpe_sdacp_disc_sfl {
-	string interface_name = 1;
+	string interface_name_xr = 1;
 	string interface_status = 2;
 }
 
@@ -235,7 +235,7 @@ message icpe_sdacp_sat {
 }
 
 message icpe_sdacp_cfg_sfl {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	repeated icpe_sdacp_disc_sfl interface = 51;
 	repeated icpe_sdacp_sat satellite = 52;
 }

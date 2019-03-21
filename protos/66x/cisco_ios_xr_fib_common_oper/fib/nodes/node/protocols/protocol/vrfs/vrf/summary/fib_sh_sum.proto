@@ -235,7 +235,7 @@ message fib_sh_pfx_masklen_distrib {
 }
 
 message fib_sh_sum {
-	repeated string prefix = 50;
+	string prefix = 50;
 	uint32 ss_tbl_id = 51;
 	uint32 ss_tbl_id_ptr = 52;
 	uint32 ss_vrf_id = 53;

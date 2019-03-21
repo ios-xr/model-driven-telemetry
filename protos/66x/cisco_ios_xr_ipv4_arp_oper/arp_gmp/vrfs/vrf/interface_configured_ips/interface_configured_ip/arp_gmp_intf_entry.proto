@@ -218,7 +218,7 @@ message arp_gmp_config_entry {
 }
 
 message arp_gmp_intf_entry {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 reference_count = 51;
 	arp_gmp_config_entry associated_configuration_entry = 52;
 }

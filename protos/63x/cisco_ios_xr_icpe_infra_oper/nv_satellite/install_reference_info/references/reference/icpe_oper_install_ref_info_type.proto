@@ -209,7 +209,7 @@ message icpe_oper_install_ref_info_type_KEYS {
 }
 
 message icpe_oper_install_ref_info_type {
-	string reference_name = 50;
+	string reference_name_xr = 50;
 	repeated string reference_file = 51;
 }
 

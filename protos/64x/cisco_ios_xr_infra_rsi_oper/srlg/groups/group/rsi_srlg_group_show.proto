@@ -215,7 +215,7 @@ message rsi_srlg_attr_brief {
 }
 
 message rsi_srlg_group_show {
-	string group_name = 50;
+	string group_name_xr = 50;
 	uint32 group_values = 51;
 	repeated rsi_srlg_attr_brief srlg_attribute = 52;
 }

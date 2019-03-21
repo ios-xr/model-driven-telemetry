@@ -214,7 +214,7 @@ message mpls_te_head_bfd_lsp_info {
 }
 
 message mpls_te_head_bfd_vif_info {
-	string tunnel_name = 50;
+	string tunnel_name_xr = 50;
 	string destination_address = 51;
 	mpls_te_head_bfd_lsp_info current_lspbfd_info = 52;
 	mpls_te_head_bfd_lsp_info standby_lspbfd_info = 53;

@@ -226,7 +226,7 @@ message ldp_intf_autocfg {
 
 message ldp_intf {
 	string interface = 50;
-	string interface_name = 51;
+	string interface_name_xr = 51;
 	ldp_vrf_info vrf = 52;
 	bool ldp_enabled = 53;
 	bool is_im_stale = 54;

@@ -354,7 +354,7 @@ message ospf_sh_lsa_opq_grace {
 message ospf_sh_opq_ri_unknown_tlv {
 	uint32 ri_gen_tlv_type = 1;
 	uint32 ri_gen_tlv_length = 2;
-	repeated string ri_genvalue = 3;
+	string ri_genvalue = 3;
 }
 
 message ospf_sh_opq_ri_rtrcap_tlv {
@@ -366,7 +366,7 @@ message ospf_sh_opq_ri_rtrcap_tlv {
 	bool rtr_cap_p2plan = 6;
 	bool rtr_cap_te_exp = 7;
 	uint32 rtr_cap_all_bits = 8;
-	repeated string rtr_cap_additional_info = 9;
+	string rtr_cap_additional_info = 9;
 }
 
 message ospf_sh_opq_ri_pce_ipv4_addr_stlv {

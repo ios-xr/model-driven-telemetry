@@ -209,12 +209,8 @@ message l2vpn_evpn_neighbor_KEYS {
 	string neighbor_ip = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_evpn_neighbor {
-	uint32 evi = 50;
-	in6_addr_td neighbor = 51;
+	uint32 evi_xr = 50;
+	string neighbor = 51;
 }
 

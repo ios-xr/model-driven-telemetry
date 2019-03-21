@@ -213,7 +213,7 @@ message ipv4_dhcpd_base_interface_reference_item {
 	string base_reference_interface_name = 1;
 }
 
-message ipv4_dhcpd_base_interface_reference {
+message ipv4_dhcpd_base_interface_reference_entry {
 	repeated ipv4_dhcpd_base_interface_reference_item ipv4_dhcpd_base_interface_reference = 1;
 }
 
@@ -225,7 +225,7 @@ message ipv4_dhcpd_base_child_profile_info_item {
 	repeated uint32 option_data = 5;
 }
 
-message ipv4_dhcpd_base_child_profile_info {
+message ipv4_dhcpd_base_child_profile_info_entry {
 	repeated ipv4_dhcpd_base_child_profile_info_item ipv4_dhcpd_base_child_profile_info = 1;
 }
 
@@ -236,7 +236,7 @@ message ipv4_dhcpd_base_profile {
 	string remote_id = 53;
 	uint32 child_profile_count = 54;
 	uint32 intf_ref_count = 55;
-	ipv4_dhcpd_base_interface_reference interface_references = 56;
-	ipv4_dhcpd_base_child_profile_info child_profile_info = 57;
+	ipv4_dhcpd_base_interface_reference_entry interface_references = 56;
+	ipv4_dhcpd_base_child_profile_info_entry child_profile_info = 57;
 }
 

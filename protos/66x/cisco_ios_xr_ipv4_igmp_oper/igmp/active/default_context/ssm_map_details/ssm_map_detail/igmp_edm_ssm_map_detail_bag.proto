@@ -216,7 +216,7 @@ message igmp_addrtype {
 }
 
 message igmp_edm_ssm_map_bag {
-	igmp_addrtype group_address = 1;
+	igmp_addrtype group_address_xr = 1;
 	uint32 map_type = 2;
 	uint32 source_counts = 3;
 }

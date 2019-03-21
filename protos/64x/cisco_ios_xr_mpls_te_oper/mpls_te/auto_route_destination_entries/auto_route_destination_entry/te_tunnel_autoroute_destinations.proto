@@ -217,7 +217,7 @@ message te_tunnel_autoroute_dest {
 }
 
 message te_tunnel_autoroute_destinations {
-	uint32 tunnel_id = 50;
+	uint32 tunnel_id_xr = 50;
 	repeated te_tunnel_autoroute_dest tunnel_autoroute_dest = 51;
 }
 

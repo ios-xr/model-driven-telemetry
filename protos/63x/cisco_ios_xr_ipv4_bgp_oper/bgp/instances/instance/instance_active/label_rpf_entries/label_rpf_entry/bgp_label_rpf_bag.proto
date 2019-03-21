@@ -209,13 +209,9 @@ message bgp_label_rpf_bag_KEYS {
 	uint32 label = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bgp_edm_label_rpf_nbr_ {
 	string ip = 1;
-	in6_addr_td ip6 = 2;
+	string ip6 = 2;
 	uint32 count = 3;
 	uint32 flags = 4;
 }

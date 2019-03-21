@@ -220,7 +220,7 @@ message atm_vcm_vc {
 	string main_interface = 50;
 	string sub_interface = 51;
 	string vc_interface = 52;
-	uint32 vpi = 53;
+	uint32 vpi_xr = 53;
 	uint32 vci_xr = 54;
 	string type = 55;
 	string encapsulation = 56;

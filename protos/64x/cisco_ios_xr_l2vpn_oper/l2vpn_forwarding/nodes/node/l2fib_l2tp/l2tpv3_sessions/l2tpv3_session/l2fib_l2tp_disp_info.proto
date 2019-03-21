@@ -214,7 +214,7 @@ message l2fib_base_info {
 
 message l2fib_l2tp_disp_info {
 	l2fib_base_info base = 50;
-	uint32 session_id = 51;
+	uint32 session_id_xr = 51;
 	string interface_handle = 52;
 	string sub_interface_name = 53;
 	string source_address = 54;

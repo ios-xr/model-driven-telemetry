@@ -224,17 +224,13 @@ message ipsla_ipv4_pw_t {
 	uint32 virtual_circuit_id = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipsla_target_union {
 	string target_type = 1;
 	string ipv4_address_target = 2;
 	ipsla_ipv4_prefix_t ipv4_prefix_target = 3;
 	ipsla_tunnel_id_t tunnel_id_target = 4;
 	ipsla_ipv4_pw_t ipv4_pseudowire_target = 5;
-	in6_addr_td ipv6_address_target = 6;
+	string ipv6_address_target = 6;
 }
 
 message ipsla_history_bag {

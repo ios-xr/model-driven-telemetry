@@ -243,10 +243,6 @@ message icpe_optical_status {
 	repeated icpe_optical_application_state application = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message icpe_timestamp {
 	uint32 seconds = 1;
 	uint32 nanoseconds = 2;
@@ -287,7 +283,7 @@ message icpe_oper_cfgd_link {
 }
 
 message icpe_oper_sat_status {
-	uint32 satellite_id = 50;
+	uint32 satellite_id_xr = 50;
 	icpe_oper_cand_fab_ports candidate_fabric_ports = 51;
 	string version_check_state = 52;
 	bool remote_version_present = 53;
@@ -299,7 +295,7 @@ message icpe_oper_sat_status {
 	string ip_address = 59;
 	bool ip_address_present = 60;
 	bool ip_address_auto = 61;
-	in6_addr_td ipv6_address = 62;
+	string ipv6_address = 62;
 	bool ipv6_address_present = 63;
 	string vrf_name = 64;
 	uint32 vrfid = 65;

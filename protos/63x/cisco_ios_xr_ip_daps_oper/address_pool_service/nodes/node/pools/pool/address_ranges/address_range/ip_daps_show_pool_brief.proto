@@ -210,14 +210,10 @@ message ip_daps_show_pool_brief_KEYS {
 	string start_address = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ip_addr_un {
 	string address_family = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message ip_addr_st {
@@ -228,7 +224,7 @@ message ip_daps_show_pool_brief {
 	string pool_name = 50;
 	string vrf_name = 51;
 	string pool_scope = 52;
-	ip_addr_st start_address = 53;
+	ip_addr_st start_address_xr = 53;
 	ip_addr_st end_address = 54;
 	ip_addr_st default_router = 55;
 	uint32 allocated_addresses = 56;

@@ -218,7 +218,7 @@ message pp_duration {
 }
 
 message pp_det {
-	string name = 50;
+	string name_xr = 50;
 	uint32 min_len = 51;
 	uint32 max_len = 52;
 	uint32 spl_char = 53;

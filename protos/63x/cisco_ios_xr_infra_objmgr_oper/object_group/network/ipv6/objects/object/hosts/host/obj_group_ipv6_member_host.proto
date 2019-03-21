@@ -209,11 +209,7 @@ message obj_group_ipv6_member_host_KEYS {
 	string host_address = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message obj_group_ipv6_member_host {
-	in6_addr_td host_address = 50;
+	string host_address_xr = 50;
 }
 

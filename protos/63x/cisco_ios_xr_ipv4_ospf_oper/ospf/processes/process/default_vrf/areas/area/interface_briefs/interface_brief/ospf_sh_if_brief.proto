@@ -220,7 +220,7 @@ message ospf_sh_interface_madj {
 }
 
 message ospf_sh_if_brief {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string interface_area = 51;
 	string interface_address = 52;
 	uint32 interface_mask = 53;

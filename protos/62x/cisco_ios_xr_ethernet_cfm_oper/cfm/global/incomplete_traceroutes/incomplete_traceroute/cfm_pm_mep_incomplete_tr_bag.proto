@@ -212,8 +212,21 @@ message cfm_pm_mep_incomplete_tr_bag_KEYS {
 	uint32 transaction_id = 5;
 }
 
+message cfm_pm_lt_opts_basic {
+	bool is_auto = 1;
+	bool fdb_only = 2;
+}
+
+message cfm_pm_lt_opts_exploratory {
+	string delay_model = 1;
+	uint32 delay_constant_factor = 2;
+	string reply_filter = 3;
+}
+
 message cfm_pm_lt_opts {
 	string mode = 1;
+	cfm_pm_lt_opts_basic basic_options = 2;
+	cfm_pm_lt_opts_exploratory exploratory_options = 3;
 }
 
 message cfm_pm_lt_info {

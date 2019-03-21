@@ -209,7 +209,7 @@ message rcmd_show_ldp_session_event_KEYS {
 }
 
 message rcmd_show_ldp_session_event {
-	uint32 event_id = 50;
+	uint32 event_id_xr = 50;
 	string event_type = 51;
 	string event_time = 52;
 	string lsr_id = 53;

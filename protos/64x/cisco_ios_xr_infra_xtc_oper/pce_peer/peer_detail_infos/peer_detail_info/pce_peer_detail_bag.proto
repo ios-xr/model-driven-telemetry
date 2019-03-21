@@ -266,7 +266,7 @@ message pce_pcep_detail_bag {
 }
 
 message pce_peer_detail_bag {
-	pce_ip_addr_type peer_address = 50;
+	pce_ip_addr_type peer_address_xr = 50;
 	string peer_protocol = 51;
 	pce_pcep_detail_bag detail_pcep_information = 52;
 	uint32 max_sid_depth = 53;

@@ -262,15 +262,14 @@ message l2vpn_fr {
 	uint32 dlci = 2;
 }
 
-message item_iflist_if {
-	string interface_name = 1;
-	string replicate_status = 2;
+message interfaces_item {
+	string value = 1;
 }
 
 message item_iflist_ifl {
 	string interface_list_name = 1;
 	uint32 interface_list_id = 2;
-	repeated item_iflist_if interface = 3;
+	repeated interfaces_item interface = 3;
 }
 
 message l2vpn_pwhe {
@@ -379,14 +378,10 @@ message l2vpn_ac {
 	uint32 evpn_internal_label = 26;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_peer {
 	string type = 1;
 	string ipv4_peer_id = 2;
-	in6_addr_td ipv6_peer_id = 3;
+	string ipv6_peer_id = 3;
 	uint32 internal_label = 4;
 }
 
@@ -459,7 +454,7 @@ message l2vpn_atom {
 message l2vpn_l2tpv3 {
 	string l2tp_class_name = 1;
 	string ipv4_source_address = 2;
-	in6_addr_td ipv6_source_address = 3;
+	string ipv6_source_address = 3;
 	bool path_mtu_enabled = 4;
 	uint32 path_mtu_max_value = 5;
 	bool dont_fragment_bit = 6;
@@ -533,7 +528,7 @@ message l2vpn_p2mp_pw {
 message l2vpn_pw {
 	l2vpn_peer peer_id = 1;
 	string local_source_address = 2;
-	in6_addr_td ipv6_local_source_address = 3;
+	string ipv6_local_source_address = 3;
 	uint64 pseudo_wire_id = 4;
 	bool is_pwr_type = 5;
 	bool is_evpn_vpws_type = 6;
@@ -637,7 +632,7 @@ message l2vpn_xc_ce2ce {
 }
 
 message l2vpn_xc {
-	string group_name = 50;
+	string group_name_xr = 50;
 	string xconnect_name_xr = 51;
 	l2vpn_segment backup = 52;
 	l2vpn_segment segment1 = 53;

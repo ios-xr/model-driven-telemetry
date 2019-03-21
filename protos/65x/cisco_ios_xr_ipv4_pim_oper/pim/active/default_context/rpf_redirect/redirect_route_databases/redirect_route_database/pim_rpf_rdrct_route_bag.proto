@@ -226,8 +226,8 @@ message pim_rpf_rdrct_rintf_bag {
 }
 
 message pim_rpf_rdrct_route_bag {
-	pim_addrtype group_address = 50;
-	pim_addrtype source_address = 51;
+	pim_addrtype group_address_xr = 50;
+	pim_addrtype source_address_xr = 51;
 	repeated pim_rpf_rdrct_rintf_bag interface = 52;
 	uint32 bandwidth = 53;
 	uint64 uptime = 54;

@@ -245,7 +245,7 @@ message l2vpn_rt {
 
 message l2vpn_evpn_evi_bgp_rt {
 	string bd_name = 50;
-	uint32 evi = 51;
+	uint32 evi_xr = 51;
 	l2vpn_rt route_target = 52;
 	string route_target_role = 53;
 	bool route_target_stitching = 54;

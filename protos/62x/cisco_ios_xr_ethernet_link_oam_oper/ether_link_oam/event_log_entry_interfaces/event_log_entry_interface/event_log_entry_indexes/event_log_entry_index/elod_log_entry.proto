@@ -212,7 +212,7 @@ message elod_log_entry_KEYS {
 message elod_log_entry {
 	uint32 index = 50;
 	string handle = 51;
-	string oui = 52;
+	bytes oui = 52;
 	uint64 timestamp = 53;
 	string type = 54;
 	string location = 55;

@@ -209,7 +209,7 @@ message eem_env_KEYS {
 }
 
 message eem_env {
-	string name = 50;
+	string name_xr = 50;
 	string value = 51;
 }
 

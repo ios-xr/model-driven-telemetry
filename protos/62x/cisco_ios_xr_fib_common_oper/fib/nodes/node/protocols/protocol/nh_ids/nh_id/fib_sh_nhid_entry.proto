@@ -214,7 +214,7 @@ message fib_sh_nhid_entry_KEYS {
 
 message fib_sh_nhid_entry {
 	string nh_interf_handle = 50;
-	string nh_address = 51;
+	string nh_address_xr = 51;
 	uint32 nh_protocol = 52;
 	uint32 nh_link_type = 53;
 	uint32 nh_table_id = 54;

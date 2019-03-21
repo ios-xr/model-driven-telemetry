@@ -209,18 +209,14 @@ message ipv6_dhcpv6d_server_binding_KEYS {
 	string client_id = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bag_dhcpv6d_addr_attrb_item {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 prefix_length = 2;
 	uint32 lease_time = 3;
 	uint32 remaining_lease_time = 4;
 }
 
-message bag_dhcpv6d_addr_attrb {
+message bag_dhcpv6d_addr_attrb_entry {
 	repeated bag_dhcpv6d_addr_attrb_item bag_dhcpv6d_addr_attrb = 5;
 }
 
@@ -230,23 +226,23 @@ message bag_dhcpv6d_ia_id_pd_info_item {
 	uint32 flags = 3;
 	uint32 total_address = 4;
 	string state = 5;
-	bag_dhcpv6d_addr_attrb addresses = 6;
+	bag_dhcpv6d_addr_attrb_entry addresses = 6;
 }
 
-message bag_dhcpv6d_ia_id_pd_info {
+message bag_dhcpv6d_ia_id_pd_info_entry {
 	repeated bag_dhcpv6d_ia_id_pd_info_item bag_dhcpv6d_ia_id_pd_info = 7;
 }
 
 message ipv6_dhcpv6d_server_binding {
 	string duid = 50;
-	uint32 client_id = 51;
+	uint32 client_id_xr = 51;
 	uint32 client_flag = 52;
 	uint32 subscriber_label = 53;
 	string vrf_name = 54;
 	string mac_address = 55;
 	uint32 ia_id_p_ds = 56;
-	bag_dhcpv6d_ia_id_pd_info ia_id_pd = 57;
-	in6_addr_td link_local_address = 58;
+	bag_dhcpv6d_ia_id_pd_info_entry ia_id_pd = 57;
+	string link_local_address = 58;
 	string interface_name = 59;
 	string access_vrf_name = 60;
 	uint32 server_binding_tags = 61;
@@ -254,7 +250,7 @@ message ipv6_dhcpv6d_server_binding {
 	uint32 server_binding_inner_tag = 63;
 	string pool_name = 64;
 	string profile_name = 65;
-	in6_addr_td framed_ipv6_prefix = 66;
+	string framed_ipv6_prefix = 66;
 	uint32 framed_prefix_length = 67;
 	string class_name = 68;
 	string rx_remote_id = 69;

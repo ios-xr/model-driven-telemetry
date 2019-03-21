@@ -238,7 +238,7 @@ message ospf_sh_vlink_neighbor {
 }
 
 message ospf_sh_virtual_links {
-	string virtual_link_name = 50;
+	string virtual_link_name_xr = 50;
 	string virtual_link_neighbor_id = 51;
 	string virtual_link_state = 52;
 	bool virtual_link_demand_circuit = 53;

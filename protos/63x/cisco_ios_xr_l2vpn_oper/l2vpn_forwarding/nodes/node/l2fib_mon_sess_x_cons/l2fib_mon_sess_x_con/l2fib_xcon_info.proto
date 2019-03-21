@@ -212,14 +212,10 @@ message l2fib_xcon_info_KEYS {
 message l2fib_base_info {
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2fib_nhop_info {
 	l2fib_base_info base = 1;
 	string next_hop_address = 2;
-	in6_addr_td next_hop_address_v6 = 3;
+	string next_hop_address_v6 = 3;
 	uint32 next_hop_internal_label = 4;
 	bool ecd_plaformt_data_valid = 5;
 	uint32 ecd_platform_data_length = 6;
@@ -359,8 +355,8 @@ message l2fib_pw_l2tp_ipv6_ts_info {
 	uint32 path_mtu = 5;
 	uint32 sequence_number_sent = 6;
 	uint32 sequence_number_expected = 7;
-	in6_addr_td local_address = 8;
-	in6_addr_td remote_address = 9;
+	string local_address = 8;
+	string remote_address = 9;
 }
 
 message l2fib_pw_un {

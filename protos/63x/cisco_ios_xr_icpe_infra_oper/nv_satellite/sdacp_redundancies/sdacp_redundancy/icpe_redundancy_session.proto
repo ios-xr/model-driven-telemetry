@@ -226,7 +226,7 @@ message icpe_redundancy_chan {
 }
 
 message icpe_redundancy_session {
-	uint32 iccp_group = 50;
+	uint32 iccp_group_xr = 50;
 	string protocol_state = 51;
 	icpe_timestamp protocol_state_timestamp = 52;
 	string transport_state = 53;

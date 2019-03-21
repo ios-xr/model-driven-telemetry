@@ -213,10 +213,6 @@ message l2rib_mac_ip_route_KEYS {
 	uint32 prod_id = 6;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message labeled_next_hop {
 	string address_family = 1;
 	string ip_address = 2;
@@ -227,7 +223,7 @@ message labeled_next_hop {
 message next_hop {
 	string type = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 	string mac = 4;
 	string interface_handle = 5;
 	labeled_next_hop labeled = 6;

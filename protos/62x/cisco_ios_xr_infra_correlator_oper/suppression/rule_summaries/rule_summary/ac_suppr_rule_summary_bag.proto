@@ -209,7 +209,7 @@ message ac_suppr_rule_summary_bag_KEYS {
 }
 
 message ac_suppr_rule_summary_bag {
-	string rule_name = 50;
+	string rule_name_xr = 50;
 	string rule_state = 51;
 	uint32 suppressed_alarms_count = 52;
 }

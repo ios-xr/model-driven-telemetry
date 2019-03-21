@@ -226,14 +226,10 @@ message daps_pool_allocations {
 	daps_pool_threshold low_threshold = 8;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ip_addr_un {
 	string address_family = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message ip_addr_st {

@@ -213,6 +213,8 @@ message igmp_edm_groups_detail_bag_KEYS {
 
 message igmp_addrtype {
 	string af_name = 1;
+	string ipv4_address = 2;
+	string ipv6_address = 3;
 }
 
 message igmp_edm_groups_bag {

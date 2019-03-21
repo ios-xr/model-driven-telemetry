@@ -217,8 +217,8 @@ message pim_addrtype {
 }
 
 message pim_mroute_bag {
-	pim_addrtype source_address = 50;
-	pim_addrtype group_address = 51;
+	pim_addrtype source_address_xr = 50;
+	pim_addrtype group_address_xr = 51;
 	sint32 upstream_assert_timer = 52;
 	uint32 assert_metric = 53;
 	uint32 assert_metric_preference = 54;

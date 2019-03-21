@@ -242,6 +242,6 @@ message subscriber_session_af_summary {
 
 message subscriber_session_summary {
 	subscriber_session_state_summary state_xr = 50;
-	subscriber_session_af_summary address_family = 51;
+	subscriber_session_af_summary address_family_xr = 51;
 }
 

@@ -211,7 +211,7 @@ message ipv6_dhcpv6d_relay_route_binding_KEYS {
 
 message ipv6_dhcpv6d_relay_route_binding {
 	string duid = 50;
-	uint32 client_id = 51;
+	uint32 client_id_xr = 51;
 	uint32 prefix_length = 52;
 	string prefix = 53;
 	string vrf_name = 54;

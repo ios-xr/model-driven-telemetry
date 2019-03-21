@@ -214,7 +214,7 @@ message interfaces_item {
 }
 
 message l2vpn_generic_if_list {
-	string interface_list_name = 50;
+	string interface_list_name_xr = 50;
 	uint32 interface_list_id = 51;
 	repeated interfaces_item interface = 52;
 	uint32 number_of_interfaces = 53;

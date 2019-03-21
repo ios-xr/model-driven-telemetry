@@ -273,7 +273,7 @@ message standby_grp_info {
 	string hsrp_router_state = 76;
 	repeated string secondary_address = 77;
 	repeated ipv6_bag_addr_ global_address = 78;
-	string interface_name = 79;
+	string interface_name_xr = 79;
 	string interface = 80;
 	uint32 router_priority = 81;
 	uint32 active_priority = 82;

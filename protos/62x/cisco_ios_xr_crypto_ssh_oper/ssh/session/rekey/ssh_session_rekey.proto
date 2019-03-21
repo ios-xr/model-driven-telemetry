@@ -207,11 +207,19 @@ package cisco_ios_xr_crypto_ssh_oper.ssh.session.rekey;
 message ssh_session_rekey_KEYS {
 }
 
-message session_rekey_info {
+message session_rekey_info_item {
+	uint32 session_id = 1;
+	uint32 session_rekey_count = 2;
+	string time_to_rekey = 3;
+	string volume_to_rekey = 4;
+}
+
+message session_rekey_info_entry {
+	repeated session_rekey_info_item session_rekey_info = 5;
 }
 
 message ssh_session_rekey {
-	session_rekey_info session_rekey_info = 50;
-	session_rekey_info session_rekey_info_1 = 51;
+	session_rekey_info_entry incoming_sessions = 50;
+	session_rekey_info_entry outgoing_connections = 51;
 }
 

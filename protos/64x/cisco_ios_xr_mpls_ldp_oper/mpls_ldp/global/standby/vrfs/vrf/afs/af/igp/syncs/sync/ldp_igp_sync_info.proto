@@ -227,7 +227,7 @@ message ldp_igp_sync_intf_gr_only {
 
 message ldp_igp_sync_info {
 	ldp_vrf_info vrf = 50;
-	string interface_name = 51;
+	string interface_name_xr = 51;
 	string igp_sync_state = 52;
 	uint32 igp_sync_delay = 53;
 	bool is_delay_timer_running = 54;

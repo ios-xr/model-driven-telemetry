@@ -211,19 +211,15 @@ message pim_mroute_bag_KEYS {
 	uint32 source_netmask = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pim_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message pim_mroute_bag {
-	pim_addrtype source_address = 50;
-	pim_addrtype group_address = 51;
+	pim_addrtype source_address_xr = 50;
+	pim_addrtype group_address_xr = 51;
 	sint32 upstream_assert_timer = 52;
 	uint32 assert_metric = 53;
 	uint32 assert_metric_preference = 54;

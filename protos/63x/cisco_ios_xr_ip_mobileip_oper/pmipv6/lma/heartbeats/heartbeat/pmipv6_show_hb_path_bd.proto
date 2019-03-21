@@ -208,10 +208,6 @@ message pmipv6_show_hb_path_bd_KEYS {
 	string peer_addr = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pmipv6_show_hb_path_bd {
 	string vrf = 50;
 	string customer_name = 51;
@@ -219,8 +215,8 @@ message pmipv6_show_hb_path_bd {
 	uint32 destination_port = 53;
 	string source_ipv4_address = 54;
 	string destination_ipv4_address = 55;
-	in6_addr_td source_ipv6_address = 56;
-	in6_addr_td destination_ipv6_address = 57;
+	string source_ipv6_address = 56;
+	string destination_ipv6_address = 57;
 	bool status = 58;
 	bool ipv6_path = 59;
 }

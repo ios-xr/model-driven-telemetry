@@ -208,18 +208,14 @@ message igmp_edm_idb_bag_KEYS {
 	string interface_name = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message igmp_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message igmp_edm_idb_bag {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 state = 51;
 	igmp_addrtype address = 52;
 	uint32 prefix_length = 53;

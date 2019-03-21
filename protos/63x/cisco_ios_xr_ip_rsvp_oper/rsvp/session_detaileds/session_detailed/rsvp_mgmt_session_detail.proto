@@ -367,14 +367,10 @@ message rsvp_mgmt_association_ipv4 {
 	string source = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message rsvp_mgmt_association_ipv6 {
 	uint32 type = 1;
 	uint32 id = 2;
-	in6_addr_td source = 3;
+	string source = 3;
 }
 
 message rsvp_mgmt_association_ipv4_ext {
@@ -388,7 +384,7 @@ message rsvp_mgmt_association_ipv4_ext {
 message rsvp_mgmt_association_ipv6_ext {
 	uint32 type = 1;
 	uint32 id = 2;
-	in6_addr_td source = 3;
+	string source = 3;
 	uint32 global_source = 4;
 	repeated uint32 extended_id = 5;
 }

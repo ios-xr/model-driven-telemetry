@@ -210,10 +210,6 @@ message ospfv3_edm_retrans_KEYS {
 	string neighbor_address = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_lsa_sum {
 	string header_lsa_type = 1;
 	uint32 header_lsa_age = 2;
@@ -223,7 +219,7 @@ message ospfv3_edm_lsa_sum {
 }
 
 message ospfv3_edm_retrans {
-	in6_addr_td retransmission_neighbor_address = 50;
+	string retransmission_neighbor_address = 50;
 	bool is_retransmissionvirtual_link = 51;
 	uint32 retransmissionvirtual_link_id = 52;
 	bool is_retransmission_sham_link = 53;

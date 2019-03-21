@@ -206,7 +206,7 @@ package cisco_ios_xr_mpls_te_oper.mpls_te.next_hop_routes.next_hop_route;
 
 message te_nexthop_route_KEYS {
 	string prefix_address = 1;
-	string prefix_length = 2;
+	uint32 prefix_length = 2;
 	string next_hop_type = 3;
 }
 
@@ -238,8 +238,8 @@ message te_rib_route_bag {
 }
 
 message te_nexthop_route {
-	string prefix_address = 50;
-	uint32 prefix_length = 51;
+	string prefix_address_xr = 50;
+	uint32 prefix_length_xr = 51;
 	bool exact_match = 52;
 	uint32 create_time = 53;
 	uint32 last_used_time = 54;

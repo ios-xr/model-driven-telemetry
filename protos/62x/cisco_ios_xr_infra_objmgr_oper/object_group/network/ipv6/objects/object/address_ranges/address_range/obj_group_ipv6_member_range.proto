@@ -211,7 +211,7 @@ message obj_group_ipv6_member_range_KEYS {
 }
 
 message obj_group_ipv6_member_range {
-	string start_address = 50;
-	string end_address = 51;
+	string start_address_xr = 50;
+	string end_address_xr = 51;
 }
 

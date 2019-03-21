@@ -231,13 +231,9 @@ message mpls_lsd_fpi_ipv4 {
 	uint32 sr_local_label = 5;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message mpls_lsd_fpi_ipv6 {
 	uint32 table_id = 1;
-	in6_addr_td prefix = 2;
+	string prefix = 2;
 	uint32 router_flags = 3;
 	uint32 prefix_len = 4;
 	uint32 version = 5;
@@ -281,7 +277,7 @@ message mpls_lsd_v4_rpf {
 
 message mpls_lsd_v6_rpf {
 	uint32 table_id = 1;
-	in6_addr_td v6_rpf_neighbor = 2;
+	string v6_rpf_neighbor = 2;
 }
 
 message mpls_lsd_moi_pop_and_lkup {
@@ -321,7 +317,7 @@ message mpls_lsd_moi_ipv6 {
 	string out_interface = 4;
 	uint32 out_label = 5;
 	string out_label_name = 6;
-	in6_addr_td ipv6_next_hop = 7;
+	string ipv6_next_hop = 7;
 	uint32 path_id = 8;
 	uint32 backup_path_id = 9;
 	uint32 next_hop_id = 10;
@@ -469,7 +465,7 @@ message mpls_lsd_lbl_ctx_ipv4 {
 
 message mpls_lsd_lbl_ctx_ipv6 {
 	uint32 table_id = 1;
-	in6_addr_td prefix = 2;
+	string prefix = 2;
 	uint32 prefix_length = 3;
 	uint32 security_id = 4;
 	string vrf_name = 5;
@@ -492,7 +488,7 @@ message mpls_lsd_lbl_ctx_l3vpn_ipv4 {
 }
 
 message mpls_lsd_lbl_ctx_l3vpn_ipv6 {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 prefix_length = 2;
 	uint64 route_distinguisher = 3;
 }
@@ -510,7 +506,7 @@ message mpls_lsd_lbl_ctx_l3vpn_cev4 {
 
 message mpls_lsd_lbl_ctx_l3vpn_cev6 {
 	uint32 table_id = 1;
-	in6_addr_td ipv6_next_hop = 2;
+	string ipv6_next_hop = 2;
 	uint32 security_id = 3;
 }
 
@@ -587,7 +583,7 @@ message mpls_lsd_lbl_ctx_blb_ipv4 {
 
 message mpls_lsd_lbl_ctx_blb_ipv6 {
 	string blb_intf = 1;
-	in6_addr_td prefix = 2;
+	string prefix = 2;
 }
 
 message mpls_lsd_lbl_ctx_pim_i_pmsi {
@@ -626,7 +622,7 @@ message mpls_lsd_lbl_ctx_sr_adj_seg_ipv6 {
 	uint32 index = 1;
 	uint32 type = 2;
 	string intf = 3;
-	in6_addr_td addr = 4;
+	string addr = 4;
 }
 
 message mpls_lsd_lbl_ctx_lbl_blk_srgb {

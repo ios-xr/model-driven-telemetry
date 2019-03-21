@@ -209,7 +209,7 @@ message icpe_install_progress_KEYS {
 }
 
 message icpe_install_progress {
-	uint32 operation_id = 50;
+	uint32 operation_id_xr = 50;
 	uint32 progress_percentage = 51;
 	uint32 satellite_count = 52;
 }

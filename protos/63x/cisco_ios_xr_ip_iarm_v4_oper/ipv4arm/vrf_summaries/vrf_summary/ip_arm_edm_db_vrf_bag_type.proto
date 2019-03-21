@@ -210,6 +210,6 @@ message ip_arm_edm_db_vrf_bag_type_KEYS {
 
 message ip_arm_edm_db_vrf_bag_type {
 	uint32 vrf_id = 50;
-	string vrf_name = 51;
+	string vrf_name_xr = 51;
 }
 

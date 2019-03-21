@@ -572,14 +572,10 @@ message im_sonet_pos_info_interface {
 	string aps_state = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pfi_ip_addr_union {
 	string afi = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message im_cmd_tunl_gre_info {

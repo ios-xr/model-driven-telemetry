@@ -212,7 +212,7 @@ message l2vpn_evpn_neighbor_KEYS {
 
 message l2vpn_evpn_evi_summary {
 	uint32 ethernet_vpn_id = 1;
-	uint32 encapsulation = 2;
+	uint32 encapsulation_xr = 2;
 	string bd_name = 3;
 	string type = 4;
 }

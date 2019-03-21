@@ -211,7 +211,7 @@ message ipv6_dhcpv6d_server_binding_options_KEYS {
 
 message ipv6_dhcpv6d_server_binding_options {
 	string mac_address_xr = 50;
-	string duid = 51;
+	string duid_xr = 51;
 	uint32 dns_count = 52;
 	repeated string dns_address = 53;
 	string opt17 = 54;

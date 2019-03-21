@@ -210,14 +210,10 @@ message ospfv3_edm_border_router_KEYS {
 	string border_router_id = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_br_path {
 	bool is_intra_area_router = 1;
 	uint32 border_router_route_metric = 2;
-	in6_addr_td border_router_next_hop = 3;
+	string border_router_next_hop = 3;
 	string interface_name = 4;
 	string border_router_type = 5;
 	string border_router_area_id = 6;

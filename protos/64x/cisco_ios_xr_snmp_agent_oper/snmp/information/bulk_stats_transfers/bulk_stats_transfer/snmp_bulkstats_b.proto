@@ -209,7 +209,7 @@ message snmp_bulkstats_b_KEYS {
 }
 
 message snmp_bulkstats_b {
-	string transfer_name = 50;
+	string transfer_name_xr = 50;
 	string url_primary = 51;
 	string url_secondary = 52;
 	string retained_file = 53;

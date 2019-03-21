@@ -222,7 +222,7 @@ message icpe_sdacp_sat {
 }
 
 message icpe_sdacp_cfg_sfl {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	repeated interfaces_item interface = 51;
 	repeated icpe_sdacp_sat satellite = 52;
 }

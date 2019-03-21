@@ -319,17 +319,13 @@ message l2fib_bridge_bvi_info {
 	string bvi_name = 3;
 	uint32 bvi_shg_id = 4;
 	uint32 irb_plat_data_len = 5;
-	repeated bytes irb_plat_data = 6;
-}
-
-message in6_addr_td {
-	string value = 1;
+	bytes irb_plat_data = 6;
 }
 
 message l2fib_nhop_info {
 	l2fib_base_info base = 1;
 	string next_hop_address = 2;
-	in6_addr_td next_hop_address_v6 = 3;
+	string next_hop_address_v6 = 3;
 	uint32 next_hop_internal_label = 4;
 	bool ecd_plaformt_data_valid = 5;
 	uint32 ecd_platform_data_length = 6;

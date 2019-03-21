@@ -209,7 +209,7 @@ message bfd_mgmt_client_brief_information_KEYS {
 }
 
 message bfd_mgmt_client_brief_information {
-	string name = 50;
+	string name_xr = 50;
 	string node_id = 51;
 	uint32 session_count = 52;
 }

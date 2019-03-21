@@ -211,10 +211,6 @@ message bgp_config_relatives_bag_KEYS {
 	string entity_name = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bgp_l2vpn_addr_t {
 	repeated uint32 l2vpn_address = 1;
 }
@@ -240,11 +236,11 @@ message bgp_addrtype {
 	string ipv4_mdt_address = 6;
 	string ipv4vpn_address = 7;
 	string ipv4vpna_mcastddress = 8;
-	in6_addr_td ipv6_address = 9;
-	in6_addr_td ipv6_mcast_address = 10;
-	in6_addr_td ipv6_label_address = 11;
-	in6_addr_td ipv6vpn_address = 12;
-	in6_addr_td ipv6vpn_mcast_address = 13;
+	string ipv6_address = 9;
+	string ipv6_mcast_address = 10;
+	string ipv6_label_address = 11;
+	string ipv6vpn_address = 12;
+	string ipv6vpn_mcast_address = 13;
 	bgp_l2vpn_addr_t l2vpn_vpls_address = 14;
 	string rt_constraint_address = 15;
 	string ipv6mvpn_address = 16;
@@ -263,20 +259,20 @@ message bgp_addrtype {
 message bgp_config_entid__item {
 	uint32 address_family_identifier = 1;
 	string configuration_type = 2;
-	bgp_addrtype neighbor_address = 3;
+	bgp_addrtype neighbor_address_xr = 3;
 	string group_name = 4;
 }
 
-message bgp_config_entid_ {
+message bgp_config_entid__entry {
 	repeated bgp_config_entid__item bgp_config_entid_ = 5;
 }
 
 message bgp_config_relatives_bag {
-	bgp_addrtype neighbor_address = 50;
+	bgp_addrtype neighbor_address_xr = 50;
 	string group_name = 51;
 	string configuration_type = 52;
 	uint32 address_family_identifier = 53;
-	bgp_config_entid_ af_independent_relatives = 54;
-	repeated bgp_config_entid_ af_dependent_relative = 55;
+	bgp_config_entid__entry af_independent_relatives = 54;
+	repeated bgp_config_entid__entry af_dependent_relative = 55;
 }
 

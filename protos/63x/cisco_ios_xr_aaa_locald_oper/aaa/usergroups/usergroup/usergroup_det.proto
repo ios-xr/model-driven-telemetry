@@ -221,13 +221,13 @@ message taskmap {
 }
 
 message taskgroup_det {
-	string name = 1;
+	string name_xr = 1;
 	taskmap included_task_ids = 2;
 	taskmap task_map = 3;
 }
 
 message usergroup_det {
-	string name = 50;
+	string name_xr = 50;
 	repeated taskgroup_det taskgroup = 51;
 	taskmap task_map = 52;
 }

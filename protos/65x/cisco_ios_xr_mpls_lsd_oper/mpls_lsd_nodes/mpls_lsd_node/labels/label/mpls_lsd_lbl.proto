@@ -440,7 +440,7 @@ message mpls_lsd_lbl_ctx_key {
 
 message mpls_lsd_lbl_ctx {
 	mpls_lsd_lbl_ctx_key key = 1;
-	string application_data = 2;
+	bytes application_data = 2;
 }
 
 message mpls_lsd_lbl {

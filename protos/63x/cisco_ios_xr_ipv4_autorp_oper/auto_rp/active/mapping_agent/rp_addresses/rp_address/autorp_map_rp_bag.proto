@@ -219,7 +219,7 @@ message autorp_map_range_bag {
 }
 
 message autorp_map_rp_bag {
-	string rp_address = 50;
+	string rp_address_xr = 50;
 	uint64 expiry_time = 51;
 	uint32 pim_version = 52;
 	repeated autorp_map_range_bag range = 53;

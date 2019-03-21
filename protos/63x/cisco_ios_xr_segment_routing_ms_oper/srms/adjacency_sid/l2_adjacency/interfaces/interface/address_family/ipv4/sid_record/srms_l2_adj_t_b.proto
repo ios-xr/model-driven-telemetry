@@ -210,20 +210,16 @@ message srms_l2_adj_t_b_KEYS {
 	uint32 sid_value = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message addr_t {
 	string af = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message srms_l2_adj_t_b {
 	string interface_name = 50;
-	uint32 sid_value = 51;
-	uint32 sid_type = 52;
+	uint32 sid_value_xr = 51;
+	uint32 sid_type_xr = 52;
 	uint32 address_family = 53;
 	bool has_nexthop = 54;
 	sint32 interface_count = 55;

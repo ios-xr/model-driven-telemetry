@@ -229,7 +229,7 @@ message isis_sh_redist_entry_item {
 	isis_sh_redist_entry_proto protocol_details = 1;
 }
 
-message isis_sh_redist_entry {
+message isis_sh_redist_entry_entry {
 	repeated isis_sh_redist_entry_item isis_sh_redist_entry = 1;
 }
 
@@ -252,7 +252,7 @@ message isis_sh_topo_area {
 
 message isis_sh_topo {
 	isis_topo_id_type id = 1;
-	isis_sh_redist_entry redist_protocols_list = 2;
+	isis_sh_redist_entry_entry redist_protocols_list = 2;
 	uint32 default_admin_distance = 3;
 	bool advertise_passive_only = 4;
 	bool wait_redist_complete = 5;

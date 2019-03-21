@@ -205,17 +205,17 @@ syntax = "proto3";
 package cisco_ios_xr_man_ipsla_oper.ipsla.responder.ports.port;
 
 message ipsla_resp_port_info_bag_KEYS {
-	string port = 1;
+	uint32 port = 1;
 }
 
 message ipsla_resp_sender_bag {
 	uint32 ip_address = 1;
-	uint32 port = 2;
+	uint32 port_xr = 2;
 	uint64 last_recv_time = 3;
 }
 
 message ipsla_resp_port_info_bag {
-	uint32 port = 50;
+	uint32 port_xr = 50;
 	string local_address = 51;
 	uint32 num_probes = 52;
 	uint32 ctrl_probes = 53;

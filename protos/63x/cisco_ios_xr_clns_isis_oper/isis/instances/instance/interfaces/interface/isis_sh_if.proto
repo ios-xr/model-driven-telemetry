@@ -460,14 +460,10 @@ message isis_sh_if_af_fwd_addr_unknown {
 	string reason_code = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message isis_ip_addr_type {
 	string af_name = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message isis_sh_if_af_fwd_addr_data {
@@ -491,7 +487,7 @@ message isis_ipv4_prefix_type {
 }
 
 message isis_ipv6_prefix_type {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 prefix_length = 2;
 }
 

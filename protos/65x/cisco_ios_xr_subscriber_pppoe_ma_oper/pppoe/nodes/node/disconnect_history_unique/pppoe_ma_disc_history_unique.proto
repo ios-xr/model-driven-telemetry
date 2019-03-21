@@ -226,8 +226,8 @@ message pppoe_ma_internal_tags_info {
 	sint32 is_dsl_tag = 9;
 	string service_name = 10;
 	uint32 max_payload = 11;
-	string host_uniq = 12;
-	string relay_session_id = 13;
+	bytes host_uniq = 12;
+	bytes relay_session_id = 13;
 	string remote_id = 14;
 	string circuit_id = 15;
 	sint32 is_dsl_actual_up = 16;

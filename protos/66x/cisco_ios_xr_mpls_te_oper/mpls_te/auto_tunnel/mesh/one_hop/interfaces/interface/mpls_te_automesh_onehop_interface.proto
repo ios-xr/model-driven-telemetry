@@ -217,7 +217,7 @@ message mpls_te_automesh_onehop_tunnel {
 }
 
 message mpls_te_automesh_onehop_interface {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	repeated mpls_te_automesh_onehop_tunnel tunnel = 51;
 }
 

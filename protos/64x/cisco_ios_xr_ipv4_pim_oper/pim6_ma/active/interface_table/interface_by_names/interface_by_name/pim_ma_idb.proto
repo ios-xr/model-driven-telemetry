@@ -215,7 +215,7 @@ message pim_addrtype {
 }
 
 message pim_ma_idb {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string vrf_name = 51;
 	string interface_type = 52;
 	pim_addrtype rp_address = 53;

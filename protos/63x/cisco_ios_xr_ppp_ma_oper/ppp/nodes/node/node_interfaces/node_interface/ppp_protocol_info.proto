@@ -271,13 +271,9 @@ message ppp_ipcpiw_info {
 	string peer_address = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ppp_ipv6cp_info {
-	in6_addr_td local_address = 1;
-	in6_addr_td peer_address = 2;
+	string local_address = 1;
+	string peer_address = 2;
 }
 
 message ppp_ncp {

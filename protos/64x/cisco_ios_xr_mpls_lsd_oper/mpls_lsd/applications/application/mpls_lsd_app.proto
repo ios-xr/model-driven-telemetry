@@ -225,7 +225,7 @@ message mpls_lsd_app_stats {
 }
 
 message mpls_lsd_app {
-	string application_name = 50;
+	string application_name_xr = 50;
 	string application_type = 51;
 	sint32 application_role_primary = 52;
 	string application_instance = 53;

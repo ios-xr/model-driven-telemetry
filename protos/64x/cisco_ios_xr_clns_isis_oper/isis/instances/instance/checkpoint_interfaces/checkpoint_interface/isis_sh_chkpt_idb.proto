@@ -211,7 +211,7 @@ message isis_sh_chkpt_idb_KEYS {
 
 message isis_sh_chkpt_idb {
 	uint32 checkpoint_object_id = 50;
-	string interface_name = 51;
+	string interface_name_xr = 51;
 	string checkpoint_interface_handle = 52;
 	uint32 local_circuit_number = 53;
 	string dis_areas = 54;

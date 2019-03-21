@@ -256,7 +256,7 @@ message fsync_clock_info_v2 {
 	bool input_disabled = 64;
 	bool output_disabled = 65;
 	uint32 wait_to_restore_time = 66;
-	string clock_type = 67;
+	string clock_type_xr = 67;
 	bool supports_frequency = 68;
 	bool supports_time_of_day = 69;
 	fsync_bag_ql quality_level_received = 70;

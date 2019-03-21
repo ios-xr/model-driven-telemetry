@@ -418,12 +418,8 @@ message te_xro_subobj_ipv4 {
 	string exclusion_type = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message te_xro_subobj_ipv6 {
-	in6_addr_td address = 1;
+	string address = 1;
 	uint32 prefix_len = 2;
 	string attribute = 3;
 	string exclusion_type = 4;

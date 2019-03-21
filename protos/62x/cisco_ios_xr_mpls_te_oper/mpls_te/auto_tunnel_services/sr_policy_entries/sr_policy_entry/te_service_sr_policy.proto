@@ -242,11 +242,11 @@ message te_auto_tun_req_exp_path {
 message te_service_sr_policy {
 	uint32 sr_policy_id = 50;
 	bool policy_active = 51;
-	uint32 client_id = 52;
+	uint32 client_id_xr = 52;
 	string client_name = 53;
-	uint32 color = 54;
-	te_end_point end_point = 55;
-	uint32 distinguisher = 56;
+	uint32 color_xr = 54;
+	te_end_point end_point_xr = 55;
+	uint32 distinguisher_xr = 56;
 	bool ipv6_caps = 57;
 	uint32 binding_sid_context_id = 58;
 	uint32 requested_binding_sid = 59;

@@ -259,17 +259,17 @@ message bgp_addrtype {
 message bgp_config_entid__item {
 	uint32 address_family_identifier = 1;
 	string configuration_type = 2;
-	bgp_addrtype neighbor_address = 3;
+	bgp_addrtype neighbor_address_xr = 3;
 	string group_name = 4;
 }
 
-message bgp_config_entid_ {
+message bgp_config_entid__entry {
 	repeated bgp_config_entid__item bgp_config_entid_ = 5;
 }
 
 message bgp_config_info_ {
 	bool is_item_configured = 1;
-	bgp_config_entid_ inheritance_chain = 2;
+	bgp_config_entid__entry inheritance_chain = 2;
 }
 
 message bgp_af_indep_ {
@@ -508,7 +508,7 @@ message bgp_af_dep_ {
 }
 
 message bgp_config_entity_bag {
-	bgp_addrtype neighbor_address = 50;
+	bgp_addrtype neighbor_address_xr = 50;
 	string group_name = 51;
 	string configuration_type = 52;
 	uint32 address_family_identifier = 53;

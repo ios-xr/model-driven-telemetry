@@ -208,17 +208,13 @@ message lspv_interface_info_brief_KEYS {
 	string interface_name = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message lspv_interface_info_brief {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string state = 51;
 	uint32 mtu = 52;
 	uint32 prefix_length = 53;
 	uint32 prefix_length_v6 = 54;
 	string primary_address = 55;
-	in6_addr_td primary_address_v6 = 56;
+	string primary_address_v6 = 56;
 }
 

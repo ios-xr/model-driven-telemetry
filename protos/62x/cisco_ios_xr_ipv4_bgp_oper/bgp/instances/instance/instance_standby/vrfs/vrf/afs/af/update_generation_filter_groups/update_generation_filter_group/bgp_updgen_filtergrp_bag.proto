@@ -220,11 +220,11 @@ message bgp_updgen_filtergrp_bag {
 	string update_group_af_name = 52;
 	uint32 update_filter_group_index = 53;
 	uint32 parent_filter_group_index = 54;
-	uint32 sub_group_index = 55;
-	uint32 sub_group_id = 56;
+	uint32 sub_group_index_xr = 55;
+	uint32 sub_group_id_xr = 56;
 	uint32 parent_sub_group_index = 57;
 	uint32 parent_sub_group_id = 58;
-	uint32 update_group_index = 59;
+	uint32 update_group_index_xr = 59;
 	uint32 neighbor_count = 60;
 }
 

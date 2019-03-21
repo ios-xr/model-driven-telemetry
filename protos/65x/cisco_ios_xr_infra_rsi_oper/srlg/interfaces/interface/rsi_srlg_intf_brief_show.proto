@@ -209,7 +209,7 @@ message rsi_srlg_intf_brief_show_KEYS {
 }
 
 message rsi_srlg_intf_brief_show {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 value_count = 51;
 	uint32 registrations = 52;
 	repeated uint32 srlg_value = 53;

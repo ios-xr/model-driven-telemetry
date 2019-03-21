@@ -211,7 +211,7 @@ message ipv6_rib_edm_route_KEYS {
 	string route_table_name = 4;
 	string as = 5;
 	string address = 6;
-	string prefix_length = 7;
+	uint32 prefix_length = 7;
 }
 
 message ipv6_rib_edm_path_item {
@@ -255,13 +255,13 @@ message ipv6_rib_edm_path_item {
 	uint64 mpls_feid = 38;
 }
 
-message ipv6_rib_edm_path {
+message ipv6_rib_edm_path_entry {
 	repeated ipv6_rib_edm_path_item ipv6_rib_edm_path = 39;
 }
 
 message ipv6_rib_edm_route {
 	string prefix = 50;
-	uint32 prefix_length = 51;
+	uint32 prefix_length_xr = 51;
 	uint32 route_version = 52;
 	uint32 protocol_id = 53;
 	string protocol_name = 54;
@@ -292,6 +292,6 @@ message ipv6_rib_edm_route {
 	uint32 version = 79;
 	uint64 tbl_version = 80;
 	uint64 route_modify_time = 81;
-	ipv6_rib_edm_path route_path = 82;
+	ipv6_rib_edm_path_entry route_path = 82;
 }
 

@@ -210,14 +210,10 @@ message pim_rpf_info_bag_KEYS {
 	string registered_address = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pim_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message pim_rpf_path_bag {
@@ -233,7 +229,7 @@ message pim_rpf_path_bag {
 }
 
 message pim_rpf_info_bag {
-	pim_addrtype registered_address = 50;
+	pim_addrtype registered_address_xr = 50;
 	uint32 metric = 51;
 	uint32 metric_preference = 52;
 	uint32 is_connected = 53;

@@ -212,7 +212,7 @@ message l2tp_cc_class_data {
 	uint32 ip_tos = 50;
 	string vrf_name = 51;
 	uint32 receive_window_size = 52;
-	string class_name = 53;
+	string class_name_xr = 53;
 	string digest_hash = 54;
 	string password = 55;
 	string encoded_password = 56;

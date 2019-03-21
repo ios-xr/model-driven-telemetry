@@ -210,15 +210,11 @@ message ipv4_rib_edm_route_KEYS {
 	string address = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv4_rib_edm_path_item {
 	string address = 1;
 	string information_source = 2;
-	in6_addr_td v6_nexthop = 3;
-	in6_addr_td v6_information_source = 4;
+	string v6_nexthop = 3;
+	string v6_information_source = 4;
 	string interface_name = 5;
 	uint32 metric = 6;
 	uint32 load_metric = 7;
@@ -263,7 +259,7 @@ message ipv4_rib_edm_path_item {
 	string subscriber_parent_interface = 46;
 }
 
-message ipv4_rib_edm_path {
+message ipv4_rib_edm_path_entry {
 	repeated ipv4_rib_edm_path_item ipv4_rib_edm_path = 47;
 }
 
@@ -300,6 +296,6 @@ message ipv4_rib_edm_route {
 	uint32 version = 79;
 	uint64 tbl_version = 80;
 	uint64 route_modify_time = 81;
-	ipv4_rib_edm_path route_path = 82;
+	ipv4_rib_edm_path_entry route_path = 82;
 }
 

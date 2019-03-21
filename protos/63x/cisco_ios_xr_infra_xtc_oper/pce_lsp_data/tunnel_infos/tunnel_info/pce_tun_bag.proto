@@ -224,7 +224,7 @@ message pce_lsp_info {
 
 message pce_tun_bag {
 	string pcc_address = 50;
-	string tunnel_name = 51;
+	string tunnel_name_xr = 51;
 	repeated pce_lsp_info brief_lsp_information = 52;
 }
 

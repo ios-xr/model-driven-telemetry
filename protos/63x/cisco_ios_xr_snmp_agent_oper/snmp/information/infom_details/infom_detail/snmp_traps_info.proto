@@ -206,7 +206,7 @@ package cisco_ios_xr_snmp_agent_oper.snmp.information.infom_details.infom_detail
 
 message snmp_traps_info_KEYS {
 	string trap_host = 1;
-	string port = 2;
+	uint32 port = 2;
 }
 
 message snmp_trap_oid_info {
@@ -220,7 +220,7 @@ message snmp_trap_oid_info {
 
 message snmp_traps_info {
 	string host = 50;
-	uint32 port = 51;
+	uint32 port_xr = 51;
 	uint32 trap_oid_count = 52;
 	repeated snmp_trap_oid_info trap_oi_dinfo = 53;
 }

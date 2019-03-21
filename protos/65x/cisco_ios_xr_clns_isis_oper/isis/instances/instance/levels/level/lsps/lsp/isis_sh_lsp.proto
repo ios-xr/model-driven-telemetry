@@ -232,6 +232,6 @@ message isis_sh_lsp_header {
 
 message isis_sh_lsp {
 	isis_sh_lsp_header lsp_header_data = 50;
-	string lsp_body = 51;
+	bytes lsp_body = 51;
 }
 

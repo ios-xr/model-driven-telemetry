@@ -208,7 +208,7 @@ message ospfv3_edm_topology_connected_KEYS {
 	string process_name = 1;
 	string vrf_name = 2;
 	string prefix = 3;
-	string prefix_length = 4;
+	uint32 prefix_length = 4;
 }
 
 message ospfv3_edm_topology {

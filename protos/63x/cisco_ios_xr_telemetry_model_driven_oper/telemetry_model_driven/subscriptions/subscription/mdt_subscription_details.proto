@@ -208,15 +208,11 @@ message mdt_subscription_details_KEYS {
 	string subscription_id = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message mdt_source_interface {
 	string interface_name = 1;
 	bool state = 2;
 	string ipv4_address = 3;
-	in6_addr_td ipv6_address = 4;
+	string ipv6_address = 4;
 	uint32 vrf_id = 5;
 }
 
@@ -242,7 +238,7 @@ message mdt_sensor_profile {
 message MdtDestinationIPAddress {
 	string ip_type = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message mdt_destination {

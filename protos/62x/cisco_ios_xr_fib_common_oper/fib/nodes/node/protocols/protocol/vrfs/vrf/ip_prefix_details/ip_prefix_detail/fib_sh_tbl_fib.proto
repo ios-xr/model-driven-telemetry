@@ -209,7 +209,7 @@ message fib_sh_tbl_fib_KEYS {
 	string protocol_name = 2;
 	string vrf_name = 3;
 	string prefix = 4;
-	string prefix_length = 5;
+	uint32 prefix_length = 5;
 }
 
 message fib_addr_str {
@@ -392,7 +392,7 @@ message fib_sh_tbl_path_item {
 	uint32 recursionvia_len = 24;
 }
 
-message fib_sh_tbl_path {
+message fib_sh_tbl_path_entry {
 	repeated fib_sh_tbl_path_item fib_sh_tbl_path = 25;
 }
 
@@ -421,7 +421,7 @@ message fib_sh_tbl_fib_ext_cmn_det {
 message fib_sh_tbl_fib {
 	uint32 protocol_type_fib_entry = 50;
 	fib_sh_tbl_fib_det detail_fib_entry_information = 51;
-	fib_sh_tbl_path fib_entry_path = 52;
+	fib_sh_tbl_path_entry fib_entry_path = 52;
 	bytes platform_hardware = 53;
 	uint32 number_of_referances_to_path_list = 54;
 	uint32 path_list_flags = 55;

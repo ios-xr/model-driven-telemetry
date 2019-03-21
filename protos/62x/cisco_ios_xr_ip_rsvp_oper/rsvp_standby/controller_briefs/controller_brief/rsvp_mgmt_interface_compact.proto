@@ -208,8 +208,30 @@ message rsvp_mgmt_interface_compact_KEYS {
 	string controller_name = 1;
 }
 
+message rsvp_mgmt_interface_bw_prestd_dste {
+	uint64 allocated_bit_rate = 1;
+	uint64 max_flow_bandwidth = 2;
+	uint64 max_bandwidth = 3;
+	uint64 max_subpool_bandwidth = 4;
+	bool is_max_bandwidth_absolute = 5;
+	bool is_max_subpool_bandwidth_absolute = 6;
+}
+
+message rsvp_mgmt_interface_bw_std_dste {
+	uint64 allocated_bit_rate = 1;
+	uint64 max_flow_bandwidth = 2;
+	uint64 max_bandwidth = 3;
+	uint64 max_pool0_bandwidth = 4;
+	uint64 max_pool1_bandwidth = 5;
+	bool is_max_bandwidth_absolute = 6;
+	bool is_max_bc0_bandwidth_absolute = 7;
+	bool is_max_bc1_bandwidth_absolute = 8;
+}
+
 message rsvp_mgmt_dste_mode_interface_bw {
 	string dste_mode = 1;
+	rsvp_mgmt_interface_bw_prestd_dste pre_standard_dste_interface = 2;
+	rsvp_mgmt_interface_bw_std_dste standard_dste_interface = 3;
 }
 
 message rsvp_mgmt_interface_compact {

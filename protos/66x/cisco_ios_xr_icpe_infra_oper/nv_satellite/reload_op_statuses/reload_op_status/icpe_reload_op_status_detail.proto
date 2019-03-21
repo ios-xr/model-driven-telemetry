@@ -209,7 +209,7 @@ message icpe_reload_op_status_detail_KEYS {
 }
 
 message icpe_reload_op_status_detail {
-	uint32 operation_id = 50;
+	uint32 operation_id_xr = 50;
 	string satellite_range = 51;
 	repeated uint32 sats_not_initiated = 52;
 	repeated uint32 sats_reloading = 53;

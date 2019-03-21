@@ -216,7 +216,7 @@ message ppp_oper_sso_fsm_state {
 }
 
 message ppp_oper_sso_state {
-	uint32 session_id = 50;
+	uint32 session_id_xr = 50;
 	string interface = 51;
 	ppp_oper_sso_fsm_state lcp_state = 52;
 	ppp_oper_sso_fsm_state of_us_auth_state = 53;

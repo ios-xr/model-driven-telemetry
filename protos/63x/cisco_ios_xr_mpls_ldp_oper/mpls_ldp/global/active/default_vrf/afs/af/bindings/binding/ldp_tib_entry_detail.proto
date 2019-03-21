@@ -214,15 +214,11 @@ message ldp_vrf_info {
 	uint32 id = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ldp_ip_addr_t_union {
 	string afi = 1;
 	uint32 dummy = 2;
 	string ipv4 = 3;
-	in6_addr_td ipv6 = 4;
+	string ipv6 = 4;
 }
 
 message ldp_ldpid_info {
@@ -240,7 +236,7 @@ message ldp_tib_entry_remote {
 
 message ldp_tib_entry_detail {
 	ldp_vrf_info vrf = 50;
-	ldp_ip_addr_t_union prefix = 51;
+	ldp_ip_addr_t_union prefix_xr = 51;
 	uint32 prefix_length = 52;
 	uint32 local_label = 53;
 	uint32 le_local_binding_revision = 54;

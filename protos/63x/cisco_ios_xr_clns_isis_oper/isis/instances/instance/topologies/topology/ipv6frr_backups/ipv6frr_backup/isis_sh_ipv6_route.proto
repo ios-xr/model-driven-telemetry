@@ -213,8 +213,12 @@ message isis_sh_ipv6_route_KEYS {
 	uint32 prefix_length = 6;
 }
 
+message interfaces_item {
+	string value = 1;
+}
+
 message isis_sh_route_conn_details {
-	repeated string interface = 1;
+	repeated interfaces_item interface = 1;
 }
 
 message isis_sh_route_conn_status {
@@ -242,10 +246,6 @@ message isis_sh_route_redist_status {
 	repeated isis_sh_route_redist_level_details redistribution_details = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message neighbor_snpa_item {
 	string value = 1;
 }
@@ -253,7 +253,7 @@ message neighbor_snpa_item {
 message isis_sh_rep_el {
 	string repair_element_node_id = 1;
 	string repair_ipv4_addr = 2;
-	in6_addr_td repair_ipv6_addr = 3;
+	string repair_ipv6_addr = 3;
 	uint32 repair_label = 4;
 	uint32 repair_element_type = 5;
 	uint32 repair_strict_spf_label = 6;
@@ -262,13 +262,13 @@ message isis_sh_rep_el {
 message isis_sh_ipv6_frr_backup {
 	string neighbor_id = 1;
 	string egress_interface = 2;
-	in6_addr_td neighbor_address = 3;
+	string neighbor_address = 3;
 	string tunnel_egress_interface = 4;
 	neighbor_snpa_item neighbor_snpa = 5;
 	string remote_lfa_system_id = 6;
-	in6_addr_td remote_lfa_router_id = 7;
+	string remote_lfa_router_id = 7;
 	string remote_lfa_system_pid = 8;
-	in6_addr_td remote_lfa_router_pid = 9;
+	string remote_lfa_router_pid = 9;
 	uint32 total_backup_distance = 10;
 	uint32 segment_routing_sid_value = 11;
 	uint32 num_sid = 12;
@@ -292,7 +292,7 @@ message isis_sh_ipv6_frr_backup {
 message isis_sh_ipv6_path {
 	string neighbor_id = 1;
 	string egress_interface = 2;
-	in6_addr_td neighbor_address = 3;
+	string neighbor_address = 3;
 	neighbor_snpa_item neighbor_snpa = 4;
 	uint32 tag = 5;
 	isis_sh_ipv6_frr_backup frr_backup = 6;
@@ -307,7 +307,7 @@ message isis_sh_ipv6_path {
 message isis_sh_ipv6_ucmp_path {
 	string neighbor_id = 1;
 	string egress_interface = 2;
-	in6_addr_td neighbor_address = 3;
+	string neighbor_address = 3;
 	neighbor_snpa_item neighbor_snpa = 4;
 	uint32 tag = 5;
 	uint32 total_ucmp_distance = 6;
@@ -331,7 +331,7 @@ message isis_nodal_sid_type {
 
 message isis_sh_ipv6_route_native_source {
 	string source_lsp_id = 1;
-	in6_addr_td source_address = 2;
+	string source_address = 2;
 	repeated uint32 tags = 3;
 	repeated isis_nodal_sid_type nodal_sid = 4;
 }
@@ -363,7 +363,7 @@ message isis_sh_ipv6_route_native_status {
 }
 
 message isis_ipv6_prefix_type {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 prefix_length = 2;
 }
 

@@ -209,7 +209,7 @@ message icpe_gco_priority_oper_type_KEYS {
 }
 
 message icpe_gco_priority_oper_type {
-	uint32 satellite_id = 50;
+	uint32 satellite_id_xr = 50;
 	uint32 rgid = 51;
 	uint32 best_path_hops = 52;
 	uint32 configured_priority = 53;

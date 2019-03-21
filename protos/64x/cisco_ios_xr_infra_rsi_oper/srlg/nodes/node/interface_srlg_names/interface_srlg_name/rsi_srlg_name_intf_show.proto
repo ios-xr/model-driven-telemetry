@@ -214,7 +214,7 @@ message rsi_srlg_intf_show {
 }
 
 message rsi_srlg_name_intf_show {
-	string srlg_name = 50;
+	string srlg_name_xr = 50;
 	uint32 srlg_value = 51;
 	rsi_srlg_intf_show interfaces = 52;
 }

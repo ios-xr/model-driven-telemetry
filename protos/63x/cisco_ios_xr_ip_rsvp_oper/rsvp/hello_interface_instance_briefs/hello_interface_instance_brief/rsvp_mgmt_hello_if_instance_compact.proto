@@ -210,8 +210,8 @@ message rsvp_mgmt_hello_if_instance_compact_KEYS {
 }
 
 message rsvp_mgmt_hello_if_instance_compact {
-	string source_address = 50;
-	string destination_address = 51;
+	string source_address_xr = 50;
+	string destination_address_xr = 51;
 	string instance_type = 52;
 	string hello_interface = 53;
 }

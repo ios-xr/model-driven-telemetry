@@ -209,14 +209,10 @@ message sse_pfilter_ea_ace_implicit_KEYS {
 	string access_list_name = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message sse_pfilter_next_hop_addr_type {
 	string address_type = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message sse_pfilter_ea_ace_data_brief {
@@ -283,10 +279,10 @@ message sse_pfilter_ipv6_tcam {
 }
 
 message sse_pfilter_tcam_entry_ipv6 {
-	in6_addr_td source_address = 1;
-	in6_addr_td source_address_mask = 2;
-	in6_addr_td destination_address = 3;
-	in6_addr_td destination_address_mask = 4;
+	string source_address = 1;
+	string source_address_mask = 2;
+	string destination_address = 3;
+	string destination_address_mask = 4;
 	sse_pfilter_ipv6_tcam value = 5;
 	sse_pfilter_ipv6_tcam mask = 6;
 	sse_pfilter_ipv6_tcam result = 7;

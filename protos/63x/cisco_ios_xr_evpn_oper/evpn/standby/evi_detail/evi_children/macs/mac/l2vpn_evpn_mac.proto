@@ -211,28 +211,24 @@ message l2vpn_evpn_mac_KEYS {
 	string ip_address = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_label_path_buffer {
-	in6_addr_td next_hop = 1;
+	string next_hop = 1;
 	uint32 output_label = 2;
 	string srte_tunnel = 3;
 }
 
 message l2vpn_evpn_mac {
-	uint32 ethernet_tag = 50;
-	string mac_address = 51;
-	in6_addr_td ip_address = 52;
+	uint32 ethernet_tag_xr = 50;
+	string mac_address_xr = 51;
+	string ip_address_xr = 52;
 	uint32 local_label = 53;
 	uint32 num_paths = 54;
 	repeated l2vpn_label_path_buffer path_buffer = 55;
 	bool is_local_mac = 56;
 	bool is_proxy_entry = 57;
 	bool is_remote_mac = 58;
-	in6_addr_td soo_nexthop = 59;
-	in6_addr_td ipnh_address = 60;
+	string soo_nexthop = 59;
+	string ipnh_address = 60;
 	repeated uint32 local_ethernet_segment_identifier = 61;
 	repeated uint32 remote_ethernet_segment_identifier = 62;
 	uint32 esi_port_key = 63;

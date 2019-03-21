@@ -309,7 +309,7 @@ message ldp_fwd_path_info {
 message ldp_fwd_pfx_info {
 	ldp_vrf_info vrf = 50;
 	uint32 table_id = 51;
-	ldp_ip_addr_t_union prefix = 52;
+	ldp_ip_addr_t_union prefix_xr = 52;
 	uint32 prefix_length = 53;
 	ldp_fwd_route_info route = 54;
 	repeated ldp_fwd_path_info paths = 55;

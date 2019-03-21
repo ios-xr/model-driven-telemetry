@@ -209,16 +209,12 @@ message bgp_label_bag_KEYS {
 	uint32 label = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bgp_edm_label_entry_ {
 	uint32 label = 1;
 	string rds = 2;
 	string vrf = 3;
 	string ip = 4;
-	in6_addr_td ip6 = 5;
+	string ip6 = 5;
 	uint32 rpc_set_id = 6;
 	uint32 masklen = 7;
 	uint32 ts_sec = 8;

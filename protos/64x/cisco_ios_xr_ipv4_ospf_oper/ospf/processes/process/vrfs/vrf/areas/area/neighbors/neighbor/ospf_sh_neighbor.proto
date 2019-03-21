@@ -219,7 +219,7 @@ message ospf_sh_neighbor_bfd {
 
 message ospf_sh_neighbor {
 	string neighbor_id = 50;
-	string neighbor_address = 51;
+	string neighbor_address_xr = 51;
 	string neighbor_interface_name = 52;
 	uint32 neighbor_dr_priority = 53;
 	string neighbor_state = 54;

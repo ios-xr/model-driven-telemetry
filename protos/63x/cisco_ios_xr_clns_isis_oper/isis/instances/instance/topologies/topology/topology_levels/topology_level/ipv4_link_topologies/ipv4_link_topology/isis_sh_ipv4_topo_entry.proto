@@ -217,14 +217,10 @@ message neighbor_snpa_item {
 	string value = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message isis_sh_rep_el {
 	string repair_element_node_id = 1;
 	string repair_ipv4_addr = 2;
-	in6_addr_td repair_ipv6_addr = 3;
+	string repair_ipv6_addr = 3;
 	uint32 repair_label = 4;
 	uint32 repair_element_type = 5;
 	uint32 repair_strict_spf_label = 6;

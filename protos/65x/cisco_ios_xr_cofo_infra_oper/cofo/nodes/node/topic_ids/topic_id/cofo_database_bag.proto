@@ -223,8 +223,8 @@ message cofo_object_info {
 	cofo_timespec_ object_delete_time = 6;
 	cofo_timespec_ object_txl_add_time = 7;
 	cofo_timespec_ object_txl_encode_time = 8;
-	string cofo_infra_object_key = 9;
-	string cofo_infra_object_value = 10;
+	bytes cofo_infra_object_key = 9;
+	bytes cofo_infra_object_value = 10;
 }
 
 message cofo_per_client_db_info {

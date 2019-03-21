@@ -252,10 +252,10 @@ message pim_tt_route_bag {
 	bool limit_reached = 50;
 	bool low_memory = 51;
 	string protocol = 52;
-	pim_addrtype group_address = 53;
-	pim_addrtype source_address = 54;
+	pim_addrtype group_address_xr = 53;
+	pim_addrtype source_address_xr = 54;
 	bool wildcard = 55;
-	bool rpt = 56;
+	bool rpt_xr = 56;
 	bool spt = 57;
 	uint64 uptime = 58;
 	uint64 expiry = 59;

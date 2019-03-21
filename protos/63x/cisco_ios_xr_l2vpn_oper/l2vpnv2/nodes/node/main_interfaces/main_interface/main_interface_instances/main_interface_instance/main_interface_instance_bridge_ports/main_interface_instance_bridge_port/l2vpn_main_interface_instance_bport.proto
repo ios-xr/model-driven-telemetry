@@ -212,7 +212,7 @@ message l2vpn_main_interface_instance_bport_KEYS {
 }
 
 message l2vpn_main_interface_instance_bport {
-	string bridge_port = 50;
+	string bridge_port_xr = 50;
 	uint32 instance_id = 51;
 }
 

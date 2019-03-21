@@ -209,17 +209,13 @@ message ipv6_dhcpv6d_base_binding_KEYS {
 	string addr_string = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_dhcpv6d_base_binding {
 	string mac_address = 50;
 	string vrf_name = 51;
 	string server_vrf_name = 52;
-	in6_addr_td ipv6_address = 53;
-	in6_addr_td server_ipv6_address = 54;
-	in6_addr_td reply_server_ipv6_address = 55;
+	string ipv6_address = 53;
+	string server_ipv6_address = 54;
+	string reply_server_ipv6_address = 55;
 	uint32 lease_time = 56;
 	uint32 remaining_lease_time = 57;
 	string state = 58;

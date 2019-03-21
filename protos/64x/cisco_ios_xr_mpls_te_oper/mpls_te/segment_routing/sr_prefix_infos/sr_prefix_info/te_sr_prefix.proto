@@ -243,19 +243,19 @@ message te_sr_igp_area {
 	string igp_area_format = 6;
 }
 
-message node_id {
+message node_id_entry {
 	string node_id = 1;
 }
 
 message te_sr_prefix {
-	string prefix = 50;
+	string prefix_xr = 50;
 	uint32 prefix_length_xr = 51;
 	uint32 prefix_sid = 52;
 	uint32 prefix_strict_sid = 53;
 	repeated te_sr_path sr_path = 54;
 	te_sr_igp_area igp_area = 55;
-	repeated node_id advertizing_node = 56;
-	repeated node_id strict_advertizing_node = 57;
+	repeated node_id_entry advertizing_node = 56;
+	repeated node_id_entry strict_advertizing_node = 57;
 	bool flag_r = 58;
 	bool flag_n = 59;
 	bool flag_p = 60;

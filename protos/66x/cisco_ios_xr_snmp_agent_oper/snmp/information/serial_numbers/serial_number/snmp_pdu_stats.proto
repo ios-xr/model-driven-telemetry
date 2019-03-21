@@ -207,13 +207,13 @@ package cisco_ios_xr_snmp_agent_oper.snmp.information.serial_numbers.serial_numb
 message snmp_pdu_stats_KEYS {
 	string number = 1;
 	uint32 req_id = 2;
-	string port = 3;
+	uint32 port = 3;
 }
 
 message snmp_pdu_stats {
 	string nms = 50;
 	uint32 request_id = 51;
-	uint32 port = 52;
+	uint32 port_xr = 52;
 	uint32 pdu_type = 53;
 	uint32 error_status = 54;
 	uint32 serial_num = 55;

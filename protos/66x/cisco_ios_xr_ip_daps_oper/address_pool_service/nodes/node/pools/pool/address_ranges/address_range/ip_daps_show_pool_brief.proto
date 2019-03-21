@@ -223,7 +223,7 @@ message ip_addr_st {
 message ip_daps_show_pool_brief {
 	string pool_name = 50;
 	string vrf_name = 51;
-	ip_addr_st start_address = 52;
+	ip_addr_st start_address_xr = 52;
 	ip_addr_st end_address = 53;
 	ip_addr_st default_router = 54;
 	uint32 allocated_addresses = 55;

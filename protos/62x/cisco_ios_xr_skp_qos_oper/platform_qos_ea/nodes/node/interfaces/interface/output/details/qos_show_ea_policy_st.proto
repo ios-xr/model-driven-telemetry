@@ -292,13 +292,13 @@ message qos_show_ea_pclass_st_item {
 	qos_show_ea_result_st result = 8;
 }
 
-message qos_show_ea_pclass_st {
+message qos_show_ea_pclass_st_entry {
 	repeated qos_show_ea_pclass_st_item qos_show_ea_pclass_st = 9;
 }
 
 message qos_show_ea_policy_st {
 	qos_show_ea_header_st header = 50;
 	qos_show_ea_if_qos_param_st interface_parameters = 51;
-	qos_show_ea_pclass_st skywarp_qos_policy_class = 52;
+	qos_show_ea_pclass_st_entry skywarp_qos_policy_class = 52;
 }
 

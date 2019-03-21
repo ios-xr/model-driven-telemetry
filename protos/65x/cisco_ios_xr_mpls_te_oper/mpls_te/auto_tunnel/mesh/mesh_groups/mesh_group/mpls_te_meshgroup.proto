@@ -216,7 +216,7 @@ message mpls_te_meshgroup_dest {
 }
 
 message mpls_te_meshgroup {
-	uint32 mesh_group_id = 50;
+	uint32 mesh_group_id_xr = 50;
 	bool is_meshgroup_disabled = 51;
 	string attribute_set_name = 52;
 	bool is_attribute_set_configured = 53;

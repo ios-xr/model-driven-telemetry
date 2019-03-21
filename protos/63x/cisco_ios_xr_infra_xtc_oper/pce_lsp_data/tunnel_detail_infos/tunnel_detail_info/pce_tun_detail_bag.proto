@@ -316,7 +316,7 @@ message pce_event_bag {
 
 message pce_tun_detail_bag {
 	string pcc_address = 50;
-	string tunnel_name = 51;
+	string tunnel_name_xr = 51;
 	repeated pce_lsp_detail_info detail_lsp_information = 52;
 	pce_event_bag private_lsp_information = 53;
 }

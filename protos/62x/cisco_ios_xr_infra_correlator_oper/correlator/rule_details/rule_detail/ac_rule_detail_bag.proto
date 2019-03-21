@@ -209,7 +209,7 @@ message ac_rule_detail_bag_KEYS {
 }
 
 message ac_rule_summary_bag {
-	string rule_name = 1;
+	string rule_name_xr = 1;
 	bool stateful = 2;
 	string rule_state = 3;
 	uint32 buffered_alarms_count = 4;

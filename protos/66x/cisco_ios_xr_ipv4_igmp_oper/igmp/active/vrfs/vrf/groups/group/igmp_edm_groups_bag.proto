@@ -217,8 +217,8 @@ message igmp_addrtype {
 }
 
 message igmp_edm_groups_bag {
-	igmp_addrtype group_address = 50;
-	string interface_name = 51;
+	igmp_addrtype group_address_xr = 50;
+	string interface_name_xr = 51;
 	uint64 uptime = 52;
 	sint32 expiration_time = 53;
 	igmp_addrtype last_reporter = 54;

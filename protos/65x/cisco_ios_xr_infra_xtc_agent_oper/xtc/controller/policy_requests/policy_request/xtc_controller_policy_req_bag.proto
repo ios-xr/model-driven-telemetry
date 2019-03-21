@@ -247,12 +247,12 @@ message xtc_policy_sl_bag {
 }
 
 message xtc_controller_policy_req_bag {
-	string source_address = 50;
+	string source_address_xr = 50;
 	xtc_ip_addr_type end_point = 51;
 	uint32 binding_sid = 52;
 	uint32 preference = 53;
-	uint32 color = 54;
-	uint32 route_distinguisher = 55;
+	uint32 color_xr = 54;
+	uint32 route_distinguisher_xr = 55;
 	repeated xtc_policy_sl_bag segment_list = 56;
 	uint32 creation_time = 57;
 	uint32 last_updated_time = 58;

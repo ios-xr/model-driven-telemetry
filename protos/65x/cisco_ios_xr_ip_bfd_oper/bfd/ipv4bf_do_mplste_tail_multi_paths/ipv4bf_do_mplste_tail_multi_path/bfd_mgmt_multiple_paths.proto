@@ -225,7 +225,7 @@ message bfd_mgmt_multiple_paths {
 	string state = 51;
 	uint32 local_discriminator = 52;
 	string node_id = 53;
-	uint32 incoming_label = 54;
+	uint32 incoming_label_xr = 54;
 	string session_interface_name = 55;
 }
 

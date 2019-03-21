@@ -211,10 +211,6 @@ message pmipv6_show_binding_bd_KEYS {
 	string customer_name = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pmipv6_show_binding_coa_bd {
 	string llid = 1;
 	string peer_name = 2;
@@ -236,7 +232,7 @@ message pmipv6_show_binding_coa_bd {
 	uint32 dnkey = 18;
 	uint32 upkey = 19;
 	string coa_v4 = 20;
-	in6_addr_td coa_v6 = 21;
+	string coa_v6 = 21;
 }
 
 message pmipv6_v4_prefix_bd {
@@ -246,12 +242,12 @@ message pmipv6_v4_prefix_bd {
 
 message pmipv6_v6_prefix_bd {
 	uint32 pfxlen = 1;
-	in6_addr_td prefix = 2;
+	string prefix = 2;
 }
 
 message pmipv6_show_binding_bd {
 	string mnnai = 50;
-	string customer_name = 51;
+	string customer_name_xr = 51;
 	string llid = 52;
 	string peer_id = 53;
 	string phyintf = 54;
@@ -270,7 +266,7 @@ message pmipv6_show_binding_bd {
 	uint32 num_coa = 67;
 	uint32 num_dmnp_v4 = 68;
 	uint32 num_dmnp_v6 = 69;
-	in6_addr_td hnps = 70;
+	string hnps = 70;
 	bool ignore_home_address = 71;
 	uint32 up_stream_grekey = 72;
 	uint32 down_stream_grekey = 73;

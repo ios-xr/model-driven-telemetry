@@ -243,14 +243,10 @@ message xtc_node_pid_bag {
 	repeated xtc_igp_info_bag igp_information = 6;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message xtc_ip_addr_type {
 	string af_name = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message xtc_pfx_entry {
@@ -258,7 +254,7 @@ message xtc_pfx_entry {
 }
 
 message xtc_pfx_bag {
-	uint32 node_identifier = 50;
+	uint32 node_identifier_xr = 50;
 	xtc_node_pid_bag node_protocol_identifier = 51;
 	repeated xtc_pfx_entry address = 52;
 }

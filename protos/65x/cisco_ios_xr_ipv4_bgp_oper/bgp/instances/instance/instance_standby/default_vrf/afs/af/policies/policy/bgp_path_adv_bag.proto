@@ -292,13 +292,13 @@ message bgp_v4_v6_t {
 message bgp_advinfo_type_ {
 	bool is_neighbor = 1;
 	uint32 update_group_afi = 2;
-	bgp_addrtype neighbor_address = 3;
+	bgp_addrtype neighbor_address_xr = 3;
 	uint32 update_group_number = 4;
 }
 
 message bgp_path_ {
 	bgp_prefixtype bgp_prefix = 1;
-	bgp_addrtype neighbor_address = 2;
+	bgp_addrtype neighbor_address_xr = 2;
 	string route_type = 3;
 	bool is_path_valid = 4;
 	bool is_path_damped = 5;
@@ -558,7 +558,7 @@ message bgp_attr_ {
 message bgp_path_adv_bag {
 	bool no_path = 50;
 	string af_name = 51;
-	bgp_addrtype neighbor_address = 52;
+	bgp_addrtype neighbor_address_xr = 52;
 	bgp_path_ path_info_after_policy_in = 53;
 	bgp_path_ path_info_after_policy_out = 54;
 	bgp_attr_ attributes_after_policy_in = 55;

@@ -218,6 +218,6 @@ message ospfv3_sh_bad_checksum {
 	uint32 received_checksum = 50;
 	uint32 computed_checksum = 51;
 	ospfv3_edm_time timestamp = 52;
-	string received_data = 53;
+	bytes received_data = 53;
 }
 

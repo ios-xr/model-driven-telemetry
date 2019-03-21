@@ -218,11 +218,11 @@ message tacacs_requestbag_item {
 	sint32 sock = 8;
 }
 
-message tacacs_requestbag {
+message tacacs_requestbag_entry {
 	repeated tacacs_requestbag_item tacacs_requestbag = 9;
 }
 
 message tacacs_requests {
-	repeated tacacs_requestbag request = 50;
+	repeated tacacs_requestbag_entry request = 50;
 }
 

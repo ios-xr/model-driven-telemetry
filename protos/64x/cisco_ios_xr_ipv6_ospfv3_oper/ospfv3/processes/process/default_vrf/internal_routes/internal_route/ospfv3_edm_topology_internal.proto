@@ -207,7 +207,7 @@ package cisco_ios_xr_ipv6_ospfv3_oper.ospfv3.processes.process.default_vrf.inter
 message ospfv3_edm_topology_internal_KEYS {
 	string process_name = 1;
 	string prefix = 2;
-	string prefix_length = 3;
+	uint32 prefix_length = 3;
 }
 
 message ospfv3_edm_topology {

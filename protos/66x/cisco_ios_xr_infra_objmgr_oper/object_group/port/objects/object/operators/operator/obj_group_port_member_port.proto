@@ -211,7 +211,7 @@ message obj_group_port_member_port_KEYS {
 }
 
 message obj_group_port_member_port {
-	uint32 operator_type = 50;
-	uint32 port = 51;
+	uint32 operator_type_xr = 50;
+	uint32 port_xr = 51;
 }
 

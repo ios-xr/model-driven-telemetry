@@ -247,7 +247,7 @@ message bgp_oc_route_attr {
 message bgp_oc_unknown_attr_type {
 	uint32 attribute_type = 1;
 	uint32 attribute_length = 2;
-	string attribute_value = 3;
+	bytes attribute_value = 3;
 }
 
 message bgp_oc_ext_attr {

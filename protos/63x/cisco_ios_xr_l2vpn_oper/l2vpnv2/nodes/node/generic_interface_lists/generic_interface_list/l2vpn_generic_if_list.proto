@@ -209,17 +209,14 @@ message l2vpn_generic_if_list_KEYS {
 	string interface_list_name = 2;
 }
 
-message iflist_if {
-	string interface_name = 1;
-	uint32 pending_replications = 2;
-	uint32 not_supported_replications = 3;
-	bool is_fib_downloaded = 4;
+message interfaces_item {
+	string value = 1;
 }
 
 message l2vpn_generic_if_list {
-	string interface_list_name = 50;
+	string interface_list_name_xr = 50;
 	uint32 interface_list_id = 51;
-	repeated iflist_if interface = 52;
+	repeated interfaces_item interface = 52;
 	uint32 number_of_interfaces = 53;
 	uint32 items = 54;
 }

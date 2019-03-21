@@ -215,15 +215,11 @@ message bfd_mgmt_relation_link_detail {
 	uint32 local_discriminator = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ip_addr_t_union {
 	string afi = 1;
 	uint32 dummy = 2;
 	string ipv4 = 3;
-	in6_addr_td ipv6 = 4;
+	string ipv6 = 4;
 }
 
 message bfd_mgmt_session_owner_information {

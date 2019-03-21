@@ -215,8 +215,8 @@ message rsvp_mgmt_timespec {
 }
 
 message rsvp_mgmt_hello_instance_detail {
-	string source_address = 50;
-	string destination_address = 51;
+	string source_address_xr = 50;
+	string destination_address_xr = 51;
 	string hello_instance_owner = 52;
 	string neighbor_hello_state = 53;
 	string instance_type = 54;

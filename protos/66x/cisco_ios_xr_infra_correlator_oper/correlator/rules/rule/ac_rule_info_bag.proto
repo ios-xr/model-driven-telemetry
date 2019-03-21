@@ -215,7 +215,7 @@ message ac_msg_code {
 }
 
 message ac_rule_info_bag {
-	string rule_name = 50;
+	string rule_name_xr = 50;
 	uint32 timeout = 51;
 	string rule_state = 52;
 	repeated ac_msg_code codes = 53;

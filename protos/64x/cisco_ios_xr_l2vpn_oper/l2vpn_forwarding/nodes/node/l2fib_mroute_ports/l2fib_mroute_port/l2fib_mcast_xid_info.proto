@@ -241,7 +241,7 @@ message l2fib_platform_stats_bag {
 message l2fib_prefix_info {
 	uint32 proto = 1;
 	uint32 prefix_length = 2;
-	repeated bytes prefix = 3;
+	bytes prefix = 3;
 }
 
 message l2fib_mcast_xid_info {

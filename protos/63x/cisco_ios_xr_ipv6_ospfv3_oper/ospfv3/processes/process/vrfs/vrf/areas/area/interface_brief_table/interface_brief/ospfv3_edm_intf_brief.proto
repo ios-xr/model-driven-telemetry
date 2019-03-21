@@ -211,12 +211,8 @@ message ospfv3_edm_intf_brief_KEYS {
 	string interface_name = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_intf_brief {
-	in6_addr_td interface_address = 50;
+	string interface_address = 50;
 	uint32 interface_link_cost = 51;
 	string ospf_interface_state = 52;
 	uint32 interface_neighbors = 53;

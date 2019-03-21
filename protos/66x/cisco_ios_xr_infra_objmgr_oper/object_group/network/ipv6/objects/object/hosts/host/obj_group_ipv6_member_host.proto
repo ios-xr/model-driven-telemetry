@@ -210,6 +210,6 @@ message obj_group_ipv6_member_host_KEYS {
 }
 
 message obj_group_ipv6_member_host {
-	string host_address = 50;
+	string host_address_xr = 50;
 }
 

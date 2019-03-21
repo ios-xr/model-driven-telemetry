@@ -218,7 +218,7 @@ message arm_addrtype {
 }
 
 message ip_arm_edm_addr {
-	arm_addrtype address = 1;
+	arm_addrtype address_xr = 1;
 	uint32 prefix_length = 2;
 	uint32 route_tag = 3;
 	bool is_primary = 4;
@@ -229,7 +229,7 @@ message ip_arm_edm_addr {
 
 message ip_arm_edm_db_net_bag_type {
 	string interface_name = 50;
-	ip_arm_edm_addr address = 51;
+	ip_arm_edm_addr address_xr = 51;
 	string referenced_interface = 52;
 	string vrf_name = 53;
 }

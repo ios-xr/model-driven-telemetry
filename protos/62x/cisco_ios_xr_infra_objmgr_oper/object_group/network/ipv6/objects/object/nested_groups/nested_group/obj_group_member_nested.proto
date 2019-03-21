@@ -210,6 +210,6 @@ message obj_group_member_nested_KEYS {
 }
 
 message obj_group_member_nested {
-	string nested_group_name = 50;
+	string nested_group_name_xr = 50;
 }
 

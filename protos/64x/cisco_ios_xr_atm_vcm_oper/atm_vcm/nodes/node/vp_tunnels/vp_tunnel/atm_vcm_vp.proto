@@ -213,7 +213,7 @@ message atm_vcm_vp_KEYS {
 message atm_vcm_vp {
 	string main_interface = 50;
 	string vp_interface = 51;
-	uint32 vpi = 52;
+	uint32 vpi_xr = 52;
 	string shape = 53;
 	uint32 peak_cell_rate = 54;
 	uint32 sustained_cell_rate = 55;

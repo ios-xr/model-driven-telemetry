@@ -269,13 +269,13 @@ message bgp_pfxlst__item {
 	uint32 max_prefix_length = 5;
 }
 
-message bgp_pfxlst_ {
+message bgp_pfxlst__entry {
 	repeated bgp_pfxlst__item bgp_pfxlst_ = 6;
 }
 
 message bgp_rcv_pfxlst_bag {
 	string af_name = 50;
-	bgp_addrtype neighbor_address = 51;
-	bgp_pfxlst_ prefix_list_info = 52;
+	bgp_addrtype neighbor_address_xr = 51;
+	bgp_pfxlst__entry prefix_list_info = 52;
 }
 

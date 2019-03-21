@@ -255,7 +255,7 @@ message te_s2l_sr_path_hop {
 
 message mpls_te_topology_path_bag {
 	uint32 tunnel_id_xr = 50;
-	string destination_address = 51;
+	string destination_address_xr = 51;
 	bool is_partial_path = 52;
 	bool is_full_path = 53;
 	bool is_topology_checked = 54;
@@ -264,8 +264,8 @@ message mpls_te_topology_path_bag {
 	uint64 bandwidth_type = 57;
 	uint64 mininum_bandwidth = 58;
 	uint64 accumulated_admin_weight = 59;
-	uint32 setup_priority = 60;
-	uint32 hold_priority = 61;
+	uint32 setup_priority_xr = 60;
+	uint32 hold_priority_xr = 61;
 	uint32 node_hop_count = 62;
 	mpls_te_tunnels_affinity_info affinity = 63;
 	string exclude_srlg_address = 64;

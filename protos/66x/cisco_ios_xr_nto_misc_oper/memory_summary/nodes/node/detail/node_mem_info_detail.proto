@@ -208,7 +208,7 @@ message node_mem_info_detail_KEYS {
 	string node_name = 1;
 }
 
-message shared_window {
+message shared_window_entry {
 	string shared_window = 1;
 	uint64 window_size = 2;
 }
@@ -225,7 +225,7 @@ message node_mem_info_detail {
 	uint64 reserved_memory = 58;
 	uint64 io_memory = 59;
 	uint64 flash_system = 60;
-	repeated shared_window shared_window = 61;
+	repeated shared_window_entry shared_window = 61;
 	uint64 total_shared_window = 62;
 	uint64 allocated_memory = 63;
 	uint64 program_text = 64;

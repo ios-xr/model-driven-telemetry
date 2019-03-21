@@ -221,12 +221,12 @@ message session_brief_info_item {
 	string connection_type = 11;
 }
 
-message session_brief_info {
+message session_brief_info_entry {
 	repeated session_brief_info_item session_brief_info = 12;
 }
 
 message ssh_session_brief {
-	session_brief_info incoming_sessions = 50;
-	session_brief_info outgoing_sessions = 51;
+	session_brief_info_entry incoming_sessions = 50;
+	session_brief_info_entry outgoing_sessions = 51;
 }
 

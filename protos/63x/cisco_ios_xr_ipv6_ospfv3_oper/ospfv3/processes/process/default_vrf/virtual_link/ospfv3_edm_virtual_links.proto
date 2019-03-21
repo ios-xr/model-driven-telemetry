@@ -208,10 +208,6 @@ message ospfv3_edm_virtual_links_KEYS {
 	string process_name = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_edm_neighbor_retrans {
 	uint32 database_descriptor_retransmissions = 1;
 	uint32 area_flood_index = 2;
@@ -250,7 +246,7 @@ message ospfv3_edm_virtual_links {
 	string virtual_link_state = 52;
 	bool is_virtual_link_ip_security_required = 53;
 	bool is_virtual_link_ip_security_active = 54;
-	in6_addr_td virtual_link_neighbor_address = 55;
+	string virtual_link_neighbor_address = 55;
 	bool is_virtual_link_demand_circuit = 56;
 	uint32 virtual_link_dc_bitless_lsa = 57;
 	string transit_area_id = 58;

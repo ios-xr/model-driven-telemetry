@@ -230,7 +230,7 @@ message elod_discovery_info {
 	bool remote_variable = 68;
 	uint32 remote_mtu = 69;
 	string remote_mac_address = 70;
-	string remote_vendor_oui = 71;
+	bytes remote_vendor_oui = 71;
 	uint32 remote_revision = 72;
 	uint32 remote_vendor_info = 73;
 	uint32 remote_mwd_key = 74;

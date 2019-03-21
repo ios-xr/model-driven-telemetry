@@ -210,7 +210,7 @@ message vpdn_lsg_node_KEYS {
 }
 
 message vpdn_lsg_node {
-	string vrf_name = 50;
+	string vrf_name_xr = 50;
 	uint32 load = 51;
 	string status = 52;
 	uint32 connects = 53;

@@ -213,12 +213,8 @@ message l2vpn_evpn_remote_shg_KEYS {
 	string esi5 = 6;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_evpn_remote_shg_info {
-	in6_addr_td next_hop = 1;
+	string next_hop = 1;
 	uint32 label = 2;
 }
 

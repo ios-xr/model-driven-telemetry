@@ -210,7 +210,7 @@ message ipv4_dhcpd_server_profile_KEYS {
 }
 
 message ipv4_dhcpd_server_profile {
-	string server_profile_name = 50;
+	string server_profile_name_xr = 50;
 	bool secure_arp = 51;
 	bool requested_address_check = 52;
 	bool server_id_check = 53;

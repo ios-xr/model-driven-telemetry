@@ -219,7 +219,7 @@ message vc_info {
 
 message l2vpn_preferred_path {
 	string type = 50;
-	string interface_name = 51;
+	string interface_name_xr = 51;
 	uint32 total_bandwidth = 52;
 	uint32 available_bandwidth = 53;
 	uint32 reserved_bandwidth = 54;

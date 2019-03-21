@@ -208,16 +208,12 @@ message ptp_if_info_KEYS {
 	string interface_name = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ptp_bag_mac_addr_type {
 	string macaddr = 1;
 }
 
 message ptp_bag_ipv6_addr_type {
-	in6_addr_td ipv6_address = 1;
+	string ipv6_address = 1;
 }
 
 message ptp_bag_address {
@@ -245,7 +241,7 @@ message ptp_if_info {
 	uint32 port_number = 51;
 	uint32 line_state = 52;
 	string encapsulation = 53;
-	in6_addr_td ipv6_address = 54;
+	string ipv6_address = 54;
 	string ipv4_address = 55;
 	ptp_bag_mac_addr_type mac_address = 56;
 	bool two_step = 57;

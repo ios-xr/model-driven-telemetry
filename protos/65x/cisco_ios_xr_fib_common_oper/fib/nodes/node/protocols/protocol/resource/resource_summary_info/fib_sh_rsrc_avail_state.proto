@@ -219,7 +219,7 @@ message fib_sh_rsrc_avail_state {
 	uint32 sr_curr_mode = 50;
 	repeated fib_sh_rsrc_shm sr_shm_state = 51;
 	repeated uint32 sr_hwrsrc_mode = 52;
-	string sr_hwrsrc_info = 53;
+	bytes sr_hwrsrc_info = 53;
 	uint32 sr_shmwin_oor_count = 54;
 	uint32 sr_hw_oor_count = 55;
 	uint64 sr_in_oor_ts = 56;

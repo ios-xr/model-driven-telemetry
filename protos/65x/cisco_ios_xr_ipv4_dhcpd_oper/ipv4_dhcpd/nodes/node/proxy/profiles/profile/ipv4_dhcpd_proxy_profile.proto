@@ -213,7 +213,7 @@ message ipv4_dhcpd_proxy_vrf_reference_item {
 	string proxy_reference_vrf_name = 1;
 }
 
-message ipv4_dhcpd_proxy_vrf_reference {
+message ipv4_dhcpd_proxy_vrf_reference_entry {
 	repeated ipv4_dhcpd_proxy_vrf_reference_item ipv4_dhcpd_proxy_vrf_reference = 1;
 }
 
@@ -221,7 +221,7 @@ message ipv4_dhcpd_proxy_interface_reference_item {
 	string proxy_reference_interface_name = 1;
 }
 
-message ipv4_dhcpd_proxy_interface_reference {
+message ipv4_dhcpd_proxy_interface_reference_entry {
 	repeated ipv4_dhcpd_proxy_interface_reference_item ipv4_dhcpd_proxy_interface_reference = 1;
 }
 
@@ -238,8 +238,8 @@ message ipv4_dhcpd_proxy_profile {
 	bool is_relay_check = 59;
 	bool is_move_allowed = 60;
 	string proxy_broadcast_flag_policy = 61;
-	ipv4_dhcpd_proxy_vrf_reference vrf_references = 62;
-	ipv4_dhcpd_proxy_interface_reference interface_references = 63;
+	ipv4_dhcpd_proxy_vrf_reference_entry vrf_references = 62;
+	ipv4_dhcpd_proxy_interface_reference_entry interface_references = 63;
 	uint32 proxy_profile_client_lease_time = 64;
 	string proxy_lease_limit_type = 65;
 	uint32 proxy_lease_limit_count = 66;

@@ -320,7 +320,7 @@ message l2vpn_evpn_es_nh_buffer {
 message l2vpn_evpn_igmp {
 	repeated uint32 ethernet_segment_identifier = 50;
 	string ethernet_segment_name = 51;
-	uint32 evi = 52;
+	uint32 evi_xr = 52;
 	uint32 bd_id = 53;
 	string route_type = 54;
 	string source_addr = 55;

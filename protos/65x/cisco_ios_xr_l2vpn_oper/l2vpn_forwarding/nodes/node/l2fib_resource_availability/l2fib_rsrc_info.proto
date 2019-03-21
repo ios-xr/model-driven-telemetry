@@ -219,6 +219,6 @@ message l2fib_rsrc_info {
 	uint32 overall_out_of_resource_mode = 50;
 	l2fib_rsrc_shm_info shm_resource = 51;
 	repeated uint32 hardware_resource_mode = 52;
-	string hardware_resource_mode_information = 53;
+	bytes hardware_resource_mode_information = 53;
 }
 

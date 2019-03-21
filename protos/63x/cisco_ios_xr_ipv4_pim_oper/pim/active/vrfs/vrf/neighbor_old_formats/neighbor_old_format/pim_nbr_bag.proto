@@ -210,18 +210,14 @@ message pim_nbr_bag_KEYS {
 	string neighbor_address = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pim_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message pim_nbr_bag {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	repeated pim_addrtype neighbor_address_xr = 51;
 	uint64 uptime = 52;
 	uint64 expires = 53;

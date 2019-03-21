@@ -215,7 +215,7 @@ message isis_sh_te_adv_KEYS {
 message isis_sh_te_adv_sub_tlv {
 	uint32 te_sub_tlv_type = 1;
 	uint32 te_sub_tlv_length = 2;
-	string te_sub_tlv_value = 3;
+	bytes te_sub_tlv_value = 3;
 }
 
 message isis_sh_te_adv_entry {

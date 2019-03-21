@@ -210,7 +210,7 @@ message csi_ma_admin_info_KEYS {
 }
 
 message csi_ma_admin_info {
-	uint32 csi_index = 50;
+	uint32 csi_index_xr = 50;
 	uint32 sdr_id = 51;
 	uint32 peer_sdr_id = 52;
 	string peer_sdr_name = 53;

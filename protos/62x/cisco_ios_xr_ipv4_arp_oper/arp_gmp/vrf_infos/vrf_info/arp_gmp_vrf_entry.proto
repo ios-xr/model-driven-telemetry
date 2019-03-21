@@ -209,7 +209,7 @@ message arp_gmp_vrf_entry_KEYS {
 }
 
 message arp_gmp_vrf_entry {
-	string vrf_name = 50;
+	string vrf_name_xr = 50;
 	uint32 vrf_id_number = 51;
 	uint32 table_id = 52;
 	uint32 rsi_handle = 53;

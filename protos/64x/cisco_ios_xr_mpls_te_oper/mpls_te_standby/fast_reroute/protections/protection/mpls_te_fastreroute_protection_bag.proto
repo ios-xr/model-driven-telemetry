@@ -217,10 +217,10 @@ message mpls_te_fastreroute_protection_bag_KEYS {
 }
 
 message mpls_te_fastreroute_protection_bag {
-	string source_address = 50;
-	string destination_address = 51;
-	uint32 tunnel_id = 52;
-	string extended_tunnel_id = 53;
+	string source_address_xr = 50;
+	string destination_address_xr = 51;
+	uint32 tunnel_id_xr = 52;
+	string extended_tunnel_id_xr = 53;
 	string tunnel_name = 54;
 	uint32 tunnel_instance = 55;
 	string role = 56;
@@ -248,7 +248,7 @@ message mpls_te_fastreroute_protection_bag {
 	string sharing_type = 78;
 	bool is_p2mp_tunnel = 79;
 	string sub_group_original_id = 80;
-	uint32 sub_group_id = 81;
-	uint32 p2mp_id = 82;
+	uint32 sub_group_id_xr = 81;
+	uint32 p2mp_id_xr = 82;
 }
 

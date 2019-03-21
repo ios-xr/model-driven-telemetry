@@ -264,7 +264,7 @@ message bgp_upderr_reset_data_bag {
 	string update_error_reset_reason = 1;
 	uint32 update_error_reset_notification_code = 2;
 	uint32 update_error_reset_notification_sub_code = 3;
-	string update_error_reset_notification_data = 4;
+	bytes update_error_reset_notification_data = 4;
 	uint32 update_error_reset_notification_data_length = 5;
 }
 
@@ -272,7 +272,7 @@ message bgp_upderr_elem_bag {
 	uint32 update_attribute_flags = 1;
 	uint32 update_attribute_code = 2;
 	uint32 update_attribute_length = 3;
-	string update_error_data = 4;
+	bytes update_error_data = 4;
 	uint32 update_error_data_length = 5;
 	string update_error_action = 6;
 }

@@ -211,7 +211,7 @@ message sse_span_ea_sft_bag_KEYS {
 
 message sse_span_ea_sft_bag {
 	uint32 src_ifh = 50;
-	repeated uint32 intf_name = 51;
+	repeated uint32 intf_name_xr = 51;
 	uint32 v4_acl_flag = 52;
 	uint32 v6_acl_flag = 53;
 	uint32 gre_acl_flag = 54;

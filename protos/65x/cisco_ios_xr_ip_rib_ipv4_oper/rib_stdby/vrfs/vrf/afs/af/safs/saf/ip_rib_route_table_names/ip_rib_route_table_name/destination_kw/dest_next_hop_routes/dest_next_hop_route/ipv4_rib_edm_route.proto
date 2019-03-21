@@ -272,7 +272,7 @@ message ipv4_rib_edm_path_item {
 	uint32 interface_index_attribute = 50;
 }
 
-message ipv4_rib_edm_path {
+message ipv4_rib_edm_path_entry {
 	repeated ipv4_rib_edm_path_item ipv4_rib_edm_path = 1;
 }
 
@@ -309,6 +309,6 @@ message ipv4_rib_edm_route {
 	uint32 version = 79;
 	uint64 tbl_version = 80;
 	uint64 route_modify_time = 81;
-	ipv4_rib_edm_path route_path = 82;
+	ipv4_rib_edm_path_entry route_path = 82;
 }
 

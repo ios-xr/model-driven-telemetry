@@ -218,12 +218,12 @@ message l2fib_ip_addr_t {
 }
 
 message l2fib_evpn_ipmac_info {
-	uint32 bdid = 50;
-	string mac_address = 51;
-	l2fib_ip_addr_t ip_address = 52;
+	uint32 bdid_xr = 50;
+	string mac_address_xr = 51;
+	l2fib_ip_addr_t ip_address_xr = 52;
 	bool arp_nd_sync_pending = 53;
 	bool arp_nd_probe_pending = 54;
 	bool arp_nd_delete_pending = 55;
-	bool is_local = 56;
+	bool is_local_xr = 56;
 }
 

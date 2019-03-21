@@ -209,18 +209,14 @@ message ipv6_dhcpv6d_proxy_binding_KEYS {
 	string client_id = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message bag_dhcpv6d_addr_attrb_item {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 prefix_length = 2;
 	uint32 lease_time = 3;
 	uint32 remaining_lease_time = 4;
 }
 
-message bag_dhcpv6d_addr_attrb {
+message bag_dhcpv6d_addr_attrb_entry {
 	repeated bag_dhcpv6d_addr_attrb_item bag_dhcpv6d_addr_attrb = 5;
 }
 
@@ -230,10 +226,10 @@ message bag_dhcpv6d_ia_id_pd_info_item {
 	uint32 flags = 3;
 	uint32 total_address = 4;
 	string state = 5;
-	bag_dhcpv6d_addr_attrb addresses = 6;
+	bag_dhcpv6d_addr_attrb_entry addresses = 6;
 }
 
-message bag_dhcpv6d_ia_id_pd_info {
+message bag_dhcpv6d_ia_id_pd_info_entry {
 	repeated bag_dhcpv6d_ia_id_pd_info_item bag_dhcpv6d_ia_id_pd_info = 7;
 }
 
@@ -244,7 +240,7 @@ message ipv6_dhcpv6d_proxy_binding {
 	string vrf_name = 53;
 	string mac_address = 54;
 	uint32 ia_id_p_ds = 55;
-	bag_dhcpv6d_ia_id_pd_info ia_id_pd = 56;
+	bag_dhcpv6d_ia_id_pd_info_entry ia_id_pd = 56;
 	string interface_name = 57;
 	string access_vrf_name = 58;
 	uint32 proxy_binding_tags = 59;
@@ -256,9 +252,9 @@ message ipv6_dhcpv6d_proxy_binding {
 	string tx_remote_id = 65;
 	string rx_interface_id = 66;
 	string tx_interface_id = 67;
-	in6_addr_td server_ipv6_address = 68;
+	string server_ipv6_address = 68;
 	string profile_name = 69;
-	in6_addr_td framed_ipv6_prefix = 70;
+	string framed_ipv6_prefix = 70;
 	uint32 framed_prefix_length = 71;
 	bool is_nak_next_renew = 72;
 	uint32 srg_state = 73;

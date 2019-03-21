@@ -281,9 +281,9 @@ message l2vpn_disco {
 	bool mtu_mismatch_ignore = 50;
 	uint32 number_vpn = 51;
 	uint32 vpn_id = 52;
-	string service_name = 53;
-	string group_name = 54;
-	string vpn_name = 55;
+	string service_name_xr = 53;
+	string group_name_xr = 54;
+	string vpn_name_xr = 55;
 	bool is_service_connected = 56;
 	l2vpn_disco_sig_info signalling_info = 57;
 }

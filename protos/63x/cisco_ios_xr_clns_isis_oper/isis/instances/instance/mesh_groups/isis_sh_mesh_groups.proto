@@ -213,11 +213,11 @@ message isis_sh_mesh_entry_item {
 	uint32 mesh_group_number = 2;
 }
 
-message isis_sh_mesh_entry {
+message isis_sh_mesh_entry_entry {
 	repeated isis_sh_mesh_entry_item isis_sh_mesh_entry = 3;
 }
 
 message isis_sh_mesh_groups {
-	isis_sh_mesh_entry mesh_group_configured_interface_list = 50;
+	isis_sh_mesh_entry_entry mesh_group_configured_interface_list = 50;
 }
 

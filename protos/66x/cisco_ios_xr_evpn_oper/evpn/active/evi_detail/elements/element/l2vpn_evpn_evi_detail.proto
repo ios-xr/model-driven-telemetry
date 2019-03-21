@@ -211,7 +211,7 @@ message l2vpn_evpn_evi_detail_KEYS {
 
 message l2vpn_evpn_evi_summary {
 	uint32 ethernet_vpn_id = 1;
-	uint32 encapsulation = 2;
+	uint32 encapsulation_xr = 2;
 	string bd_name = 3;
 	string type = 4;
 }
@@ -278,8 +278,8 @@ message l2vpn_rt {
 }
 
 message l2vpn_evpn_evi_detail {
-	uint32 evi = 50;
-	uint32 encapsulation = 51;
+	uint32 evi_xr = 50;
+	uint32 encapsulation_xr = 51;
 	string bd_name = 52;
 	string type = 53;
 	l2vpn_evpn_evi_summary evpn_instance = 54;

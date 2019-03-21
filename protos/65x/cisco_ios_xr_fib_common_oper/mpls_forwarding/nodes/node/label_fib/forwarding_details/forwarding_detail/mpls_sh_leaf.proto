@@ -253,7 +253,7 @@ message mpls_adj_info {
 }
 
 message mpls_ldi_info {
-	string ldi_hardware_information = 1;
+	bytes ldi_hardware_information = 1;
 }
 
 message mpls_mcast_info {
@@ -270,7 +270,7 @@ message mpls_mcast_info {
 	uint32 multicast_rpf_id = 11;
 	uint32 multicast_encap_id = 12;
 	uint32 multicast_platform_data_length = 13;
-	string multicast_platform_data = 14;
+	bytes multicast_platform_data = 14;
 }
 
 message mpls_sh_leaf {
@@ -278,7 +278,7 @@ message mpls_sh_leaf {
 	uint32 eos_bit = 51;
 	repeated mpls_adj_info label_information = 52;
 	mpls_ldi_info ldi_information = 53;
-	string hardware_information = 54;
+	bytes hardware_information = 54;
 	uint32 leaf_referance_count = 55;
 	uint32 leaf_flags = 56;
 	uint32 path_list_referance_count = 57;

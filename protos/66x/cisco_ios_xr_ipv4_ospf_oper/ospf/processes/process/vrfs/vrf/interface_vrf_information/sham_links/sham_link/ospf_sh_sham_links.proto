@@ -239,7 +239,7 @@ message ospf_sh_slink_neighbor {
 }
 
 message ospf_sh_sham_links {
-	string sham_link_name = 50;
+	string sham_link_name_xr = 50;
 	string sham_link_neighbor_id = 51;
 	string sham_link_source_address = 52;
 	string sham_link_dest_address = 53;

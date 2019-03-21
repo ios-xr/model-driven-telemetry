@@ -209,15 +209,11 @@ message ldp_discovery_link_info_KEYS {
 	string interface_name = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ldp_ip_addr_t_union {
 	string afi = 1;
 	uint32 dummy = 2;
 	string ipv4 = 3;
-	in6_addr_td ipv6 = 4;
+	string ipv6 = 4;
 }
 
 message ldp_last_sess_info {
@@ -260,7 +256,7 @@ message ldp_discovery_link_info {
 	repeated ldp_discovery_link_af_info discovery_link_af = 51;
 	uint32 next_hello = 52;
 	string interface = 53;
-	string interface_name = 54;
+	string interface_name_xr = 54;
 	ldp_vrf_info vrf = 55;
 	bool quick_start_disabled = 56;
 }

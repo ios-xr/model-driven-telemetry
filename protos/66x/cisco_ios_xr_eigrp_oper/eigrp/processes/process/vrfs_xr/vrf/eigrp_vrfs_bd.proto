@@ -210,6 +210,6 @@ message eigrp_vrfs_bd_KEYS {
 }
 
 message eigrp_vrfs_bd {
-	string vrf_name = 50;
+	string vrf_name_xr = 50;
 }
 

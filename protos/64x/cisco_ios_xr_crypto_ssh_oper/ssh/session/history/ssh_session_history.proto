@@ -224,11 +224,11 @@ message session_history_info_item {
 	repeated ssh_mcinfo mc_info = 7;
 }
 
-message session_history_info {
+message session_history_info_entry {
 	repeated session_history_info_item session_history_info = 1;
 }
 
 message ssh_session_history {
-	session_history_info incoming_sessions = 50;
+	session_history_info_entry incoming_sessions = 50;
 }
 

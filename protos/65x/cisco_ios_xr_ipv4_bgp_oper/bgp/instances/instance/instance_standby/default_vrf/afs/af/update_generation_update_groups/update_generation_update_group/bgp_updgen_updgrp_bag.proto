@@ -244,7 +244,7 @@ message bgp_updgen_updgrp_bag {
 	string update_vrf_name = 51;
 	string update_group_af_name = 52;
 	uint32 neighbor_session_af_name = 53;
-	uint32 update_group_index = 54;
+	uint32 update_group_index_xr = 54;
 	uint32 update_group_flags2 = 55;
 	uint32 update_out_queue_messages = 56;
 	uint32 update_out_queue_size = 57;

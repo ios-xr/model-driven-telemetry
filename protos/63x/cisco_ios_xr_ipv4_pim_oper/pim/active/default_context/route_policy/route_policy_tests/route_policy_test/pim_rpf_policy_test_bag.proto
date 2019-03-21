@@ -210,20 +210,16 @@ message pim_rpf_policy_test_bag_KEYS {
 	string ext_comm = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pim_addrtype {
 	string af_name = 1;
 	string ipv4_address = 2;
-	in6_addr_td ipv6_address = 3;
+	string ipv6_address = 3;
 }
 
 message pim_rpf_policy_test_bag {
 	string policy_name = 50;
-	pim_addrtype source_address = 51;
-	pim_addrtype group_address = 52;
+	pim_addrtype source_address_xr = 51;
+	pim_addrtype group_address_xr = 52;
 	string extended_community_rt = 53;
 	bool pass = 54;
 	bool default_table = 55;

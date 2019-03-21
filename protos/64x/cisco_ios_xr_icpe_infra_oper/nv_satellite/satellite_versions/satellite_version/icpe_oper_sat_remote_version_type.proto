@@ -215,7 +215,7 @@ message icpe_oper_sat_version {
 }
 
 message icpe_oper_sat_remote_version_type {
-	uint32 satellite_id = 50;
+	uint32 satellite_id_xr = 50;
 	string version_check_state = 51;
 	bool remote_version_present = 52;
 	repeated string remote_version = 53;

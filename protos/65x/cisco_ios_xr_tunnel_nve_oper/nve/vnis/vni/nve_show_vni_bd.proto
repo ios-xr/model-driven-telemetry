@@ -210,7 +210,7 @@ message nve_show_vni_bd_KEYS {
 
 message nve_show_vni_bd {
 	string interface_name = 50;
-	uint32 vni = 51;
+	uint32 vni_xr = 51;
 	string state = 52;
 	string mcast_ipv4_address = 53;
 	uint32 flags = 54;

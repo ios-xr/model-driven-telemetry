@@ -228,7 +228,7 @@ message subdb_subscriber_obj {
 	bool activate_timer_running = 65;
 	bool apply_timer_running = 66;
 	bool event_queue_size = 67;
-	string restarts = 68;
+	bytes restarts = 68;
 	uint32 template_interface_id = 69;
 }
 

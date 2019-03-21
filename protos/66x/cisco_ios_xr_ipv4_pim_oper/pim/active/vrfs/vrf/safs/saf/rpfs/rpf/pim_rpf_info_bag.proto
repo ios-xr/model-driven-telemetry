@@ -230,7 +230,7 @@ message pim_rpf_path_bag {
 }
 
 message pim_rpf_info_bag {
-	pim_addrtype registered_address = 50;
+	pim_addrtype registered_address_xr = 50;
 	uint32 metric = 51;
 	uint32 metric_preference = 52;
 	uint32 is_connected = 53;

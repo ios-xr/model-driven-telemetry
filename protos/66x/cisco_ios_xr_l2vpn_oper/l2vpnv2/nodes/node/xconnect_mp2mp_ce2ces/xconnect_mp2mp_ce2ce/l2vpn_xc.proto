@@ -638,7 +638,7 @@ message l2vpn_xc_ce2ce {
 }
 
 message l2vpn_xc {
-	string group_name = 50;
+	string group_name_xr = 50;
 	string xconnect_name_xr = 51;
 	l2vpn_segment backup = 52;
 	l2vpn_segment segment1 = 53;

@@ -221,7 +221,7 @@ message taskmap {
 }
 
 message user_det {
-	string name = 50;
+	string name_xr = 50;
 	repeated string usergroup = 51;
 	taskmap task_map = 52;
 	bool admin_user = 53;

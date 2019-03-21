@@ -215,7 +215,7 @@ message ipv6_bag_addr_ {
 
 message vrrp_trackitem_info {
 	string interface = 1;
-	uint32 virtual_router_id = 2;
+	uint32 virtual_router_id_xr = 2;
 	uint32 tracked_item_type = 3;
 	string tracked_item_index = 4;
 	uint32 state = 5;
@@ -235,8 +235,8 @@ message vrrp_state_change_info_type {
 }
 
 message vrrp_vrouter_info {
-	string interface_name = 50;
-	uint32 virtual_router_id = 51;
+	string interface_name_xr = 50;
+	uint32 virtual_router_id_xr = 51;
 	uint32 version = 52;
 	string address_family = 53;
 	string session_name = 54;

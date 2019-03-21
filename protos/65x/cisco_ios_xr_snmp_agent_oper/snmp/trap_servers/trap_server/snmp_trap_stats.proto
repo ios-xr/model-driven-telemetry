@@ -206,7 +206,7 @@ package cisco_ios_xr_snmp_agent_oper.snmp.trap_servers.trap_server;
 
 message snmp_trap_stats_KEYS {
 	string trap_host = 1;
-	string port = 2;
+	uint32 port = 2;
 }
 
 message snmp_trap_stats {

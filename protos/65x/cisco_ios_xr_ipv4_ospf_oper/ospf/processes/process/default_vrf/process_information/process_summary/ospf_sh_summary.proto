@@ -249,7 +249,7 @@ message ospf_sh_redist {
 
 message ospf_sh_domain_id_entry {
 	uint32 domain_id_type = 1;
-	string domain_id_value = 2;
+	bytes domain_id_value = 2;
 }
 
 message ospf_sh_domain_id {

@@ -239,7 +239,7 @@ message rcmd_show_ldp_rlfa_log {
 }
 
 message rcmd_show_ldp_rlfa_event {
-	uint32 event_id = 50;
+	uint32 event_id_xr = 50;
 	string end_of_calculation_time = 51;
 	string igp_protocol = 52;
 	string process_name = 53;

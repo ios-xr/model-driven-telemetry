@@ -209,7 +209,7 @@ message tc_mgmt_ext_if_data_KEYS {
 }
 
 message tc_mgmt_ext_if_data {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint32 interface_handle = 51;
 	uint32 vrfid = 52;
 	bool is_interface_enabled = 53;

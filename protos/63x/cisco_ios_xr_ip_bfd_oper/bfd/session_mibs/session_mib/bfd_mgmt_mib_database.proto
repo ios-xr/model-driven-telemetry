@@ -208,15 +208,11 @@ message bfd_mgmt_mib_database_KEYS {
 	uint32 discriminator = 1;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ip_addr_t_union {
 	string afi = 1;
 	uint32 dummy = 2;
 	string ipv4 = 3;
-	in6_addr_td ipv6 = 4;
+	string ipv6 = 4;
 }
 
 message bfd_mgmt_mib_database {

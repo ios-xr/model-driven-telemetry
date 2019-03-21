@@ -219,12 +219,12 @@ message session_detail_info_item {
 	string end_time = 9;
 }
 
-message session_detail_info {
+message session_detail_info_entry {
 	repeated session_detail_info_item session_detail_info = 1;
 }
 
 message ssh_session_detail {
-	session_detail_info incoming_sessions = 50;
-	session_detail_info outgoing_connections = 51;
+	session_detail_info_entry incoming_sessions = 50;
+	session_detail_info_entry outgoing_connections = 51;
 }
 

@@ -215,7 +215,7 @@ message xtc_dist_info_bag {
 }
 
 message xtc_on_demand_color_bag {
-	uint32 color = 50;
+	uint32 color_xr = 50;
 	xtc_dist_info_bag disjoint_path_info = 51;
 	uint32 absolute_margin = 52;
 	uint32 relative_margin = 53;

@@ -209,7 +209,7 @@ message fib_sh_tbl_fib_KEYS {
 	string protocol_name = 2;
 	string vrf_name = 3;
 	string prefix = 4;
-	string prefix_length = 5;
+	uint32 prefix_length = 5;
 }
 
 message fib_addr_str {
@@ -267,7 +267,7 @@ message fib_sh_tbl_fib_det {
 	uint32 adjacency_address_length = 8;
 	uint32 adjacency_interface = 9;
 	uint32 fib_special_nh_information_type = 10;
-	repeated string fib_entry_adjacency_address = 11;
+	string fib_entry_adjacency_address = 11;
 	uint32 fib_entry_adjacency_interface = 12;
 	uint64 packets_through_fib_entry = 13;
 	uint64 bytes_through_fib_entry = 14;
@@ -284,9 +284,9 @@ message fib_sh_tbl_fib_det {
 	uint32 bgp_local_attribute_id = 25;
 	uint32 bgp_attribute_origin_as = 26;
 	uint32 bgp_attribute_next_hop_as = 27;
-	repeated string path_string = 28;
-	repeated string extcom_string = 29;
-	repeated string com_string = 30;
+	string path_string = 28;
+	string extcom_string = 29;
+	string com_string = 30;
 	uint32 extended_community = 31;
 	uint32 qos_group = 32;
 	uint32 mpls_fec = 33;
@@ -337,10 +337,10 @@ message fib_sh_tbl_path_det {
 	uint32 number_of_dependencies_this_path = 10;
 	uint32 robin_reset_value = 11;
 	bool recurse_prefix_object = 12;
-	repeated string next_prefix_recursion = 13;
+	string next_prefix_recursion = 13;
 	uint32 next_prefix_length = 14;
 	bool recurse_prefix_object2 = 15;
-	repeated string next_prefix_recursion2 = 16;
+	string next_prefix_recursion2 = 16;
 	uint32 next_prefix_length2 = 17;
 	string detail_fib_adjacency_type = 18;
 	bool current_path_flag = 19;
@@ -404,7 +404,7 @@ message fib_sh_tbl_path_item {
 	uint32 recursionvia_len = 25;
 }
 
-message fib_sh_tbl_path {
+message fib_sh_tbl_path_entry {
 	repeated fib_sh_tbl_path_item fib_sh_tbl_path = 1;
 }
 
@@ -421,7 +421,7 @@ message fib_sh_tbl_fib_ext_cmn_det {
 message fib_sh_tbl_fib {
 	uint32 protocol_type_fib_entry = 50;
 	fib_sh_tbl_fib_det detail_fib_entry_information = 51;
-	fib_sh_tbl_path fib_entry_path = 52;
+	fib_sh_tbl_path_entry fib_entry_path = 52;
 	string platform_hardware = 53;
 	uint32 number_of_referances_to_path_list = 54;
 	uint32 path_list_flags = 55;

@@ -218,9 +218,9 @@ message l2vpn_label_path_buffer {
 }
 
 message l2vpn_evpn_mac {
-	uint32 ethernet_tag = 50;
-	string mac_address = 51;
-	string ip_address = 52;
+	uint32 ethernet_tag_xr = 50;
+	string mac_address_xr = 51;
+	string ip_address_xr = 52;
 	uint32 local_label = 53;
 	uint32 num_paths = 54;
 	repeated l2vpn_label_path_buffer path_buffer = 55;

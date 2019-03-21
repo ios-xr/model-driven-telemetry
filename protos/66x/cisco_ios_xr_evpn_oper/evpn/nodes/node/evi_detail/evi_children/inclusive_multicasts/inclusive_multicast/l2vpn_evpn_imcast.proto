@@ -214,15 +214,15 @@ message l2vpn_evpn_imcast_KEYS {
 
 message l2vpn_evpn_evi_summary {
 	uint32 ethernet_vpn_id = 1;
-	uint32 encapsulation = 2;
+	uint32 encapsulation_xr = 2;
 	string bd_name = 3;
 	string type = 4;
 }
 
 message l2vpn_evpn_imcast {
 	l2vpn_evpn_evi_summary evpn_instance = 50;
-	uint32 ethernet_tag = 51;
-	string originating_ip = 52;
+	uint32 ethernet_tag_xr = 51;
+	string originating_ip_xr = 52;
 	uint32 tunnel_endpoint_id = 53;
 	uint32 pmsi_tunnel_type = 54;
 	string next_hop = 55;

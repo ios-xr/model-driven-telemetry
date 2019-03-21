@@ -260,7 +260,7 @@ message pce_pcep_detail_bag {
 }
 
 message pce_peer_detail_bag {
-	string peer_address = 50;
+	string peer_address_xr = 50;
 	string peer_protocol = 51;
 	pce_pcep_detail_bag detail_pcep_information = 52;
 }

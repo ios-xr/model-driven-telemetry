@@ -212,7 +212,7 @@ message ospfv3_edm_redist_KEYS {
 }
 
 message ospfv3_edm_redist {
-	string protocol_name = 50;
+	string protocol_name_xr = 50;
 	string process_id = 51;
 	bool red_metric_flag = 52;
 	uint32 red_metric = 53;

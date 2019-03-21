@@ -258,14 +258,10 @@ message pce_node_pid_bag {
 	repeated pce_srgb_info_bag srgb_information = 7;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pce_ip_addr_type {
 	string af_name = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message pce_pfx_entry {
@@ -273,7 +269,7 @@ message pce_pfx_entry {
 }
 
 message pce_pfx_bag {
-	uint32 node_identifier = 50;
+	uint32 node_identifier_xr = 50;
 	pce_node_pid_bag node_protocol_identifier = 51;
 	repeated pce_pfx_entry address = 52;
 }

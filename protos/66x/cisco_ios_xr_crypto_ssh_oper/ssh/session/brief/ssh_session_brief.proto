@@ -225,12 +225,12 @@ message session_brief_info_item {
 	repeated ssh_mcinfo mc_info = 8;
 }
 
-message session_brief_info {
+message session_brief_info_entry {
 	repeated session_brief_info_item session_brief_info = 1;
 }
 
 message ssh_session_brief {
-	session_brief_info incoming_sessions = 50;
-	session_brief_info outgoing_sessions = 51;
+	session_brief_info_entry incoming_sessions = 50;
+	session_brief_info_entry outgoing_sessions = 51;
 }
 

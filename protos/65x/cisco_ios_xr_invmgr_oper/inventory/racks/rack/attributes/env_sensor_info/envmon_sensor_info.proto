@@ -209,7 +209,7 @@ message envmon_sensor_info_KEYS {
 }
 
 message envmon_sensor_info {
-	string field_validity_bitmap = 50;
+	bytes field_validity_bitmap = 50;
 	string device_description = 51;
 	string units = 52;
 	uint32 device_id = 53;

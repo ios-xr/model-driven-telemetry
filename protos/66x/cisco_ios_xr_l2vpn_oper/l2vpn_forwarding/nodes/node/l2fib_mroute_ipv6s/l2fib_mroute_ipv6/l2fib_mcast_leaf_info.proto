@@ -258,7 +258,7 @@ message l2fib_mcast_leaf_info {
 	uint32 bridge_id = 53;
 	uint32 xid_count = 54;
 	uint32 platform_data_length = 55;
-	repeated string platform_data = 56;
+	string platform_data = 56;
 	string hardware_information = 57;
 	repeated string bridge_domain_name = 58;
 	l2fib_platform_stats_bag forward_stats = 59;

@@ -209,7 +209,7 @@ message mpls_rsvp_interface_counters_KEYS {
 }
 
 message mpls_rsvp_interface_counters {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	uint64 in_path_messages = 51;
 	uint64 in_path_error_messages = 52;
 	uint64 in_path_tear_messages = 53;

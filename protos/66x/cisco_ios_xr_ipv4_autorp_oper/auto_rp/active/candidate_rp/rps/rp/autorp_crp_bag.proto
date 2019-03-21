@@ -214,6 +214,6 @@ message autorp_crp_bag {
 	string candidate_rp_address = 51;
 	sint32 ttl = 52;
 	sint32 announce_period = 53;
-	string protocol_mode = 54;
+	string protocol_mode_xr = 54;
 }
 

@@ -270,7 +270,7 @@ message l2vpn_rt {
 }
 
 message l2vpn_evpn_evi_detail {
-	uint32 evi = 50;
+	uint32 evi_xr = 50;
 	string description = 51;
 	string bd_name = 52;
 	string type = 53;

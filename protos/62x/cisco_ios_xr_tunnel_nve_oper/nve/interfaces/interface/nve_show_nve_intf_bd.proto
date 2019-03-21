@@ -209,7 +209,7 @@ message nve_show_nve_intf_bd_KEYS {
 }
 
 message nve_show_nve_intf_bd {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	string state = 51;
 	string admin_state = 52;
 	uint32 flags = 53;

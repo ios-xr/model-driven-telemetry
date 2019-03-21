@@ -214,7 +214,7 @@ message mpls_te_topo_cfg_srlg_link {
 }
 
 message mpls_te_topo_cfg_srlg {
-	uint32 srlg_number = 50;
+	uint32 srlg_number_xr = 50;
 	string srlg_name = 51;
 	uint32 admin_weight = 52;
 	bool is_admin_weight_configured = 53;

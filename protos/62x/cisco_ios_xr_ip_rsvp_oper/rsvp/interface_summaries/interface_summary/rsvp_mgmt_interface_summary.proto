@@ -235,7 +235,7 @@ message rsvp_mgmt_dste_mode_interface_bw {
 }
 
 message rsvp_mgmt_interface_summary {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	rsvp_mgmt_dste_mode_interface_bw bandwidth_information = 51;
 	uint32 paths_in = 52;
 	uint32 paths_out = 53;

@@ -211,7 +211,7 @@ message policy_map_applied_show_bg_KEYS {
 
 message plmgr_var_val_un {
 	string type = 1;
-	repeated string class_name = 2;
+	string class_name = 2;
 	uint32 uint8_val = 3;
 	uint32 uint16_val = 4;
 	uint32 uint32_val = 5;
@@ -227,7 +227,8 @@ message pmap_var_info_st {
 }
 
 message pmap_var_list_st {
-	repeated pmap_var_info_st pmap_var_list_arr = 1;
+	repeated uint32 offset = 1;
+	repeated pmap_var_info_st pmap_var_list_arr = 2;
 }
 
 message uint8_rng_st {
@@ -286,12 +287,8 @@ message match_ipv4_st {
 	string mask = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message match_ipv6_st {
-	in6_addr_td prefix = 1;
+	string prefix = 1;
 	uint32 mask = 2;
 }
 
@@ -394,12 +391,13 @@ message class_match_data_un {
 	repeated uint16_rng_st ethertype = 80;
 	flow_key_st flow_key_data = 81;
 	repeated match_dhcp_client_id_st dhcp_client_id = 82;
-	repeated string circuit_id = 83;
-	repeated string circuit_id_regex = 84;
-	repeated string remote_id = 85;
-	repeated string remote_id_regex = 86;
-	repeated uint16_rng_st src_port = 87;
-	repeated uint16_rng_st dst_port = 88;
+	repeated match_dhcp_client_id_st dhcp_client_id_regexp = 83;
+	repeated string circuit_id = 84;
+	repeated string circuit_id_regex = 85;
+	repeated string remote_id = 86;
+	repeated string remote_id_regex = 87;
+	repeated uint16_rng_st src_port = 88;
+	repeated uint16_rng_st dst_port = 89;
 }
 
 message class_match_info_st_item {
@@ -407,7 +405,7 @@ message class_match_info_st_item {
 	uint32 flags = 2;
 }
 
-message class_match_info_st {
+message class_match_info_st_entry {
 	repeated class_match_info_st_item class_match_info_st = 3;
 }
 
@@ -415,29 +413,31 @@ message inline_class_map_bg {
 	string mode = 1;
 	uint32 flags = 2;
 	uint32 match_count = 3;
-	class_match_info_st match_infop = 4;
+	class_match_info_st_entry match_infop = 4;
 }
 
 message pol_class_enc_un {
 	string enc = 1;
-	repeated string class_name = 2;
+	string class_name = 2;
 	uint64 hd = 3;
 	uint32 idx = 4;
 	inline_class_map_bg inline_cmap = 5;
 }
 
 message class_map_bg_item {
-	repeated string name = 1;
-	string type = 2;
-	string mode = 3;
-	uint32 flags = 4;
-	uint32 match_count = 5;
-	class_match_info_st match_infop = 6;
-	string description = 7;
+	uint32 magic = 1;
+	string name = 2;
+	string type = 3;
+	string mode = 4;
+	uint32 flags = 5;
+	uint32 match_count = 6;
+	class_match_info_st_entry match_infop = 7;
+	repeated uint32 chk_sum = 8;
+	string description = 9;
 }
 
-message class_map_bg {
-	repeated class_map_bg_item class_map_bg = 8;
+message class_map_bg_entry {
+	repeated class_map_bg_item class_map_bg = 10;
 }
 
 message action_mark_info_st {
@@ -629,12 +629,12 @@ message action_police_info_st {
 	repeated police_action_un exceed_actns = 7;
 	repeated police_action_un violate_actns = 8;
 	pol_class_enc_un confclass_encode = 9;
-	class_map_bg confclass_p = 10;
+	class_map_bg_entry confclass_p = 10;
 	pol_class_enc_un excdclass_encode = 11;
-	class_map_bg excdclass_p = 12;
+	class_map_bg_entry excdclass_p = 12;
 	uint32 flags = 13;
 	uint32 police_flags = 14;
-	repeated string sbuck_name = 15;
+	string sbuck_name = 15;
 	string sbuck_type = 16;
 }
 
@@ -644,13 +644,13 @@ message action_shape_info_st {
 }
 
 message policy_map_type_n_name_st {
-	repeated string name = 1;
+	string name = 1;
 	string type = 2;
 }
 
 message policy_map_hd_st {
 	uint64 hd = 1;
-	policy_map_bg data_hd = 2;
+	policy_map_bg_entry data_hd = 2;
 }
 
 message chld_pol_enc_un {
@@ -717,10 +717,10 @@ message action_afmon_fmm_info_st {
 }
 
 message action_pbf_info_st {
-	in6_addr_td addr = 1;
+	string addr = 1;
 	string vrf = 2;
 	uint32 rt_type = 3;
-	repeated bytes rt = 4;
+	bytes rt = 4;
 }
 
 message action_ipv4_nh_info_st {
@@ -729,7 +729,7 @@ message action_ipv4_nh_info_st {
 }
 
 message action_ipv6_nh_info_st {
-	in6_addr_td nh_addr = 1;
+	string nh_addr = 1;
 	string vrf_name = 2;
 }
 
@@ -791,7 +791,7 @@ message policy_action_info_st_item {
 	policy_action_datap_un actp = 3;
 }
 
-message policy_action_info_st {
+message policy_action_info_st_entry {
 	repeated policy_action_info_st_item policy_action_info_st = 4;
 }
 
@@ -801,39 +801,50 @@ message policy_class_info_bg_item {
 	uint32 flags = 3;
 	string ctype = 4;
 	pol_class_enc_un cl_encode = 5;
-	class_map_bg clmp_p = 6;
+	class_map_bg_entry clmp_p = 6;
 	uint32 num_actions = 7;
 	uint32 version = 8;
 	string exe_strat = 9;
-	policy_action_info_st act_infop = 10;
+	policy_action_info_st_entry act_infop = 10;
 }
 
-message policy_class_info_bg {
+message policy_class_info_bg_entry {
 	repeated policy_class_info_bg_item policy_class_info_bg = 11;
 }
 
 message policy_event_info_bg_item {
 	string event_type = 1;
 	string cond_eval = 2;
-	policy_class_info_bg class_infop = 3;
-	uint32 flags = 4;
+	policy_class_info_bg_entry class_infop = 3;
+	uint64 avl_tree = 4;
+	uint32 flags = 5;
 }
 
-message policy_event_info_bg {
-	repeated policy_event_info_bg_item policy_event_info_bg = 5;
+message policy_event_info_bg_entry {
+	repeated policy_event_info_bg_item policy_event_info_bg = 6;
 }
 
 message policy_map_bg_item {
-	repeated string name = 1;
+	string name = 1;
 	string type = 2;
-	uint32 flags = 3;
-	pmap_var_list_st pmap_var_list = 4;
-	policy_event_info_bg event_infop = 5;
-	string description = 6;
+	uint32 magic = 3;
+	uint32 flags = 4;
+	uint32 num_classes = 5;
+	uint32 max_hierarchy = 6;
+	uint32 class_dflt_hrchy_depth = 7;
+	uint32 num_policy_class_info = 8;
+	uint32 table_id = 9;
+	uint32 handle = 10;
+	pmap_var_list_st pmap_var_list = 11;
+	policy_event_info_bg_entry event_infop = 12;
+	repeated uint32 chk_sum = 13;
+	repeated uint32 rateless_chk_sum = 14;
+	string description = 15;
+	uint64 pclass_diff = 16;
 }
 
-message policy_map_bg {
-	repeated policy_map_bg_item policy_map_bg = 7;
+message policy_map_bg_entry {
+	repeated policy_map_bg_item policy_map_bg = 17;
 }
 
 message plmgr_applied_varlist_bg {
@@ -841,9 +852,9 @@ message plmgr_applied_varlist_bg {
 }
 
 message policy_map_applied_show_bg {
-	repeated string parent_pmap_name = 50;
+	string parent_pmap_name = 50;
 	string pmap_type = 51;
-	repeated policy_map_bg pmaps = 52;
+	repeated policy_map_bg_entry pmaps = 52;
 	repeated plmgr_applied_varlist_bg pmap_var_list = 53;
 	repeated string subscriber_grp = 54;
 }

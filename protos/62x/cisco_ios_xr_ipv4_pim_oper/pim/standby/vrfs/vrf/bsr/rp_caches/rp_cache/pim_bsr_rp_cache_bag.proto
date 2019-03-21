@@ -211,15 +211,27 @@ message pim_bsr_rp_cache_bag_KEYS {
 
 message pim_addrtype {
 	string af_name = 1;
+	string ipv4_address = 2;
+	string ipv6_address = 3;
 }
 
-message pim_bsr_crp_bag {
+message pim_bsr_crp_bag_item {
+	pim_addrtype candidate_rp_address = 1;
+	uint32 candidate_rp_holdtime = 2;
+	uint32 candidate_rp_priority = 3;
+	uint32 candidate_rp_up_time = 4;
+	uint32 candidate_rp_expires = 5;
+	string protocol = 6;
+}
+
+message pim_bsr_crp_bag_entry {
+	repeated pim_bsr_crp_bag_item pim_bsr_crp_bag = 7;
 }
 
 message pim_bsr_rp_cache_bag {
 	pim_addrtype group_prefix_xr = 50;
 	uint32 group_prefix_length = 51;
 	uint32 candidate_rp_group_count = 52;
-	pim_bsr_crp_bag pim_bsr_crp_bag = 53;
+	pim_bsr_crp_bag_entry candidate_rp_list = 53;
 }
 

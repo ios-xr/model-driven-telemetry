@@ -208,12 +208,54 @@ message span_mgr_session_bag_KEYS {
 	string session = 1;
 }
 
+message span_bag_dst_intf_data_ {
+	string interface_name = 1;
+	string interface_state = 2;
+}
+
+message span_bag_dst_pw_data_ {
+	string pseudowire_name = 1;
+	bool pseudowire_is_up = 2;
+}
+
+message span_bag_dst_nh_ipv4_data_ {
+	string ipv4_address = 1;
+	string vrf_name = 2;
+	bool address_is_reachable = 3;
+}
+
+message span_bag_dst_nh_ipv6_data_ {
+	string ipv6_address = 1;
+	string vrf_name = 2;
+	bool address_is_reachable = 3;
+}
+
 message span_bag_dst_data {
 	string destination_class = 1;
+	span_bag_dst_intf_data_ interface_data = 2;
+	span_bag_dst_pw_data_ pseudowire_data = 3;
+	span_bag_dst_nh_ipv4_data_ next_hop_ipv4_data = 4;
+	span_bag_dst_nh_ipv6_data_ next_hop_ipv6_data = 5;
+	uint32 invalid_value = 6;
+}
+
+message span_bag_dst_id_nexthop_v4_ {
+	string ipv4_address = 1;
+	string vrf_name = 2;
+}
+
+message span_bag_dst_id_nexthop_v6_ {
+	string ipv6_address = 1;
+	string vrf_name = 2;
 }
 
 message span_bag_dst_id {
 	string destination_class = 1;
+	string interface = 2;
+	uint32 pseudowire_id = 3;
+	span_bag_dst_id_nexthop_v4_ ipv4_address_and_vrf = 4;
+	span_bag_dst_id_nexthop_v6_ ipv6_address_and_vrf = 5;
+	uint32 invalid_value = 6;
 }
 
 message span_mgr_session_bag {

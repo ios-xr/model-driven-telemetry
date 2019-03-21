@@ -216,20 +216,16 @@ message pce_path_list_bag_KEYS {
 	uint32 shortest_path = 9;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message pce_addr_bag {
 	uint32 address_family = 1;
 	string ipv4_prefix = 2;
-	in6_addr_td ipv6_prefix = 3;
+	string ipv6_prefix = 3;
 }
 
 message pce_ip_addr_type {
 	string af_name = 1;
 	string ipv4 = 2;
-	in6_addr_td ipv6 = 3;
+	string ipv6 = 3;
 }
 
 message pce_path_bag {

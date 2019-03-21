@@ -215,7 +215,7 @@ message pim_addrtype {
 }
 
 message pim_idb_bag {
-	string interface_name = 50;
+	string interface_name_xr = 50;
 	repeated pim_addrtype interface_address = 51;
 	uint32 interface_address_mask = 52;
 	bool is_enabled = 53;

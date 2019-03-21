@@ -225,7 +225,7 @@ message pce_ip_addr_type {
 message pce_path_bag {
 	repeated pce_addr_bag hops = 50;
 	uint64 cost = 51;
-	pce_ip_addr_type source = 52;
-	pce_ip_addr_type destination = 53;
+	pce_ip_addr_type source_xr = 52;
+	pce_ip_addr_type destination_xr = 53;
 }
 

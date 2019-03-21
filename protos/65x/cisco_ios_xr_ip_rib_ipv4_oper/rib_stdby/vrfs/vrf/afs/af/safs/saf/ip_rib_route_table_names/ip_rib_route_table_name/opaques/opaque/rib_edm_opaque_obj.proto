@@ -218,7 +218,7 @@ message rib_edm_opaque_obj_KEYS {
 }
 
 message rib_edm_opaque_obj {
-	string key = 50;
-	string data = 51;
+	bytes key = 50;
+	bytes data = 51;
 }
 

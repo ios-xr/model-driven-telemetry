@@ -305,7 +305,7 @@ message fib_sh_nhinfo {
 	uint32 si_anc_ifh = 92;
 	fib_sh_nhinfo_pwhe_ext si_pwhe = 93;
 	uint64 si_gre_ti_resolving_leafp = 94;
-	repeated string si_gre_dest_addr = 95;
+	string si_gre_dest_addr = 95;
 	uint32 si_nhid = 96;
 	uint64 si_upd_ts = 97;
 	fib_sh_nhinfo_ext nh_info_extension = 98;

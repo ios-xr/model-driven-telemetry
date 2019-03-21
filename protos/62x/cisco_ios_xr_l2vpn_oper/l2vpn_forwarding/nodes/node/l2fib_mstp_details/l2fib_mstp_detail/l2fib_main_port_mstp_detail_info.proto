@@ -215,8 +215,8 @@ message l2fib_base_info {
 
 message l2fib_main_port_mstp_detail_info {
 	l2fib_base_info base = 50;
-	string parent_interface = 51;
-	uint32 msti = 52;
+	string parent_interface_xr = 51;
+	uint32 msti_xr = 52;
 	uint32 internal_msti = 53;
 	uint32 state = 54;
 	repeated string bridge_port_array = 55;

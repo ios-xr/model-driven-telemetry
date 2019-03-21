@@ -295,10 +295,10 @@ message bgp_updgen_nbr_bag {
 	bgp_addrtype update_neighbor_address = 53;
 	uint32 update_filter_group_index = 54;
 	uint32 refresh_filter_group_index = 55;
-	uint32 sub_group_index = 56;
+	uint32 sub_group_index_xr = 56;
 	uint32 refresh_sub_group_index = 57;
 	uint32 refresh_sub_group_id = 58;
-	uint32 update_group_index = 59;
+	uint32 update_group_index_xr = 59;
 	uint32 update_main_table_version = 60;
 	uint32 update_vrf_table_rib_version = 61;
 	uint32 update_out_queue_messages = 62;

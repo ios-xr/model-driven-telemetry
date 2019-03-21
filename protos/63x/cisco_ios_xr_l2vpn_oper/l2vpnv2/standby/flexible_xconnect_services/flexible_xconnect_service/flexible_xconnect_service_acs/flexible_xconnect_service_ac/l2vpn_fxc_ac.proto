@@ -260,15 +260,14 @@ message l2vpn_fr {
 	uint32 dlci = 2;
 }
 
-message item_iflist_if {
-	string interface_name = 1;
-	string replicate_status = 2;
+message interfaces_item {
+	string value = 1;
 }
 
 message item_iflist_ifl {
 	string interface_list_name = 1;
 	uint32 interface_list_id = 2;
-	repeated item_iflist_if interface = 3;
+	repeated interfaces_item interface = 3;
 }
 
 message l2vpn_pwhe {

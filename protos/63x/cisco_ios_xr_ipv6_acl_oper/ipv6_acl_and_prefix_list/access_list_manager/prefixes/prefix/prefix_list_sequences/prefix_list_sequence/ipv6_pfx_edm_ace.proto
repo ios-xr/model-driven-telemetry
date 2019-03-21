@@ -209,15 +209,11 @@ message ipv6_pfx_edm_ace_KEYS {
 	uint32 sequence_number = 2;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ipv6_pfx_edm_ace {
 	string is_ace_type = 50;
 	uint32 is_ace_sequence_number = 51;
 	string is_packet_allow_or_deny = 52;
-	in6_addr_td is_address_in_numbers = 53;
+	string is_address_in_numbers = 53;
 	uint32 is_address_mask_length = 54;
 	string is_length_operator = 55;
 	uint32 is_packet_minimum_length = 56;

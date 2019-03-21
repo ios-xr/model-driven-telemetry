@@ -208,8 +208,8 @@ message mpls_vpn_vrf_KEYS {
 	string vrf_name = 1;
 }
 
-message mpls_vpn_interfaces {
-	string interface_name = 1;
+message interfaces_item {
+	string value = 1;
 }
 
 message mpls_vpn_rt {
@@ -228,10 +228,10 @@ message mpls_vpn_afi_safi {
 }
 
 message mpls_vpn_vrf {
-	string vrf_name = 50;
+	string vrf_name_xr = 50;
 	string vrf_description = 51;
 	string route_distinguisher = 52;
-	repeated mpls_vpn_interfaces interface = 53;
+	repeated interfaces_item interface = 53;
 	repeated mpls_vpn_afi_safi af = 54;
 	bool is_big_vrf = 55;
 }

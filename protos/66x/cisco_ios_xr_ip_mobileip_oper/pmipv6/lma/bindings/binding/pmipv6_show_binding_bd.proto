@@ -247,7 +247,7 @@ message pmipv6_v6_prefix_bd {
 
 message pmipv6_show_binding_bd {
 	string mnnai = 50;
-	string customer_name = 51;
+	string customer_name_xr = 51;
 	string llid = 52;
 	string peer_id = 53;
 	string phyintf = 54;

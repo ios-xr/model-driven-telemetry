@@ -207,11 +207,22 @@ package cisco_ios_xr_crypto_ssh_oper.ssh.session.detail;
 message ssh_session_detail_KEYS {
 }
 
-message session_detail_info {
+message session_detail_info_item {
+	uint32 session_id = 1;
+	string key_exchange = 2;
+	string public_key = 3;
+	string in_cipher = 4;
+	string out_cipher = 5;
+	string in_mac = 6;
+	string out_mac = 7;
+}
+
+message session_detail_info_entry {
+	repeated session_detail_info_item session_detail_info = 8;
 }
 
 message ssh_session_detail {
-	session_detail_info session_detail_info = 50;
-	session_detail_info session_detail_info_1 = 51;
+	session_detail_info_entry incoming_sessions = 50;
+	session_detail_info_entry outgoing_connections = 51;
 }
 

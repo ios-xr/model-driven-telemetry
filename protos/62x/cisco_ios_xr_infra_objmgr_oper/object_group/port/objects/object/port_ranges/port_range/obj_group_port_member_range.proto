@@ -211,7 +211,7 @@ message obj_group_port_member_range_KEYS {
 }
 
 message obj_group_port_member_range {
-	uint32 start_port = 50;
-	uint32 end_port = 51;
+	uint32 start_port_xr = 50;
+	uint32 end_port_xr = 51;
 }
 

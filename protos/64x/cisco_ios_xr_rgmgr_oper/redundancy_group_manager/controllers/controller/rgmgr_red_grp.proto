@@ -210,7 +210,7 @@ message rgmgr_red_grp_KEYS {
 
 message rgmgr_red_grp {
 	string multi_router_aps_group_number = 50;
-	string controller_name = 51;
+	string controller_name_xr = 51;
 	string controller_handle = 52;
 	string backup_interface_name = 53;
 	string backup_interface_handle = 54;

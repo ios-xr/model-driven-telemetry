@@ -212,7 +212,7 @@ message vrrp_trackitem_info_KEYS {
 
 message vrrp_trackitem_info {
 	string interface = 50;
-	uint32 virtual_router_id = 51;
+	uint32 virtual_router_id_xr = 51;
 	uint32 tracked_item_type = 52;
 	string tracked_item_index = 53;
 	uint32 state = 54;

@@ -246,12 +246,8 @@ message l2fib_bridge_port_seg_key_un {
 	l2fib_pw_key_info pw = 6;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_evpn_moi_info {
-	in6_addr_td next_hop_ipv6_addr = 1;
+	string next_hop_ipv6_addr = 1;
 	uint32 mcast_label = 2;
 }
 
@@ -266,7 +262,7 @@ message l2fib_bridge_mac_evpn_ctx_un {
 message l2fib_nhop_info {
 	l2fib_base_info base = 1;
 	string next_hop_address = 2;
-	in6_addr_td next_hop_address_v6 = 3;
+	string next_hop_address_v6 = 3;
 	uint32 next_hop_internal_label = 4;
 	bool ecd_plaformt_data_valid = 5;
 	uint32 ecd_platform_data_length = 6;

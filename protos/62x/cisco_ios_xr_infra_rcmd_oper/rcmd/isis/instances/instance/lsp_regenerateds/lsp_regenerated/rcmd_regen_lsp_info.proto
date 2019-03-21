@@ -210,7 +210,7 @@ message rcmd_regen_lsp_info_KEYS {
 }
 
 message rcmd_regen_lsp_info {
-	uint32 serial_number = 50;
+	uint32 serial_number_xr = 50;
 	string lsp_id = 51;
 	uint32 sequence_number = 52;
 	string reception_time = 53;

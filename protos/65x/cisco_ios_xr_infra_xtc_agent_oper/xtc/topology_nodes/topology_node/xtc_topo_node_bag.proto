@@ -283,7 +283,7 @@ message xtc_ipv6_link_bag {
 }
 
 message xtc_topo_node_bag {
-	uint32 node_identifier = 50;
+	uint32 node_identifier_xr = 50;
 	xtc_node_pid_bag node_protocol_identifier = 51;
 	repeated xtc_sid_bag prefix_sid = 52;
 	repeated xtc_ipv4_link_bag ipv4_link = 53;

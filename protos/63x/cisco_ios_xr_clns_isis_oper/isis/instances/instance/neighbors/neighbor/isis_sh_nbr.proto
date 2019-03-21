@@ -249,15 +249,11 @@ message isis_sh_adj_ipv4 {
 	repeated uint32 underlying_adjacency_sid = 6;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message isis_ipv6_adj_sid_backup_info {
 	uint32 backup_label_stack_size = 1;
 	repeated uint32 backup_label_stack = 2;
-	in6_addr_td backup_node_address = 3;
-	in6_addr_td backup_nexthop = 4;
+	string backup_node_address = 3;
+	string backup_nexthop = 4;
 	string backup_interface = 5;
 }
 
@@ -268,7 +264,7 @@ message isis_ipv6_adj_sid {
 }
 
 message isis_sh_adj_ipv6 {
-	in6_addr_td next_hop = 1;
+	string next_hop = 1;
 	repeated string interface_address = 2;
 	isis_ipv6_adj_sid adjacency_sid = 3;
 	isis_ipv6_adj_sid non_frr_adjacency_sid = 4;

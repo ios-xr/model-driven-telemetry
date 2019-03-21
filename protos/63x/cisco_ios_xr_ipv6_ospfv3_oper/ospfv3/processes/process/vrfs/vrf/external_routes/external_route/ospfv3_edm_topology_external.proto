@@ -208,7 +208,7 @@ message ospfv3_edm_topology_external_KEYS {
 	string process_name = 1;
 	string vrf_name = 2;
 	string prefix = 3;
-	string prefix_length = 4;
+	uint32 prefix_length = 4;
 }
 
 message ospfv3_edm_topology {
@@ -218,13 +218,9 @@ message ospfv3_edm_topology {
 	uint32 route_type = 4;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message ospfv3_sh_backup_path {
 	string backup_route_interface_name = 1;
-	in6_addr_td backup_route_next_hop_address = 2;
+	string backup_route_next_hop_address = 2;
 	string backup_route_source = 3;
 	uint32 backup_metric = 4;
 	bool primary_path = 5;
@@ -236,7 +232,7 @@ message ospfv3_sh_backup_path {
 
 message ospfv3_edm_top_path {
 	string interface_name = 1;
-	in6_addr_td route_path_next_hop = 2;
+	string route_path_next_hop = 2;
 	uint32 route_path_id = 3;
 	ospfv3_sh_backup_path route_backup_path = 4;
 }

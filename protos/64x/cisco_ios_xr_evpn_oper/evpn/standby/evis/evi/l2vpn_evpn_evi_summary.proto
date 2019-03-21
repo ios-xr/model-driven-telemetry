@@ -209,7 +209,7 @@ message l2vpn_evpn_evi_summary_KEYS {
 }
 
 message l2vpn_evpn_evi_summary {
-	uint32 evi = 50;
+	uint32 evi_xr = 50;
 	string bd_name = 51;
 	string type = 52;
 }

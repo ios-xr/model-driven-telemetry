@@ -210,15 +210,11 @@ message l2vpn_evpn_imcast_KEYS {
 	string originating_ip = 3;
 }
 
-message in6_addr_td {
-	string value = 1;
-}
-
 message l2vpn_evpn_imcast {
-	uint32 evi = 50;
-	uint32 ethernet_tag = 51;
-	in6_addr_td originating_ip = 52;
-	in6_addr_td next_hop = 53;
+	uint32 evi_xr = 50;
+	uint32 ethernet_tag_xr = 51;
+	string originating_ip_xr = 52;
+	string next_hop = 53;
 	uint32 output_label = 54;
 	bool is_local_entry = 55;
 	bool is_proxy_entry = 56;

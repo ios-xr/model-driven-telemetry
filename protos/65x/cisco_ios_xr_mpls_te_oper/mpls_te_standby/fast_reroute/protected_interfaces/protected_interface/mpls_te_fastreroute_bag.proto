@@ -211,7 +211,7 @@ message mpls_te_fastreroute_bag_KEYS {
 
 message mpls_te_fastreroute_bag {
 	uint32 backup_tunnel_id = 50;
-	string backup_tunnel_name = 51;
+	string backup_tunnel_name_xr = 51;
 	string backup_status = 52;
 	string backup_type = 53;
 	string backup_usage = 54;

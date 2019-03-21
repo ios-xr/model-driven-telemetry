@@ -256,7 +256,7 @@ message dpm_oper_host {
 }
 
 message dpm_oper_if {
-	repeated string discovery_interface = 50;
+	repeated string discovery_interface_xr = 50;
 	string discovery_interface_handle = 51;
 	string discovery_interface_status = 52;
 	uint64 ident_packets_received = 53;

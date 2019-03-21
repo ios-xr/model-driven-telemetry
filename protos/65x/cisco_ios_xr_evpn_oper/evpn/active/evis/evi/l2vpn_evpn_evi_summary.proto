@@ -211,7 +211,7 @@ message l2vpn_evpn_evi_summary_KEYS {
 
 message l2vpn_evpn_evi_summary {
 	uint32 ethernet_vpn_id = 50;
-	uint32 encapsulation = 51;
+	uint32 encapsulation_xr = 51;
 	string bd_name = 52;
 	string type = 53;
 }

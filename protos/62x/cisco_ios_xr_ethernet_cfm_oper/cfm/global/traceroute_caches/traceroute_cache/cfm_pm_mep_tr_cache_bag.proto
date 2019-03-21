@@ -212,8 +212,21 @@ message cfm_pm_mep_tr_cache_bag_KEYS {
 	uint32 transaction_id = 5;
 }
 
+message cfm_pm_lt_opts_basic {
+	bool is_auto = 1;
+	bool fdb_only = 2;
+}
+
+message cfm_pm_lt_opts_exploratory {
+	string delay_model = 1;
+	uint32 delay_constant_factor = 2;
+	string reply_filter = 3;
+}
+
 message cfm_pm_lt_opts {
 	string mode = 1;
+	cfm_pm_lt_opts_basic basic_options = 2;
+	cfm_pm_lt_opts_exploratory exploratory_options = 3;
 }
 
 message cfm_pm_lt_info {
@@ -245,19 +258,22 @@ message cfm_pm_ltr_hdr {
 
 message cfm_pm_chassis_id_val {
 	string chassis_id_format = 1;
+	string chassis_id_string = 2;
+	string chassis_id_mac = 3;
+	bytes chassis_id_raw = 4;
 }
 
 message cfm_pm_chassis_id {
 	string chassis_id_type = 1;
 	uint32 chassis_id_type_value = 2;
 	cfm_pm_chassis_id_val chassis_id_value = 3;
-	string chassis_id = 4;
+	bytes chassis_id = 4;
 }
 
 message cfm_pm_sender_id {
 	cfm_pm_chassis_id chassis_id = 1;
-	string management_address_domain = 2;
-	string management_address = 3;
+	bytes management_address_domain = 2;
+	bytes management_address = 3;
 }
 
 message cfm_pm_egress_id_type {
@@ -272,13 +288,16 @@ message cfm_pm_ltr_egress_id {
 
 message cfm_pm_port_id_val {
 	string port_id_format = 1;
+	string port_id_string = 2;
+	string port_id_mac = 3;
+	bytes port_id_raw = 4;
 }
 
 message cfm_pm_port_id {
 	string port_id_type = 1;
 	uint32 port_id_type_value = 2;
 	cfm_pm_port_id_val port_id_value = 3;
-	string port_id = 4;
+	bytes port_id = 4;
 }
 
 message cfm_pm_reply_ingress {
@@ -294,18 +313,20 @@ message cfm_pm_reply_egress {
 }
 
 message cfm_pm_org_spec_tlv {
-	string oui = 1;
+	bytes oui = 1;
 	uint32 subtype = 2;
-	string value = 3;
+	bytes value = 3;
 }
 
 message cfm_pm_unknown_tlv {
 	uint32 typecode = 1;
-	string value = 2;
+	bytes value = 2;
 }
 
 message cfm_pm_last_hop {
 	string last_hop_format = 1;
+	string host_name = 2;
+	cfm_pm_egress_id_type egress_id = 3;
 }
 
 message cfm_pm_ltr {
@@ -317,7 +338,7 @@ message cfm_pm_ltr {
 	repeated cfm_pm_org_spec_tlv organization_specific_tlv = 6;
 	repeated cfm_pm_unknown_tlv unknown_tlv = 7;
 	cfm_pm_last_hop last_hop = 8;
-	string raw_data = 9;
+	bytes raw_data = 9;
 }
 
 message cfm_pm_elr_hdr {
@@ -357,7 +378,7 @@ message cfm_pm_elr {
 	repeated cfm_pm_org_spec_tlv organization_specific_tlv = 5;
 	repeated cfm_pm_unknown_tlv unknown_tlv = 6;
 	cfm_pm_last_hop last_hop = 7;
-	string raw_data = 8;
+	bytes raw_data = 8;
 }
 
 message cfm_pm_mep_tr_cache_bag {

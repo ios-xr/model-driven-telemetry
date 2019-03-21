@@ -213,7 +213,7 @@ message dpa_trap_stats_KEYS {
 message dpa_trap_stats {
 	uint32 trap_strength = 50;
 	uint32 priority = 51;
-	uint32 trap_id = 52;
+	uint32 trap_id_xr = 52;
 	uint32 gport = 53;
 	uint32 fec_id = 54;
 	uint32 policer_id = 55;

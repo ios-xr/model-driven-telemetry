@@ -228,7 +228,7 @@ message mpls_vpn_afi_safi {
 }
 
 message mpls_vpn_vrf {
-	string vrf_name = 50;
+	string vrf_name_xr = 50;
 	string vrf_description = 51;
 	string route_distinguisher = 52;
 	repeated mpls_vpn_interfaces interface = 53;
