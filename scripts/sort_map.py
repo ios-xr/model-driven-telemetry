@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+"""Sorts release yang2proto maps."""
 import os
 import argparse
 import glob

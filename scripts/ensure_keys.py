@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+"""Ensures keys are correct in release yang2proto maps."""
 import os
 import argparse
 import glob
@@ -9,7 +10,7 @@ from collections import OrderedDict
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Sorts release yang2proto maps.'
+        description='Ensures keys are correct in release yang2proto maps.'
     )
     parser.add_argument('--base_dir',
         help='base directory containing release directories',
@@ -46,14 +47,13 @@ def main():
                 if entry['message_keys'] in proto_content:
                     continue
                 logging.error('%s not in %s', entry['message_keys'], entry['file'])
-                key = None
                 for line in proto_content.split('\n'):
                     test = searcher.search(line)
                     if test != None:
                         key = test.group(0)
-                if key:
-                    logging.info('%s -> %s', entry['message_keys'], key)
-                    entry['message_keys'] = key
+                        logging.info('%s -> %s', entry['message_keys'], key)
+                        entry['message_keys'] = key
+                        break
             with open(yang2proto_filename, 'w') as yang2proto_fd:
                 json.dump(yang2proto_listing, yang2proto_fd, sort_keys=True, indent=4)
 
