@@ -2681,25 +2681,25 @@
         "package": "cisco_ios_xr_icpe_infra_oper.nv_satellite.satellite_versions.satellite_version"
     },
     {
-        "encoding_path": "Cisco-IOS-XR-icpe-sdacp-oper:augment[1]/sdacp-discovery2s/sdacp-discovery2",
-        "file": "cisco_ios_xr_icpe_sdacp_oper/augment[1]/sdacp_discovery2s/sdacp_discovery2/icpe_sdacp_cfg_sfl.proto",
+        "encoding_path": "Cisco-IOS-XR-icpe-sdacp-oper:augment1/sdacp-discovery2s/sdacp-discovery2",
+        "file": "cisco_ios_xr_icpe_sdacp_oper/augment1/sdacp_discovery2s/sdacp_discovery2/icpe_sdacp_cfg_sfl.proto",
         "message": "icpe_sdacp_cfg_sfl",
         "message_keys": "icpe_sdacp_cfg_sfl_KEYS",
-        "package": "cisco_ios_xr_icpe_sdacp_oper.augment[1].sdacp_discovery2s.sdacp_discovery2"
+        "package": "cisco_ios_xr_icpe_sdacp_oper.augment1.sdacp_discovery2s.sdacp_discovery2"
     },
     {
-        "encoding_path": "Cisco-IOS-XR-icpe-sdacp-oper:augment[2]/icpe-dpms/icpe-dpm",
-        "file": "cisco_ios_xr_icpe_sdacp_oper/augment[2]/icpe_dpms/icpe_dpm/dpm_oper_if.proto",
+        "encoding_path": "Cisco-IOS-XR-icpe-sdacp-oper:augment2/icpe-dpms/icpe-dpm",
+        "file": "cisco_ios_xr_icpe_sdacp_oper/augment2/icpe_dpms/icpe_dpm/dpm_oper_if.proto",
         "message": "dpm_oper_if",
         "message_keys": "dpm_oper_if_KEYS",
-        "package": "cisco_ios_xr_icpe_sdacp_oper.augment[2].icpe_dpms.icpe_dpm"
+        "package": "cisco_ios_xr_icpe_sdacp_oper.augment2.icpe_dpms.icpe_dpm"
     },
     {
-        "encoding_path": "Cisco-IOS-XR-icpe-sdacp-oper:augment[3]/sdacp-controls/sdacp-control",
-        "file": "cisco_ios_xr_icpe_sdacp_oper/augment[3]/sdacp_controls/sdacp_control/icpe_cpm_oper_sat.proto",
+        "encoding_path": "Cisco-IOS-XR-icpe-sdacp-oper:augment3/sdacp-controls/sdacp-control",
+        "file": "cisco_ios_xr_icpe_sdacp_oper/augment3/sdacp_controls/sdacp_control/icpe_cpm_oper_sat.proto",
         "message": "icpe_cpm_oper_sat",
         "message_keys": "icpe_cpm_oper_sat_KEYS",
-        "package": "cisco_ios_xr_icpe_sdacp_oper.augment[3].sdacp_controls.sdacp_control"
+        "package": "cisco_ios_xr_icpe_sdacp_oper.augment3.sdacp_controls.sdacp_control"
     },
     {
         "encoding_path": "Cisco-IOS-XR-iedge4710-oper:iedge-license-manager/nodes/node/iedge-license-manager-summary",
