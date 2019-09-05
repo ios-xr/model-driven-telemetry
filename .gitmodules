@@ -1,4 +1,0 @@
-[submodule "telemetry-go-collector"]
-	path = telemetry-go-collector
-	url = https://github.com/ios-xr/telemetry-go-collector.git
-	branch = master
