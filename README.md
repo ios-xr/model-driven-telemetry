@@ -18,4 +18,5 @@ For more info on Model Driven Telemetry,
 * https://xrdocs.io/telemetry/
 * https://www.cisco.com/c/en/us/td/docs/iosxr/ncs5500/telemetry/b-telemetry-cg-ncs5500-62x/b-telemetry-cg-ncs5500-62x_chapter_010.html
  
- 
+For more info on the IOS XR Telemetry collector:
+* https://github.com/ios-xr/telemetry-go-collector 
