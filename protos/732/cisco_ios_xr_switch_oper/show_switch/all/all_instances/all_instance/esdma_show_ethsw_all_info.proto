@@ -1,0 +1,754 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_switch_oper.show_switch.all.all_instances.all_instance;
+
+message esdma_show_ethsw_all_info_KEYS {
+	string node_id = 1;
+}
+
+message esdma_show_ethsw_location_data {
+	uint32 rack = 1;
+	string card = 2;
+	string switch = 3;
+	string serial_num = 4;
+}
+
+message esdma_show_ethsw_trunk_data {
+	uint32 port = 1;
+	uint32 port_status = 2;
+}
+
+message esdma_show_ethsw_trunk_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	uint32 member_count = 2;
+	string trunk_name = 3;
+	repeated esdma_show_ethsw_trunk_data ethsw_trunk_info = 4;
+}
+
+message esdma_show_ethsw_bridge_ingress_data {
+	uint32 entry_number = 1;
+	string ingress_port_vlan = 2;
+	uint64 ingress_frames = 3;
+	uint64 ingress_vlan_discards = 4;
+	uint64 ingress_sec_discards = 5;
+	uint64 ingress_other_discards = 6;
+}
+
+message esdma_show_ethsw_bridge_egress_data {
+	uint32 entry_number = 1;
+	string egress_port_vlan_tc_dp = 2;
+	uint64 egress_unicast_frames = 3;
+	uint64 egress_multicast_frames = 4;
+	uint64 egress_broadcast_frames = 5;
+	uint64 egress_discarded_frames = 6;
+	uint64 egress_transmit_q_cong = 7;
+	uint64 egress_control_packets = 8;
+	uint64 egress_other_drops = 9;
+}
+
+message esdma_show_ethsw_bridge_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_bridge_ingress_data ethsw_bridge_ingress_info = 2;
+	repeated esdma_show_ethsw_bridge_egress_data ethsw_bridge_egress_info = 3;
+}
+
+message esdma_show_ethsw_summary_data {
+	uint32 port = 1;
+	string port_state = 2;
+	string port_admin_state = 3;
+	string port_speed = 4;
+	string port_protocol_state = 5;
+	string port_forwarding = 6;
+	string connects_to = 7;
+}
+
+message esdma_show_ethsw_summary_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_summary_data ethsw_sum_info = 2;
+}
+
+message esdma_show_ethsw_fdb_data {
+	string fdb_mac_addr = 1;
+	uint32 fdb_vlan = 2;
+	string fdb_port = 3;
+	string fdb_trap_entry = 4;
+	string fdb_static_entry = 5;
+	uint32 fdb_synced_cores = 6;
+	uint32 fdb_index = 7;
+}
+
+message esdma_show_ethsw_fdb_statistics_data {
+	uint32 fdb_shadow_entries = 1;
+	uint32 fdb_max_shadow_entries = 2;
+	uint32 fdb_max_hash_chain = 3;
+	uint32 fdb_entries_added = 4;
+	uint32 fdb_entries_deleted = 5;
+	uint32 fdb_entries_updated = 6;
+	uint32 fdb_flushed = 7;
+	uint32 fdb_address_updates = 8;
+	uint32 fdb_new_address = 9;
+	uint32 fdb_aged_updates = 10;
+	uint32 fdb_transplant_updates = 11;
+	uint32 fdb_forwarding_updates = 12;
+	uint32 fdb_addr_insert_errors = 13;
+	uint32 fdb_addr_update_errors = 14;
+	uint32 fdbmemory_errors = 15;
+	uint32 fdb_allocation_errors = 16;
+	uint32 fdb_addr_updates_q = 17;
+	string fdb_addr_q_full = 18;
+	uint32 fdbforwarding_updates_qed = 19;
+	string fdb_forwarding_q_full = 20;
+}
+
+message esdma_show_ethsw_fdb_core_data {
+	string fdb_instance = 1;
+	uint32 fdb_entries = 2;
+	uint32 fdb_static_entries = 3;
+}
+
+message esdma_show_ethsw_fdb_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	string has_trunk_entry = 2;
+	string trunk_entry_message = 3;
+	repeated esdma_show_ethsw_fdb_data ethsw_fdb_info = 4;
+	repeated esdma_show_ethsw_fdb_statistics_data ethsw_fdb_statistics = 5;
+	repeated esdma_show_ethsw_fdb_core_data ethsw_fdb_core_info = 6;
+}
+
+message esdma_show_ethsw_policing_port_data {
+	string policing_port = 1;
+	string policing_port_speed = 2;
+	uint32 policing_id = 3;
+	string policing_dir = 4;
+	string policing_count_only = 5;
+	uint32 policing_vid = 6;
+	uint32 policing_vid_mask = 7;
+	uint32 policing_up = 8;
+	uint32 policing_up_mask = 9;
+	uint64 policing_config_cir = 10;
+	uint32 policing_config_cir_pcnt = 11;
+	uint64 policing_config_pir = 12;
+	uint32 policing_config_pir_pcnt = 13;
+	uint64 policing_config_cbs = 14;
+	uint64 policing_config_pbs = 15;
+	uint64 policing_stats_total = 16;
+	uint64 policing_stats_green = 17;
+	uint64 policing_stats_yellow = 18;
+	uint64 policing_stats_red = 19;
+	string policing_desc = 20;
+}
+
+message esdma_show_ethsw_policing_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_policing_port_data ethsw_policing_port_data = 2;
+	string policing_config_ingress0 = 3;
+	uint32 policing_config_ingress0_mru = 4;
+	string policing_config_ingress1 = 5;
+	uint32 policing_config_ingress1_mru = 6;
+	string policing_config_egress = 7;
+	uint32 policing_config_egress_mru = 8;
+}
+
+message esdma_show_ethsw_summary_statistics_data {
+	uint32 port = 1;
+	string port_state = 2;
+	uint32 port_state_changes = 3;
+	uint64 tx_packets = 4;
+	uint64 rx_packets = 5;
+	uint64 tx_drops_errors = 6;
+	uint64 rx_drops_errors = 7;
+	string connects_to = 8;
+}
+
+message esdma_show_ethsw_detailed_statistics_data {
+	uint32 port = 1;
+	string port_state = 2;
+	string port_speed = 3;
+	string connects_to = 4;
+	uint64 rx_unicast_packets = 5;
+	uint64 rx_multicast_packets = 6;
+	uint64 rx_broadcast_packets = 7;
+	uint64 rx_flow_control = 8;
+	uint64 rx_good_octets = 9;
+	uint64 rx_bad_octets = 10;
+	uint64 rx_fifo_overrun = 11;
+	uint64 rx_undersize = 12;
+	uint64 rx_fragments = 13;
+	uint64 rx_oversize = 14;
+	uint64 rx_jabber = 15;
+	uint64 rx_errors = 16;
+	uint64 rx_bad_crc = 17;
+	uint64 rx_collisons = 18;
+	uint64 rx_policing_drops = 19;
+	uint64 tx_unitcast_packets = 20;
+	uint64 tx_multicast_packets = 21;
+	uint64 tx_broadcast_packets = 22;
+	uint64 txflow_control = 23;
+	uint64 tx_good_octets = 24;
+	uint64 tx_deferred = 25;
+	uint64 tx_fifo_unrun = 26;
+	uint64 tx_multi_collision = 27;
+	uint64 tx_excess_collision = 28;
+	uint64 tx_late_collisions = 29;
+	uint64 tx_policing_drops = 30;
+	uint64 tx_queue_drops = 31;
+	uint64 rx_tx_packets_64 = 32;
+	uint64 rx_tx_packets_65_127 = 33;
+	uint64 rx_tx_packets_128_255 = 34;
+	uint64 rx_tx_packets_256_511 = 35;
+	uint64 rx_tx_packets_512_1023 = 36;
+	uint64 rx_tx_packets_1024__max = 37;
+}
+
+message esdma_show_ethsw_statistics_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_summary_statistics_data ethsw_summary_stat_info = 2;
+	repeated esdma_show_ethsw_detailed_statistics_data ethsw_detailed_stat_info = 3;
+}
+
+message esdma_show_ethsw_vlan_data {
+	uint32 vlan = 1;
+	string vlan_use = 2;
+}
+
+message esdma_show_ethsw_vlaninfo_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_vlan_data ethsw_vlan_info = 2;
+}
+
+message esdma_show_ethsw_vlan_membership_data {
+	uint32 vlan = 1;
+	repeated uint32 ports = 2;
+}
+
+message esdma_show_ethsw_vlanmembership_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_vlan_membership_data ethsw_vlan_memb_info = 2;
+}
+
+message esdma_show_ethsw_register_data {
+	string base_reg = 1;
+	string description = 2;
+	string value = 3;
+}
+
+message esdma_show_ethsw_port_data {
+	uint32 port = 1;
+	repeated esdma_show_ethsw_register_data ethsw_register_data = 2;
+}
+
+message esdma_show_ethsw_register_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_port_data ethsw_port_info = 2;
+}
+
+message esdma_show_ethsw_txq_configuration_global_data {
+	uint32 global_traffic_descriptors = 1;
+	uint32 global_buffers = 2;
+	uint32 shared_pool0_traffic_descriptors = 3;
+	uint32 shared_pool0_buffers = 4;
+	uint32 multi_target_traffic_descriptors = 5;
+	uint32 multi_target_buffers = 6;
+	uint32 sniffed_ingress_traffic_descriptors = 7;
+	uint32 sniffed_ingress_buffers = 8;
+	uint32 sniffed_egress_traffic_descriptors = 9;
+	uint32 sniffed_egress_buffers = 10;
+	string weighted_round_robin_schedule_mode = 11;
+	string weighted_round_robin_schedule_mtu = 12;
+}
+
+message esdma_show_ethsw_txq_configuration_profile_per_traffic_class_data {
+	uint32 traffic_class = 1;
+	string arbitration_group = 2;
+	uint32 weighted_round_robin_weight = 3;
+	string sharing = 4;
+	uint32 drop_profile0_max_buffers = 5;
+	uint32 drop_profile1_max_buffers = 6;
+	uint32 drop_profile2_max_buffers = 7;
+	uint32 drop_profile0_max_traffic_descriptors = 8;
+	uint32 drop_profile1_max_traffic_descriptors = 9;
+	uint32 drop_profile2_max_traffic_descriptors = 10;
+	uint32 traffic_class_max_buffers = 11;
+	uint32 traffic_class_max_traffic_descriptors = 12;
+}
+
+message esdma_show_ethsw_txq_configuration_profile_data {
+	uint32 id = 1;
+	string sharing = 2;
+	uint32 max_buffers = 3;
+	uint32 max_traffic_descriptors = 4;
+	repeated esdma_show_ethsw_txq_configuration_profile_per_traffic_class_data ethsw_txq_configuration_profile_per_traffic_class_info = 5;
+}
+
+message esdma_show_ethsw_txq_configuration_port_data {
+	uint32 port = 1;
+	uint32 config_drop_profile = 2;
+	uint32 config_scheduler_profile = 3;
+}
+
+message esdma_show_ethsw_txq_configuration_data {
+	repeated esdma_show_ethsw_txq_configuration_global_data ethsw_txq_configuration_global_info = 1;
+	repeated esdma_show_ethsw_txq_configuration_profile_data ethsw_txq_configuration_profile_info = 2;
+	repeated esdma_show_ethsw_txq_configuration_port_data ethsw_txq_configuration_port_info = 3;
+}
+
+message esdma_show_ethsw_txq_statistics_summary_port_data {
+	uint32 port = 1;
+	string traffic_class = 2;
+	string traffic_class_color = 3;
+	uint64 total_queued_packets = 4;
+	uint64 total_queued_bytes = 5;
+	uint64 total_drop_packets = 6;
+	uint64 total_drop_bytes = 7;
+}
+
+message esdma_show_ethsw_txq_statistics_summary_data {
+	repeated esdma_show_ethsw_txq_statistics_summary_port_data ethsw_txq_statistics_summary_port_info = 1;
+}
+
+message esdma_show_ethsw_txq_statistics_detailed_color_data {
+	string color = 1;
+	uint64 pass_packets = 2;
+	uint64 pass_bytes = 3;
+	uint64 drop_packets = 4;
+	uint64 drop_bytes = 5;
+}
+
+message esdma_show_ethsw_txq_statistics_detailed_traffic_class_data {
+	string traffic_class = 1;
+	repeated esdma_show_ethsw_txq_statistics_detailed_color_data ethsw_txq_statistics_detailed_color_info = 2;
+}
+
+message esdma_show_ethsw_txq_statistics_detailed_port_data {
+	uint32 port = 1;
+	repeated esdma_show_ethsw_txq_statistics_detailed_traffic_class_data ethsw_txq_statistics_detailed_traffic_class_info = 2;
+	string traffic_class = 3;
+	string traffic_class_color = 4;
+	uint64 total_queued_packets = 5;
+	uint64 total_queued_bytes = 6;
+	uint64 total_drop_packets = 7;
+	uint64 total_drop_bytes = 8;
+}
+
+message esdma_show_ethsw_txq_statistics_detailed_data {
+	repeated esdma_show_ethsw_txq_statistics_detailed_port_data ethsw_txq_statistics_detailed_port_info = 1;
+}
+
+message esdma_show_ethsw_txq_info {
+	string initial_configuration = 1;
+	esdma_show_ethsw_location_data ethsw_location_info = 2;
+	repeated esdma_show_ethsw_txq_configuration_data ethsw_txq_configuration_info = 3;
+	repeated esdma_show_ethsw_txq_statistics_summary_data ethsw_txq_statistics_summary_info = 4;
+	repeated esdma_show_ethsw_txq_statistics_detailed_data ethsw_txq_statistics_detailed_info = 5;
+}
+
+message esdma_show_ethsw_health_state_detailed_state_data {
+	string state = 1;
+	string fault = 2;
+	string epoch = 3;
+	uint32 count = 4;
+}
+
+message esdma_show_ethsw_health_state_partner_active_data {
+	uint32 card_type = 1;
+	uint32 logical_slot = 2;
+}
+
+message esdma_show_ethsw_health_state_partner_data {
+	uint32 card_type = 1;
+	uint32 logical_slot = 2;
+	uint32 present = 3;
+	uint32 active = 4;
+	string epoch = 5;
+	string card_name = 6;
+}
+
+message esdma_show_ethsw_health_state_history_entry_data {
+	uint32 instance = 1;
+	string type = 2;
+	string new_state = 3;
+	string fault = 4;
+	string epoch = 5;
+}
+
+message esdma_show_ethsw_health_state_port_data {
+	uint32 port = 1;
+	string port_name = 2;
+	string polling_mode = 3;
+	uint32 polling_count = 4;
+	uint32 polling_interval_ms = 5;
+	string monitor_mode = 6;
+	string monitor_enabled = 7;
+	string recovery_mode = 8;
+	string recovery_enabled = 9;
+	uint32 recovery_attempts = 10;
+	repeated esdma_show_ethsw_health_state_detailed_state_data ethsw_health_state_link_state_info = 11;
+	repeated esdma_show_ethsw_health_state_detailed_state_data ethsw_health_state_sync_state_info = 12;
+	repeated esdma_show_ethsw_health_state_detailed_state_data ethsw_health_state_admin_state_info = 13;
+	repeated esdma_show_ethsw_health_state_detailed_state_data ethsw_health_state_phy_sync_state_info = 14;
+	repeated esdma_show_ethsw_health_state_detailed_state_data ethsw_health_state_health_state_info = 15;
+	repeated esdma_show_ethsw_health_state_detailed_state_data ethsw_health_state_partner_state_info = 16;
+	repeated esdma_show_ethsw_health_state_partner_active_data ethsw_health_state_partner_active_info = 17;
+	repeated esdma_show_ethsw_health_state_partner_data ethsw_health_state_partner_info = 18;
+	repeated esdma_show_ethsw_health_state_history_entry_data ethsw_health_state_history_entry_info = 19;
+}
+
+message esdma_show_ethsw_health_state_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_health_state_port_data ethsw_health_state_port_info = 2;
+}
+
+message esdma_show_ethsw_event_data {
+	uint32 id = 1;
+	string name = 2;
+	uint32 received = 3;
+	uint32 dropped = 4;
+	uint32 queued = 5;
+	uint32 notified = 6;
+	uint32 handled = 7;
+}
+
+message esdma_show_ethsw_events_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	uint32 max_queued_events = 2;
+	string max_queued_events_time = 3;
+	repeated esdma_show_ethsw_event_data ethsw_event_info = 4;
+	uint64 total_received = 5;
+	uint64 total_dropped = 6;
+	uint64 total_queued = 7;
+	uint64 total_notified = 8;
+	uint64 total_handled = 9;
+}
+
+message esdma_show_ethsw_debug_counters_core_statistics_data {
+	uint32 core = 1;
+	uint64 msi_count = 2;
+	uint64 aer_count = 3;
+	uint64 hotplug_count = 4;
+	uint64 watchdog_count = 5;
+	uint64 task_lock_longest_wait_time = 6;
+	uint64 task_lock_longest_held_time = 7;
+	uint64 task_unlock_longest_wait_time = 8;
+}
+
+message esdma_show_ethsw_debug_counters_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	uint64 tx_thread_watchdog_count = 2;
+	uint64 rx_thread_watchdog_count = 3;
+	uint64 task_lock_longest_wait_time = 4;
+	uint32 task_lock_longest_wait_event = 5;
+	uint64 task_lock_longest_held_time = 6;
+	uint32 task_lock_longest_held_event = 7;
+	uint64 task_unlock_longest_wait_time = 8;
+	uint32 task_unlock_longest_wait_event = 9;
+	string dma_health_checks = 10;
+	uint64 dma_max_rx_packets_dequeued_per_interrupt = 11;
+	uint64 dma_rx_packets_dequeued = 12;
+	uint64 dma_rx_packet_dequeue_errors = 13;
+	uint64 dma_tx_packets_queued = 14;
+	uint64 dma_tx_packets_completed = 15;
+	uint64 dma_tx_packet_no_message_errors = 16;
+	uint64 dma_tx_packet_message_too_big_errors = 17;
+	uint64 dma_tx_packet_no_buffer_errors = 18;
+	uint64 dma_tx_packet_queue_errors = 19;
+	uint64 dma_tx_packet_completion_errors = 20;
+	uint64 dma_max_tx_packets_freed_per_interrupt = 21;
+	uint64 dma_tx_buffer_allocation_count = 22;
+	uint64 dma_tx_buffer_free_count = 23;
+	repeated esdma_show_ethsw_debug_counters_core_statistics_data ethsw_debug_counters_core_statistics_info = 24;
+}
+
+message esdma_show_ethsw_data_integrity_error_summary_entry_data {
+	uint32 memory_type = 1;
+	string memory_type_name = 2;
+	uint32 parity_error_count = 3;
+	uint32 single_bit_error_correction_code_error_count = 4;
+	uint32 multi_bit_error_correction_code_error_count = 5;
+	uint32 corrected_error_count = 6;
+	uint32 uncorrected_error_count = 7;
+}
+
+message esdma_show_ethsw_data_integrity_error_summary_data {
+	uint32 number_of_entries = 1;
+	repeated esdma_show_ethsw_data_integrity_error_summary_entry_data ethsw_data_integrity_error_summary_entry_info = 2;
+	uint64 total_parity_error_count = 3;
+	uint64 total_single_bit_error_correction_code_error_count = 4;
+	uint64 total_multi_bit_error_correction_code_error_count = 5;
+	uint64 total_corrected_error_count = 6;
+	uint64 total_uncorrected_error_count = 7;
+}
+
+message esdma_show_ethsw_data_integrity_error_information_entry_data {
+	uint32 instance = 1;
+	uint32 memory_type = 2;
+	string memory_type_name = 3;
+	string hardware_table = 4;
+	string hardware_table_name = 5;
+	string logical_table = 6;
+	string logical_table_name = 7;
+	string protection_type = 8;
+	uint32 parity_error_count = 9;
+	uint32 single_bit_error_correction_code_error_count = 10;
+	uint32 multi_bit_error_correction_code_error_count = 11;
+	uint32 corrected_error_count = 12;
+	uint32 uncorrected_error_count = 13;
+	string last_error_time = 14;
+}
+
+message esdma_show_ethsw_data_integrity_error_information_data {
+	uint32 number_of_entries = 1;
+	repeated esdma_show_ethsw_data_integrity_error_information_entry_data ethsw_data_integrity_error_information_entry_info = 2;
+}
+
+message esdma_show_ethsw_data_integrity_error_history_entry_data {
+	uint32 instance = 1;
+	uint32 memory_type = 2;
+	string memory_type_name = 3;
+	uint32 memory_row = 4;
+	string tcam_rule_index = 5;
+	string hardware_table = 6;
+	string hardware_table_name = 7;
+	string hardware_table_index = 8;
+	string logical_table = 9;
+	string logical_table_name = 10;
+	string logical_table_index = 11;
+	uint32 interrupt = 12;
+	string error_type = 13;
+	string memory_usage = 14;
+	string correction_method = 15;
+	string error_status = 16;
+	string error_time = 17;
+}
+
+message esdma_show_ethsw_data_integrity_error_history_data {
+	uint32 number_of_entries = 1;
+	repeated esdma_show_ethsw_data_integrity_error_history_entry_data ethsw_data_integrity_error_history_entry_info = 2;
+}
+
+message esdma_show_ethsw_data_integrity_error_info {
+	esdma_show_ethsw_location_data ethsw_location_info = 1;
+	repeated esdma_show_ethsw_data_integrity_error_summary_data ethsw_data_integrity_error_summary_info = 2;
+	repeated esdma_show_ethsw_data_integrity_error_information_data ethsw_data_integrity_error_information = 3;
+	repeated esdma_show_ethsw_data_integrity_error_history_data ethsw_data_integrity_error_history_info = 4;
+}
+
+message esdma_show_ethsw_all_info {
+	esdma_show_ethsw_trunk_info ethsw_trunk = 50;
+	esdma_show_ethsw_bridge_info ethsw_bridge = 51;
+	esdma_show_ethsw_summary_info ethsw_summay = 52;
+	esdma_show_ethsw_fdb_info ethsw_fdb = 53;
+	esdma_show_ethsw_policing_info ethsw_policing = 54;
+	esdma_show_ethsw_statistics_info ethsw_statistics = 55;
+	esdma_show_ethsw_vlaninfo_info ethsw_vlan_ifo = 56;
+	esdma_show_ethsw_vlanmembership_info ethsw_vlan_membership = 57;
+	esdma_show_ethsw_register_info ethsw_serdes = 58;
+	esdma_show_ethsw_register_info ethsw_mac = 59;
+	esdma_show_ethsw_txq_info ethsw_txq = 60;
+	esdma_show_ethsw_health_state_info ethsw_health_state = 61;
+	esdma_show_ethsw_events_info ethsw_events = 62;
+	esdma_show_ethsw_debug_counters_info ethsw_debug_counters = 63;
+	esdma_show_ethsw_data_integrity_error_info ethsw_data_integrity_error = 64;
+}
+
