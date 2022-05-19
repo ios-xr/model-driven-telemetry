@@ -1,9 +1,9 @@
 /* ----------------------------------------------------------------------------
- * telemetry_bis.proto - Telemetry protobuf definitions
+ * telemetry.proto - Telemetry protobuf definition
  *
  * August 2016
  *
- * Copyright (c) 2016 by Cisco Systems, Inc.
+ * Copyright (c) 2016, 2022 by Cisco Systems, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -132,8 +132,14 @@ message TelemetryField {
   // The Yang model may include nesting (e.g hierarchy of containers). The
   // next level of nesting, if present, is encoded, starting from fields.
   repeated TelemetryField fields = 15;
-  // set only for delete event
+  // This is set only for delete event
   bool           delete = 16;
+  //
+  // timestamp_nano is the time at which the data was collected from the
+  // underlying source, or the time that the message was generated, if
+  // provided by the underlying source. This is the number of nanoseconds
+  // since the Unix epoch (January 1st 1970 00:00:00 UTC).
+  uint64         timestamp_nano = 18;
 }
 
 // TelemetryGPBTable contains a repeated number of TelemetryRowGPB,
@@ -158,6 +164,15 @@ message TelemetryRowGPB {
   // milliseconds since the epoch.  When included, this is typically
   // different from the msg_timestamp in the containing Telemetry message.
   uint64 timestamp = 1;
+  //
+  // This is set only for delete event
+  bool delete = 2;
+  //
+  // timestamp_nano is the time at which the data was collected from the
+  // underlying source, or the time that the message was generated, if
+  // provided by the underlying source. This is the number of nanoseconds
+  // since the Unix epoch (January 1st 1970 00:00:00 UTC).
+  uint64 timestamp_nano = 3;
   //
   // keys: if the encoding-path includes one or more list elements, and/or
   // ends in a list element, the keys field is a GPB encoded message that
