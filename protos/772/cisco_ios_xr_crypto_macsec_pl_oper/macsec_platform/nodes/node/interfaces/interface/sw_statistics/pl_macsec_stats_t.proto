@@ -1,0 +1,752 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_crypto_macsec_pl_oper.macsec_platform.nodes.node.interfaces.interface.sw_statistics;
+
+message pl_macsec_stats_t_KEYS {
+	string node_name = 1;
+	string name = 2;
+}
+
+message pl_xlfpga_macsec_tx_stats_t {
+	uint64 sc_encrypted_octets = 1;
+	uint64 sc_toolong_pkts = 2;
+	uint64 sc_encrypted_pkts = 3;
+	uint64 sc_untagged_pkts = 4;
+	uint64 sc_overrun_pkts = 5;
+	uint64 sc_bypass_pkts = 6;
+	uint64 sc_eapol_pkts = 7;
+	uint64 sc_dropped_pkts = 8;
+	uint64 current_an = 9;
+	uint64 sa_encrypted_pkts = 10;
+}
+
+message pl_xlfpga_macsec_rx_sa_stats_t {
+	uint64 an = 1;
+	uint64 sa_ok_pkts = 2;
+	uint64 sa_not_using_pkts = 3;
+	uint64 sa_unused_pkts = 4;
+	uint64 sa_not_valid_pkts = 5;
+	uint64 sa_invalid_pkts = 6;
+}
+
+message pl_xlfpga_macsec_rx_stats_t {
+	uint64 sc_decrypted_octets = 1;
+	uint64 sc_no_tag_pkts = 2;
+	uint64 sc_untagged_pkts = 3;
+	uint64 sc_bad_tag_pkts = 4;
+	uint64 sc_late_pkts = 5;
+	uint64 sc_delayed_pkts = 6;
+	uint64 sc_unchecked_pkts = 7;
+	uint64 sc_no_sci_pkts = 8;
+	uint64 sc_unknown_sci_pkts = 9;
+	uint64 sc_ok_pkts = 10;
+	uint64 sc_not_using_pkts = 11;
+	uint64 sc_unused_pkts = 12;
+	uint64 sc_not_valid_pkts = 13;
+	uint64 sc_invalid_pkts = 14;
+	uint64 sc_overrun_pkts = 15;
+	uint64 sc_bypass_pkts = 16;
+	uint64 sc_eapol_pkts = 17;
+	uint64 sc_dropped_pkts = 18;
+	repeated pl_xlfpga_macsec_rx_sa_stats_t rx_sa_stats = 19;
+}
+
+message pl_xlfpga_stats_t {
+	pl_xlfpga_macsec_tx_stats_t macsec_tx_stats = 1;
+	pl_xlfpga_macsec_rx_stats_t macsec_rx_stats = 2;
+}
+
+message pl_es200_tx_sa_stats_t {
+	uint64 out_pkts_too_long = 1;
+	uint64 out_pkts_encrypted_protected = 2;
+	uint64 out_octets_encrypted_protected1 = 3;
+}
+
+message pl_es200_rx_sa_stats_t {
+	uint64 in_pkts_unchecked = 1;
+	uint64 in_pkts_delayed = 2;
+	uint64 in_pkts_late = 3;
+	uint64 in_pkts_ok = 4;
+	uint64 in_pkts_invalid = 5;
+	uint64 in_pkts_not_valid = 6;
+	uint64 in_pkts_not_using_sa = 7;
+	uint64 in_pkts_unused_sa = 8;
+	uint64 in_octets_decrypted_validated1 = 9;
+	uint64 in_octets_validated = 10;
+}
+
+message pl_es200_tx_sc_macsec_stats_t {
+	uint64 out_pkts_sa_not_in_use = 1;
+}
+
+message pl_es200_rx_sc_macsec_stats_t {
+	uint64 in_pkts_sa_not_in_use = 1;
+}
+
+message pl_es200_tx_interface_macsec_stats_t {
+	uint64 transform_error_pkts = 1;
+	uint64 out_pkt_ctrl = 2;
+	uint64 out_pkts_untagged = 3;
+	uint64 out_octets_unctrl = 4;
+	uint64 out_octets_ctrl = 5;
+	uint64 out_octets_common = 6;
+	uint64 out_ucast_pkts_unctrl = 7;
+	uint64 out_ucast_pkts_ctrl = 8;
+	uint64 out_mcast_pkts_unctrl = 9;
+	uint64 out_mcast_pkts_ctrl = 10;
+	uint64 out_bcast_pkts_unctrl = 11;
+	uint64 out_bcast_pkts_ctrl = 12;
+	uint64 out_rx_drop_pkts_unctrl = 13;
+	uint64 out_rx_drop_pkts_ctrl = 14;
+	uint64 out_rx_err_pkts_unctrl = 15;
+	uint64 out_rx_err_pkts_ctrl = 16;
+	uint64 out_drop_pkts_class = 17;
+	uint64 out_drop_pkts_data = 18;
+}
+
+message pl_es200_rx_interface_macsec_stats_t {
+	uint64 transform_error_pkts = 1;
+	uint64 in_pkt_ctrl = 2;
+	uint64 in_pkt_no_tag = 3;
+	uint64 in_pkts_untagged = 4;
+	uint64 in_pkt_bad_tag = 5;
+	uint64 in_pkt_no_sci = 6;
+	uint64 in_pkts_unknown_sci = 7;
+	uint64 in_pkts_tagged_ctrl = 8;
+	uint64 in_octets_unctrl = 9;
+	uint64 in_octets_ctrl = 10;
+	uint64 in_ucast_pkts_unctrl = 11;
+	uint64 in_ucast_pkts_ctrl = 12;
+	uint64 in_mcast_pkts_unctrl = 13;
+	uint64 in_mcast_pkts_ctrl = 14;
+	uint64 in_bcast_pkts_unctrl = 15;
+	uint64 in_bcast_pkts_ctrl = 16;
+	uint64 in_rx_drop_pkts_unctrl = 17;
+	uint64 in_rx_drop_pkts_ctrl = 18;
+	uint64 in_rx_error_pkts_unctrl = 19;
+	uint64 in_rx_error_pkts_ctrl = 20;
+	uint64 in_drop_pkts_class = 21;
+	uint64 in_drop_pkts_data = 22;
+}
+
+message pl_es200_port_level_stats_t {
+	uint64 multi_flow_match = 1;
+	uint64 parser_dropped = 2;
+	uint64 flow_miss = 3;
+	uint64 pkts_ctrl = 4;
+	uint64 pkts_data = 5;
+	uint64 pkts_dropped = 6;
+	uint64 pkts_err_in = 7;
+}
+
+message pl_es200_stats_t {
+	pl_es200_tx_sa_stats_t tx_sa_stats = 1;
+	pl_es200_rx_sa_stats_t rx_sa_stats = 2;
+	pl_es200_tx_sc_macsec_stats_t tx_sc_macsec_stats = 3;
+	pl_es200_rx_sc_macsec_stats_t rx_sc_macsec_stats = 4;
+	pl_es200_tx_interface_macsec_stats_t tx_interface_macsec_stats = 5;
+	pl_es200_rx_interface_macsec_stats_t rx_interface_macsec_stats = 6;
+	pl_es200_port_level_stats_t tx_port_stats = 7;
+	pl_es200_port_level_stats_t rx_port_stats = 8;
+}
+
+message pl_mv88ec808_sc_stat_e_t {
+	uint32 an_no = 1;
+	uint32 sa_no = 2;
+	uint32 port_no = 3;
+	uint64 out_pkts_too_long = 4;
+	uint64 out_pkts_encrypted_protected = 5;
+	uint64 out_octets_encrypted_protected1 = 6;
+	uint64 out_octets_encrypted_protected2 = 7;
+}
+
+message pl_mv88ec808_sc_stat_i_t {
+	uint32 an_no = 1;
+	uint32 sa_no = 2;
+	uint32 port_no = 3;
+	uint64 in_pkts_unchecked = 4;
+	uint64 in_pkts_delayed = 5;
+	uint64 in_pkts_late = 6;
+	uint64 in_pkts_ok = 7;
+	uint64 in_pkts_invalid = 8;
+	uint64 in_pkts_not_valid = 9;
+	uint64 in_pkts_not_using_sa = 10;
+	uint64 in_pkts_unused_sa = 11;
+	uint64 in_pkts_untagged_hit = 12;
+	uint64 in_octets_decrypted_validated1 = 13;
+	uint64 in_octets_decrypted_validated2 = 14;
+}
+
+message pl_mv88ec808_global_stat_i_t {
+	uint64 transform_error_pkts = 1;
+	uint64 in_pkt_ctrl = 2;
+	uint64 in_pkt_no_tag = 3;
+	uint64 in_pkts_untagged = 4;
+	uint64 in_pkts_tagged = 5;
+	uint64 in_pkt_bad_tag = 6;
+	uint64 in_pkts_untagged_miss = 7;
+	uint64 in_pkt_no_sci = 8;
+	uint64 in_pkts_unknown_sci = 9;
+	uint64 in_consist_check_controlled_not_pass = 10;
+	uint64 in_consist_check_uncontrolled_not_pass = 11;
+	uint64 in_consist_check_controlled_pass = 12;
+	uint64 in_consist_check_uncontrolled_pass = 13;
+	uint64 in_over_sized_pkts = 14;
+}
+
+message pl_mv88ec808_global_stat_e_t {
+	uint64 transform_error_pkts = 1;
+	uint64 out_pkt_ctrl = 2;
+	uint64 out_pkts_unknown_sa = 3;
+	uint64 out_pkts_untagged = 4;
+	uint64 out_over_sized_pkts = 5;
+}
+
+message pl_mv88ec808_stats_t {
+	pl_mv88ec808_sc_stat_e_t eg_stat = 1;
+	repeated pl_mv88ec808_sc_stat_i_t ig_stat = 2;
+	pl_mv88ec808_global_stat_i_t glb_stat_i = 3;
+	pl_mv88ec808_global_stat_e_t glb_stat_e = 4;
+}
+
+message pl_x120_tx_sa_stats_t {
+	uint64 out_pkts_too_long = 1;
+	uint64 out_pkts_encrypted_protected = 2;
+	uint64 out_octets_encrypted_protected1 = 3;
+}
+
+message pl_x120_rx_sa_stats_t {
+	uint64 in_pkts_unchecked = 1;
+	uint64 in_pkts_delayed = 2;
+	uint64 in_pkts_late = 3;
+	uint64 in_pkts_ok = 4;
+	uint64 in_pkts_invalid = 5;
+	uint64 in_pkts_not_valid = 6;
+	uint64 in_pkts_not_using_sa = 7;
+	uint64 in_pkts_unused_sa = 8;
+	uint64 in_octets_decrypted_validated1 = 9;
+	uint64 in_octets_validated = 10;
+	uint64 in_pkts_untagged_hit = 11;
+}
+
+message pl_x120_tx_interface_macsec_stats_t {
+	uint64 transform_error_pkts = 1;
+	uint64 out_pkt_ctrl = 2;
+	uint64 out_pkts_untagged = 3;
+	uint64 out_pkts_unknown_sa = 4;
+	uint64 out_over_sized_pkts = 5;
+}
+
+message pl_x120_rx_interface_macsec_stats_t {
+	uint64 transform_error_pkts = 1;
+	uint64 in_pkt_ctrl = 2;
+	uint64 in_pkt_no_tag = 3;
+	uint64 in_pkts_untagged = 4;
+	uint64 in_pkt_bad_tag = 5;
+	uint64 in_pkt_no_sci = 6;
+	uint64 in_pkts_unknown_sci = 7;
+	uint64 in_pkts_tagged = 8;
+	uint64 in_pkts_untagged_miss = 9;
+	uint64 in_over_sized_pkts = 10;
+}
+
+message pl_x120_stats_t {
+	pl_x120_tx_sa_stats_t tx_sa_stats = 1;
+	pl_x120_rx_sa_stats_t rx_sa_stats = 2;
+	pl_x120_tx_interface_macsec_stats_t tx_interface_macsec_stats = 3;
+	pl_x120_rx_interface_macsec_stats_t rx_interface_macsec_stats = 4;
+}
+
+message pl_metadx_sa_stat_e_t {
+	uint32 an_no = 1;
+	uint32 sa_no = 2;
+	uint32 port_no = 3;
+	uint64 pkts_encrypted_protected = 4;
+	uint64 pkts_too_long = 5;
+	uint64 pkts_sa_not_in_use = 6;
+	uint64 octets_encrypted_protected = 7;
+}
+
+message pl_metadx_sa_stat_i_t {
+	uint32 an_no = 1;
+	uint32 sa_no = 2;
+	uint32 port_no = 3;
+	uint64 pkts_unchecked = 4;
+	uint64 pkts_delayed = 5;
+	uint64 pkts_late = 6;
+	uint64 pkts_ok = 7;
+	uint64 pkts_invalid = 8;
+	uint64 pkts_not_valid = 9;
+	uint64 pkts_not_using_sa = 10;
+	uint64 pkts_unused_sa = 11;
+	uint64 octets_decrypted = 12;
+	uint64 octets_validated = 13;
+}
+
+message pl_metadx_sc_stat_e_t {
+	uint32 port_no = 1;
+	uint64 pkts_encrypted_protected = 2;
+	uint64 pkts_too_long = 3;
+	uint64 pkts_sa_not_in_use = 4;
+	uint64 octets_encrypted_protected = 5;
+}
+
+message pl_metadx_sc_stat_i_t {
+	uint32 port_no = 1;
+	uint64 pkts_unchecked = 2;
+	uint64 pkts_delayed = 3;
+	uint64 pkts_late = 4;
+	uint64 pkts_ok = 5;
+	uint64 pkts_invalid = 6;
+	uint64 pkts_not_valid = 7;
+	uint64 pkts_not_using_sa = 8;
+	uint64 pkts_unused_sa = 9;
+	uint64 octets_decrypted = 10;
+	uint64 octets_validated = 11;
+}
+
+message pl_metadx_intf_e_t {
+	uint32 port_no = 1;
+	uint32 vport_no = 2;
+	uint32 rule_no = 3;
+	uint64 pkts_xform_err = 4;
+	uint64 ctrl_pkts = 5;
+	uint64 untagged_pkts = 6;
+	uint64 multiple_rule_match = 7;
+	uint64 header_parser_drop = 8;
+	uint64 rule_mis_match = 9;
+	uint64 ctrl_pkt_match = 10;
+	uint64 data_pkt_match = 11;
+	uint64 dropped_pkts = 12;
+	uint64 in_error_pkts = 13;
+	uint64 rule_match = 14;
+}
+
+message pl_metadx_intf_i_t {
+	uint32 port_no = 1;
+	uint32 vport_no = 2;
+	uint32 rule_no = 3;
+	uint64 pkts_xform_err = 4;
+	uint64 ctrl_pkts = 5;
+	uint64 untagged_pkts = 6;
+	uint64 no_tag_pkts = 7;
+	uint64 bad_tag_pkts = 8;
+	uint64 no_sci_match_pkts = 9;
+	uint64 unknwn_sci_match_pkts = 10;
+	uint64 tagged_ctrl_pkts = 11;
+	uint64 multiple_rule_match = 12;
+	uint64 header_parser_drop = 13;
+	uint64 rule_mis_match = 14;
+	uint64 ctrl_pkt_match = 15;
+	uint64 data_pkt_match = 16;
+	uint64 dropped_pkts = 17;
+	uint64 in_error_pkts = 18;
+	uint64 rule_match = 19;
+}
+
+message pl_metadx_glbl_common_stat {
+	uint32 vport_no = 1;
+	uint64 uc_pkts_uncontrolled = 2;
+	uint64 mc_pkts_uncontrolled = 3;
+	uint64 bc_pkts_uncontrolled = 4;
+	uint64 rx_drop_pkts_uncontrolled = 5;
+	uint64 rx_err_pkts_uncontrolled = 6;
+	uint64 uc_pkts_controlled = 7;
+	uint64 mc_pkts_controlled = 8;
+	uint64 bc_pkts_controlled = 9;
+	uint64 rx_drop_pkts_controlled = 10;
+	uint64 rx_err_pkts_controlled = 11;
+	uint64 total_bytes_uncontrolled = 12;
+	uint64 total_bytes_controlled = 13;
+}
+
+message pl_metadx_stats_t {
+	pl_metadx_sa_stat_e_t eg_sa_stat = 1;
+	repeated pl_metadx_sa_stat_i_t ig_sa_stat = 2;
+	pl_metadx_sc_stat_e_t eg_sc_stat = 3;
+	pl_metadx_sc_stat_i_t ig_sc_stat = 4;
+	pl_metadx_intf_e_t eg_int_stat = 5;
+	pl_metadx_intf_i_t ig_int_stat = 6;
+	pl_metadx_glbl_common_stat eg_glb_stat = 7;
+	pl_metadx_glbl_common_stat ig_glb_stat = 8;
+}
+
+message pl_vsc_sa_stat_e_t {
+	uint32 an_no = 1;
+	uint32 port_no = 2;
+	uint64 out_pkts_protected = 3;
+	uint64 out_pkts_encrypted = 4;
+}
+
+message pl_vsc_sa_stat_i_t {
+	uint32 an_no = 1;
+	uint32 port_no = 2;
+	uint64 in_pkts_ok = 3;
+	uint64 in_pkts_invalid = 4;
+	uint64 in_pkts_not_valid = 5;
+	uint64 in_pkts_not_using_sa = 6;
+	uint64 in_pkts_unused_sa = 7;
+	uint64 in_pkts_unchecked = 8;
+	uint64 in_pkts_delayed = 9;
+	uint64 in_pkts_late = 10;
+}
+
+message pl_vsc_sc_stat_e_t {
+	uint32 port_no = 1;
+	uint64 out_pkts_protected = 2;
+	uint64 out_pkts_encrypted = 3;
+	uint64 out_octets_protected = 4;
+	uint64 out_octets_encrypted = 5;
+}
+
+message pl_vsc_sc_stat_i_t {
+	uint32 port_no = 1;
+	uint64 in_pkts_unchecked = 2;
+	uint64 in_pkts_delayed = 3;
+	uint64 in_pkts_late = 4;
+	uint64 in_pkts_ok = 5;
+	uint64 in_pkts_invalid = 6;
+	uint64 in_pkts_not_valid = 7;
+	uint64 in_pkts_not_using_sa = 8;
+	uint64 in_pkts_unused_sa = 9;
+	uint64 in_octets_validated = 10;
+	uint64 in_octets_decrypted = 11;
+}
+
+message pl_vsc_intf_common_t {
+	uint32 port_no = 1;
+	uint64 if_in_octets = 2;
+	uint64 if_in_ucast_pkts = 3;
+	uint64 if_in_multicast_pkts = 4;
+	uint64 if_in_broadcast_pkts = 5;
+	uint64 if_in_discards = 6;
+	uint64 if_in_errors = 7;
+	uint64 if_out_octets = 8;
+	uint64 if_out_ucast_pkts = 9;
+	uint64 if_out_multicast_pkts = 10;
+	uint64 if_out_broadcast_pkts = 11;
+	uint64 if_out_errors = 12;
+}
+
+message pl_vsc_rmon_cntrs_t {
+	uint64 if_rx_octets = 1;
+	uint64 if_rx_in_bytes = 2;
+	uint32 if_rx_pause_pkts = 3;
+	uint32 if_rx_ucast_pkts = 4;
+	uint32 if_rx_multicast_pkts = 5;
+	uint32 if_rx_broadcast_pkts = 6;
+	uint32 if_rx_discards = 7;
+	uint32 if_rx_errors = 8;
+	uint64 if_rx__stats_pkts = 9;
+	uint32 if_rx_crc_align_errors = 10;
+	uint32 if_rx__undersize_pkts = 11;
+	uint32 if_rx__oversize_pkts = 12;
+	uint32 if_rx__fragments = 13;
+	uint32 if_rx__jabbers = 14;
+	uint32 if_rx__pkts64_octets = 15;
+	uint32 if_rx__pkts65to127_octets = 16;
+	uint32 if_rx__pkts128to255_octets = 17;
+	uint32 if_rx__pkts256to511_octets = 18;
+	uint32 if_rx__pkts512to1023_octets = 19;
+	uint32 if_rx__pkts1024to1518_octets = 20;
+	uint32 if_rx__pkts1519to_max_octets = 21;
+	uint64 if_tx_octets = 22;
+	uint32 if_tx_pause_pkts = 23;
+	uint32 if_tx_ucast_pkts = 24;
+	uint32 if_tx_multicast_pkts = 25;
+	uint32 if_tx_broadcast_pkts = 26;
+	uint32 if_tx_errors = 27;
+	uint32 if_tx__drop_events = 28;
+	uint64 if_tx__stats_pkts = 29;
+	uint32 if_tx__collisions = 30;
+	uint32 if_tx__pkts64_octets = 31;
+	uint32 if_tx__pkts65to127_octets = 32;
+	uint32 if_tx__pkts128to255_octets = 33;
+	uint32 if_tx__pkts256to511_octets = 34;
+	uint32 if_tx__pkts512to1023_octets = 35;
+	uint32 if_tx__pkts1024to1518_octets = 36;
+	uint32 if_tx__pkts1519to_max_octets = 37;
+}
+
+message pl_vsc_intf_rmon_t {
+	uint32 port_no = 1;
+	pl_vsc_rmon_cntrs_t lmac_counters = 2;
+	pl_vsc_rmon_cntrs_t hmac_counters = 3;
+}
+
+message pl_vsc_intf_controlled_t {
+	uint32 port_no = 1;
+	uint64 if_in_octets = 2;
+	uint64 if_in_pkts = 3;
+	uint64 if_in_ucast_pkts = 4;
+	uint64 if_in_multicast_pkts = 5;
+	uint64 if_in_broadcast_pkts = 6;
+	uint64 if_in_discards = 7;
+	uint64 if_in_errors = 8;
+	uint64 if_out_octets = 9;
+	uint64 if_out_pkts = 10;
+	uint64 if_out_errors = 11;
+	uint64 if_out_ucast_pkts = 12;
+	uint64 if_out_multicast_pkts = 13;
+	uint64 if_out_broadcast_pkts = 14;
+}
+
+message pl_vsc_intf_uncontrolled_t {
+	uint32 port_no = 1;
+	uint64 if_in_octets = 2;
+	uint64 if_in_ucast_pkts = 3;
+	uint64 if_in_multicast_pkts = 4;
+	uint64 if_in_broadcast_pkts = 5;
+	uint64 if_in_discards = 6;
+	uint64 if_in_errors = 7;
+	uint64 if_out_octets = 8;
+	uint64 if_out_ucast_pkts = 9;
+	uint64 if_out_multicast_pkts = 10;
+	uint64 if_out_broadcast_pkts = 11;
+	uint64 if_out_errors = 12;
+}
+
+message pl_vsc_secy_counters_t {
+	uint32 port_no = 1;
+	uint64 in_pkts_untagged = 2;
+	uint64 in_pkts_no_tag = 3;
+	uint64 in_pkts_bad_tag = 4;
+	uint64 in_pkts_unknown_sci = 5;
+	uint64 in_pkts_no_sci = 6;
+	uint64 in_pkts_overrun = 7;
+	uint64 in_octets_validated = 8;
+	uint64 in_octets_decrypted = 9;
+	uint64 out_pkts_untagged = 10;
+	uint64 out_pkts_too_long = 11;
+	uint64 out_octets_protected = 12;
+	uint64 out_octets_encrypted = 13;
+}
+
+message pl_vsc_stats_t {
+	pl_vsc_sa_stat_e_t eg_sa_stat = 1;
+	repeated pl_vsc_sa_stat_i_t ig_sa_stat = 2;
+	pl_vsc_sc_stat_e_t eg_sc_stat = 3;
+	pl_vsc_sc_stat_i_t ig_sc_stat = 4;
+	pl_vsc_intf_common_t common_int_stat = 5;
+	pl_vsc_intf_rmon_t rmon_int_stat = 6;
+	pl_vsc_intf_controlled_t controlled_int_stat = 7;
+	pl_vsc_intf_uncontrolled_t un_controlled_int_stat = 8;
+	pl_vsc_secy_counters_t secy_stat = 9;
+}
+
+message pl_macsec_stats_t_ext {
+	string type = 1;
+	pl_xlfpga_stats_t xlfpga_stats = 2;
+	pl_es200_stats_t es200_stats = 3;
+	pl_mv88ec808_stats_t mv88ec808_stats = 4;
+	pl_x120_stats_t x120_stats = 5;
+	pl_metadx_stats_t metadx_stats = 6;
+	pl_vsc_stats_t vsc_stats = 7;
+}
+
+message pl_macsec_stats_t {
+	pl_macsec_stats_t_ext ext = 50;
+}
+

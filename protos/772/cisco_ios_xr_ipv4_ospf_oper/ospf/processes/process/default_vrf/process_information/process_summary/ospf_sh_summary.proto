@@ -1,0 +1,365 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_ipv4_ospf_oper.ospf.processes.process.default_vrf.process_information.process_summary;
+
+message ospf_sh_summary_KEYS {
+	string process_name = 1;
+}
+
+message ospf_sh_time {
+	uint32 second = 1;
+	uint32 nanosecond = 2;
+}
+
+message ospf_sh_max_metric {
+	uint32 max_metric_reason = 1;
+	bool max_metric_enabled = 2;
+	bool unset_maximum_metric = 3;
+	bool saved_unset_maximum_metric = 4;
+	uint32 maximum_metric_start_time = 5;
+	uint32 saved_startup_time = 6;
+	bool maximum_metric_include_stubs = 7;
+	bool maximum_metric_summary_lsa = 8;
+	uint32 maximum_metric_summary_lsa_metric = 9;
+	bool maximum_metric_external_lsa = 10;
+	uint32 maximum_metric_external_lsa_metric = 11;
+	uint32 maximum_metric_originated_for = 12;
+	ospf_sh_time maximum_metric_time_unset = 13;
+	string maximum_metric_unset_reason = 14;
+}
+
+message ospf_sh_redist_proto {
+	string protocol_type = 1;
+	string isis_instance_id = 2;
+	string ospf_process_id = 3;
+	string bgp_as_number = 4;
+	string eigrp_as_number = 5;
+	string connected_instance = 6;
+}
+
+message ospf_sh_redist {
+	ospf_sh_redist_proto redistribution_protocol = 1;
+	bool metric_flag = 2;
+	uint32 metric = 3;
+	bool rib_metric_flag = 4;
+	uint32 metric_type = 5;
+	bool tag_flag = 6;
+	uint32 tag = 7;
+	bool keep_bgp_med = 8;
+	bool keep_bgp_def_info = 9;
+	bool redist_summary = 10;
+	string policy_name = 11;
+	bool classless = 12;
+	bool nssa_only = 13;
+}
+
+message ospf_sh_domain_id_entry {
+	uint32 domain_id_type = 1;
+	string domain_id_value = 2;
+}
+
+message ospf_sh_domain_id {
+	ospf_sh_domain_id_entry primary_domain_id = 1;
+	repeated ospf_sh_domain_id_entry secondary_domain_id_list = 2;
+}
+
+message ospf_sh_summary {
+	bool vrf_active = 50;
+	bool role_standby = 51;
+	uint32 role = 52;
+	bool nsr_enabled = 53;
+	bool nsr_switchover_on_restart = 54;
+	bool igp_intact_on = 55;
+	string router_id = 56;
+	uint32 tos_options = 57;
+	bool opaque_capable = 58;
+	bool area_border_router = 59;
+	bool as_border_router = 60;
+	bool vrf_lite_enabled = 61;
+	bool capability_prefer_type7 = 62;
+	bool maximum_metric_start = 63;
+	uint32 maximum_metric_start_timer = 64;
+	string maximum_metric_set_reason = 65;
+	bool maximum_metric_abr_off_mode = 66;
+	string maximum_metric_abr_off_reasons = 67;
+	uint32 maximum_metric_abr_off_buffer_time = 68;
+	repeated ospf_sh_max_metric maximum_metric_list = 69;
+	repeated ospf_sh_redist redistribution_list = 70;
+	uint32 spf_start_time = 71;
+	uint32 spf_hold_time = 72;
+	uint32 spf_maximum_time = 73;
+	bool spf_prefix_priority = 74;
+	string spf_prefix_priority_route_policy = 75;
+	sint32 lsa_start_time = 76;
+	uint32 lsa_hold_time = 77;
+	uint32 lsa_maximum_time = 78;
+	uint32 minimum_lsa_interval = 79;
+	uint32 lsa_refresh_interval = 80;
+	uint32 minimum_lsa_arrival_interval = 81;
+	uint32 if_flood_pacing_interval = 82;
+	uint32 if_retrans_pacing_interval = 83;
+	uint32 adj_stag_init_num_nbr = 84;
+	uint32 adj_stag_max_num_nbr = 85;
+	bool adj_stagger_enabled = 86;
+	uint32 adj_stag_num_nbr_forming = 87;
+	uint32 number_nbrs_full = 88;
+	uint32 as_lsa_count = 89;
+	uint32 as_lsa_checksum = 90;
+	uint32 opaque_lsa_count = 91;
+	uint32 opaque_lsa_checksum = 92;
+	uint32 as_dc_bitless_lsa_count = 93;
+	uint32 as_dna_lsa_count = 94;
+	uint32 area_count = 95;
+	uint32 normal_area_count = 96;
+	uint32 stub_area_count = 97;
+	uint32 nssa_area_count = 98;
+	uint32 maximum_interfaces = 99;
+	uint32 as_lsa_flood_list_length = 100;
+	bool nsf_enabled = 101;
+	uint32 last_nsf_time = 102;
+	uint32 nsf_time = 103;
+	uint32 redistribution_limit = 104;
+	uint32 redistribution_threshold = 105;
+	bool redistribution_limit_warn = 106;
+	uint32 graceful_shutdown_retention_time = 107;
+	string graceful_shutdown_state = 108;
+	ospf_sh_domain_id domain_id = 109;
+	bool table_prefix_limit_reached = 110;
+	uint32 non_self_lsa_count = 111;
+	bool max_lsa_enabled = 112;
+	uint32 max_lsa_limit = 113;
+	uint32 max_lsa_treshold = 114;
+	bool max_lsa_warning_only = 115;
+	uint32 max_lsa_ignore_time = 116;
+	uint32 max_lsa_reset_time = 117;
+	uint32 max_lsa_ignore_limit = 118;
+	uint32 max_lsa_ignore_count = 119;
+	uint32 max_lsa_ignore_timer = 120;
+	uint32 max_lsa_reset_timer = 121;
+	string context_name = 122;
+	bool snmp_trap_enabled = 123;
+	bool ucmp = 124;
+	string ucmp__prefix_list = 125;
+	sint32 ucmp__variance = 126;
+	uint32 ucmp__delay = 127;
+	string microloop_avoidance_type = 128;
+	uint32 microloop_avoidance_delay = 129;
+	bool microloop_avoidance_active = 130;
+	uint32 microloop_avoidance_delay_expiry = 131;
+	bool lsd_connected = 132;
+	bool lsd_registered = 133;
+	bool lsd_bound = 134;
+	uint32 lsd_connection_revision = 135;
+	bool srgb_configured = 136;
+	uint32 srgb_start = 137;
+	uint32 srgb_end = 138;
+	string srgb_status = 139;
+	bool sr_strict_spf_cap = 140;
+	uint32 srlb_start = 141;
+	uint32 srlb_end = 142;
+	string srlb_status = 143;
+	bool spf__suspended = 144;
+}
+
