@@ -215,16 +215,14 @@ message nf_producer_stats {
 	uint64 i_pv6_egress_flows = 53;
 	uint64 mpls_ingress_flows = 54;
 	uint64 mpls_egress_flows = 55;
-	uint64 section_ingress_flows = 56;
-	uint64 sflow_ingress_flows = 57;
-	uint64 mapt_logging_ingress_flows = 58;
-	uint64 drops_no_space = 59;
-	uint64 drops_others = 60;
-	uint64 unknown_ingress_flows = 61;
-	uint64 unknown_egress_flows = 62;
-	uint64 waiting_servers = 63;
-	uint64 spp_rx_counts = 64;
-	uint64 flow_packet_counts = 65;
-	string last_cleared = 66;
+	uint64 ipfix315_ingress_flows = 56;
+	uint64 ipfix315_egress_flows = 57;
+	uint64 s_flow_ingress_flows = 58;
+	uint64 s_flow_egress_flows = 59;
+	uint64 drops_no_space = 60;
+	uint64 drops_others = 61;
+	uint64 unknown_ingress_flows = 62;
+	uint64 unknown_egress_flows = 63;
+	string last_cleared = 64;
 }
 

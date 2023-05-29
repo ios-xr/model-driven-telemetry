@@ -240,6 +240,6 @@ message ptp_pd_servo_info {
 	ptp_pd_bag_timestamp pre_received_t4 = 74;
 	string offset_from_master = 75;
 	string mean_path_delay = 76;
-	string servo_mode = 77;
+	sint32 servo_mode = 77;
 }
 

@@ -212,15 +212,12 @@ message pl_pifib_police_info_ {
 	uint32 avgrate = 1;
 	uint32 burst = 2;
 	uint32 static_avgrate = 3;
-	string avgrate_type = 4;
-	string flow_type = 5;
-	uint64 accepted_stats = 6;
-	uint64 dropped_stats = 7;
-	uint32 policer = 8;
-	string str_iptos_val = 9;
-	uint32 change_type = 10;
-	uint32 acl_config = 11;
-	string acl_str = 12;
+	uint32 avgrate_type = 4;
+	uint64 accepted_stats = 5;
+	uint64 dropped_stats = 6;
+	uint32 hw_policer_addr = 7;
+	uint32 sw_police_id = 8;
+	uint32 npu_id = 9;
 }
 
 message pl_pifib_show_police {
