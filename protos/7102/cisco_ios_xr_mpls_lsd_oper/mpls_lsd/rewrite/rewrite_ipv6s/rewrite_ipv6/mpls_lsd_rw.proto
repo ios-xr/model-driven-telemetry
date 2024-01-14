@@ -1,0 +1,842 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_mpls_lsd_oper.mpls_lsd.rewrite.rewrite_ipv6s.rewrite_ipv6;
+
+message mpls_lsd_rw_KEYS {
+	string rsi_table_id = 1;
+	string address = 2;
+	uint32 prefix_length = 3;
+}
+
+message mpls_lsd_fpi_lbl {
+	uint32 label = 1;
+	uint32 security_id = 2;
+	sint32 elc = 3;
+	uint32 label_flags = 4;
+}
+
+message mpls_lsd_fpi_te {
+	string tunnel_interface = 1;
+	uint32 local_label = 2;
+}
+
+message mpls_lsd_fpi_ipv4 {
+	uint32 table_id = 1;
+	string prefix = 2;
+	uint32 prefix_length = 3;
+	uint32 version = 4;
+	uint32 sr_local_label = 5;
+}
+
+message mpls_lsd_fpi_ipv6 {
+	uint32 table_id = 1;
+	string prefix = 2;
+	uint32 router_flags = 3;
+	uint32 prefix_len = 4;
+	uint32 version = 5;
+}
+
+message mpls_lsd_fpi_pw_list {
+	uint32 pwhe_list_id = 1;
+}
+
+message mpls_lsd_fpi_dmtc_ext_intf {
+	string dmtc_ext_ifh = 1;
+}
+
+message mpls_lsd_fpi_label_range {
+	uint32 type = 1;
+	uint32 index = 2;
+}
+
+message mpls_lsd_fpi_gen {
+	string fpi_type = 1;
+	mpls_lsd_fpi_lbl label_data = 2;
+	mpls_lsd_fpi_te te_data = 3;
+	mpls_lsd_fpi_ipv4 i_pv4_data = 4;
+	mpls_lsd_fpi_ipv6 i_pv6_data = 5;
+	mpls_lsd_fpi_pw_list pw_list_data = 6;
+	mpls_lsd_fpi_dmtc_ext_intf dmtc_ext_intf_data = 7;
+	mpls_lsd_fpi_label_range label_range = 8;
+}
+
+message mpls_lsd_app_rsrc_state {
+	string application_name = 1;
+	string application_type = 2;
+	sint32 application_role_primary = 3;
+	string application_instance = 4;
+	string resource_state = 5;
+}
+
+message mpls_lsd_fpi {
+	mpls_lsd_fpi_gen fpi = 1;
+	repeated mpls_lsd_app_rsrc_state application_owner = 2;
+}
+
+message mpls_lsd_v4_rpf {
+	uint32 table_id = 1;
+	string v4_rpf__neighbor = 2;
+}
+
+message mpls_lsd_v6_rpf {
+	uint32 table_id = 1;
+	string v6_rpf__neighbor = 2;
+}
+
+message mpls_lsd_ip_moi_path_qos {
+	string type = 1;
+	uint32 value = 2;
+	sint32 is_default = 3;
+}
+
+message mpls_lsd_moi_pop_and_lkup {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	sint32 is_path_qos_set = 4;
+	mpls_lsd_ip_moi_path_qos path_qos_info = 5;
+}
+
+message mpls_lsd_moi_pop_and_lkup_tp {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	uint32 out_label = 4;
+}
+
+message mpls_lsd_moi_ipv4 {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	string out_interface = 4;
+	string out_interface_parent = 5;
+	string i_pv4_next_hop = 6;
+	uint32 out_binding_sid = 7;
+	uint32 path_id = 8;
+	sint32 is_path_qos_set = 9;
+	mpls_lsd_ip_moi_path_qos path_qos_info = 10;
+	uint32 backup_path_id = 11;
+	uint32 load_metric = 12;
+	uint32 out_label = 13;
+	string out_label_name = 14;
+	uint32 tunnel_id = 15;
+	uint32 tunnel_type = 16;
+	uint32 next_hop_id = 17;
+	uint32 local_label = 18;
+	uint32 minimum_recurse_length = 19;
+}
+
+message mpls_lsd_moi_ipv6 {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	string out_interface = 4;
+	uint32 out_label = 5;
+	string out_label_name = 6;
+	string i_pv6_next_hop = 7;
+	uint32 path_id = 8;
+	sint32 is_path_qos_set = 9;
+	mpls_lsd_ip_moi_path_qos path_qos_info = 10;
+	uint32 backup_path_id = 11;
+	uint32 tunnel_id = 12;
+	uint32 tunnel_type = 13;
+	uint32 next_hop_id = 14;
+	string out_interface_parent = 15;
+	uint32 minimum_recurse_length = 16;
+	uint32 load_metric = 17;
+	uint32 out_binding_sid = 18;
+}
+
+message mpls_lsd_moi_tev4 {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	string out_interface = 4;
+	uint32 out_label = 5;
+	string out_label_name = 6;
+	string i_pv4_next_hop = 7;
+	string backup_interface = 8;
+	string backup_i_pv4_next_hop = 9;
+	uint32 merge_point_label = 10;
+	uint32 backup_local_label = 11;
+	string tunnel_interface = 12;
+	uint32 tunnel_weight = 13;
+	string data_out_parent_interface = 14;
+	uint32 tunnel_class = 15;
+	string i_pv4_next_next_hop = 16;
+}
+
+message mpls_lsd_moi_pw {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	string out_interface = 4;
+	uint32 out_label = 5;
+	uint32 cross_connect_id = 6;
+	uint32 pseuodo_wire_connect_id = 7;
+	string i_pv4_next_hop = 8;
+	uint32 bridge_id = 9;
+	uint32 split_horizon_id = 10;
+	string sub_interface = 11;
+}
+
+message mpls_lsd_moi_ip_sub {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string out_interface = 3;
+	string path_flags_decode = 4;
+}
+
+message mpls_lsd_moi_pwhe {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	string out_interface = 4;
+	uint32 out_label = 5;
+	string i_pv4_next_hop = 6;
+	sint32 control_word = 7;
+	sint32 imposition = 8;
+	uint32 vc_type = 9;
+	uint32 pw_list_id = 10;
+	string pwhe_interface = 11;
+	uint32 out_binding_sid = 12;
+}
+
+message mpls_lsd_moi_pw_list {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string l3_interface = 3;
+	string l2_interface = 4;
+	string path_flags_decode = 5;
+}
+
+message mpls_lsd_moi_out_label_info {
+	uint32 outgoing_label = 1;
+	string outgoing_label_str = 2;
+}
+
+message mpls_lsd_moi_ipv4_inner_stack {
+	uint32 num_nexthops = 1;
+	repeated string nexthops = 2;
+	uint32 num_lbls = 3;
+	uint32 flags = 4;
+	repeated mpls_lsd_moi_out_label_info labels = 5;
+}
+
+message mpls_lsd_ipv4_large_label_stack {
+	uint32 recycle_label = 1;
+	mpls_lsd_moi_ipv4 recycle_nexthop = 2;
+	mpls_lsd_moi_ipv4_inner_stack recycle_inner_stack = 3;
+	mpls_lsd_moi_ipv4_inner_stack modified_inner_stack = 4;
+}
+
+message mpls_lsd_moi_ipv4_stack {
+	string owner_application_type = 1;
+	mpls_lsd_moi_ipv4 nexthop = 2;
+	mpls_lsd_moi_ipv4_inner_stack inner_stack = 3;
+	sint32 recycle_present = 4;
+	mpls_lsd_ipv4_large_label_stack split_stack_info = 5;
+}
+
+message mpls_lsd_moi_ipv6_inner_stack {
+	uint32 num_nexthops = 1;
+	repeated string nexthops = 2;
+	uint32 num_lbls = 3;
+	uint32 flags = 4;
+	repeated mpls_lsd_moi_out_label_info labels = 5;
+}
+
+message mpls_lsd_ipv6_large_label_stack {
+	uint32 recycle_label = 1;
+	mpls_lsd_moi_ipv6 recycle_nexthop = 2;
+	mpls_lsd_moi_ipv6_inner_stack recycle_inner_stack = 3;
+	mpls_lsd_moi_ipv6_inner_stack modified_inner_stack = 4;
+}
+
+message mpls_lsd_moi_ipv6_stack {
+	mpls_lsd_moi_ipv6 nexthop = 1;
+	mpls_lsd_moi_ipv6_inner_stack inner_stack = 2;
+	sint32 recycle_present = 3;
+	mpls_lsd_ipv6_large_label_stack split_stack_info = 4;
+}
+
+message mpls_lsd_moi_te_head {
+	uint32 table_id = 1;
+	string table_name = 2;
+	uint32 tunnel_local_label = 3;
+	string tunnel_local_label_str = 4;
+	uint32 tunnel_fwd_class = 5;
+	uint32 tunnel_load_metric = 6;
+	string flags_decode = 7;
+}
+
+message mpls_lsd_moi_dmtc_ext_intf {
+	string dmtc_ext_ifh = 1;
+}
+
+message mpls_lsd_moi_nnh {
+	string nnh_type = 1;
+	string address = 2;
+	string interface_name = 3;
+}
+
+message mpls_lsd_moi_ipv4_nnh_stack {
+	mpls_lsd_moi_ipv4_stack ipv4_stack = 1;
+	repeated mpls_lsd_moi_nnh neighbor_next_hop = 2;
+}
+
+message mpls_lsd_moi_ipv6_nnh_stack {
+	mpls_lsd_moi_ipv6_stack ipv6_stack = 1;
+	repeated mpls_lsd_moi_nnh neighbor_next_hop = 2;
+}
+
+message mpls_lsd_moi_label_range {
+	uint32 start_label_active = 1;
+	uint32 end_label_active = 2;
+}
+
+message mpls_lsd_moi_evpn {
+	uint32 table_id = 1;
+	string table_name = 2;
+	string path_flags_decode = 3;
+	string out_interface = 4;
+	string afi = 5;
+	string i_pv4_next_hop = 6;
+	string i_pv6_next_hop = 7;
+	uint32 out_binding_sid = 8;
+	uint32 path_id = 9;
+	uint32 backup_path_id = 10;
+	uint32 out_label = 11;
+	string out_label_name = 12;
+	uint32 tunnel_id = 13;
+	string tunnel_type = 14;
+}
+
+message mpls_lsd_moi_gen {
+	string moi_type = 1;
+	mpls_lsd_moi_pop_and_lkup pop_and_lookup_i_pv4 = 2;
+	mpls_lsd_moi_pop_and_lkup_tp pop_and_lookup_tp = 3;
+	mpls_lsd_moi_pop_and_lkup pop_and_lookup_i_pv6 = 4;
+	mpls_lsd_moi_ipv4 i_pv4_data = 5;
+	mpls_lsd_moi_ipv6 i_pv6_data = 6;
+	mpls_lsd_moi_tev4 t_ev4_data = 7;
+	mpls_lsd_moi_pw pseudowire_data = 8;
+	mpls_lsd_moi_ip_sub ip_sub_data = 9;
+	mpls_lsd_moi_pwhe pseudowire_head_end_data = 10;
+	mpls_lsd_moi_pw_list pw_list_data = 11;
+	mpls_lsd_moi_ipv4_stack stackv4_data = 12;
+	mpls_lsd_moi_ipv6_stack stackv6_data = 13;
+	mpls_lsd_moi_te_head te_head_data = 14;
+	mpls_lsd_moi_dmtc_ext_intf dmtc_data = 15;
+	mpls_lsd_moi_ipv4_nnh_stack nnh_stackv4_data = 16;
+	mpls_lsd_moi_ipv6_nnh_stack nnh_stackv6_data = 17;
+	mpls_lsd_moi_label_range label_range = 18;
+	mpls_lsd_moi_evpn evpn_data = 19;
+}
+
+message mpls_lsd_moi {
+	mpls_lsd_moi_gen moi = 1;
+	uint64 mpls_feid = 2;
+}
+
+message mpls_lsd_moi_arr {
+	repeated mpls_lsd_moi moi_array = 1;
+	mpls_lsd_app_rsrc_state application_resource = 2;
+}
+
+message mpls_lsd_lbl_ctx_ipv4 {
+	uint32 table_id = 1;
+	string prefix = 2;
+	uint32 prefix_length = 3;
+	uint32 security_id = 4;
+	string vrf_name = 5;
+}
+
+message mpls_lsd_lbl_ctx_ipv6 {
+	uint32 table_id = 1;
+	string prefix = 2;
+	uint32 prefix_length = 3;
+	uint32 security_id = 4;
+	string vrf_name = 5;
+}
+
+message mpls_lsd_lbl_ctx_tev4 {
+	uint32 table_id = 1;
+	string tunnel_source = 2;
+	string tunnel_dest = 3;
+	uint32 tunnel_id = 4;
+	uint32 tunnel_id_extension = 5;
+	uint32 tunnel_lsp_id = 6;
+	sint32 is_srte = 7;
+}
+
+message mpls_lsd_lbl_ctx_l3vpn_ipv4 {
+	string prefix = 1;
+	uint32 prefix_length = 2;
+	uint64 route_distinguisher = 3;
+}
+
+message mpls_lsd_lbl_ctx_l3vpn_ipv6 {
+	string prefix = 1;
+	uint32 prefix_length = 2;
+	uint64 route_distinguisher = 3;
+}
+
+message mpls_lsd_lbl_ctx_l3vpn_vrf {
+	uint32 table_id = 1;
+	uint32 security_id = 2;
+}
+
+message mpls_lsd_lbl_ctx_l3vpn_cev4 {
+	uint32 table_id = 1;
+	string i_pv4_next_hop = 2;
+	uint32 security_id = 3;
+}
+
+message mpls_lsd_lbl_ctx_l3vpn_cev6 {
+	uint32 table_id = 1;
+	string i_pv6_next_hop = 2;
+	uint32 security_id = 3;
+}
+
+message mpls_lsd_lbl_ctx_pw {
+	string prefix = 1;
+	uint64 pseudowire_id = 2;
+	uint32 remote_l2_router_id = 3;
+	string subinterface = 4;
+}
+
+message mpls_lsd_lbl_ctx_lbl_blk {
+	uint32 service = 1;
+	uint32 vpn_id = 2;
+	uint32 edge_id = 3;
+	uint32 offset = 4;
+	uint32 size = 5;
+}
+
+message mpls_lsd_lbl_ctx_ip_sub {
+	uint32 table_id = 1;
+	string parent_interface = 2;
+}
+
+message mpls_lsd_lbl_ctx_tev4_p2mp {
+	uint32 table_id = 1;
+	string tunnel_source = 2;
+	uint32 p2mp_id = 3;
+	uint32 tunnel_id = 4;
+	uint32 tunnel_id_extension = 5;
+	uint32 tunnel_lsp_id = 6;
+	string previous_hop = 7;
+}
+
+message mpls_lsd_lbl_ctx_mldpv4 {
+	uint32 table_id = 1;
+	uint32 type = 2;
+	uint32 lsm_id = 3;
+	string peer_lsrid = 4;
+	uint32 peer_label_space_id = 5;
+}
+
+message mpls_lsd_lbl_ctx_pwhe {
+	string pwhe_intf = 1;
+}
+
+message mpls_lsd_lbl_ctx_tp {
+	uint32 source_global_id = 1;
+	string source_node_id = 2;
+	uint32 dest_global_id = 3;
+	string dest_node_id = 4;
+	uint32 source_tunnel_id = 5;
+	uint32 dest_tunnel_id = 6;
+	uint32 lsp_id = 7;
+}
+
+message mpls_lsd_lbl_ctx_gre {
+	string gre_interface = 1;
+}
+
+message mpls_lsd_lbl_ctx_gre_ipv6 {
+	string grei_pv6_interface = 1;
+}
+
+message mpls_lsd_lbl_ctx_evpn {
+	uint32 evpn_id = 1;
+	uint32 evpn_tag = 2;
+	repeated uint32 ethernet_segment = 3;
+	uint32 evpn_encap = 4;
+}
+
+message mpls_lsd_lbl_ctx_blb_ipv4 {
+	string blb_intf = 1;
+	string prefix = 2;
+}
+
+message mpls_lsd_lbl_ctx_blb_ipv6 {
+	string blb_intf = 1;
+	string prefix = 2;
+}
+
+message mpls_lsd_lbl_ctx_pim_i_pmsi {
+	uint32 vrf_id = 1;
+	sint32 head = 2;
+	sint32 v6 = 3;
+}
+
+message mpls_lsd_lbl_ctx_pim_s_pmsi {
+	uint32 vrf_id = 1;
+	string source = 2;
+	sint32 head = 3;
+	sint32 v6 = 4;
+	uint32 hli = 5;
+	sint32 seg = 6;
+}
+
+message mpls_lsd_lbl_ctx_l3vpn_nh_set {
+	uint32 table_id = 1;
+	uint32 next_hop_set_id = 2;
+	string type = 3;
+}
+
+message mpls_lsd_lbl_ctx_sr_pfx_seg {
+	uint32 table_id = 1;
+	uint32 segment_id = 2;
+}
+
+message mpls_lsd_lbl_ctx_sr_adj_seg_ipv4 {
+	uint32 index = 1;
+	uint32 type = 2;
+	string intf = 3;
+	string addr = 4;
+}
+
+message mpls_lsd_lbl_ctx_sr_adj_seg_ipv6 {
+	uint32 index = 1;
+	uint32 type = 2;
+	string intf = 3;
+	string addr = 4;
+}
+
+message mpls_lsd_lbl_ctx_lbl_blk_srgb {
+	uint32 start_label = 1;
+	uint32 offset = 2;
+	uint32 size = 3;
+}
+
+message mpls_lsd_lbl_ctx_te_binding {
+	uint32 te_identifier = 1;
+	string te_type = 2;
+}
+
+message mpls_lsd_lbl_ctx_lbl_blk_srlb {
+	uint32 start_label = 1;
+	uint32 offset = 2;
+	uint32 size = 3;
+}
+
+message mpls_lsd_lbl_ctx_recycle_lbl {
+	uint64 grid_id = 1;
+}
+
+message mpls_lsd_lbl_ctx_lbl_blk_cbf {
+	uint32 start_label = 1;
+	uint32 offset = 2;
+	uint32 size = 3;
+	string owner_app_name = 4;
+}
+
+message mpls_lsd_lbl_ctx_srte_nh_label_set {
+	uint32 table_id = 1;
+	uint32 next_hop_set_id = 2;
+	string type = 3;
+}
+
+message mpls_lsd_lbl_ctx_sr_pfx_node {
+	uint32 segment_routing_label = 1;
+}
+
+message mpls_lsd_lbl_ctx_lbl_blk_pfp {
+	uint32 start_label = 1;
+	uint32 offset = 2;
+	uint32 size = 3;
+	string owner_app_name = 4;
+}
+
+message mpls_lsd_lbl_ctx_sfi {
+	string sfi_interface = 1;
+	string sfi_name = 2;
+	uint32 sfi_disposition_protocol = 3;
+}
+
+message mpls_lsd_lbl_ctx_key {
+	string label_context_type = 1;
+	mpls_lsd_lbl_ctx_ipv4 i_pv4_data = 2;
+	mpls_lsd_lbl_ctx_ipv6 i_pv6_data = 3;
+	mpls_lsd_lbl_ctx_tev4 t_ev4_data = 4;
+	mpls_lsd_lbl_ctx_l3vpn_ipv4 i_pv4l3vpn_data = 5;
+	mpls_lsd_lbl_ctx_l3vpn_ipv6 i_pv6l3vpn_data = 6;
+	mpls_lsd_lbl_ctx_l3vpn_vrf vrf_l3vpn_data = 7;
+	mpls_lsd_lbl_ctx_l3vpn_cev4 c_ev4l3vpn_data = 8;
+	mpls_lsd_lbl_ctx_l3vpn_cev6 c_ev6l3vpn_data = 9;
+	mpls_lsd_lbl_ctx_pw pseudowire_data = 10;
+	mpls_lsd_lbl_ctx_lbl_blk label_block_data = 11;
+	mpls_lsd_lbl_ctx_ip_sub ip_sub_data = 12;
+	mpls_lsd_lbl_ctx_tev4_p2mp t_ev4p2mp_data = 13;
+	mpls_lsd_lbl_ctx_mldpv4 mld_pv4_data = 14;
+	mpls_lsd_lbl_ctx_pwhe pseudowire_head_end_data = 15;
+	mpls_lsd_lbl_ctx_tp tp_data = 16;
+	mpls_lsd_lbl_ctx_gre generic_routing_encapsulation = 17;
+	mpls_lsd_lbl_ctx_gre_ipv6 i_pv6_generic_routing_encapsulation = 18;
+	mpls_lsd_lbl_ctx_evpn evpn_data = 19;
+	mpls_lsd_lbl_ctx_blb_ipv4 i_pv4blb_data = 20;
+	mpls_lsd_lbl_ctx_blb_ipv6 i_pv6blb_data = 21;
+	mpls_lsd_lbl_ctx_pim_i_pmsi pi_mi_pmsi_data = 22;
+	mpls_lsd_lbl_ctx_pim_s_pmsi pi_ms_pmsi_data = 23;
+	mpls_lsd_lbl_ctx_l3vpn_nh_set next_hop_set_l3vpn = 24;
+	mpls_lsd_lbl_ctx_sr_pfx_seg sr_prefix_segment = 25;
+	mpls_lsd_lbl_ctx_sr_adj_seg_ipv4 sr_adj_segment_i_pv4 = 26;
+	mpls_lsd_lbl_ctx_sr_adj_seg_ipv6 sr_adj_segment_i_pv6 = 27;
+	mpls_lsd_lbl_ctx_lbl_blk_srgb label_block_srgb_data = 28;
+	mpls_lsd_lbl_ctx_te_binding te_binding = 29;
+	mpls_lsd_lbl_ctx_lbl_blk_srlb label_block_srlb_data = 30;
+	mpls_lsd_lbl_ctx_recycle_lbl recycle_label = 31;
+	mpls_lsd_lbl_ctx_lbl_blk_cbf label_block_cbf_data = 32;
+	mpls_lsd_lbl_ctx_srte_nh_label_set next_hop_label_set_srte = 33;
+	mpls_lsd_lbl_ctx_sr_pfx_node sr_pfx_node = 34;
+	mpls_lsd_lbl_ctx_lbl_blk_pfp label_block_pfp_data = 35;
+	mpls_lsd_lbl_ctx_sfi sfi = 36;
+}
+
+message mpls_lsd_rw_id_loc_lbl {
+	repeated uint32 label_data = 1;
+}
+
+message mpls_lsd_rw_id_gen {
+	string rewrite_id_type = 1;
+	mpls_lsd_lbl_ctx_key label_context = 2;
+	mpls_lsd_rw_id_loc_lbl local_label_rewrite = 3;
+}
+
+message mpls_lsd_rw_id {
+	mpls_lsd_rw_id_gen rewrite_id = 1;
+}
+
+message mpls_lsd_rw {
+	mpls_lsd_fpi fpi_key = 50;
+	repeated mpls_lsd_fpi associated_fpi = 51;
+	repeated mpls_lsd_v4_rpf v4_rpf = 52;
+	repeated mpls_lsd_v6_rpf v6_rpf = 53;
+	repeated mpls_lsd_moi_arr mois = 54;
+	uint64 rewrite_version = 55;
+	uint32 bcdl_priority = 56;
+	uint32 lsd_queue = 57;
+	uint64 rw_install_time = 58;
+	uint64 rw_install_age = 59;
+	sint32 rw_updated = 60;
+	sint32 priority_updated = 61;
+	mpls_lsd_rw_id rewrite_id = 62;
+	sint32 rw_redist = 63;
+	uint64 prefix_feid = 64;
+}
+

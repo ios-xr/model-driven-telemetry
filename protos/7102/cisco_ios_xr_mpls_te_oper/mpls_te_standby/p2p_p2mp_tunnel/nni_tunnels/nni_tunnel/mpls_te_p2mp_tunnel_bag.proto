@@ -1,0 +1,1742 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_mpls_te_oper.mpls_te_standby.p2p_p2mp_tunnel.nni_tunnels.nni_tunnel;
+
+message mpls_te_p2mp_tunnel_bag_KEYS {
+	uint32 tunnel_id = 1;
+	string source_address = 2;
+	string destination_address = 3;
+}
+
+message affinity_name_bag {
+	uint32 constraint_type = 1;
+	uint32 constraint_value = 2;
+	uint32 forward_ref_value = 3;
+	repeated uint32 constraint_extended_value = 4;
+	repeated uint32 extended_forward_ref_value = 5;
+}
+
+message mpls_te_tunnels_affinity_info {
+	uint32 affinity_bits = 1;
+	uint32 affinity_mask = 2;
+	repeated affinity_name_bag named_affinities = 3;
+}
+
+message mpls_te_tunnel_bidir_config_info {
+	uint32 association_type = 1;
+	uint32 association_id = 2;
+	string association_source = 3;
+	uint32 association_global_id = 4;
+	bool association_corouted = 5;
+}
+
+message mpls_te_tunnel_bfd_config_info {
+	bool bfd_fast_detecting_enabled = 1;
+	string bfd_type = 2;
+	uint32 min_interval = 3;
+	bool min_interval_default = 4;
+	uint32 multiplier = 5;
+	bool multiplier_default = 6;
+	uint32 bring_up_timeout = 7;
+	bool bring_up_timeout_default = 8;
+	uint32 dampening_initial_wait = 9;
+	bool dampening_initial_wait_default = 10;
+	uint32 dampening_max_wait = 11;
+	bool dampening_max_wait_default = 12;
+	uint32 dampening_secondary_wait = 13;
+	bool dampening_secondary_wait_default = 14;
+	bool periodic_lsp_ping_disabled = 15;
+	uint32 periodic_lsp_ping_interval = 16;
+	bool periodic_lsp_ping_interval_default = 17;
+	string bfd_session_down_action = 18;
+	uint32 bfd_session_down_reopt_timeout = 19;
+	string bfd_encap_mode = 20;
+	string sbfd_target_id = 21;
+}
+
+message mpls_te_autoroute_destination_bag {
+	string destination_address = 1;
+	uint32 prefix_length = 2;
+}
+
+message mpls_te_tunnel_logging {
+	bool all = 1;
+	bool reoptimize = 2;
+	bool state = 3;
+	bool reroute = 4;
+	bool bandwidth_change = 5;
+	bool switchover = 6;
+	bool record_route = 7;
+	bool path_calculation_failure = 8;
+	bool reoptimization_attempt = 9;
+	bool insufficient_bandwidth = 10;
+}
+
+message mpls_te_p2mp_tun_cfg_bag {
+	string tunnel_name = 1;
+	uint32 tunnel_id = 2;
+	bool is_p2mp = 3;
+	string signaled_name = 4;
+	uint32 configured_bandwidth = 5;
+	uint32 interface_configured_bandwidth = 6;
+	string bandwidth_type = 7;
+	uint32 setup_priority = 8;
+	uint32 hold_priority = 9;
+	uint32 policy_class = 10;
+	repeated uint32 policy_classes = 11;
+	uint32 forward_class = 12;
+	bool is_forward_class_configured = 13;
+	mpls_te_tunnels_affinity_info affinity = 14;
+	uint32 backup_bandwidth = 15;
+	uint32 backup_bandwidth_flags = 16;
+	uint32 config_load_share = 17;
+	uint32 load_interval = 18;
+	uint32 payload_type = 19;
+	bool is_in_config = 20;
+	bool explicit_null_imposition = 21;
+	bool fast_reroute = 22;
+	bool is_backup_tunnel = 23;
+	bool record_route = 24;
+	bool srlg_discovery = 25;
+	bool path_protection_enabled = 26;
+	bool path_protection_srlg_diversity = 27;
+	bool path_protection_non_revertive = 28;
+	uint32 hop_limit = 29;
+	uint32 cost_limit = 30;
+	uint32 cost_limit_global = 31;
+	uint32 delay_limit = 32;
+	uint32 delay_limit_global = 33;
+	bool delay_measurement_enabled = 34;
+	uint32 path_invalidation_timeout_source = 35;
+	uint32 path_invalidation_timeout = 36;
+	uint32 path_invalidation_action_source = 37;
+	uint32 path_invalidation_action = 38;
+	bool soft_preempt = 39;
+	mpls_te_tunnel_bidir_config_info bidirectional_config = 40;
+	mpls_te_tunnel_bfd_config_info bfd_config = 41;
+	bool disable_affinity_failure_reopt = 42;
+	uint32 affinity_failure_reopt_timer = 43;
+	string segment_routing_path_selection = 44;
+	repeated mpls_te_autoroute_destination_bag autoroute_destinations = 45;
+	mpls_te_tunnel_logging logging = 46;
+	bool is_self_ping_configured = 47;
+	uint32 self_ping_probes_maximum = 48;
+	uint32 self_ping_retry_period = 49;
+}
+
+message mpls_te_attribute_set_version {
+	string attribute_type = 1;
+	uint32 generation = 2;
+	bool is_default = 3;
+}
+
+message mpls_te_attribute_set_bfd_rev_path {
+	string path_type = 1;
+	uint32 binding_label = 2;
+}
+
+message mpls_te_attribute_set_path_option {
+	uint32 configured_bandwidth = 1;
+	uint32 cost_limit = 2;
+	uint32 dste_class_type = 3;
+	string bandwidth_type = 4;
+	bool is_bandwidth_configured = 5;
+	bool is_cost_limit_configured = 6;
+	mpls_te_tunnels_affinity_info affinity = 7;
+	bool is_affinity_configured = 8;
+	repeated uint32 tunnel_id = 9;
+	uint32 generation = 10;
+	repeated mpls_te_attribute_set_version version_info = 11;
+	uint32 path_invalidation_timeout = 12;
+	uint32 path_invalidation_action = 13;
+	bool is_path_invalidation_timeout_configured = 14;
+	bool is_path_invalidation_action_configured = 15;
+	string exclude_list_name = 16;
+	bool is_exclude_list_name_configured = 17;
+	bool is_pce_configured = 18;
+	bool is_pce_disj_source_configured = 19;
+	bool is_pce_disj_type_configured = 20;
+	bool is_pce_disj_group_id_configured = 21;
+	uint32 pcedp_source_address = 22;
+	string pcedp_type = 23;
+	uint32 pcedp_group_id = 24;
+	bool is_pceb_dj_source_configured = 25;
+	bool is_pcebd_group_id_configured = 26;
+	uint32 pcebd_source_address = 27;
+	uint32 pcebd_group_id = 28;
+	mpls_te_attribute_set_bfd_rev_path bfd_reverse_path = 29;
+	bool is_bfd_reverse_pat_configured = 30;
+	bool is_delay_limit_configured = 31;
+	uint32 delay_limit = 32;
+}
+
+message mpls_te_attribute_set_sig_name {
+	string name = 1;
+	string source_type = 2;
+	string protected_interface_type = 3;
+	bool is_mp_addresses = 4;
+}
+
+message mpls_te_logging_attributes {
+	bool lsp_state = 1;
+	bool s2l_state = 2;
+	bool lsp_re_route = 3;
+	bool lsp_re_opt = 4;
+	bool lsp_insufficient_bw = 5;
+	bool lsp_bandwidth_change = 6;
+	bool lsp_pcalc_failure_logging_enabled = 7;
+	bool all_logging_enabled = 8;
+}
+
+message mpls_te_protected_if_name_str {
+	string protected_interface = 1;
+}
+
+message mpls_te_attribute_set_auto_backup {
+	bool is_signalled_name_configured = 1;
+	mpls_te_attribute_set_sig_name signalled_name = 2;
+	uint32 setup_priority = 3;
+	uint32 hold_priority = 4;
+	bool is_priority_configured = 5;
+	uint32 policy_class = 6;
+	repeated uint32 policy_classes = 7;
+	bool is_policyclass_configured = 8;
+	mpls_te_tunnels_affinity_info affinity = 9;
+	bool is_affinity_configured = 10;
+	bool record_route = 11;
+	mpls_te_logging_attributes logging = 12;
+	repeated mpls_te_protected_if_name_str protected_interfaces = 13;
+	repeated uint32 tunnel_id = 14;
+}
+
+message mpls_te_attribute_set_auto_mesh {
+	uint32 configured_bandwidth = 1;
+	uint32 dste_class_type = 2;
+	bool is_bandwidth_configured = 3;
+	uint32 setup_priority = 4;
+	uint32 hold_priority = 5;
+	bool is_priority_configured = 6;
+	uint32 policy_class = 7;
+	repeated uint32 policy_classes = 8;
+	bool is_policyclass_configured = 9;
+	uint32 forward_class = 10;
+	bool is_forward_class_configured = 11;
+	mpls_te_tunnels_affinity_info affinity = 12;
+	bool is_affinity_configured = 13;
+	bool fast_reroute = 14;
+	bool frr_node_protection = 15;
+	bool frr_bandwidth_protection = 16;
+	bool record_route = 17;
+	bool auto_bandwidth_collect = 18;
+	bool auto_route_announce = 19;
+	bool soft_preemption_configured = 20;
+	mpls_te_logging_attributes logging = 21;
+	uint32 bandwidth = 22;
+	uint32 load_share = 23;
+	bool is_interface_bw_configured = 24;
+	repeated uint32 mesh_group_id = 25;
+	repeated uint32 tunnel_id = 26;
+}
+
+message te_xro_subobj_ipv4 {
+	string address = 1;
+	uint32 prefix_len = 2;
+	string attribute = 3;
+	string exclusion_type = 4;
+}
+
+message te_xro_subobj_ipv6 {
+	string address = 1;
+	uint32 prefix_len = 2;
+	string attribute = 3;
+	string exclusion_type = 4;
+}
+
+message te_xro_subobj_unnum {
+	string te_router_id = 1;
+	uint32 interface_id = 2;
+	string attribute = 3;
+	string exclusion_type = 4;
+}
+
+message te_xro_subobj_as {
+	uint32 as_number = 1;
+}
+
+message te_xro_subobj_srlg {
+	uint32 srlg_id = 1;
+	string exclusion_type = 2;
+}
+
+message te_lsp_fec_ctype_data_t {
+	string fec_c_type = 1;
+	string p2p_lsp_destination = 2;
+	uint32 fec_destination_p2mp_id = 3;
+}
+
+message te_lsp_fec_t {
+	uint32 fec_lsp_id = 1;
+	uint32 fec_tunnel_id = 2;
+	string fec_extended_tunnel_id = 3;
+	string fec_source = 4;
+	te_lsp_fec_ctype_data_t fec_destination_info = 5;
+	string fec_vrf = 6;
+}
+
+message te_xro_subobj_p2p_lsp {
+	te_lsp_fec_t fec = 1;
+	bool ignore_lsp_id = 2;
+	bool processing_node_exception = 3;
+	bool penultimate_node_exception = 4;
+	bool destination_node_exception = 5;
+	string exclusion_type = 6;
+}
+
+message te_xro_subobj {
+	string type = 1;
+	te_xro_subobj_ipv4 i_pv4_subobject = 2;
+	te_xro_subobj_ipv6 i_pv6_subobject = 3;
+	te_xro_subobj_unnum unnumbered_subobject = 4;
+	te_xro_subobj_as as_subobject = 5;
+	te_xro_subobj_srlg srlg_subobject = 6;
+	te_xro_subobj_p2p_lsp lsp_subobject = 7;
+}
+
+message te_xro {
+	repeated te_xro_subobj xro_subobjects = 1;
+	bool mutual_diversity_flag = 2;
+}
+
+message mpls_te_attribute_set_xro {
+	te_xro xro = 1;
+}
+
+message mpls_te_attribute_set_p2mp_te {
+	bool fast_reroute = 1;
+	bool frr_bandwidth_protection = 2;
+	uint32 setup_priority = 3;
+	uint32 hold_priority = 4;
+	bool is_priority_configured = 5;
+	uint32 configured_bandwidth = 6;
+	uint32 dste_class_type = 7;
+	bool is_bandwidth_configured = 8;
+	repeated uint32 tunnel_id = 9;
+	mpls_te_tunnels_affinity_info affinity = 10;
+	bool is_affinity_configured = 11;
+}
+
+message te_revert_sch_t {
+	repeated string schedulename = 1;
+	uint32 schedule_date = 2;
+	string schedule_frequency = 3;
+	uint32 duration = 4;
+	uint32 max_tries = 5;
+}
+
+message mpls_te_attribute_set_aps_pp {
+	string snc_mode = 1;
+	uint32 tcm_id = 2;
+	string protection_type = 3;
+	string protection_mode = 4;
+	uint32 wait_to_restore_time = 5;
+	uint32 hold_off_time = 6;
+	te_revert_sch_t revert_schedule = 7;
+	string path_prot_profile_type = 8;
+	string restoration_style = 9;
+}
+
+message mpls_te_attribute_set_sr_prepend_entry {
+	string type = 1;
+	uint32 index = 2;
+	uint32 next_label = 3;
+}
+
+message mpls_te_attribute_set_sr_prepend_list {
+	repeated mpls_te_attribute_set_sr_prepend_entry prepend_entries = 1;
+}
+
+message mpls_te_attribute_set_p2p_te {
+	repeated uint32 tunnel_id = 1;
+	mpls_te_tunnels_affinity_info affinity = 2;
+	bool is_affinity_configured = 3;
+	string path_selection_segment_routing_adjacency_protection = 4;
+	bool is_path_selection_segment_routing_adjacency_protection_configured = 5;
+	uint32 path_invalidation_timeout = 6;
+	string path_selection_invalidation_action = 7;
+	bool is_path_invalidation_timeout_configured = 8;
+	bool is_path_invalidation_action_configured = 9;
+	string path_selection_metric = 10;
+	bool is_path_selection_metric_configured = 11;
+	uint32 path_selection_segment_routing_margin = 12;
+	bool is_path_selection_segment_routing_margin_relative = 13;
+	bool is_path_selection_segment_routing_margin_configured = 14;
+	uint32 path_selection_segment_routing_segment_limit = 15;
+	bool is_path_selection_segment_routing_segment_limit_configured = 16;
+	bool is_path_select_configured = 17;
+	mpls_te_logging_attributes logging = 18;
+	mpls_te_attribute_set_sr_prepend_list prepend_list = 19;
+	bool is_prepend_list_configured = 20;
+	bool is_pce_configured = 21;
+	bool is_pce_disj_source_configured = 22;
+	bool is_pce_disj_type_configured = 23;
+	bool is_pce_disj_group_id_configured = 24;
+	uint32 pcedp_source_address = 25;
+	string pcedp_type = 26;
+	uint32 pcedp_group_id = 27;
+	bool is_pceb_dj_source_configured = 28;
+	bool is_pcebd_group_id_configured = 29;
+	uint32 pcebd_source_address = 30;
+	uint32 pcebd_group_id = 31;
+}
+
+message mpls_te_attribute_set_uni_p {
+	string lsp_flag = 1;
+	string seg_flag = 2;
+	bool in_place_bit = 3;
+	bool required_bit = 4;
+}
+
+message mpls_te_attribute_set_union {
+	string tunnel_attribute_set_type = 1;
+	mpls_te_attribute_set_path_option attribute_set_path_option = 2;
+	mpls_te_attribute_set_auto_backup attribute_set_autobackup = 3;
+	mpls_te_attribute_set_auto_mesh attribute_set_automesh = 4;
+	mpls_te_attribute_set_xro attribute_set_xro = 5;
+	mpls_te_attribute_set_p2mp_te attribute_set_p2mpte = 6;
+	mpls_te_attribute_set_aps_pp attribute_set_aps_pp = 7;
+	mpls_te_attribute_set_p2p_te attribute_set_p2p_te = 8;
+	mpls_te_attribute_set_uni_p attribute_set_uni_p = 9;
+}
+
+message mpls_te_attribute_set {
+	string tunnel_attribute_set_name = 1;
+	uint32 tunnel_attribute_set_name_crc32 = 2;
+	mpls_te_attribute_set_union attribute_set_union = 3;
+}
+
+message mpls_te_p2mp_pcalc_error {
+	string error_message = 1;
+	string lsp_mode = 2;
+	uint32 log_time = 3;
+}
+
+message mpls_te_p2mp_sig_error {
+	uint32 error_node = 1;
+	uint32 error = 2;
+	uint32 sub_code = 3;
+	string lsp_mode = 4;
+	uint32 log_time = 5;
+	uint32 signalling_lsp_id = 6;
+	string error_message = 7;
+	bool reverse_lsp = 8;
+}
+
+message mpls_te_p2mp_path_option {
+	bool option_index_is_valid = 1;
+	uint32 option_index = 2;
+	string path_option_name = 3;
+	string path_option_type = 4;
+	string explicit_path_name = 5;
+	uint32 explicit_path_id = 6;
+	uint32 holddown_duration = 7;
+	string pce_address = 8;
+	string path_option_area_id = 9;
+	bool is_strict_explicit_path = 10;
+	bool is_helddown = 11;
+	bool is_lockdown = 12;
+	bool is_sticky = 13;
+	bool is_verbatim = 14;
+	bool is_disabled = 15;
+	bool has_attribute_set = 16;
+	mpls_te_attribute_set attribute_set = 17;
+	bool attribute_set_found = 18;
+	repeated mpls_te_p2mp_pcalc_error path_calculation_error = 19;
+	repeated mpls_te_p2mp_pcalc_error remerge_error = 20;
+	repeated mpls_te_p2mp_sig_error signalling_error = 21;
+	bool has_xro_attribute_set = 22;
+	bool xro_attribute_set_found = 23;
+	mpls_te_attribute_set xro_attribute_set = 24;
+	bool is_segment_routing = 25;
+	uint32 protected_by_path_option_index = 26;
+	uint32 restored_from_path_option_index = 27;
+	uint32 setup_timeout = 28;
+}
+
+message mpls_te_interarea_reopt_info {
+	uint32 sent_path_queries = 1;
+	uint32 time_since_last_query_sent = 2;
+	uint32 received_preferred_path_errors = 3;
+	uint32 time_since_last_preferred_path_error = 4;
+	uint32 received_preferred_tree_errors = 5;
+	uint32 time_since_last_preferred_tree_error = 6;
+	string preferred_path_error_node = 7;
+	string preferred_tree_error_node = 8;
+}
+
+message mpls_te_p2mp_dest {
+	string destination_address = 1;
+	repeated mpls_te_p2mp_path_option path_options = 2;
+	repeated mpls_te_p2mp_path_option path_option = 3;
+	string destination_state = 4;
+	uint32 active_path_option_index = 5;
+	bool path_option_exhausted = 6;
+	uint32 uptime = 7;
+	uint32 path_change_time = 8;
+	uint32 total_uptime = 9;
+	bool s2l_exist = 10;
+	string destination_deletion_cause = 11;
+	string destination_deletion_sub_cause = 12;
+	uint32 destination_deletion_timestamp = 13;
+	bool is_inter_area = 14;
+	mpls_te_interarea_reopt_info inter_area_reoptimization = 15;
+}
+
+message te_s2l_fec_t {
+	uint32 s2l_fec_subgroup_id = 1;
+	uint32 s2l_fec_lsp_id = 2;
+	uint32 s2l_fec_tunnel_id = 3;
+	string s2l_fec_extended_tunnel_id = 4;
+	string s2l_fec_source = 5;
+	string s2l_fec_dest = 6;
+	uint32 s2l_fec_p2mp_id = 7;
+	string s2l_fec_subgroup_originator = 8;
+	string s2l_fec_c_type = 9;
+	string s2l_fec_vrf = 10;
+}
+
+message mpls_srlg_info {
+	uint32 shared_risk_group = 1;
+	string srlg_name = 2;
+}
+
+message rsvp_mgmt_ero_ipv4_subobj {
+	bool is_strict_route = 1;
+	string ero_address = 2;
+	uint32 prefix_length = 3;
+}
+
+message rsvp_mgmt_ero_unnum_subobj {
+	bool is_strict_route = 1;
+	uint32 ero_interface_id = 2;
+	string ero_router_id = 3;
+	string status = 4;
+}
+
+message rsvp_mgmt_ero_subobj {
+	string ero_type = 1;
+	rsvp_mgmt_ero_ipv4_subobj ipv4ero_sub_object = 2;
+	rsvp_mgmt_ero_unnum_subobj unnumbered_ero_sub_object = 3;
+}
+
+message rsvp_mgmt_rro_ipv4_subobj_flags {
+	bool is_protection_available = 1;
+	bool is_protection_in_use = 2;
+	bool is_bandwidth_protected = 3;
+	bool is_node_protection_available = 4;
+	bool is_node_id = 5;
+}
+
+message rsvp_mgmt_rro_ipv4_subobj {
+	rsvp_mgmt_rro_ipv4_subobj_flags flags = 1;
+	string rro_address = 2;
+}
+
+message rsvp_mgmt_rro_label_subobj_flags {
+	bool is_global_label = 1;
+}
+
+message rsvp_mgmt_rro_label_subobj {
+	rsvp_mgmt_rro_label_subobj_flags flags = 1;
+	uint32 label = 2;
+	bool is_label_variable_length = 3;
+	repeated uint32 variable_length_label = 4;
+}
+
+message rsvp_mgmt_rro_unnumbered_subobj_flags {
+	bool is_protection_available = 1;
+	bool is_protection_in_use = 2;
+	bool is_bandwidth_protected = 3;
+	bool is_node_protection_available = 4;
+	bool is_node_id = 5;
+}
+
+message rsvp_mgmt_rro_unnumbered_subobj {
+	rsvp_mgmt_rro_unnumbered_subobj_flags flags = 1;
+	string interface_address = 2;
+	uint32 interface_id = 3;
+}
+
+message rsvp_mgmt_rro_srlg_subobj {
+	repeated uint32 srl_gs = 1;
+}
+
+message rsvp_mgmt_rro_subobj {
+	string rro_type = 1;
+	rsvp_mgmt_rro_ipv4_subobj ipv4rro_sub_object = 2;
+	rsvp_mgmt_rro_label_subobj label_rro_sub_object = 3;
+	rsvp_mgmt_rro_unnumbered_subobj unnumbered_rro_sub_object = 4;
+	rsvp_mgmt_rro_srlg_subobj srlg_rro_sub_object = 5;
+}
+
+message tunnel_hop_info {
+	string hop_address = 1;
+	uint32 hop_affinity = 2;
+	repeated uint32 hop_extended_affinity = 3;
+}
+
+message bandwidth_spec_bag {
+	uint64 average_rate = 1;
+	uint64 maximum_burst = 2;
+	uint64 peak_rate = 3;
+}
+
+message te_mgmt_g709_otn_tspec {
+	uint32 signal_type = 1;
+	uint32 nmc_or_tolerance = 2;
+	uint32 nvc = 3;
+	uint32 multiplier = 4;
+	uint32 bit_rate = 5;
+}
+
+message te_mgmt_generic_tspec {
+	string t_spec_type = 1;
+	te_mgmt_g709_otn_tspec otnt_spec = 2;
+}
+
+message te_mgmt_g709_otn_fspec {
+	uint32 signal_type = 1;
+	uint32 nmc_or_tolerance = 2;
+	uint32 nvc = 3;
+	uint32 multiplier = 4;
+	uint32 bit_rate = 5;
+}
+
+message te_mgmt_generic_fspec {
+	string f_spec_type = 1;
+	te_mgmt_g709_otn_fspec otnf_spec = 2;
+}
+
+message te_addr_type_ipv4_unnum {
+	string router_id = 1;
+	uint32 interface_index = 2;
+}
+
+message addr {
+	string type = 1;
+	string i_pv4_address = 2;
+	te_addr_type_ipv4_unnum i_pv4_unnumbered_address = 3;
+}
+
+message te_addr_t_ {
+	addr te_addr = 1;
+}
+
+message te_lsp_convergence_info {
+	uint64 path_in = 1;
+	uint64 path_out = 2;
+	uint64 resv_in = 3;
+	uint64 resv_out = 4;
+	uint64 label_rewrite = 5;
+	uint64 tunnel_rewrite = 6;
+	uint64 creation_time = 7;
+}
+
+message mpls_te_soft_preemption_lsp_info {
+	string status = 1;
+	uint32 soft_preemption_timestamp = 2;
+	string soft_preemption_link = 3;
+	string preempting_link_address = 4;
+	uint32 time_to_hard_preemption = 5;
+	bool fr_rrewrite = 6;
+	string fr_rrewrite_tunnel_name = 7;
+}
+
+message mpls_te_mgmt_wdm_fixed_grid_label {
+	bool label_set = 1;
+	string grid = 2;
+	string channel_spacing = 3;
+	uint32 identifier = 4;
+	string channel = 5;
+}
+
+message mpls_te_mgmt_g709_otn_fixed_size_label {
+	uint32 tpn = 1;
+	uint32 bit_map_length = 2;
+	repeated uint32 bit_map = 3;
+}
+
+message mpls_te_mgmt_fsc_label {
+	uint32 interface_id = 1;
+}
+
+message mpls_te_mgmt_gmpls_label {
+	string label_type = 1;
+	mpls_te_mgmt_wdm_fixed_grid_label wdm = 2;
+	mpls_te_mgmt_g709_otn_fixed_size_label otn = 3;
+	mpls_te_mgmt_fsc_label fsc = 4;
+}
+
+message mpls_te_mgmt_gmpls_labels {
+	mpls_te_mgmt_gmpls_label path_ingress_label = 1;
+	mpls_te_mgmt_gmpls_label path_egress_label = 2;
+	mpls_te_mgmt_gmpls_label resv_ingress_label = 3;
+	mpls_te_mgmt_gmpls_label resv_egress_label = 4;
+}
+
+message te_odu_flex_cbr_info {
+	uint32 bit_rate = 1;
+	uint32 tolerance = 2;
+}
+
+message te_odu_flex_gfp_f_res_info {
+	uint32 bit_rate = 1;
+}
+
+message te_odu_flex_gfp_f_non_res_info {
+	uint32 bit_rate = 1;
+}
+
+message te_odu_v3_bw {
+	string odu_level = 1;
+	te_odu_flex_cbr_info odu_flex_cbr = 2;
+	te_odu_flex_gfp_f_res_info odu_flex_gfp_f_res = 3;
+	te_odu_flex_gfp_f_non_res_info odu_flex_gfp_f_non_res = 4;
+}
+
+message mpls_te_s2l_otn_info {
+	string incoming_controller = 1;
+	string incoming_controller_state = 2;
+	string incoming_sub_controller = 3;
+	string incoming_sub_controller_state = 4;
+	string outgoing_controller = 5;
+	string outgoing_controller_state = 6;
+	string outgoing_sub_controller = 7;
+	string outgoing_sub_controller_state = 8;
+	te_odu_v3_bw bandwidth = 9;
+	mpls_te_mgmt_gmpls_labels labels = 10;
+	uint32 cross_connect_id = 11;
+	bool is_connected = 12;
+	uint32 uptime = 13;
+	string outgoing_controller_ifhandle = 14;
+	string outgoing_sub_controller_ifhandle = 15;
+	string incoming_controller_ifhandle = 16;
+	string incoming_sub_controller_ifhandle = 17;
+	uint32 gpid = 18;
+}
+
+message te_pvt_prot_obj_t {
+	bool s_bit = 1;
+	bool p_bit = 2;
+	bool n_bit = 3;
+	bool o_bit = 4;
+	string protect_type = 5;
+	bool is_wtr_present = 6;
+	uint32 wtr_timeout = 7;
+	bool is_ho_present = 8;
+	uint32 ho_timeout = 9;
+	bool is_snc_mode_present = 10;
+	string snc_mode = 11;
+	uint32 tcm_id = 12;
+	string path_prot_profile_type = 13;
+}
+
+message mpls_te_s2l_aps_info {
+	te_pvt_prot_obj_t protection_info = 1;
+}
+
+message mpls_te_otn_s2l_info {
+	mpls_te_s2l_otn_info otn = 1;
+	mpls_te_s2l_aps_info aps = 2;
+}
+
+message mpls_te_bfd_session_info {
+	string state = 1;
+	uint32 state_change_time = 2;
+}
+
+message mpls_te_bfd_deletion_history {
+	uint32 lsp_id = 1;
+	uint32 deletion_time = 2;
+	string deletion_reason = 3;
+	uint32 deletion_diagnostic_code = 4;
+}
+
+message mpls_te_head_bfd_info {
+	uint32 creation_time = 1;
+	mpls_te_bfd_session_info session_info = 2;
+	mpls_te_bfd_deletion_history deletion_history = 3;
+	string lspbfd_type = 4;
+	bool is_redundant = 5;
+	repeated uint32 bfd_reverse_path_labels = 6;
+	bool bfd_reverse_path_stale = 7;
+}
+
+message mpls_te_tail_bfd_info {
+	mpls_te_bfd_session_info session_info = 1;
+	uint32 failure_diagnostic_code = 2;
+	string failure_reason = 3;
+	uint32 local_discriminator = 4;
+	uint32 remote_discriminator = 5;
+	uint32 min_interval = 6;
+	bool min_interval_default = 7;
+	uint32 multiplier = 8;
+	bool multiplier_default = 9;
+}
+
+message te_s2l_srlg_collect_info {
+	string srlg_collect_type = 1;
+	repeated uint32 discovered_srl_gs = 2;
+}
+
+message mpls_te_s2l_association_object {
+	uint32 s2l_association_type = 1;
+	string s2l_association_tie_role = 2;
+	uint32 s2l_association_id = 3;
+	string s2l_association_source = 4;
+	uint32 s2l_global_source = 5;
+	repeated uint32 s2l_extended_id = 6;
+}
+
+message mpls_te_s2l_protection_object {
+	bool s2l_secondary = 1;
+	bool s2l_protecting = 2;
+	bool s2l_notification = 3;
+	bool s2l_operational = 4;
+	bool enhanced = 5;
+	bool ded1_plus1 = 6;
+	bool ded1_to1 = 7;
+	bool shared = 8;
+	bool link_unprotected = 9;
+	bool extra_traffic = 10;
+	bool any = 11;
+	bool rerouting = 12;
+	bool rerouting_no_et = 13;
+	bool one_to_n_protection_et = 14;
+	bool one_plus_one_uni = 15;
+	bool one_plus_one_bi = 16;
+	bool lsp_unprotected = 17;
+	bool seg_rerouting = 18;
+	bool seg_rerouting_no_et = 19;
+	bool seg_one_to_n_protection_et = 20;
+	bool seg_one_plus_one_uni = 21;
+	bool seg_one_plus_one_bi = 22;
+	bool seg_lsp_unprotected = 23;
+	bool in_place_bit = 24;
+	bool required_bit = 25;
+}
+
+message mpls_te_s2l_flex_info {
+	bool entry_exists = 1;
+	uint32 in_label = 2;
+	bool bfd_created = 3;
+	bool bfd_up = 4;
+	bool oam_created = 5;
+	te_s2l_fec_t flex_fec = 6;
+	string bfd_next_hop = 7;
+	string bfd_tun_ifh = 8;
+	string bfd_out_ifh = 9;
+	uint32 bfd_int_label = 10;
+	uint32 bfd_egress_label = 11;
+	bool fault_ldi_lockout = 12;
+	bool fault_ldi = 13;
+	bool fault_lkr = 14;
+	bool fault_ais = 15;
+	uint32 fault_time = 16;
+}
+
+message te_s2l_sr_path_hop {
+	string sid_type = 1;
+	bool has_ip_addresses = 2;
+	string local_addr = 3;
+	string remote_addr = 4;
+	bool has_mpls_label = 5;
+	uint32 mpls_label_value = 6;
+	bool has_entropy_label = 7;
+}
+
+message tunnel_midpoint_lsp_wrap_info_bag {
+	bool lsp_wrap_protection_enable = 1;
+	uint32 lsp_wrap_protection_label = 2;
+	string reverse_egress_interface = 3;
+	uint32 reverse_lsp_label = 4;
+	string lsp_wrap_protection_state = 5;
+}
+
+message mpls_te_s2l_diversity_info {
+	string diversity_type = 1;
+}
+
+message mpls_te_path_metrics {
+	uint64 te_metric = 1;
+	uint64 igp_metric = 2;
+	uint64 delay_metric = 3;
+}
+
+message mpls_te_s2l_delay_measurement {
+	uint32 minimum_delay = 1;
+	uint32 maximum_delay = 2;
+	uint32 average_delay = 3;
+	uint32 notification_timestamp = 4;
+}
+
+message mpls_te_p2mp_s2l {
+	te_s2l_fec_t s2l_fec = 1;
+	mpls_te_p2mp_path_option active_path_option = 2;
+	repeated mpls_srlg_info shared_risk_link_groups = 3;
+	string pcalc_area = 4;
+	bool is_expanded_ero = 5;
+	uint32 path_reeval_query_mid = 6;
+	uint32 time_since_last_query_received_mid = 7;
+	uint32 time_since_last_preferred_path_exists_send_mid = 8;
+	uint32 time_since_last_preferred_tree_exists_send_mid = 9;
+	string expanded_ero_area_id = 10;
+	uint32 expanded_ero_affinity_bits = 11;
+	uint32 expanded_ero_affinity_mask = 12;
+	string expanded_ero_metric_type = 13;
+	uint32 expanded_ero_metric = 14;
+	string abr_auto_discovered = 15;
+	bool is_frr_enabled = 16;
+	bool is_node_protected = 17;
+	bool is_bandwidth_protect = 18;
+	bool path_rro_enabled = 19;
+	repeated rsvp_mgmt_ero_subobj out_ero = 20;
+	repeated rsvp_mgmt_ero_subobj in_ero = 21;
+	te_xro out_xro = 22;
+	te_xro in_xro = 23;
+	repeated rsvp_mgmt_rro_subobj path_rro = 24;
+	repeated rsvp_mgmt_rro_subobj resv_rro = 25;
+	repeated tunnel_hop_info path_affinity_array = 26;
+	bandwidth_spec_bag t_spec = 27;
+	te_mgmt_generic_tspec generic_t_spec = 28;
+	bandwidth_spec_bag f_spec = 29;
+	te_mgmt_generic_fspec generic_f_spec = 30;
+	uint64 weight = 31;
+	uint64 reverse_weight = 32;
+	uint32 uptime = 33;
+	string egress_interface = 34;
+	string egress_interface_state = 35;
+	string egress_interface_brief = 36;
+	string ingress_interface = 37;
+	string ingress_interface_state = 38;
+	string ingress_interface_brief = 39;
+	uint32 s2l_local_label = 40;
+	uint32 s2l_out_label = 41;
+	string outbound_frr_state = 42;
+	string frr_out_tunnel_interface = 43;
+	string role = 44;
+	string signalling_status = 45;
+	string local_router_id = 46;
+	string upstream_router_id = 47;
+	string downstream_router_id = 48;
+	string next_hop_address = 49;
+	string next_next_hop_address = 50;
+	te_addr_t_ next_hop_address_generic = 51;
+	string previous_hop_address = 52;
+	te_addr_t_ previous_hop_address_generic = 53;
+	string incoming_address = 54;
+	te_addr_t_ incoming_address_generic = 55;
+	string backup_tunnel_interface = 56;
+	uint32 node_hop_count = 57;
+	te_lsp_convergence_info s2l_convergence = 58;
+	mpls_te_soft_preemption_lsp_info soft_preemption = 59;
+	bool is_optical = 60;
+	mpls_te_mgmt_gmpls_labels gmpls_labels = 61;
+	mpls_te_otn_s2l_info otn_s2l = 62;
+	mpls_te_head_bfd_info head_end_bfd_info = 63;
+	mpls_te_tail_bfd_info tail_end_bfd_info = 64;
+	te_s2l_srlg_collect_info srlg_collection = 65;
+	mpls_te_s2l_association_object association = 66;
+	mpls_te_s2l_protection_object protection = 67;
+	bool s2l_reverse_ero_obj_present = 68;
+	repeated rsvp_mgmt_ero_subobj reverse_ero_in = 69;
+	bool reverse_lsp_present = 70;
+	bool reverse_lsp_connected = 71;
+	te_lsp_fec_t reverse_lsp_fec = 72;
+	string reverse_lsp_name = 73;
+	bool s2l_reverse_t_spec_obj_present = 74;
+	bandwidth_spec_bag reverse_t_spec = 75;
+	repeated uint32 s2l_reverse_lsp_sub_objs = 76;
+	mpls_te_s2l_flex_info flex_info = 77;
+	repeated te_s2l_sr_path_hop s2l_segment_routing_path = 78;
+	tunnel_midpoint_lsp_wrap_info_bag lsp_wrap_info = 79;
+	bool path_using_strict_spf = 80;
+	mpls_te_s2l_diversity_info diversity_info = 81;
+	mpls_te_path_metrics accumulated_path_metrics = 82;
+	mpls_te_path_metrics accumulated_reverse_path_metrics = 83;
+	mpls_te_s2l_delay_measurement delay_measurement = 84;
+}
+
+message mpls_te_p2mp_lsp {
+	string signaled_name = 1;
+	bool is_frr_failed = 2;
+	uint32 frr_active_reason = 3;
+	uint32 lsp_bandwidth = 4;
+	uint32 lsp_setup_priority = 5;
+	uint32 lsp_hold_priority = 6;
+	string lsp_bandwidth_type = 7;
+	bool dste_class_match = 8;
+	uint32 dste_class_index = 9;
+	te_lsp_fec_t lsp_fec = 10;
+	string type = 11;
+	repeated mpls_te_p2mp_s2l s2l_list = 12;
+	uint32 uptime = 13;
+	uint32 s2_ls_up = 14;
+	uint32 s2_ls_proceeding = 15;
+	uint32 s2_ls_down = 16;
+	string reoptimize_reason = 17;
+	string reoptimize_trigger = 18;
+	uint32 timer_left = 19;
+	bool is_passive = 20;
+	bool is_interface = 21;
+	uint32 last_path_change = 22;
+	uint64 persistent_bytes = 23;
+	uint64 persistent_packets = 24;
+	string protection_role = 25;
+}
+
+message mpls_te_tunnels_autobw_status {
+	bool is_auto_bandwidth_enabled = 1;
+	uint32 reactivation_time = 2;
+}
+
+message mpls_te_tunnels_autobw_config {
+	bool is_auto_bandwidth_collect_only = 1;
+	uint32 minimum_bandwidth = 2;
+	uint32 maximum_bandwidth = 3;
+	uint32 application_frequency = 4;
+	uint32 collection_frequency = 5;
+	uint32 adjustment_threshold_percent = 6;
+	uint32 adjustment_threshold_value = 7;
+	uint32 overflow_threshold_percent = 8;
+	uint32 overflow_threshold_value = 9;
+	uint32 overflow_threshold_limit = 10;
+	uint32 underflow_threshold_percent = 11;
+	uint32 underflow_threshold_value = 12;
+	uint32 underflow_threshold_limit = 13;
+	bool resignal_last_bandwidth_enabled = 14;
+	uint32 resignal_last_bandwidth_timeout = 15;
+}
+
+message mpls_te_tunnels_autobw_oper {
+	uint32 last_bandwidth_applied = 1;
+	string bandwidth_pool_type = 2;
+	uint32 bandwidth_applications = 3;
+	string last_application_trigger = 4;
+	uint32 application_jitter = 5;
+	uint32 time_left_application = 6;
+	uint32 samples_collected = 7;
+	uint32 time_left_collection = 8;
+	uint32 highest_bandwidth = 9;
+	uint32 underflow_highest_bandwidth = 10;
+	uint32 threshold_overflows = 11;
+	uint32 overflow_early_bw_applications = 12;
+	uint32 threshold_underflows = 13;
+	uint32 underflow_early_bw_applications = 14;
+	uint32 collect_only_requested_bandwidth = 15;
+	string application_reject_reason = 16;
+	uint32 resignal_last_bandwidth_expire_time = 17;
+}
+
+message mpls_te_p2p_info_bag {
+	mpls_te_tunnels_autobw_status auto_bandwidth_status = 1;
+	mpls_te_tunnels_autobw_config auto_bandwidth_config = 2;
+	mpls_te_tunnels_autobw_oper auto_bandwidth_oper = 3;
+	bool is_bidirectional = 4;
+}
+
+message mpls_te_autocapacity_config {
+	uint32 minimum_clones = 1;
+	uint32 maximum_clones = 2;
+	uint32 merge_bandwidth = 3;
+	uint32 split_bandwidth = 4;
+	uint32 nominal_bandwidth = 5;
+}
+
+message mpls_te_autocapacity_stats {
+	uint32 splits = 1;
+	uint32 merges = 2;
+	uint32 total_clones_created = 3;
+	uint32 total_clones_deleted = 4;
+	uint32 high_watermark_clones = 5;
+}
+
+message mpls_te_autocapacity_clone {
+	string name = 1;
+	uint32 creation_timestamp = 2;
+	string state = 3;
+	uint32 signaled_bandwidth = 4;
+	uint32 current_bandwidth_demand = 5;
+}
+
+message mpls_te_autocapacity {
+	mpls_te_autocapacity_config auto_capacity_configuration = 1;
+	mpls_te_autocapacity_stats auto_capacity_stats = 2;
+	repeated mpls_te_autocapacity_clone clones = 3;
+}
+
+message mpls_te_self_ping {
+	string state = 1;
+	uint32 lsp_id = 2;
+	uint32 start_timestamp = 3;
+	uint32 stop_timestamp = 4;
+	uint32 probe_received_timestamp = 5;
+	uint32 probes_sent = 6;
+}
+
+message mpls_te_tunnels_history_current_connected {
+	uint32 current_lsp_uptime = 1;
+	uint32 current_uptime = 2;
+}
+
+message mpls_te_tunnels_history_current {
+	mpls_te_tunnels_history_current_connected connected_uptimes = 1;
+	uint32 current_setup_timer = 2;
+	string selection_reason = 3;
+	string current_setup_last_error = 4;
+	string protection_role = 5;
+}
+
+message mpls_te_tunnels_history_reopt {
+	uint32 reoptimized_setup_uptime = 1;
+	uint32 reoptimized_setup_timer = 2;
+	string reoptimized_setup_last_error = 3;
+	string protection_role = 4;
+}
+
+message mpls_te_tunnels_history_path_protect {
+	uint32 protecting_setup_uptime = 1;
+	uint32 protecting_setup_timer = 2;
+	string protecting_setup_last_error = 3;
+}
+
+message mpls_te_tunnels_history_previous {
+	string previous_path_option = 1;
+	uint32 previous_tunnel_instance = 2;
+	string previous_fail_reason = 3;
+	string previous_setup_last_error = 4;
+}
+
+message mpls_te_tunnels_history_previous_protect {
+	string previous_protect_path_option = 1;
+	uint32 previous_protect_tunnel_instance = 2;
+	string previous_protect_fail_reason = 3;
+	string previous_protect_setup_last_error = 4;
+}
+
+message mpls_te_tunnels_history_other_setup {
+	uint32 path_option_index = 1;
+	string other_setup_error = 2;
+}
+
+message mpls_te_tunnels_history_standby_setup {
+	uint32 standby_lsp_uptime = 1;
+	uint32 standby_setup_timer = 2;
+	string protection_role = 3;
+}
+
+message mpls_te_tunnels_tunnel_last_reopt_fail_info {
+	string re_opt_last_fail_reason = 1;
+	string re_opt_failed_destination = 2;
+	uint32 re_opt_failed_timestamp = 3;
+}
+
+message mpls_te_tunnels_history_bag {
+	mpls_te_tunnels_history_current current_setup = 1;
+	mpls_te_tunnels_history_reopt reopt_setup = 2;
+	mpls_te_tunnels_history_path_protect gmpls_path_protect_setup = 3;
+	mpls_te_tunnels_history_previous previous_setup = 4;
+	mpls_te_tunnels_history_previous_protect previous_gmpls_path_protect_setup = 5;
+	mpls_te_tunnels_history_other_setup gmpls_other_setup = 6;
+	mpls_te_tunnels_history_other_setup gmpls_other_protect_setup = 7;
+	mpls_te_tunnels_history_standby_setup standby_setup = 8;
+	mpls_te_tunnels_history_reopt standby_reopt_setup = 9;
+	mpls_te_tunnels_tunnel_last_reopt_fail_info last_re_opt_fail = 10;
+	mpls_te_tunnels_tunnel_last_reopt_fail_info last_stdby_re_opt_fail = 11;
+}
+
+message te_pp_sw_log_entry_bag {
+	uint32 path_protection_switchover_event_index = 1;
+	uint32 path_protection_tunnel_id = 2;
+	uint32 from_lsp_id = 3;
+	uint32 to_lsp_id = 4;
+	uint32 date_of_error_detection = 5;
+	uint32 date_of_error_detection_millisec = 6;
+	uint32 switchover_duration_millisec = 7;
+	string path_protection_switchover_reason = 8;
+}
+
+message mpls_te_pp_info {
+	uint32 time_of_switchover_sec = 1;
+	uint32 switchover_total = 2;
+	uint32 switchover_ready = 3;
+	uint32 standby_reoptimized_number = 4;
+	uint32 switchover_reason = 5;
+	string diversity_type = 6;
+	bool is_path_protect_configured = 7;
+	uint32 path_protection_protected_by_id = 8;
+	bool valid_path_protection_path_option_exists = 9;
+	bool is_path_protect_switch_over_underway = 10;
+	te_pp_sw_log_entry_bag switchover = 11;
+	uint32 reoptimization_time_remaining = 12;
+}
+
+message mpls_te_wsrlg_value_bag {
+	uint32 srlg = 1;
+	string srlg_name = 2;
+	uint32 admin_weight = 3;
+}
+
+message mpls_te_wsrlg_hop_bag {
+	string from_address = 1;
+	string to_address = 2;
+	uint64 aggregate_admin_weight = 3;
+	repeated uint32 common_srlg = 4;
+}
+
+message mpls_te_wsrlg_info_bag {
+	repeated mpls_te_wsrlg_value_bag protected_interface_srlg = 1;
+	repeated mpls_te_wsrlg_hop_bag weighted_srlg_hops = 2;
+}
+
+message mpls_te_iep_hop_bag {
+	uint32 hop_index = 1;
+	string iep_hop_type = 2;
+	string iep_hop_address = 3;
+}
+
+message mpls_te_iep_bag {
+	uint32 path_option_id = 1;
+	repeated mpls_te_iep_hop_bag iep_hop_list = 2;
+}
+
+message mpls_te_autobackup_info {
+	uint32 protected_ls_ps = 1;
+	uint32 protected_s2_ls = 2;
+	uint32 sharing_families = 3;
+	string ab_protection_type = 4;
+	bool is_using_srlg = 5;
+	string srlg_prot_type = 6;
+	string ab_protected_interface = 7;
+	mpls_te_wsrlg_info_bag weighted_srlg_info = 8;
+	string protected_address = 9;
+	string tunnel_attribute_set_name = 10;
+	repeated mpls_te_iep_bag iep_list = 11;
+	bool is_unused_removal_timer_running = 12;
+	uint32 unused_removal_remaining_time = 13;
+}
+
+message mpls_te_automesh_info {
+	uint32 mesh_group_id = 1;
+	string tunnel_destination_list_name = 2;
+	bool is_tunnel_unused_timer_running = 3;
+	uint32 remaining_unused_time = 4;
+	string mesh_group_type = 5;
+}
+
+message mpls_te_autopcc_info {
+	string owner_address = 1;
+	string creator_address = 2;
+	bool has_creator_id = 3;
+	string creator_id = 4;
+	uint32 plspid = 5;
+	string symbolic_name = 6;
+	bool operationally_up = 7;
+}
+
+message mpls_te_pce_delegation_info {
+	uint32 plsp_id = 1;
+	string symbolic_name = 2;
+	string owner_address = 3;
+	bool operationally_up = 4;
+}
+
+message mpls_te_soft_preemption_path_error {
+	uint32 timestamp = 1;
+	string preempting_link_address = 2;
+}
+
+message mpls_te_soft_preemption_head_counters {
+	uint32 soft_preemption_events = 1;
+	uint32 reopt_completed_ls_ps = 2;
+	uint32 torn_down_ls_ps = 3;
+	uint32 path_protection_switchover_ls_ps = 4;
+	uint32 frr_triggered_ls_ps = 5;
+	uint32 time_in_preemption_pending_min = 6;
+	uint32 time_in_preemption_pending_max = 7;
+	uint32 time_in_preemption_pending_avg = 8;
+}
+
+message mpls_te_soft_preemption_tunnel_info {
+	string status = 1;
+	repeated mpls_te_soft_preemption_path_error soft_preemption_path_errors = 2;
+	uint32 time_in_preemption_pending = 3;
+	string preemption_pending_resolution = 4;
+	mpls_te_soft_preemption_head_counters soft_preemption_counters = 5;
+}
+
+message mpls_te_mgmt_wdm_uni_tunnel_info {
+	string tunnel_state = 1;
+	string tunnel_role = 2;
+	uint32 tunnel_id = 3;
+	uint32 lsp_id = 4;
+	string local_optical_router_id = 5;
+	string remote_optical_router_id = 6;
+	string controlled_interface = 7;
+	string source_address = 8;
+	string destination_address = 9;
+	string extended_tunnel_id = 10;
+	string label_origin = 11;
+	bool srlg_discovery = 12;
+}
+
+message mpls_te_tunnel_otn_info {
+	te_odu_v3_bw bandwidth_cfg = 1;
+	uint32 config_bit_rate = 2;
+}
+
+message te_term_interface_srlg_cb_t_ {
+	repeated uint32 discovered_srlg = 1;
+}
+
+message mpls_te_tunnel_static_uni_info {
+	string client_port = 1;
+	string client_if_handle = 2;
+	string client_odu_name = 3;
+	string client_odu_if_handle = 4;
+	uint32 cross_connect_id = 5;
+	bool is_connected = 6;
+	uint32 uptime = 7;
+	string local_termination = 8;
+	string static_uni_type = 9;
+	string term_client_port = 10;
+	string term_client_if_handle = 11;
+	te_term_interface_srlg_cb_t_ term_interface_srlg = 12;
+}
+
+message mpls_te_tunnel_egress_static_uni_info {
+	te_addr_t_ egress_port = 1;
+	string local_termination = 2;
+	string remote_uni_type = 3;
+	te_addr_t_ term_egress_port = 4;
+}
+
+message mpls_te_tunnel_vif_diversity_info {
+	uint32 tunnel_id = 1;
+}
+
+message mpls_te_transport_tunnel_info {
+	mpls_te_tunnel_otn_info otn = 1;
+	mpls_te_tunnel_static_uni_info static_uni = 2;
+	mpls_te_tunnel_egress_static_uni_info egress_static_uni = 3;
+	repeated rsvp_mgmt_ero_subobj homepath_ero = 4;
+	bool status_homepath_working = 5;
+	repeated mpls_te_tunnel_vif_diversity_info diversity_info = 6;
+}
+
+message mpls_te_bfd_lsp_counters {
+	uint32 session_create_events = 1;
+	uint32 session_up_events = 2;
+	uint32 session_creation_failed_events = 3;
+	uint32 session_down_events = 4;
+	uint32 session_admin_down_events = 5;
+	uint32 session_gracefully_delete_events = 6;
+	uint32 session_non_gracefully_delete_events = 7;
+	uint32 session_create_timeout_events = 8;
+	uint32 session_replay_events = 9;
+}
+
+message mpls_te_path_option_dampening_info {
+	uint32 option_index = 1;
+	uint32 hold_down_time = 2;
+	uint32 remained_time = 3;
+	uint32 backoff_count = 4;
+}
+
+message mpls_te_tunnel_bfd_info {
+	bool bfd_session_up = 1;
+	uint32 session_up_time = 2;
+	uint32 failure_diagnostic_code = 3;
+	string failure_reason = 4;
+	uint32 minimum_session_up_interval = 5;
+	uint32 maximum_session_up_interval = 6;
+	mpls_te_bfd_lsp_counters event_counters = 7;
+	repeated mpls_te_path_option_dampening_info dampening_info = 8;
+}
+
+message mpls_te_tunnel_aps_info {
+	mpls_te_attribute_set_aps_pp protection_profile = 1;
+	string active_lsp = 2;
+	string diversity_type = 3;
+}
+
+message mpls_te_tunnel_restoration_info {
+	string revert_option = 1;
+	string diverse_lsp = 2;
+	string diversity_type = 3;
+}
+
+message mpls_te_tunnel_otn_bidir_info {
+	mpls_te_tunnel_aps_info aps = 1;
+	mpls_te_tunnel_restoration_info restoration = 2;
+}
+
+message mpls_te_tunnels_reverse_ero_error_bag {
+	uint32 reverse_lsp_id = 1;
+	bool path_reject_reason_bw = 2;
+	bool path_reject_reason_affinity = 3;
+	bool path_reject_reason_ip_addr = 4;
+	bool path_reject_reason_reverse_link = 5;
+	bool path_reject_reason_ixcd = 6;
+	bool path_reject_reason_holddown = 7;
+	bool path_reject_reason_exclude_node = 8;
+	bool path_reject_reason_exclude_link = 9;
+	bool path_reject_reason_exclude_srlg = 10;
+	bool path_reject_reason_hop_limit = 11;
+	bool path_reject_reason_node_ol_unknown = 12;
+	bool path_reject_reason_node_ol_head = 13;
+	bool path_reject_reason_node_ol_mid = 14;
+	bool path_reject_reason_node_ol_tail = 15;
+	bool path_reject_reason_reverse_bw = 16;
+	bool path_reject_reason_node_unreachable = 17;
+	uint32 path_option_index = 18;
+	string path_option_type = 19;
+	repeated mpls_te_p2mp_pcalc_error path_calculation_error = 20;
+	string ero_reject_reason = 21;
+}
+
+message mpls_te_tunnel_bidir_info {
+	uint32 reverse_bandwidth = 1;
+	uint32 reverse_bandwidth_standby = 2;
+	mpls_te_tunnels_reverse_ero_error_bag reverse_ero_error_current = 3;
+	mpls_te_tunnels_reverse_ero_error_bag reverse_ero_error_reopt = 4;
+	mpls_te_tunnels_reverse_ero_error_bag reverse_ero_error_standby = 5;
+	mpls_te_tunnels_reverse_ero_error_bag reverse_ero_error_standby_reopt = 6;
+}
+
+message te_vif_convergence_info {
+	bool is_convergence_in_progress = 1;
+	uint64 frr_trigger_time = 2;
+	uint64 pcalc_complete_time = 3;
+	uint64 convergence_complete_time = 4;
+	te_lsp_convergence_info convergence_lsp = 5;
+	uint64 binding_label_rewrite_time = 6;
+	uint64 vif_creation_time = 7;
+}
+
+message mpls_te_tunnel_flex_info {
+	bool fault_ldi_lockout = 1;
+	bool fault_ldi = 2;
+	bool fault_lkr = 3;
+	bool fault_ais = 4;
+	uint32 fault_time = 5;
+	uint32 fault_in_label = 6;
+	bool is_lockout = 7;
+	uint32 lockout_timestamp = 8;
+	uint32 lockout_lsp_id = 9;
+	string origination = 10;
+}
+
+message mpls_te_sticky_path {
+	uint32 path_option_id = 1;
+	repeated rsvp_mgmt_ero_subobj path = 2;
+}
+
+message mpls_te_p2mp_tunnel_bag {
+	bool role_standby = 50;
+	string tunnel_interface_name = 51;
+	mpls_te_p2mp_tun_cfg_bag config = 52;
+	string admin_state = 53;
+	string operational_state = 54;
+	uint32 operational_state_changes = 55;
+	string signaled_name = 56;
+	string fail_reason = 57;
+	uint32 destination_up_count = 58;
+	uint32 destination_disabled_count = 59;
+	uint32 destination_down_count = 60;
+	repeated mpls_te_p2mp_dest destinations = 61;
+	mpls_te_p2mp_lsp tunnel_current_lsp = 62;
+	mpls_te_p2mp_lsp reoptimized_p2mp_lsp = 63;
+	mpls_te_p2mp_lsp tunnel_standby_lsp = 64;
+	mpls_te_p2mp_lsp reoptimized_standby_p2mp_lsp = 65;
+	mpls_te_p2mp_lsp tunnel_restoration_lsp = 66;
+	mpls_te_p2mp_lsp delay_clean_pp_lsp = 67;
+	mpls_te_p2mp_lsp cleaned_lsp = 68;
+	uint32 re_opt_hold_down_timer_remaining = 69;
+	uint32 bandwidth_requested = 70;
+	string bandwidth_type = 71;
+	bool is_node_protected = 72;
+	bool is_bandwidth_protect = 73;
+	bool tunnel_recovering = 74;
+	bool reroute_pending = 75;
+	bool explicit_path_change = 76;
+	bool path_option_change = 77;
+	bool affinity_failure_reopt_disabled = 78;
+	uint32 affinity_failure_reopt_time_remained = 79;
+	uint32 affinity_failure_delayed_tear_time_remained = 80;
+	uint32 invalidation_time_remained = 81;
+	bool drop_mode = 82;
+	bool auto_route = 83;
+	bool forwarding_adjacency = 84;
+	uint32 load_share_factor = 85;
+	string load_share_type = 86;
+	uint32 create_time = 87;
+	uint32 uptime = 88;
+	string metric_type = 89;
+	string tie_breaker = 90;
+	uint32 tiebreaker_type = 91;
+	string tiebreaker_qualifier = 92;
+	string metric_qualifier = 93;
+	bool is_hop_limit_ignore = 94;
+	string hop_limit_ignored_reason = 95;
+	string outbound_frr_state = 96;
+	string area_id = 97;
+	mpls_te_p2p_info_bag p2p_info = 98;
+	mpls_te_autocapacity auto_capacity = 99;
+	mpls_te_self_ping self_ping = 100;
+	string pce_fail_reason = 101;
+	uint32 snmp_index = 102;
+	mpls_te_tunnels_history_bag history = 103;
+	mpls_te_pp_info path_protection = 104;
+	bool is_inter_area_tunnel = 105;
+	mpls_te_autobackup_info auto_backup = 106;
+	bool is_auto_backup = 107;
+	mpls_te_automesh_info auto_mesh = 108;
+	bool is_auto_pcc = 109;
+	mpls_te_autopcc_info auto_pcc = 110;
+	bool is_pce_delegated = 111;
+	mpls_te_pce_delegation_info pce_delegation = 112;
+	string tunnel_attribute_set_name = 113;
+	string tunnel_attribute_set_type = 114;
+	mpls_te_soft_preemption_tunnel_info soft_preemption = 115;
+	mpls_te_mgmt_wdm_uni_tunnel_info wdm_uni_tunnel = 116;
+	mpls_te_transport_tunnel_info transport_tunnel_info = 117;
+	mpls_te_tunnel_bfd_info bfd_info = 118;
+	mpls_te_tunnel_otn_bidir_info otn_bidir = 119;
+	mpls_te_tunnel_bidir_info bidir = 120;
+	string xro_attribute_set_name = 121;
+	mpls_te_attribute_set xro_attribute_set = 122;
+	te_vif_convergence_info te_tunnel_convergence = 123;
+	bool is_passive = 124;
+	string passive_tunnel_name = 125;
+	mpls_te_tunnel_flex_info flex_info = 126;
+	bool binding_label_exists = 127;
+	uint32 binding_label = 128;
+	uint32 last_hop_ifindex = 129;
+	bool is_named = 130;
+	bool lsp_wrap_protection_enabled = 131;
+	uint32 lsp_wrap_label = 132;
+	bool is_interface = 133;
+	uint32 last_path_change = 134;
+	uint64 persistent_bytes = 135;
+	uint64 persistent_packets = 136;
+	bool autoroute_announce_exclude_segment_routing = 137;
+	mpls_te_sticky_path sticky_working_path = 138;
+	mpls_te_sticky_path sticky_protecting_path = 139;
+	uint32 last_working_lsp_id = 140;
+	bool is_reoptimize_timer_config = 141;
+	uint32 reoptimization_period = 142;
+	uint32 time_left_till_next_reoptimize = 143;
+}
+
