@@ -1,6 +1,11 @@
 ## IOS XR Telemetry
-This Repository contains Telemetry Protos for Cisco IOS XR yang models. Its currently organized by OS release version under Protos directory. Release version is represented without the dots.
-Maintenance version will use 'x' instead of number in directory naming, if same protos can be used across the maintenance releases.
+This Repository contains Telemetry Protos for Cisco IOS XR yang models. It is currently organized by OS release version under protos directory.
+
+Prior to XR software version 7.11.2, release versions are represented without the dots. Starting software version 7.11.2, the naming convention
+of the folder has been changed to represent the dots with '_'. For example: protos for software version 7.11.2 are located under 'protos/7_11_2'.
+
+For 6.2, 6.3, 6.4, 6.5, 6.6 and 7.0, maintenance versions will use 'x' instead of number in directory naming, if same protos can be used
+across the maintenance releases.
 
 Protos are organized in directory structure which matches yang model. Instructions on how to unmarshal compact gpb message can be read at
 https://github.com/cisco/bigmuddy-network-telemetry-proto
