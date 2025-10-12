@@ -1,0 +1,579 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_l2_snoop_oper.igmp_snooping.bridge_domains.bridge_domain;
+
+message igmpsn_edm_bd_bag_KEYS {
+	string bd_name = 1;
+}
+
+message igmpsn_addrtype {
+	string af_name = 1;
+	string ipv4_address = 2;
+	string ipv6_address = 3;
+}
+
+message igmpsn_edm_mrtr_bag {
+	bool static_m_router = 1;
+	bool dynamic_m_router = 2;
+	string interface_name = 3;
+	bool pseudowire = 4;
+}
+
+message igmpsn_edm_internal_querier_stats_bag {
+	uint32 elapsed_time = 1;
+	uint32 received_general_queries = 2;
+	uint32 received_general_queries_when_disabled = 3;
+	uint32 received_general_queries_as_queries = 4;
+	uint32 received_general_queries_as_non_querier = 5;
+	uint32 received_general_queries_as_winnder = 6;
+	uint32 received_general_queries_as_loser = 7;
+	uint32 received_global_leaves = 8;
+	uint32 received_global_leaves_when_disabled = 9;
+	uint32 received_global_leaves_as_non_querier = 10;
+	uint32 received_global_leaves_ignored = 11;
+	uint32 received_pim_enabled_notifications = 12;
+	uint32 received_pim_disabled_notifications = 13;
+	uint32 receivedy_local_query_solicitations = 14;
+	uint32 sent_general_queries = 15;
+}
+
+message igmpsn_pkt_stats_bag {
+	uint32 elapsed_time = 1;
+	uint32 received_igmp_general_queries = 2;
+	uint32 received_igmp_group_specific_queries = 3;
+	uint32 received_igmp_group_source_specific_querier = 4;
+	uint32 received_igmpv1_reports = 5;
+	uint32 received_igmpv2_reports = 6;
+	uint32 received_igmpv3_reports = 7;
+	uint32 received_evpn_igmpv1_reports = 8;
+	uint32 received_evpn_igmpv2_reports = 9;
+	uint32 received_evpn_igmpv3_reports = 10;
+	uint32 received_evpn__proxy_v2_reports = 11;
+	uint32 received_evpn__proxy_v3_reports = 12;
+	uint32 received_evpn__proxy_del_v2_reports = 13;
+	uint32 received_evpn__proxy_del_v3_reports = 14;
+	uint32 received_igmpv2_leaves = 15;
+	uint32 received_evpn_igmpv2_leaves = 16;
+	uint32 received_igmp_global_leaves = 17;
+	uint32 received_pim_hellos = 18;
+	uint32 received_igmpv3_is_include_group_records = 19;
+	uint32 received_igmpv3_change_to_include_group_records = 20;
+	uint32 received_igmpv3_is_exclude_group_records = 21;
+	uint32 received_igmpv3_change_to_exclude_group_records = 22;
+	uint32 received_igmpv3_allow_new_sources_group_records = 23;
+	uint32 received_igmpv3_block_old_sources_group_records = 24;
+	uint32 received_evpn_igmpv3_is_include_group_records = 25;
+	uint32 received_evpn_igmpv3_change_to_include_group_records = 26;
+	uint32 received_evpn_igmpv3_is_exclude_group_records = 27;
+	uint32 received_evpn_igmpv3_change_to_exclude_group_records = 28;
+	uint32 received_evpn_igmpv3_allow_new_sources_group_records = 29;
+	uint32 received_evpn_igmpv3_block_old_sources_group_records = 30;
+	uint32 sent_igmp_general_queries = 31;
+	uint32 sent_igmp_group_specific_queries = 32;
+	uint32 sent_igmp_group_source_specific_queries = 33;
+	uint32 sent_igmpv2_reports = 34;
+	uint32 sent_igmpv2_leaves = 35;
+	uint32 sent_igmpv3_reports = 36;
+	uint32 sent_igmp_global_leaves = 37;
+	uint32 received_igmp_general_queries_flooded = 38;
+	uint32 received_igmp_group_specific_queries_flooded = 39;
+	uint32 received_igmp_group_source_specific_queries_flooded = 40;
+	uint32 received_igmpv2_reports_forwarded_to_mrouters = 41;
+	uint32 received_igmpv2_reports_flooded = 42;
+	uint32 received_igmpv3_reports_forwarded_to_mrouters = 43;
+	uint32 received_igmpv3_reports_flooded = 44;
+	uint32 received_igmpv2_leaves_forwarded_to_mrouters = 45;
+	uint32 received_igmpv2_leaves_flooded = 46;
+	uint32 received_pim_hellos_flooded = 47;
+	uint32 received_packets_flooded = 48;
+	uint32 received_packets_forwarded_to_members = 49;
+	uint32 received_packets_forwarded_to_mrouters = 50;
+	uint32 received_packets_consumed = 51;
+	uint32 reports_suppressed = 52;
+	uint32 blocks_ignored_in_v2_compat_mode = 53;
+	uint32 exclude_source_lists_ignored_in_v2_compat_mode = 54;
+	uint32 access_group_permits = 55;
+	uint32 access_group_denials = 56;
+	uint32 group_limit_exceeds = 57;
+	uint32 received_ip_packets_on_inactive_bridge_domain = 58;
+	uint32 received_ip_packets_on_inactive_port = 59;
+	uint32 received_ip_packets_martiain = 60;
+	uint32 received_ip_packets_bad_protocol = 61;
+	uint32 received_ip_packets_da_not_multicast = 62;
+	uint32 received_ip_packets_no_rrt_alert = 63;
+	uint32 received_ip_packets_no_router_alert_check = 64;
+	uint32 received_ip_packets_bad_igmp_checksum = 65;
+	uint32 received_ip_packets_ttl_not_one = 66;
+	uint32 received_ip_packets_ttl_not_one_check = 67;
+	uint32 received_igmp_queries_too_short = 68;
+	uint32 received_igmp_group_source_specific_queries_too_short = 69;
+	uint32 received_igmpv1_reports_too_short = 70;
+	uint32 received_igmpv2_reports_too_short = 71;
+	uint32 received_igmpv3_reports_too_short = 72;
+	uint32 received_igmpv2_leaves_too_short = 73;
+	uint32 received_igmp_msgs_unknown_type = 74;
+	uint32 received_igmp_msgs_greater_than_maximum_version = 75;
+	uint32 received_igmp_msgs_less_than_minimum_version = 76;
+	uint32 received_igmp_queries_bad_source = 77;
+	uint32 received_igmp_queries_dropped_by_router = 78;
+	uint32 received_igmp_general_queries_da_no_all_nodes = 79;
+	uint32 received_igmp_group_specific_queries_invalid_group = 80;
+	uint32 received_igmp_group_specific_queries_da_not_group = 81;
+	uint32 received_igmp_group_specific_queries_not_from_querier = 82;
+	uint32 received_igmp_group_specific_queries_unknown_group = 83;
+	uint32 received_igmp_reports_invalid_group = 84;
+	uint32 received_igmp_reports_link_local_group = 85;
+	uint32 received_igmp_reports_da_not_group = 86;
+	uint32 received_igmp_reports_no_querier = 87;
+	uint32 received_igmp_leaves_invalid_group = 88;
+	uint32 received_igmp_leaves_invalid_da = 89;
+	uint32 received_igmp_leaves_no_querier = 90;
+	uint32 received_igmp_leaves_non_member = 91;
+	uint32 received_igmp_leaves_non_dynamic_member = 92;
+	uint32 received_igmp_leaves_non_v2_member = 93;
+	uint32 received_igmpv3_reports_invalid_group = 94;
+	uint32 received_igmpv3_reports_link_local_group = 95;
+	uint32 received_igmpv3_reports_da_not_all_v3_routers = 96;
+	uint32 received_igmpv3_reports_no_querier = 97;
+	uint32 received_igmpv3_reports_older_version_querier = 98;
+	uint32 received_igmpv3_reports_invalid_group_record_type = 99;
+	uint32 received_igmpv3_reports_no_sources = 100;
+	uint32 received_igmpv3_leaves_non_member = 101;
+	uint32 received_pim_msgs_dropped_by_router_guard = 102;
+	uint32 received_igmp_msgs_p2mp_bud_tail_dropped = 103;
+	uint32 received_igmp_queries_on_multihome_port = 104;
+	uint32 received_igmpv1_reports_on_multihome_port = 105;
+	uint32 received_igmp_proxy_general_queries = 106;
+	uint32 received_igmp_proxy_gs_queries = 107;
+	uint32 received_igmp_proxy_reports = 108;
+	uint32 sources_not_reported = 109;
+	uint32 tx_error_no_querier_in_bd = 110;
+	uint32 tx_error_no_l2_info_for_bd = 111;
+}
+
+message igmpsn_evpn_stats_bag {
+	uint32 evpn_reset_time = 1;
+	uint32 evpn_up_events = 2;
+	uint32 evpn_down_events = 3;
+	uint32 evpn_message_received = 4;
+	uint32 evpn_type7_add_received = 5;
+	uint32 evpn_type7_withdraw_received = 6;
+	uint32 evpn_type8_add_received = 7;
+	uint32 evpn_type8_withdraw_received = 8;
+	uint32 evpn_message_received_ignored = 9;
+	uint32 evpn_message_received_unsupported = 10;
+	uint32 evpn_message_sent = 11;
+	uint32 evpn_type7_add_sent = 12;
+	uint32 evpn_type7_with_sent = 13;
+	uint32 evpn_type8_add_sent = 14;
+	uint32 evpn_type8_withdraw_sent = 15;
+	uint32 current_evpn_remove_queue = 16;
+	uint32 cumulative_evpn_remove_queue = 17;
+	uint32 evpn_replay_time = 18;
+}
+
+message igmpsn_common_stats_bag {
+	uint32 elapsed_time = 1;
+	uint32 stale_port_groups_deleted = 2;
+	uint32 stale_port_group_sources_deleted = 3;
+}
+
+message igmpsn_iccp_stats_bag {
+	uint32 elapsed_time = 1;
+	uint32 iccp_up_events = 2;
+	uint32 iccp_down_events = 3;
+	uint32 iccp_congestion_detected_events = 4;
+	uint32 iccp_congestion_cleared_events = 5;
+	uint32 iccp_group_peer_up_events = 6;
+	uint32 iccp_group_peer_down_events = 7;
+	uint32 iccp_group_connect_attempts = 8;
+	uint32 iccp_group_connect_failures = 9;
+	uint32 iccp_group_disconnect_attempts = 10;
+	uint32 iccp_group_disconnect_failures = 11;
+}
+
+message igmpsn_iccp_group_port_stats_bag {
+	uint32 elapsed_time = 1;
+	uint32 iccp_group_port_create_down_events = 2;
+	uint32 iccp_group_port_create_standby_events = 3;
+	uint32 iccp_group_port_create_active_events = 4;
+	uint32 iccp_group_port_down_events = 5;
+	uint32 iccp_group_port_standby_events = 6;
+	uint32 iccp_group_port_active_events = 7;
+}
+
+message igmpsn_iccp_traffic_stats_bag {
+	uint32 elapsed_time = 1;
+	uint32 iccp_rx_buffer_parse_failures = 2;
+	uint32 iccp_get_tx_buffer_failures = 3;
+	uint32 iccp_tx_buffer_send_failures = 4;
+	uint32 recvd_iccp_app_data_msgs = 5;
+	uint32 recvd_iccp_app_data_naks = 6;
+	uint32 recvd_iccp_app_data_tlvs = 7;
+	uint32 recvd_iccp_app_state_tlvs = 8;
+	uint32 recvd_iccp_app_state_start_of_sync = 9;
+	uint32 recvd_iccp_app_state_end_of_sync = 10;
+	uint32 recvd_iccpig_request_sync_tlvs = 11;
+	uint32 recvd_iccp_request_sync_tlvs = 12;
+	uint32 recvd_iccp_port_membership_tlvs = 13;
+	uint32 recvd_iccp_port_membership_adds = 14;
+	uint32 recvd_iccp_port_membership_removes = 15;
+	uint32 recvd_iccp_querier_info_tlvs = 16;
+	uint32 recvd_iccp_querier_info_delete_tlvs = 17;
+	uint32 recvd_iccp_dynamic_mrouter_tlvs = 18;
+	uint32 recvd_iccp_dynamic_mrouter_delete_tlvs = 19;
+	uint32 recvd_iccp_isolation_info_msgs = 20;
+	uint32 recvd_iccp_app_state_sync_ignored = 21;
+	uint32 recvd_iccp_app_state_ignored = 22;
+	uint32 recvd_iccp_app_data_unknown_ig = 23;
+	uint32 recvd_iccp_app_data_unknown_ig_port = 24;
+	uint32 recvd_iccp_app_data_wrong_ig = 25;
+	uint32 recvd_iccp_app_data_bd_inactive = 26;
+	uint32 recvd_iccp_app_data_bd_port_inactive = 27;
+	uint32 recvd_iccp_app_data_ig_port_not_standby = 28;
+	uint32 recvd_iccp_app_data_ig_port_not_active = 29;
+	uint32 recvd_iccp_app_data_unsupported_ig_tlv_type = 30;
+	uint32 recvd_iccp_app_data_truncated = 31;
+	uint32 recvd_iccp_app_data_length_error = 32;
+	uint32 recvd_iccp_app_data_unsupported_tlv_type = 33;
+	uint32 recvd_iccp_port_membership_no_querier = 34;
+	uint32 recvd_iccp_port_membership_tlv_error = 35;
+	uint32 recvd_iccp_port_membership_tlv_too_long = 36;
+	uint32 recvd_iccp_querier_info_tlv_error = 37;
+	uint32 recvd_iccp_dynamic_mrouter_tlv_error = 38;
+	uint32 recvd_iccp_isolation_info_unknown_rg = 39;
+	uint32 iccp_tx_buffer_send_count = 40;
+	uint32 iccp_app_state_replay_attempts = 41;
+	uint32 sent_iccp_group_connect_tlvs = 42;
+	uint32 sent_iccp_group_disconnect_tlvs = 43;
+	uint32 sent_iccp_request_sync_tlvs = 44;
+	uint32 sent_iccp_port_membership_tlvs = 45;
+	uint32 sent_iccp_port_membership_adds = 46;
+	uint32 sent_iccp_port_membership_removes = 47;
+	uint32 sent_iccp_querier_info_tlvs = 48;
+	uint32 sent_iccp_querier_info_delete_tlvs = 49;
+	uint32 sent_iccp_dynamic_mrouter_tlvs = 50;
+	uint32 sent_iccp_dynamic_mrouter_delete_tlvs = 51;
+	uint32 sent_iccp_app_state_refused = 52;
+	uint32 iccp_app_state_replay_failures = 53;
+	uint32 iccp_request_sync_tlvs_tx_failures = 54;
+	uint32 iccp_port_membership_tlvs_tx_failures = 55;
+	uint32 iccp_querier_info_tlvs_tx_failures = 56;
+	uint32 iccp_querier_info_delete_tx_failures = 57;
+	uint32 iccp_dynamic_mrouter_tlvs_tx_failures = 58;
+	uint32 iccp_dynamic_mrouter_delete_tlvs_tx_failures = 59;
+}
+
+message iccp_app_ig_port_stats_bag {
+	uint32 port_active_rx = 1;
+	uint32 port_standby_rx = 2;
+	uint32 port_down_rx = 3;
+	uint32 port_sync_req_rx = 4;
+	uint32 port_sync_req_rx_drop = 5;
+	uint32 port_sync_req_tx = 6;
+	uint32 port_sync_req_tx_drop = 7;
+	uint32 port_sync_rx = 8;
+	uint32 port_sync_rx_drop = 9;
+	uint32 port_sync_invalid_rx = 10;
+	uint32 port_sync_tx = 11;
+	uint32 port_sync_tx_drop = 12;
+	uint32 port_app_state_rx = 13;
+	uint32 port_app_state_rx_drop = 14;
+	uint32 port_app_state_tx = 15;
+	uint32 port_app_state_tx_drop = 16;
+	uint32 port_start_retry_timer = 17;
+}
+
+message igmpsn_edm_bd_bag {
+	string bridge_domain_name = 50;
+	string profile_name = 51;
+	bool snoop_active = 52;
+	bool stats_enabled = 53;
+	uint32 number_of_ports = 54;
+	uint32 number_of_mrouters = 55;
+	uint32 number_of_stp_ports = 56;
+	uint32 number_of_ig_ports = 57;
+	uint32 number_of_groups = 58;
+	uint32 number_of_group_o_ports = 59;
+	uint32 number_of_group_sources = 60;
+	uint32 number_of_group_source_statics = 61;
+	uint32 number_of_group_source_includes = 62;
+	uint32 number_of_group_source_excludes = 63;
+	uint32 number_of_group_source_include_ports = 64;
+	uint32 number_of_group_source_exclude_ports = 65;
+	igmpsn_addrtype configured_system_ip_address = 66;
+	bool configured_report_suppression = 67;
+	bool configured_tcn_query_solicit = 68;
+	bool configured_tcn_flood = 69;
+	bool configured_router_alert_check = 70;
+	bool configured_ttl_check = 71;
+	bool offload_enabled = 72;
+	bool evpn_proxy_enabled = 73;
+	bool configured_mrouter_forwarding = 74;
+	bool configured_igmp_snooping_disabled = 75;
+	bool configured_p2mp_capability = 76;
+	bool configured_default_profile = 77;
+	bool configured_internal_querier_supprt = 78;
+	uint32 configured_internal_querier_version = 79;
+	uint32 configured_internal_querier_query_timeout = 80;
+	uint32 configured_internal_querier_query_interval = 81;
+	uint32 configured_internal_querier_max_response_time = 82;
+	uint32 configured_internal_querier_robust_variable = 83;
+	uint32 configured_internal_querier_tcn_query_interval = 84;
+	uint32 configured_internal_querier_tcn_query_count = 85;
+	uint32 configured_internal_querier_tcn_query_mrt = 86;
+	uint32 configured_querier_query_interval = 87;
+	uint32 configured_querier_lmq_interval = 88;
+	uint32 configured_querier_lmq_count = 89;
+	uint32 configured_querier_robust_variable = 90;
+	uint32 configured_tcn_flood_query_count = 91;
+	uint32 configured_minimum_version = 92;
+	uint32 configured_maximum_version = 93;
+	uint32 configured_unsolicated_report_interval = 94;
+	repeated igmpsn_edm_mrtr_bag m_router_list = 95;
+	igmpsn_addrtype querier_address = 96;
+	string querier_port_name = 97;
+	bool querier_port_pseudowire = 98;
+	uint32 querier_version = 99;
+	uint32 querier_query_interval = 100;
+	uint32 querier_robust_variable = 101;
+	uint32 querier_max_response_time = 102;
+	sint32 querier_time_since_last_g_query = 103;
+	bool topology_change_flood_mode = 104;
+	uint32 gqs_since_topology_change_start = 105;
+	bool ig_report_standby_state_disabled = 106;
+	bool startup_query_port_up_disabled = 107;
+	bool startup_query_ig_port_active = 108;
+	bool startup_query_tcn = 109;
+	bool startup_query_tcn_sync = 110;
+	bool startup_query_tcn_always = 111;
+	bool startup_query_process_start = 112;
+	bool startup_query_process_start_sync = 113;
+	uint32 startup_query_interval = 114;
+	uint32 startup_query_count = 115;
+	uint32 startup_query_mrt = 116;
+	bool internal_querier_present = 117;
+	igmpsn_edm_internal_querier_stats_bag internal_querier_stats = 118;
+	igmpsn_pkt_stats_bag packet_statistics = 119;
+	igmpsn_evpn_stats_bag evpn_statistics = 120;
+	igmpsn_common_stats_bag common_statistics = 121;
+	igmpsn_iccp_stats_bag iccp_statistics = 122;
+	igmpsn_iccp_group_port_stats_bag iccp_group_port_statistics = 123;
+	igmpsn_iccp_traffic_stats_bag iccp_traffic_statistics = 124;
+	iccp_app_ig_port_stats_bag iccp_app_ig_port_statistics = 125;
+	string star_star_mroute_pd_data = 126;
+	string client_port_name = 127;
+	bool client_port_pseudowire = 128;
+	string client_l2_info = 129;
+	igmpsn_addrtype client_address = 130;
+	uint32 client_packet_priority = 131;
+	string querier_l2_info = 132;
+	uint32 querier_packet_priority = 133;
+	bool platform_out_of_resources = 134;
+	uint32 star_star_oor_fail_cnt = 135;
+	uint32 star_goor_fail_cnt = 136;
+	uint32 sgoor_fail_cnt = 137;
+}
+
