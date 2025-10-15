@@ -1,0 +1,554 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_fib_common_oper.fib.nodes.node.global.nhg_database.nhg_nameds.nhg_named;
+
+message fib_sh_tbl_fib_KEYS {
+	string node_name = 1;
+	string nhg_name = 2;
+}
+
+message fib_addr_str {
+	string address = 1;
+}
+
+message fib_sh_tbl_loadinfo_int {
+	uint32 level_of_loadinfos = 1;
+	uint32 number_of_loadinfos = 2;
+	uint32 maximum_index_arrays = 3;
+	repeated uint32 path_indices = 4;
+	repeated uint32 path_loadinfo_numbers = 5;
+	repeated bool sanity_flag = 6;
+	repeated fib_addr_str adjacency_address = 7;
+	repeated string interface_handle = 8;
+	uint32 maximum_slots = 9;
+	repeated uint32 weights_of_paths = 10;
+	repeated uint32 normalized_weights = 11;
+	repeated uint32 tunnel_class_value = 12;
+	bool is_pbts_info_valid = 13;
+	repeated uint32 pbts_class_offset = 14;
+	repeated uint32 pbts_class_num_paths = 15;
+	repeated bool pbts_class_is_fallback_mapped = 16;
+	repeated uint32 pbts_fallback_mapped_class = 17;
+	repeated bool pbts_fallback_to_drop = 18;
+	bool round_robin_disable = 19;
+	uint32 number_of_loadinfo_next_hop_buckets = 20;
+	string platform_hardware_information = 21;
+	repeated bool tunnel_is_forward_class = 22;
+}
+
+message fib_sh_tbl_loadinfo_det {
+	uint64 packets_through_loadinfo = 1;
+	uint64 bytes_through_loadinfo = 2;
+	uint64 total_packets_through_loadinfo = 3;
+	uint64 total_bytes_through_loadinfo = 4;
+	uint32 prefix_of_owner = 5;
+	uint32 mask_length_of_owner = 6;
+	uint32 loadinfo_reference_count = 7;
+	bool per_dest_load_sharing_flag = 8;
+	bool loadinfo_owner_deleted_flag = 9;
+	bool loadinfo_sanity_flag = 10;
+	bool is_owner = 11;
+	fib_sh_tbl_loadinfo_int loadinfo_internal_data = 12;
+}
+
+message fib_sh_tbl_fib_det {
+	uint64 fib_entry_version = 1;
+	uint32 per_prefix_accounting = 2;
+	string load_sharing_type = 3;
+	string fib_entry_adjacency_type = 4;
+	uint32 protocol_type = 5;
+	uint32 afi_fib_protocol_type = 6;
+	string aib_l3_address = 7;
+	uint32 adjacency_address_length = 8;
+	string adjacency_interface_name = 9;
+	uint32 fib_special_nh_info_type = 10;
+	string fib_entry_adjacency_address = 11;
+	uint32 fib_entry_adjacency_interface = 12;
+	uint64 packets_through_fib_entry = 13;
+	uint64 bytes_through_fib_entry = 14;
+	uint32 detailed_prefix_length = 15;
+	uint32 prefix_protocol = 16;
+	uint32 precedence_for_packets = 17;
+	uint32 traffic_index_for_packets = 18;
+	uint32 switch_compontent_id = 19;
+	bool fast_adjacency_flag = 20;
+	bool illegal_fast_adjacency_flag = 21;
+	bool remote_adjacency_flag = 22;
+	fib_sh_tbl_loadinfo_det loadshare_information = 23;
+	uint32 bgp_attribute_id = 24;
+	uint32 bgp_local_attribute_id = 25;
+	uint32 bgp_attribute_local_preference = 26;
+	uint32 bgp_attribute_origin_as = 27;
+	uint32 bgp_attribute_next_hop_as = 28;
+	string path_string = 29;
+	string extcom_string = 30;
+	string com_string = 31;
+	uint32 extended_community = 32;
+	uint32 qos_group = 33;
+	uint32 mpls_forwarding_equivalence_class = 34;
+	uint32 qppb_qos_group_and_ip_precedence = 35;
+	uint32 flow_tag = 36;
+	uint32 forwarding_class_id = 37;
+	uint64 pl_time_of_last_update_in_msec = 38;
+	uint64 loadinfo_time_of_last_update_in_msec = 39;
+	uint64 lw_loadinfo_time_of_last_update_in_msec = 40;
+	uint64 encap_id = 41;
+	uint32 pl_timestamp_type = 42;
+}
+
+message fib_sh_ipencap_hdr_det {
+	string ip_encap_hdr_type = 1;
+	repeated uint32 ip_encap_hdrp = 2;
+	uint32 ip_encap_hdr_dyn = 3;
+}
+
+message fib_sh_ipencap_det {
+	uint32 ip_encap_hdr_count = 1;
+	uint32 ip_encap_locks = 2;
+	uint32 ip_encap_transport_tbl = 3;
+	string ipe_transport_vrf_name = 4;
+	uint32 ip_encap_transport_af = 5;
+	uint32 ip_encap_payload_af = 6;
+	uint32 ip_encap_payload_mtu = 7;
+	uint32 ip_encap_parent = 8;
+	uint32 ip_encap_parent_type = 9;
+	repeated fib_sh_ipencap_hdr_det ip_encap_hdrs = 10;
+}
+
+message fib_sh_tbl_nnh_path {
+	uint32 next_next_hop_index = 1;
+	string next_next_hop_prefix = 2;
+	uint32 next_next_hop_interface = 3;
+}
+
+message fib_gribi_path_info {
+	uint64 next_hop_id = 1;
+	string aft_object_type = 2;
+	uint32 aft_vrf_id = 3;
+}
+
+message fib_sh_tbl_path_det {
+	string ip_address_to_recurse = 1;
+	uint32 label_to_recurse = 2;
+	string s_rv6_sid_to_recurse = 3;
+	string detail_next_hop_prefix = 4;
+	uint32 next_hop_mask_length = 5;
+	string interface_associated_path = 6;
+	string next_hop_interface = 7;
+	string next_hop_vrf = 8;
+	uint32 tunnle_endpoint_id = 9;
+	uint32 lisprlocid = 10;
+	uint32 number_of_dependencies_this_path = 11;
+	uint32 robin_reset_value = 12;
+	bool recurse_prefix_object = 13;
+	string next_prefix_recursion = 14;
+	uint32 next_prefix_length = 15;
+	bool recurse_prefix_object2 = 16;
+	string next_prefix_recursion2 = 17;
+	uint32 next_prefix_length2 = 18;
+	string detail_fib_adjacency_type = 19;
+	bool current_path_flag = 20;
+	bool recursive_path_information = 21;
+	bool external_adjacency = 22;
+	string fib_path_nh_information_type = 23;
+	string fib_path_nh_information_type_special = 24;
+	uint32 weight_of_path = 25;
+	uint32 tunnel_class = 26;
+	repeated fib_sh_ipencap_det spd_ip_encap = 27;
+	bool tunnel_is_forward_class = 28;
+	repeated fib_sh_tbl_nnh_path next_next_hops = 29;
+	fib_gribi_path_info gribi_path_info = 30;
+}
+
+message fib_sh_tbl_mpls_label_stack {
+	uint32 number_of_labels = 1;
+	repeated uint32 l_stack = 2;
+	string out_interface = 3;
+	string nh_address = 4;
+}
+
+message fib_sh_tbl_path_mpls_info {
+	uint32 local_lable = 1;
+	bool recursive_fwd_chain = 2;
+	repeated uint32 recursive_lbl_stack = 3;
+	uint32 number_of_igp_paths = 4;
+	bool remote_backup = 5;
+	repeated fib_sh_tbl_mpls_label_stack igp_label_stack_array = 6;
+}
+
+message fib_sh_tbl_srv6_recycle_item {
+	string internal_id = 1;
+	string s_rv6_sid_list_subset = 2;
+}
+
+message fib_sh_tbl_srv6_recycle_entry {
+	repeated fib_sh_tbl_srv6_recycle_item fib_sh_tbl_srv6_recycle = 1;
+}
+
+message fib_sh_tbl_srv6_next_lvl_item {
+	string s_rv6_encapsulation_behavior = 1;
+	string s_rv6_sid_list = 2;
+	bool s_rv6_packet_recycling_requested = 3;
+}
+
+message fib_sh_tbl_srv6_next_lvl_entry {
+	repeated fib_sh_tbl_srv6_next_lvl_item fib_sh_tbl_srv6_next_lvl = 1;
+}
+
+message fib_sh_tbl_path_srv6_info {
+	string s_rv6_encapsulation_behavior = 1;
+	string s_rv6_sid_list = 2;
+	fib_sh_tbl_srv6_recycle_entry s_rv6_packet_recycling_information = 3;
+	bool is_exact_route_requested = 4;
+	fib_sh_tbl_srv6_next_lvl_entry next_recursion_level_s_rv6_information = 5;
+	string s_rv6_evpn_ac_interface = 6;
+	uint32 s_rv6_evpn_xconnect_id = 7;
+	uint32 s_rv6_evpn_bridge_id = 8;
+	uint32 s_rv6_evpn_shg_id = 9;
+}
+
+message fib_bag_counter {
+	uint64 packet_count = 1;
+	uint64 byte_count = 2;
+}
+
+message fib_sh_tbl_path_item {
+	fib_sh_tbl_path_det more_detail_about_path = 1;
+	fib_sh_tbl_path_mpls_info mpls_information_for_path = 2;
+	fib_sh_tbl_path_srv6_info s_rv6_information_for_path = 3;
+	string hardware_information = 4;
+	string brief_interface_handle = 5;
+	string brief_next_hop_prefix = 6;
+	uint32 via_label_to_recurse = 7;
+	string via_s_rv6_sid_to_recurse = 8;
+	string via_nexthop_group = 9;
+	string via_next_hop_group_name = 10;
+	string brief_pnode_address = 11;
+	string brief_qnode_address = 12;
+	string brief_lfa_protection_type = 13;
+	bool resolved_path = 14;
+	bool recursive_path = 15;
+	bool packets_received_path = 16;
+	bool attached_path = 17;
+	bool backup_path = 18;
+	bool best_external_path = 19;
+	bool protect_ignore = 20;
+	bool path_dlb = 21;
+	bool via_nhg_path = 22;
+	uint32 path_flags = 23;
+	uint32 path_info_flags = 24;
+	uint32 path_index = 25;
+	uint32 backup_index = 26;
+	uint32 next_hop_index = 27;
+	string parent_interface_handle = 28;
+	uint32 recursion_via_len = 29;
+	uint32 set_id = 30;
+	uint32 set_priority = 31;
+	fib_bag_counter per_path_counter = 32;
+}
+
+message fib_sh_tbl_path_entry {
+	repeated fib_sh_tbl_path_item fib_sh_tbl_path = 1;
+}
+
+message mgmt_srv6_endpoint_behavior {
+	string type = 1;
+	string description = 2;
+}
+
+message fib_sh_tbl_fib_ext_det {
+	bool context_label_flag = 1;
+	uint32 context_label = 2;
+}
+
+message fib_sh_tbl_fib_ext_cmn_det {
+	string type = 1;
+	fib_sh_tbl_fib_ext_det sfecd_le = 2;
+}
+
+message fib_gribi_entry_info {
+	uint64 entry_transaction_id = 1;
+	uint64 nhg_id = 2;
+	uint32 nhg_vrf_id = 3;
+	string ack_status = 4;
+	uint32 ack_latency = 5;
+	string ack_events = 6;
+}
+
+message fib_rib_nhg_entry_info {
+	uint32 next_hop_group_id = 1;
+	string next_hop_group_name = 2;
+	string viability_events = 3;
+}
+
+message fib_sh_tbl_fib {
+	bool is_non_recursive = 50;
+	bool is_unresolved = 51;
+	bool is_frr = 52;
+	uint32 protocol_type_fib_entry = 53;
+	string label_type = 54;
+	fib_sh_tbl_fib_det detail_fib_entry_information = 55;
+	fib_sh_tbl_path_entry fib_entry_path = 56;
+	uint32 path_count = 57;
+	string platform_hardware = 58;
+	uint32 number_of_references_to_path_list = 59;
+	uint32 path_list_flags = 60;
+	uint32 path_list_source = 61;
+	uint32 number_of_references_to_loadinfo = 62;
+	uint32 loadinfo_flags = 63;
+	uint32 loadinfo_external_flags = 64;
+	uint32 pointer_external_loadinfo = 65;
+	string exact_path_interface_name = 66;
+	string exact_path_gre_interface_name = 67;
+	bool exact_route_gre_phys_ifh_avail = 68;
+	bool exact_route_result = 69;
+	bool prefix_is_static_or_connected = 70;
+	bool packet_should_receive = 71;
+	bool prefix_connected = 72;
+	bool prefix_for_adjancency = 73;
+	bool prefix_for_pic_next_hop = 74;
+	bool purgable_after_purge_interval = 75;
+	bool broadcast_receive_flag = 76;
+	bool broadcast_forward_flag = 77;
+	bool zero_by_zero_route_as_default = 78;
+	bool external_switch_triggered = 79;
+	bool route_attribute_flag = 80;
+	bool dummy_real_zero_route = 81;
+	uint32 lw_loadinfo_flag = 82;
+	uint32 lw_loadinfo_reference_counter = 83;
+	uint32 type_of_lw_loadinfo = 84;
+	uint32 lspa_flags = 85;
+	uint64 version_of_route = 86;
+	uint32 fib_route_download_priority = 87;
+	uint64 time_of_last_update_in_msec = 88;
+	bool l2_subscriber_route = 89;
+	uint32 l2_subscriber_xconnect_id = 90;
+	uint32 l2_subscriber_flags = 91;
+	uint32 l2_subscriber_ip_protocol = 92;
+	uint32 l2tpv3_cookie_length_bits = 93;
+	bool route_for_external_reach_linecard_flag = 94;
+	bool route_source_not_preferred = 95;
+	bool route_is_sr_flag = 96;
+	bool route_is_s_rv6_headend = 97;
+	bool route_is_s_rv6_endpoint = 98;
+	mgmt_srv6_endpoint_behavior s_rv6_endpoint = 99;
+	bool internal_i_droute = 100;
+	string internal_id_route_type = 101;
+	repeated fib_sh_tbl_fib_ext_cmn_det extension_object_list = 102;
+	bool prefix_is_in_oor_state = 103;
+	bool route_is_ribnhg = 104;
+	uint32 loadinfo_base_extended_flags = 105;
+	uint32 lw_loadinfo_base_extended_flags = 106;
+	fib_gribi_entry_info gribi = 107;
+	fib_rib_nhg_entry_info rib_nhg = 108;
+	uint64 transaction_id = 109;
+	string ack_status = 110;
+	uint32 ack_latency = 111;
+	string prefix_accounting_mode = 112;
+	string ack_events = 113;
+	bool is_loadinfo_collapsed = 114;
+	fib_bag_counter per_prefix_counter = 115;
+}
+
