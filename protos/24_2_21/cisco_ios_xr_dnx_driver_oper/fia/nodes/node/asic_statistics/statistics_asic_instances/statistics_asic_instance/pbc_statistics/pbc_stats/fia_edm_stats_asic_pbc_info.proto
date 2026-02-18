@@ -1,0 +1,871 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_dnx_driver_oper.fia.nodes.node.asic_statistics.statistics_asic_instances.statistics_asic_instance.pbc_statistics.pbc_stats;
+
+message fia_edm_stats_asic_pbc_info_KEYS {
+	string node_name = 1;
+	uint32 instance = 2;
+}
+
+message fia_edm_device_stats_pbc_otn {
+	uint64 il__total_rx_pkt_count = 1;
+	uint64 il__total_tx_pkt_count = 2;
+}
+
+message fia_edm_device_stats_pbc {
+	uint64 rx_internal_error = 1;
+	uint64 rx_internal_drop = 2;
+	uint64 tx_internal_error = 3;
+	uint64 tx_internal_drop = 4;
+	uint64 cmic__cmc0_pkt_count_tx_pkt = 5;
+	uint64 cmic__cmc0_pkt_count_rx_pkt = 6;
+	uint64 nbi__stat_rx_bursts_err_cnt = 7;
+	uint64 nbi__ecc_1b_err_cnt = 8;
+	uint64 nbi__ecc_2b_err_cnt = 9;
+	uint64 nbi__parity_err_cnt = 10;
+	uint64 nbi__rx_ilkn_crc32_err_cnt = 11;
+	uint64 nbi__rx_ilkn0_crc24_err_cnt = 12;
+	uint64 nbi__rx_ilkn0_burst_err_cnt = 13;
+	uint64 nbi__rx_ilkn0_miss_sop_err_cnt = 14;
+	uint64 nbi__rx_ilkn0_miss_eop_err_cnt = 15;
+	uint64 nbi__rx_ilkn0_misaligned_cnt = 16;
+	uint64 nbi__rx_ilkn1_crc24_err_cnt = 17;
+	uint64 nbi__rx_ilkn1_burst_err_cnt = 18;
+	uint64 nbi__rx_ilkn1_miss_sop_err_cnt = 19;
+	uint64 nbi__rx_ilkn1_miss_eop_err_cnt = 20;
+	uint64 nbi__rx_ilkn1_misaligned_cnt = 21;
+	uint64 nbi__tx_ilkn1_flushed_bursts_cnt = 22;
+	uint64 nbi__rx_ilkn0_retrans_crc24_err_cnt = 23;
+	uint64 nbi__rx_ilkn0_retrans_retry_err_cnt = 24;
+	uint64 nbi__rx_ilkn0_retrans_wdog_err_cnt = 25;
+	uint64 nbi__rx_ilkn0_retrans_wrap_after_disc_err_cnt = 26;
+	uint64 nbi__rx_ilkn0_retrans_wrap_b4_disc_err_cnt = 27;
+	uint64 nbi__rx_ilkn0_retrans_reached_timeout_err_cnt = 28;
+	uint64 nbi__rx_ilkn1_retrans_crc24_err_cnt = 29;
+	uint64 nbi__rx_ilkn1_retrans_retry_err_cnt = 30;
+	uint64 nbi__rx_ilkn1_retrans_wdog_err_cnt = 31;
+	uint64 nbi__rx_ilkn1_retrans_wrap_after_disc_err_cnt = 32;
+	uint64 nbi__rx_ilkn1_retrans_wrap_b4_disc_err_cnt = 33;
+	uint64 nbi__rx_ilkn1_retrans_reached_timeout_err_cnt = 34;
+	uint64 nbi__stat_rx_frame_err_cnt = 35;
+	uint64 nbi__stat_tx_frame_err_cnt = 36;
+	uint64 nbi__rx_elk_err_bursts_cnt = 37;
+	uint64 nbi__rx_num_thrown_eops = 38;
+	uint64 nbi__rx_num_runts = 39;
+	uint64 nbi__bist_tx_crc_err_bursts_cnt = 40;
+	uint64 nbi__bist_rx_err_length_bursts_cnt = 41;
+	uint64 nbi__bist_rx_err_burst_index_cnt = 42;
+	uint64 nbi__bist_rx_err_bct_cnt = 43;
+	uint64 nbi__bist_rx_err_data_cnt = 44;
+	uint64 nbi__bist_rx_err_in_crc_err_cnt = 45;
+	uint64 nbi__bist_rx_err_sob_cnt = 46;
+	uint64 nbi__stat_tx_bursts_cnt = 47;
+	uint64 nbi__stat_tx_total_leng_cnt = 48;
+	uint64 rxaui__total_tx_pkt_count = 49;
+	uint64 rxaui__total_rx_pkt_count = 50;
+	uint64 rxaui__rx_pkt_count_bcast_pkt = 51;
+	uint64 rxaui__tx_pkt_count_bcast_pkt = 52;
+	uint64 rxaui__rx_pkt_count_mcast_pkt = 53;
+	uint64 rxaui__tx_pkt_count_mcast_pkt = 54;
+	uint64 rxaui__rx_pkt_count_ucast_pkt = 55;
+	uint64 rxaui__tx_pkt_count_ucast_pkt = 56;
+	uint64 rxaui__rx_err_drop_pkt_cnt = 57;
+	uint64 rxaui__tx_err_drop_pkt_cnt = 58;
+	uint64 rxaui__byte_count_tx_pkt = 59;
+	uint64 rxaui__byte_count_rx_pkt = 60;
+	uint64 rxaui__rx_dscrd_pkt_cnt = 61;
+	uint64 rxaui__tx_dscrd_pkt_cnt = 62;
+	uint64 ire__nif_packet_counter = 63;
+	uint64 il__total_rx_pkt_count = 64;
+	uint64 il__total_tx_pkt_count = 65;
+	uint64 il__rx_err_drop_pkt_cnt = 66;
+	uint64 il__tx_err_drop_pkt_cnt = 67;
+	uint64 il__byte_count_tx_pkt = 68;
+	uint64 il__byte_count_rx_pkt = 69;
+	uint64 il__rx_dscrd_pkt_cnt = 70;
+	uint64 il__tx_dscrd_pkt_cnt = 71;
+	uint64 il__rx_pkt_count_bcast_pkt = 72;
+	uint64 il__tx_pkt_count_bcast_pkt = 73;
+	uint64 il__rx_pkt_count_mcast_pkt = 74;
+	uint64 il__tx_pkt_count_mcast_pkt = 75;
+	uint64 il__rx_pkt_count_ucast_pkt = 76;
+	uint64 il__tx_pkt_count_ucast_pkt = 77;
+	uint64 iqm__enq_pkt_cnt = 78;
+	uint64 iqm__enq_byte_cnt = 79;
+	uint64 iqm__deq_pkt_cnt = 80;
+	uint64 iqm__deq_byte_cnt = 81;
+	uint64 iqm__tot_dscrd_pkt_cnt = 82;
+	uint64 iqm__tot_dscrd_byte_cnt = 83;
+	uint64 iqm__ecc_1b_err_cnt = 84;
+	uint64 iqm__ecc_2b_err_cnt = 85;
+	uint64 iqm__parity_err_cnt = 86;
+	uint64 iqm__deq_delete_pkt_cnt = 87;
+	uint64 iqm__ecn_dscrd_msk_pkt_cnt = 88;
+	uint64 iqm_q_tot_dscrd_pkt_cnt = 89;
+	uint64 iqm_q_deq_delete_pkt_cnt = 90;
+	uint64 iqm__rjct_db_pkt_cnt = 91;
+	uint64 iqm__rjct_bdb_pkt_cnt = 92;
+	uint64 iqm__rjct_bdb_protct_pkt_cnt = 93;
+	uint64 iqm__rjct_oc_bd_pkt_cnt = 94;
+	uint64 iqm__rjct_sn_err_pkt_cnt = 95;
+	uint64 iqm__rjct_mc_err_pkt_cnt = 96;
+	uint64 iqm__rjct_rsrc_err_pkt_cnt = 97;
+	uint64 iqm__rjct_qnvalid_err_pkt_cnt = 98;
+	uint64 iqm__rjct_cnm_pkt_cnt = 99;
+	uint64 iqm__rjct_dyn_space_pkt_cnt = 100;
+	uint64 ipt__fdt_pkt_cnt = 101;
+	uint64 ipt__ecc_1b_err_cnt = 102;
+	uint64 ipt__ecc_2b_err_cnt = 103;
+	uint64 ipt__parity_err_cnt = 104;
+	uint64 ipt__crc_err_cnt = 105;
+	uint64 ipt__crc_err_del_buff_cnt = 106;
+	uint64 ipt__cpu_del_buff_cnt = 107;
+	uint64 ipt__cpu_rel_buff_cnt = 108;
+	uint64 ipt__crc_err_buff_fifo_full_cnt = 109;
+	uint64 fdt__data_cell_cnt = 110;
+	uint64 fdt__data_byte_cnt = 111;
+	uint64 fdt__crc_dropped_pck_cnt = 112;
+	uint64 fdt_invalid_destq_drop_cell_cnt = 113;
+	uint64 fdt__indirect_command_count = 114;
+	uint64 fdt__ecc_1b_err_cnt = 115;
+	uint64 fdt__ecc_2b_err_cnt = 116;
+	uint64 fdt__parity_err_cnt = 117;
+	uint64 fdt__crc_dropped_cell_cnt = 118;
+	uint64 fcr__control_cell_cnt = 119;
+	uint64 fcr__cell_drop_cnt = 120;
+	uint64 fcr__credit_cell_drop_cnt = 121;
+	uint64 fcr_fs_cell_drop_cnt = 122;
+	uint64 fcr_rt_cell_drop_cnt = 123;
+	uint64 fcr__ecc_1b_err_cnt = 124;
+	uint64 fcr__ecc_2b_err_cnt = 125;
+	uint64 fdr__data_cell_cnt = 126;
+	uint64 fdr__data_byte_cnt = 127;
+	uint64 fdr__crc_dropped_pck_cnt = 128;
+	uint64 fdr_p_pkt_cnt = 129;
+	uint64 fdr__prm_error_filter_cnt = 130;
+	uint64 fdr__sec_error_filter_cnt = 131;
+	uint64 fdr__prm_ecc_1b_err_cnt = 132;
+	uint64 fdr__prm_ecc_2b_err_cnt = 133;
+	uint64 fdr__sec_ecc_1b_err_cnt = 134;
+	uint64 fdr__sec_ecc_2b_err_cnt = 135;
+	uint64 egq__ecc_1b_err_cnt = 136;
+	uint64 egq__ecc_2b_err_cnt = 137;
+	uint64 egq__parity_err_cnt = 138;
+	uint64 egq__dbf_ecc_1b_err_cnt = 139;
+	uint64 egq__dbf_ecc_2b_err_cnt = 140;
+	uint64 egq__empty_mcid_counter = 141;
+	uint64 egq__rqp_discard_packet_counter = 142;
+	uint64 egq__ehp_discard_packet_counter = 143;
+	uint64 egq__ipt_pkt_cnt = 144;
+	uint64 epni__epe_pkt_cnt = 145;
+	uint64 epni__epe_byte_cnt = 146;
+	uint64 epni__epe_discard_pkt_cnt = 147;
+	uint64 epni__ecc_1b_err_cnt = 148;
+	uint64 epni__ecc_2b_err_cnt = 149;
+	uint64 epni__parity_err_cnt = 150;
+	uint64 egq__pqp_ucast_pkt_cnt = 151;
+	uint64 egq__pqp_ucast_h_pkt_cnt = 152;
+	uint64 egq__pqp_ucast_l_pkt_cnt = 153;
+	uint64 egq__pqp_ucast_bytes_cnt = 154;
+	uint64 egq__pqp_ucast_discard_pkt_cnt = 155;
+	uint64 egq__pqp_mcast_pkt_cnt = 156;
+	uint64 egq__pqp_mcast_h_pkt_cnt = 157;
+	uint64 egq__pqp_mcast_l_pkt_cnt = 158;
+	uint64 egq__pqp_mcast_bytes_cnt = 159;
+	uint64 egq__pqp_mcast_discard_pkt_cnt = 160;
+	uint64 fct__control_cell_cnt = 161;
+	uint64 fct__unrch_crdt_cnt = 162;
+	uint64 idr__reassembly_errors = 163;
+	uint64 idr__mmu_ecc_1b_err_cnt = 164;
+	uint64 idr__mmu_ecc_2b_err_cnt = 165;
+	uint64 idr__discarded_packets0_cnt = 166;
+	uint64 idr__discarded_packets1_cnt = 167;
+	uint64 idr__discarded_packets2_cnt = 168;
+	uint64 idr__discarded_packets3_cnt = 169;
+	uint64 idr__discarded_octets0_cnt = 170;
+	uint64 idr__discarded_octets1_cnt = 171;
+	uint64 idr__discarded_octets2_cnt = 172;
+	uint64 idr__discarded_octets3_cnt = 173;
+	uint64 mmu__ecc_1b_err_cnt = 174;
+	uint64 mmu__ecc_2b_err_cnt = 175;
+	uint64 oamp__parity_err_cnt = 176;
+	uint64 oamp__ecc_1b_err_cnt = 177;
+	uint64 oamp__ecc_2b_err_cnt = 178;
+	uint64 crps__parity_err_cnt = 179;
+	uint64 fmac0__kpcs0_tst_rx_err_cnt = 180;
+	uint64 fmac1__kpcs0_tst_rx_err_cnt = 181;
+	uint64 fmac2__kpcs0_tst_rx_err_cnt = 182;
+	uint64 fmac3__kpcs0_tst_rx_err_cnt = 183;
+	uint64 fmac4__kpcs0_tst_rx_err_cnt = 184;
+	uint64 fmac5__kpcs0_tst_rx_err_cnt = 185;
+	uint64 fmac6__kpcs0_tst_rx_err_cnt = 186;
+	uint64 fmac7__kpcs0_tst_rx_err_cnt = 187;
+	uint64 fmac8__kpcs0_tst_rx_err_cnt = 188;
+	uint64 fmac0__kpcs1_tst_rx_err_cnt = 189;
+	uint64 fmac1__kpcs1_tst_rx_err_cnt = 190;
+	uint64 fmac2__kpcs1_tst_rx_err_cnt = 191;
+	uint64 fmac3__kpcs1_tst_rx_err_cnt = 192;
+	uint64 fmac4__kpcs1_tst_rx_err_cnt = 193;
+	uint64 fmac5__kpcs1_tst_rx_err_cnt = 194;
+	uint64 fmac6__kpcs1_tst_rx_err_cnt = 195;
+	uint64 fmac7__kpcs1_tst_rx_err_cnt = 196;
+	uint64 fmac8__kpcs1_tst_rx_err_cnt = 197;
+	uint64 fmac0__kpcs2_tst_rx_err_cnt = 198;
+	uint64 fmac1__kpcs2_tst_rx_err_cnt = 199;
+	uint64 fmac2__kpcs2_tst_rx_err_cnt = 200;
+	uint64 fmac3__kpcs2_tst_rx_err_cnt = 201;
+	uint64 fmac4__kpcs2_tst_rx_err_cnt = 202;
+	uint64 fmac5__kpcs2_tst_rx_err_cnt = 203;
+	uint64 fmac6__kpcs2_tst_rx_err_cnt = 204;
+	uint64 fmac7__kpcs2_tst_rx_err_cnt = 205;
+	uint64 fmac8__kpcs2_tst_rx_err_cnt = 206;
+	uint64 fmac0__kpcs3_tst_rx_err_cnt = 207;
+	uint64 fmac1__kpcs3_tst_rx_err_cnt = 208;
+	uint64 fmac2__kpcs3_tst_rx_err_cnt = 209;
+	uint64 fmac3__kpcs3_tst_rx_err_cnt = 210;
+	uint64 fmac4__kpcs3_tst_rx_err_cnt = 211;
+	uint64 fmac5__kpcs3_tst_rx_err_cnt = 212;
+	uint64 fmac6__kpcs3_tst_rx_err_cnt = 213;
+	uint64 fmac7__kpcs3_tst_rx_err_cnt = 214;
+	uint64 fmac8__kpcs3_tst_rx_err_cnt = 215;
+	uint64 fmac0__tst0_err_cnt = 216;
+	uint64 fmac1__tst0_err_cnt = 217;
+	uint64 fmac2__tst0_err_cnt = 218;
+	uint64 fmac3__tst0_err_cnt = 219;
+	uint64 fmac4__tst0_err_cnt = 220;
+	uint64 fmac5__tst0_err_cnt = 221;
+	uint64 fmac6__tst0_err_cnt = 222;
+	uint64 fmac7__tst0_err_cnt = 223;
+	uint64 fmac8__tst0_err_cnt = 224;
+	uint64 fmac0__tst1_err_cnt = 225;
+	uint64 fmac1__tst1_err_cnt = 226;
+	uint64 fmac2__tst1_err_cnt = 227;
+	uint64 fmac3__tst1_err_cnt = 228;
+	uint64 fmac4__tst1_err_cnt = 229;
+	uint64 fmac5__tst1_err_cnt = 230;
+	uint64 fmac6__tst1_err_cnt = 231;
+	uint64 fmac7__tst1_err_cnt = 232;
+	uint64 fmac8__tst1_err_cnt = 233;
+	uint64 fmac0__tst2_err_cnt = 234;
+	uint64 fmac1__tst2_err_cnt = 235;
+	uint64 fmac2__tst2_err_cnt = 236;
+	uint64 fmac3__tst2_err_cnt = 237;
+	uint64 fmac4__tst2_err_cnt = 238;
+	uint64 fmac5__tst2_err_cnt = 239;
+	uint64 fmac6__tst2_err_cnt = 240;
+	uint64 fmac7__tst2_err_cnt = 241;
+	uint64 fmac8__tst2_err_cnt = 242;
+	uint64 fmac0__tst3_err_cnt = 243;
+	uint64 fmac1__tst3_err_cnt = 244;
+	uint64 fmac2__tst3_err_cnt = 245;
+	uint64 fmac3__tst3_err_cnt = 246;
+	uint64 fmac4__tst3_err_cnt = 247;
+	uint64 fmac5__tst3_err_cnt = 248;
+	uint64 fmac6__tst3_err_cnt = 249;
+	uint64 fmac7__tst3_err_cnt = 250;
+	uint64 fmac8__tst3_err_cnt = 251;
+	uint64 fmac0__ecc_1b_err_cnt = 252;
+	uint64 fmac1__ecc_1b_err_cnt = 253;
+	uint64 fmac2__ecc_1b_err_cnt = 254;
+	uint64 fmac3__ecc_1b_err_cnt = 255;
+	uint64 fmac4__ecc_1b_err_cnt = 256;
+	uint64 fmac5__ecc_1b_err_cnt = 257;
+	uint64 fmac6__ecc_1b_err_cnt = 258;
+	uint64 fmac7__ecc_1b_err_cnt = 259;
+	uint64 fmac8__ecc_1b_err_cnt = 260;
+	uint64 fmac0__ecc_2b_err_cnt = 261;
+	uint64 fmac1__ecc_2b_err_cnt = 262;
+	uint64 fmac2__ecc_2b_err_cnt = 263;
+	uint64 fmac3__ecc_2b_err_cnt = 264;
+	uint64 fmac4__ecc_2b_err_cnt = 265;
+	uint64 fmac5__ecc_2b_err_cnt = 266;
+	uint64 fmac6__ecc_2b_err_cnt = 267;
+	uint64 fmac7__ecc_2b_err_cnt = 268;
+	uint64 fmac8__ecc_2b_err_cnt = 269;
+	uint64 olp__incoming_bad_identifier_counter = 270;
+	uint64 olp__incoming_bad_reassembly_counter = 271;
+	uint64 cfc__parity_err_cnt = 272;
+	uint64 cfc__ilkn0_oob_rx_crc_err_cntr = 273;
+	uint64 cfc__ilkn1_oob_rx_crc_err_cntr = 274;
+	uint64 cfc__spi_oob_rx0_frm_err_cnt = 275;
+	uint64 cfc__spi_oob_rx0_dip2_err_cnt = 276;
+	uint64 cfc__spi_oob_rx1_frm_err_cnt = 277;
+	uint64 cfc__spi_oob_rx1_dip2_err_cnt = 278;
+	uint64 cgm__cgm_uc_pd_dropped_cnt = 279;
+	uint64 cgm__cgm_mc_rep_pd_dropped_cnt = 280;
+	uint64 cgm__cgm_uc_db_dropped_by_rqp_cnt = 281;
+	uint64 cgm__cgm_uc_db_dropped_by_pqp_cnt = 282;
+	uint64 cgm__cgm_mc_rep_db_dropped_cnt = 283;
+	uint64 cgm__cgm_mc_db_dropped_cnt = 284;
+	uint64 drca__full_err_cnt = 285;
+	uint64 drca__single_err_cnt = 286;
+	uint64 drca__calib_bist_full_err_cnt = 287;
+	uint64 drca__loopback_full_err_cnt = 288;
+	uint64 drcb__full_err_cnt = 289;
+	uint64 drcb__single_err_cnt = 290;
+	uint64 drcb__calib_bist_full_err_cnt = 291;
+	uint64 drcb__loopback_full_err_cnt = 292;
+	uint64 drcc__full_err_cnt = 293;
+	uint64 drcc__single_err_cnt = 294;
+	uint64 drcc__calib_bist_full_err_cnt = 295;
+	uint64 drcc__loopback_full_err_cnt = 296;
+	uint64 drcd__full_err_cnt = 297;
+	uint64 drcd__single_err_cnt = 298;
+	uint64 drcd__calib_bist_full_err_cnt = 299;
+	uint64 drcd__loopback_full_err_cnt = 300;
+	uint64 drce__full_err_cnt = 301;
+	uint64 drce__single_err_cnt = 302;
+	uint64 drce__calib_bist_full_err_cnt = 303;
+	uint64 drce__loopback_full_err_cnt = 304;
+	uint64 drcf__full_err_cnt = 305;
+	uint64 drcf__single_err_cnt = 306;
+	uint64 drcf__calib_bist_full_err_cnt = 307;
+	uint64 drcf__loopback_full_err_cnt = 308;
+	uint64 drcg__full_err_cnt = 309;
+	uint64 drcg__single_err_cnt = 310;
+	uint64 drcg__calib_bist_full_err_cnt = 311;
+	uint64 drcg__loopback_full_err_cnt = 312;
+	uint64 drch__full_err_cnt = 313;
+	uint64 drch__single_err_cnt = 314;
+	uint64 drch__calib_bist_full_err_cnt = 315;
+	uint64 drch__loopback_full_err_cnt = 316;
+	uint64 drcbroadcast__full_err_cnt = 317;
+	uint64 drcbroadcast__single_err_cnt = 318;
+	uint64 drcbroadcast__calib_bist_full_err_cnt = 319;
+	uint64 drcbroadcast__loopback_full_err_cnt = 320;
+	uint32 otn_mode = 321;
+	uint32 num_ports = 322;
+	repeated fia_edm_device_stats_pbc_otn aggr_stats_otn = 323;
+}
+
+message fia_edm_device_stats_ovf_pbc {
+	repeated string cmic__cmc0_pkt_count_tx_pkt = 1;
+	repeated string cmic__cmc0_pkt_count_rx_pkt = 2;
+	repeated string nbi__stat_rx_bursts_err_cnt = 3;
+	repeated string nbi__ecc_1b_err_cnt = 4;
+	repeated string nbi__ecc_2b_err_cnt = 5;
+	repeated string nbi__parity_err_cnt = 6;
+	repeated string nbi__rx_ilkn_crc32_err_cnt = 7;
+	repeated string nbi__rx_ilkn0_crc24_err_cnt = 8;
+	repeated string nbi__rx_ilkn0_burst_err_cnt = 9;
+	repeated string nbi__rx_ilkn0_miss_sop_err_cnt = 10;
+	repeated string nbi__rx_ilkn0_miss_eop_err_cnt = 11;
+	repeated string nbi__rx_ilkn0_misaligned_cnt = 12;
+	repeated string nbi__rx_ilkn1_crc24_err_cnt = 13;
+	repeated string nbi__rx_ilkn1_burst_err_cnt = 14;
+	repeated string nbi__rx_ilkn1_miss_sop_err_cnt = 15;
+	repeated string nbi__rx_ilkn1_miss_eop_err_cnt = 16;
+	repeated string nbi__rx_ilkn1_misaligned_cnt = 17;
+	repeated string nbi__tx_ilkn1_flushed_bursts_cnt = 18;
+	repeated string nbi__rx_ilkn0_retrans_crc24_err_cnt = 19;
+	repeated string nbi__rx_ilkn0_retrans_retry_err_cnt = 20;
+	repeated string nbi__rx_ilkn0_retrans_wdog_err_cnt = 21;
+	repeated string nbi__rx_ilkn0_retrans_wrap_after_disc_err_cnt = 22;
+	repeated string nbi__rx_ilkn0_retrans_wrap_b4_disc_err_cnt = 23;
+	repeated string nbi__rx_ilkn0_retrans_reached_timeout_err_cnt = 24;
+	repeated string nbi__rx_ilkn1_retrans_crc24_err_cnt = 25;
+	repeated string nbi__rx_ilkn1_retrans_retry_err_cnt = 26;
+	repeated string nbi__rx_ilkn1_retrans_wdog_err_cnt = 27;
+	repeated string nbi__rx_ilkn1_retrans_wrap_after_disc_err_cnt = 28;
+	repeated string nbi__rx_ilkn1_retrans_wrap_b4_disc_err_cnt = 29;
+	repeated string nbi__rx_ilkn1_retrans_reached_timeout_err_cnt = 30;
+	repeated string nbi__stat_rx_frame_err_cnt = 31;
+	repeated string nbi__stat_tx_frame_err_cnt = 32;
+	repeated string nbi__rx_elk_err_bursts_cnt = 33;
+	repeated string nbi__rx_num_thrown_eops = 34;
+	repeated string nbi__rx_num_runts = 35;
+	repeated string nbi__bist_tx_crc_err_bursts_cnt = 36;
+	repeated string nbi__bist_rx_err_length_bursts_cnt = 37;
+	repeated string nbi__bist_rx_err_burst_index_cnt = 38;
+	repeated string nbi__bist_rx_err_bct_cnt = 39;
+	repeated string nbi__bist_rx_err_data_cnt = 40;
+	repeated string nbi__bist_rx_err_in_crc_err_cnt = 41;
+	repeated string nbi__bist_rx_err_sob_cnt = 42;
+	repeated string nbi__stat_tx_bursts_cnt = 43;
+	repeated string nbi__stat_tx_total_leng_cnt = 44;
+	repeated string rxaui__total_tx_pkt_count = 45;
+	repeated string rxaui__total_rx_pkt_count = 46;
+	repeated string rxaui__rx_pkt_count_bcast_pkt = 47;
+	repeated string rxaui__tx_pkt_count_bcast_pkt = 48;
+	repeated string rxaui__rx_pkt_count_mcast_pkt = 49;
+	repeated string rxaui__tx_pkt_count_mcast_pkt = 50;
+	repeated string rxaui__rx_pkt_count_ucast_pkt = 51;
+	repeated string rxaui__tx_pkt_count_ucast_pkt = 52;
+	repeated string rxaui__rx_err_drop_pkt_cnt = 53;
+	repeated string rxaui__tx_err_drop_pkt_cnt = 54;
+	repeated string rxaui__byte_count_tx_pkt = 55;
+	repeated string rxaui__byte_count_rx_pkt = 56;
+	repeated string rxaui__rx_dscrd_pkt_cnt = 57;
+	repeated string rxaui__tx_dscrd_pkt_cnt = 58;
+	repeated string ire__nif_packet_counter = 59;
+	repeated string il__total_rx_pkt_count = 60;
+	repeated string il__total_tx_pkt_count = 61;
+	repeated string il__rx_err_drop_pkt_cnt = 62;
+	repeated string il__tx_err_drop_pkt_cnt = 63;
+	repeated string il__byte_count_tx_pkt = 64;
+	repeated string il__byte_count_rx_pkt = 65;
+	repeated string il__rx_dscrd_pkt_cnt = 66;
+	repeated string il__tx_dscrd_pkt_cnt = 67;
+	repeated string il__rx_pkt_count_bcast_pkt = 68;
+	repeated string il__tx_pkt_count_bcast_pkt = 69;
+	repeated string il__rx_pkt_count_mcast_pkt = 70;
+	repeated string il__tx_pkt_count_mcast_pkt = 71;
+	repeated string il__rx_pkt_count_ucast_pkt = 72;
+	repeated string il__tx_pkt_count_ucast_pkt = 73;
+	repeated string iqm__enq_pkt_cnt = 74;
+	repeated string iqm__enq_byte_cnt = 75;
+	repeated string iqm__deq_pkt_cnt = 76;
+	repeated string iqm__deq_byte_cnt = 77;
+	repeated string iqm__tot_dscrd_pkt_cnt = 78;
+	repeated string iqm__tot_dscrd_byte_cnt = 79;
+	repeated string iqm__ecc_1b_err_cnt = 80;
+	repeated string iqm__ecc_2b_err_cnt = 81;
+	repeated string iqm__parity_err_cnt = 82;
+	repeated string iqm__deq_delete_pkt_cnt = 83;
+	repeated string iqm__ecn_dscrd_msk_pkt_cnt = 84;
+	repeated string iqm_q_tot_dscrd_pkt_cnt = 85;
+	repeated string iqm_q_deq_delete_pkt_cnt = 86;
+	repeated string iqm__rjct_db_pkt_cnt = 87;
+	repeated string iqm__rjct_bdb_pkt_cnt = 88;
+	repeated string iqm__rjct_bdb_protct_pkt_cnt = 89;
+	repeated string iqm__rjct_oc_bd_pkt_cnt = 90;
+	repeated string iqm__rjct_sn_err_pkt_cnt = 91;
+	repeated string iqm__rjct_mc_err_pkt_cnt = 92;
+	repeated string iqm__rjct_rsrc_err_pkt_cnt = 93;
+	repeated string iqm__rjct_qnvalid_err_pkt_cnt = 94;
+	repeated string iqm__rjct_cnm_pkt_cnt = 95;
+	repeated string iqm__rjct_dyn_space_pkt_cnt = 96;
+	repeated string ipt__fdt_pkt_cnt = 97;
+	repeated string ipt__ecc_1b_err_cnt = 98;
+	repeated string ipt__ecc_2b_err_cnt = 99;
+	repeated string ipt__parity_err_cnt = 100;
+	repeated string ipt__crc_err_cnt = 101;
+	repeated string ipt__crc_err_del_buff_cnt = 102;
+	repeated string ipt__cpu_del_buff_cnt = 103;
+	repeated string ipt__cpu_rel_buff_cnt = 104;
+	repeated string ipt__crc_err_buff_fifo_full_cnt = 105;
+	repeated string fdt__data_cell_cnt = 106;
+	repeated string fdt__data_byte_cnt = 107;
+	repeated string fdt__crc_dropped_pck_cnt = 108;
+	repeated string fdt_invalid_destq_drop_cell_cnt = 109;
+	repeated string fdt__indirect_command_count = 110;
+	repeated string fdt__ecc_1b_err_cnt = 111;
+	repeated string fdt__ecc_2b_err_cnt = 112;
+	repeated string fdt__parity_err_cnt = 113;
+	repeated string fdt__crc_dropped_cell_cnt = 114;
+	repeated string fcr__control_cell_cnt = 115;
+	repeated string fcr__cell_drop_cnt = 116;
+	repeated string fcr__credit_cell_drop_cnt = 117;
+	repeated string fcr_fs_cell_drop_cnt = 118;
+	repeated string fcr_rt_cell_drop_cnt = 119;
+	repeated string fcr__ecc_1b_err_cnt = 120;
+	repeated string fcr__ecc_2b_err_cnt = 121;
+	repeated string fdr__data_cell_cnt = 122;
+	repeated string fdr__data_byte_cnt = 123;
+	repeated string fdr__crc_dropped_pck_cnt = 124;
+	repeated string fdr_p_pkt_cnt = 125;
+	repeated string fdr__prm_error_filter_cnt = 126;
+	repeated string fdr__sec_error_filter_cnt = 127;
+	repeated string fdr__prm_ecc_1b_err_cnt = 128;
+	repeated string fdr__prm_ecc_2b_err_cnt = 129;
+	repeated string fdr__sec_ecc_1b_err_cnt = 130;
+	repeated string fdr__sec_ecc_2b_err_cnt = 131;
+	repeated string egq__ecc_1b_err_cnt = 132;
+	repeated string egq__ecc_2b_err_cnt = 133;
+	repeated string egq__parity_err_cnt = 134;
+	repeated string egq__dbf_ecc_1b_err_cnt = 135;
+	repeated string egq__dbf_ecc_2b_err_cnt = 136;
+	repeated string egq__empty_mcid_counter = 137;
+	repeated string egq__rqp_discard_packet_counter = 138;
+	repeated string egq__ehp_discard_packet_counter = 139;
+	repeated string egq__ipt_pkt_cnt = 140;
+	repeated string epni__epe_pkt_cnt = 141;
+	repeated string epni__epe_byte_cnt = 142;
+	repeated string epni__epe_discard_pkt_cnt = 143;
+	repeated string epni__ecc_1b_err_cnt = 144;
+	repeated string epni__ecc_2b_err_cnt = 145;
+	repeated string epni__parity_err_cnt = 146;
+	repeated string egq__pqp_ucast_pkt_cnt = 147;
+	repeated string egq__pqp_ucast_h_pkt_cnt = 148;
+	repeated string egq__pqp_ucast_l_pkt_cnt = 149;
+	repeated string egq__pqp_ucast_bytes_cnt = 150;
+	repeated string egq__pqp_ucast_discard_pkt_cnt = 151;
+	repeated string egq__pqp_mcast_pkt_cnt = 152;
+	repeated string egq__pqp_mcast_h_pkt_cnt = 153;
+	repeated string egq__pqp_mcast_l_pkt_cnt = 154;
+	repeated string egq__pqp_mcast_bytes_cnt = 155;
+	repeated string egq__pqp_mcast_discard_pkt_cnt = 156;
+	repeated string fct__control_cell_cnt = 157;
+	repeated string fct__unrch_crdt_cnt = 158;
+	repeated string idr__reassembly_errors = 159;
+	repeated string idr__mmu_ecc_1b_err_cnt = 160;
+	repeated string idr__mmu_ecc_2b_err_cnt = 161;
+	repeated string idr__discarded_packets0_cnt = 162;
+	repeated string idr__discarded_packets1_cnt = 163;
+	repeated string idr__discarded_packets2_cnt = 164;
+	repeated string idr__discarded_packets3_cnt = 165;
+	repeated string idr__discarded_octets0_cnt = 166;
+	repeated string idr__discarded_octets1_cnt = 167;
+	repeated string idr__discarded_octets2_cnt = 168;
+	repeated string idr__discarded_octets3_cnt = 169;
+	repeated string mmu__ecc_1b_err_cnt = 170;
+	repeated string mmu__ecc_2b_err_cnt = 171;
+	repeated string oamp__parity_err_cnt = 172;
+	repeated string oamp__ecc_1b_err_cnt = 173;
+	repeated string oamp__ecc_2b_err_cnt = 174;
+	repeated string crps__parity_err_cnt = 175;
+	repeated string fmac0__kpcs0_tst_rx_err_cnt = 176;
+	repeated string fmac1__kpcs0_tst_rx_err_cnt = 177;
+	repeated string fmac2__kpcs0_tst_rx_err_cnt = 178;
+	repeated string fmac3__kpcs0_tst_rx_err_cnt = 179;
+	repeated string fmac4__kpcs0_tst_rx_err_cnt = 180;
+	repeated string fmac5__kpcs0_tst_rx_err_cnt = 181;
+	repeated string fmac6__kpcs0_tst_rx_err_cnt = 182;
+	repeated string fmac7__kpcs0_tst_rx_err_cnt = 183;
+	repeated string fmac8__kpcs0_tst_rx_err_cnt = 184;
+	repeated string fmac0__kpcs1_tst_rx_err_cnt = 185;
+	repeated string fmac1__kpcs1_tst_rx_err_cnt = 186;
+	repeated string fmac2__kpcs1_tst_rx_err_cnt = 187;
+	repeated string fmac3__kpcs1_tst_rx_err_cnt = 188;
+	repeated string fmac4__kpcs1_tst_rx_err_cnt = 189;
+	repeated string fmac5__kpcs1_tst_rx_err_cnt = 190;
+	repeated string fmac6__kpcs1_tst_rx_err_cnt = 191;
+	repeated string fmac7__kpcs1_tst_rx_err_cnt = 192;
+	repeated string fmac8__kpcs1_tst_rx_err_cnt = 193;
+	repeated string fmac0__kpcs2_tst_rx_err_cnt = 194;
+	repeated string fmac1__kpcs2_tst_rx_err_cnt = 195;
+	repeated string fmac2__kpcs2_tst_rx_err_cnt = 196;
+	repeated string fmac3__kpcs2_tst_rx_err_cnt = 197;
+	repeated string fmac4__kpcs2_tst_rx_err_cnt = 198;
+	repeated string fmac5__kpcs2_tst_rx_err_cnt = 199;
+	repeated string fmac6__kpcs2_tst_rx_err_cnt = 200;
+	repeated string fmac7__kpcs2_tst_rx_err_cnt = 201;
+	repeated string fmac8__kpcs2_tst_rx_err_cnt = 202;
+	repeated string fmac0__kpcs3_tst_rx_err_cnt = 203;
+	repeated string fmac1__kpcs3_tst_rx_err_cnt = 204;
+	repeated string fmac2__kpcs3_tst_rx_err_cnt = 205;
+	repeated string fmac3__kpcs3_tst_rx_err_cnt = 206;
+	repeated string fmac4__kpcs3_tst_rx_err_cnt = 207;
+	repeated string fmac5__kpcs3_tst_rx_err_cnt = 208;
+	repeated string fmac6__kpcs3_tst_rx_err_cnt = 209;
+	repeated string fmac7__kpcs3_tst_rx_err_cnt = 210;
+	repeated string fmac8__kpcs3_tst_rx_err_cnt = 211;
+	repeated string fmac0__tst0_err_cnt = 212;
+	repeated string fmac1__tst0_err_cnt = 213;
+	repeated string fmac2__tst0_err_cnt = 214;
+	repeated string fmac3__tst0_err_cnt = 215;
+	repeated string fmac4__tst0_err_cnt = 216;
+	repeated string fmac5__tst0_err_cnt = 217;
+	repeated string fmac6__tst0_err_cnt = 218;
+	repeated string fmac7__tst0_err_cnt = 219;
+	repeated string fmac8__tst0_err_cnt = 220;
+	repeated string fmac0__tst1_err_cnt = 221;
+	repeated string fmac1__tst1_err_cnt = 222;
+	repeated string fmac2__tst1_err_cnt = 223;
+	repeated string fmac3__tst1_err_cnt = 224;
+	repeated string fmac4__tst1_err_cnt = 225;
+	repeated string fmac5__tst1_err_cnt = 226;
+	repeated string fmac6__tst1_err_cnt = 227;
+	repeated string fmac7__tst1_err_cnt = 228;
+	repeated string fmac8__tst1_err_cnt = 229;
+	repeated string fmac0__tst2_err_cnt = 230;
+	repeated string fmac1__tst2_err_cnt = 231;
+	repeated string fmac2__tst2_err_cnt = 232;
+	repeated string fmac3__tst2_err_cnt = 233;
+	repeated string fmac4__tst2_err_cnt = 234;
+	repeated string fmac5__tst2_err_cnt = 235;
+	repeated string fmac6__tst2_err_cnt = 236;
+	repeated string fmac7__tst2_err_cnt = 237;
+	repeated string fmac8__tst2_err_cnt = 238;
+	repeated string fmac0__tst3_err_cnt = 239;
+	repeated string fmac1__tst3_err_cnt = 240;
+	repeated string fmac2__tst3_err_cnt = 241;
+	repeated string fmac3__tst3_err_cnt = 242;
+	repeated string fmac4__tst3_err_cnt = 243;
+	repeated string fmac5__tst3_err_cnt = 244;
+	repeated string fmac6__tst3_err_cnt = 245;
+	repeated string fmac7__tst3_err_cnt = 246;
+	repeated string fmac8__tst3_err_cnt = 247;
+	repeated string fmac0__ecc_1b_err_cnt = 248;
+	repeated string fmac1__ecc_1b_err_cnt = 249;
+	repeated string fmac2__ecc_1b_err_cnt = 250;
+	repeated string fmac3__ecc_1b_err_cnt = 251;
+	repeated string fmac4__ecc_1b_err_cnt = 252;
+	repeated string fmac5__ecc_1b_err_cnt = 253;
+	repeated string fmac6__ecc_1b_err_cnt = 254;
+	repeated string fmac7__ecc_1b_err_cnt = 255;
+	repeated string fmac8__ecc_1b_err_cnt = 256;
+	repeated string fmac0__ecc_2b_err_cnt = 257;
+	repeated string fmac1__ecc_2b_err_cnt = 258;
+	repeated string fmac2__ecc_2b_err_cnt = 259;
+	repeated string fmac3__ecc_2b_err_cnt = 260;
+	repeated string fmac4__ecc_2b_err_cnt = 261;
+	repeated string fmac5__ecc_2b_err_cnt = 262;
+	repeated string fmac6__ecc_2b_err_cnt = 263;
+	repeated string fmac7__ecc_2b_err_cnt = 264;
+	repeated string fmac8__ecc_2b_err_cnt = 265;
+	repeated string olp__incoming_bad_identifier_counter = 266;
+	repeated string olp__incoming_bad_reassembly_counter = 267;
+	repeated string cfc__parity_err_cnt = 268;
+	repeated string cfc__ilkn0_oob_rx_crc_err_cntr = 269;
+	repeated string cfc__ilkn1_oob_rx_crc_err_cntr = 270;
+	repeated string cfc__spi_oob_rx0_frm_err_cnt = 271;
+	repeated string cfc__spi_oob_rx0_dip2_err_cnt = 272;
+	repeated string cfc__spi_oob_rx1_frm_err_cnt = 273;
+	repeated string cfc__spi_oob_rx1_dip2_err_cnt = 274;
+	repeated string cgm__cgm_uc_pd_dropped_cnt = 275;
+	repeated string cgm__cgm_mc_rep_pd_dropped_cnt = 276;
+	repeated string cgm__cgm_uc_db_dropped_by_rqp_cnt = 277;
+	repeated string cgm__cgm_uc_db_dropped_by_pqp_cnt = 278;
+	repeated string cgm__cgm_mc_rep_db_dropped_cnt = 279;
+	repeated string cgm__cgm_mc_db_dropped_cnt = 280;
+	repeated string drca__full_err_cnt = 281;
+	repeated string drca__single_err_cnt = 282;
+	repeated string drca__calib_bist_full_err_cnt = 283;
+	repeated string drca__loopback_full_err_cnt = 284;
+	repeated string drcb__full_err_cnt = 285;
+	repeated string drcb__single_err_cnt = 286;
+	repeated string drcb__calib_bist_full_err_cnt = 287;
+	repeated string drcb__loopback_full_err_cnt = 288;
+	repeated string drcc__full_err_cnt = 289;
+	repeated string drcc__single_err_cnt = 290;
+	repeated string drcc__calib_bist_full_err_cnt = 291;
+	repeated string drcc__loopback_full_err_cnt = 292;
+	repeated string drcd__full_err_cnt = 293;
+	repeated string drcd__single_err_cnt = 294;
+	repeated string drcd__calib_bist_full_err_cnt = 295;
+	repeated string drcd__loopback_full_err_cnt = 296;
+	repeated string drce__full_err_cnt = 297;
+	repeated string drce__single_err_cnt = 298;
+	repeated string drce__calib_bist_full_err_cnt = 299;
+	repeated string drce__loopback_full_err_cnt = 300;
+	repeated string drcf__full_err_cnt = 301;
+	repeated string drcf__single_err_cnt = 302;
+	repeated string drcf__calib_bist_full_err_cnt = 303;
+	repeated string drcf__loopback_full_err_cnt = 304;
+	repeated string drcg__full_err_cnt = 305;
+	repeated string drcg__single_err_cnt = 306;
+	repeated string drcg__calib_bist_full_err_cnt = 307;
+	repeated string drcg__loopback_full_err_cnt = 308;
+	repeated string drch__full_err_cnt = 309;
+	repeated string drch__single_err_cnt = 310;
+	repeated string drch__calib_bist_full_err_cnt = 311;
+	repeated string drch__loopback_full_err_cnt = 312;
+	repeated string drcbroadcast__full_err_cnt = 313;
+	repeated string drcbroadcast__single_err_cnt = 314;
+	repeated string drcbroadcast__calib_bist_full_err_cnt = 315;
+	repeated string drcbroadcast__loopback_full_err_cnt = 316;
+}
+
+message fia_edm_stats_asic_pbc_info {
+	bool valid = 50;
+	uint32 rack_no = 51;
+	uint32 slot_no = 52;
+	uint32 asic_instance = 53;
+	uint32 chip_ver = 54;
+	fia_edm_device_stats_pbc aggr_stats = 55;
+	fia_edm_device_stats_ovf_pbc ovf_status = 56;
+}
+

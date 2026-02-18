@@ -1,0 +1,521 @@
+//                                 Apache License
+//                           Version 2.0, January 2004
+//                        http://www.apache.org/licenses/
+//
+//   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+//
+//   1. Definitions.
+//
+//      "License" shall mean the terms and conditions for use, reproduction,
+//      and distribution as defined by Sections 1 through 9 of this document.
+//
+//      "Licensor" shall mean the copyright owner or entity authorized by
+//      the copyright owner that is granting the License.
+//
+//      "Legal Entity" shall mean the union of the acting entity and all
+//      other entities that control, are controlled by, or are under common
+//      control with that entity. For the purposes of this definition,
+//      "control" means (i) the power, direct or indirect, to cause the
+//      direction or management of such entity, whether by contract or
+//      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+//      outstanding shares, or (iii) beneficial ownership of such entity.
+//
+//      "You" (or "Your") shall mean an individual or Legal Entity
+//      exercising permissions granted by this License.
+//
+//      "Source" form shall mean the preferred form for making modifications,
+//      including but not limited to software source code, documentation
+//      source, and configuration files.
+//
+//      "Object" form shall mean any form resulting from mechanical
+//      transformation or translation of a Source form, including but
+//      not limited to compiled object code, generated documentation,
+//      and conversions to other media types.
+//
+//      "Work" shall mean the work of authorship, whether in Source or
+//      Object form, made available under the License, as indicated by a
+//      copyright notice that is included in or attached to the work
+//      (an example is provided in the Appendix below).
+//
+//      "Derivative Works" shall mean any work, whether in Source or Object
+//      form, that is based on (or derived from) the Work and for which the
+//      editorial revisions, annotations, elaborations, or other modifications
+//      represent, as a whole, an original work of authorship. For the purposes
+//      of this License, Derivative Works shall not include works that remain
+//      separable from, or merely link (or bind by name) to the interfaces of,
+//      the Work and Derivative Works thereof.
+//
+//      "Contribution" shall mean any work of authorship, including
+//      the original version of the Work and any modifications or additions
+//      to that Work or Derivative Works thereof, that is intentionally
+//      submitted to Licensor for inclusion in the Work by the copyright owner
+//      or by an individual or Legal Entity authorized to submit on behalf of
+//      the copyright owner. For the purposes of this definition, "submitted"
+//      means any form of electronic, verbal, or written communication sent
+//      to the Licensor or its representatives, including but not limited to
+//      communication on electronic mailing lists, source code control systems,
+//      and issue tracking systems that are managed by, or on behalf of, the
+//      Licensor for the purpose of discussing and improving the Work, but
+//      excluding communication that is conspicuously marked or otherwise
+//      designated in writing by the copyright owner as "Not a Contribution."
+//
+//      "Contributor" shall mean Licensor and any individual or Legal Entity
+//      on behalf of whom a Contribution has been received by Licensor and
+//      subsequently incorporated within the Work.
+//
+//   2. Grant of Copyright License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      copyright license to reproduce, prepare Derivative Works of,
+//      publicly display, publicly perform, sublicense, and distribute the
+//      Work and such Derivative Works in Source or Object form.
+//
+//   3. Grant of Patent License. Subject to the terms and conditions of
+//      this License, each Contributor hereby grants to You a perpetual,
+//      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+//      (except as stated in this section) patent license to make, have made,
+//      use, offer to sell, sell, import, and otherwise transfer the Work,
+//      where such license applies only to those patent claims licensable
+//      by such Contributor that are necessarily infringed by their
+//      Contribution(s) alone or by combination of their Contribution(s)
+//      with the Work to which such Contribution(s) was submitted. If You
+//      institute patent litigation against any entity (including a
+//      cross-claim or counterclaim in a lawsuit) alleging that the Work
+//      or a Contribution incorporated within the Work constitutes direct
+//      or contributory patent infringement, then any patent licenses
+//      granted to You under this License for that Work shall terminate
+//      as of the date such litigation is filed.
+//
+//   4. Redistribution. You may reproduce and distribute copies of the
+//      Work or Derivative Works thereof in any medium, with or without
+//      modifications, and in Source or Object form, provided that You
+//      meet the following conditions:
+//
+//      (a) You must give any other recipients of the Work or
+//          Derivative Works a copy of this License; and
+//
+//      (b) You must cause any modified files to carry prominent notices
+//          stating that You changed the files; and
+//
+//      (c) You must retain, in the Source form of any Derivative Works
+//          that You distribute, all copyright, patent, trademark, and
+//          attribution notices from the Source form of the Work,
+//          excluding those notices that do not pertain to any part of
+//          the Derivative Works; and
+//
+//      (d) If the Work includes a "NOTICE" text file as part of its
+//          distribution, then any Derivative Works that You distribute must
+//          include a readable copy of the attribution notices contained
+//          within such NOTICE file, excluding those notices that do not
+//          pertain to any part of the Derivative Works, in at least one
+//          of the following places: within a NOTICE text file distributed
+//          as part of the Derivative Works; within the Source form or
+//          documentation, if provided along with the Derivative Works; or,
+//          within a display generated by the Derivative Works, if and
+//          wherever such third-party notices normally appear. The contents
+//          of the NOTICE file are for informational purposes only and
+//          do not modify the License. You may add Your own attribution
+//          notices within Derivative Works that You distribute, alongside
+//          or as an addendum to the NOTICE text from the Work, provided
+//          that such additional attribution notices cannot be construed
+//          as modifying the License.
+//
+//      You may add Your own copyright statement to Your modifications and
+//      may provide additional or different license terms and conditions
+//      for use, reproduction, or distribution of Your modifications, or
+//      for any such Derivative Works as a whole, provided Your use,
+//      reproduction, and distribution of the Work otherwise complies with
+//      the conditions stated in this License.
+//
+//   5. Submission of Contributions. Unless You explicitly state otherwise,
+//      any Contribution intentionally submitted for inclusion in the Work
+//      by You to the Licensor shall be under the terms and conditions of
+//      this License, without any additional terms or conditions.
+//      Notwithstanding the above, nothing herein shall supersede or modify
+//      the terms of any separate license agreement you may have executed
+//      with Licensor regarding such Contributions.
+//
+//   6. Trademarks. This License does not grant permission to use the trade
+//      names, trademarks, service marks, or product names of the Licensor,
+//      except as required for reasonable and customary use in describing the
+//      origin of the Work and reproducing the content of the NOTICE file.
+//
+//   7. Disclaimer of Warranty. Unless required by applicable law or
+//      agreed to in writing, Licensor provides the Work (and each
+//      Contributor provides its Contributions) on an "AS IS" BASIS,
+//      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+//      implied, including, without limitation, any warranties or conditions
+//      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+//      PARTICULAR PURPOSE. You are solely responsible for determining the
+//      appropriateness of using or redistributing the Work and assume any
+//      risks associated with Your exercise of permissions under this License.
+//
+//   8. Limitation of Liability. In no event and under no legal theory,
+//      whether in tort (including negligence), contract, or otherwise,
+//      unless required by applicable law (such as deliberate and grossly
+//      negligent acts) or agreed to in writing, shall any Contributor be
+//      liable to You for damages, including any direct, indirect, special,
+//      incidental, or consequential damages of any character arising as a
+//      result of this License or out of the use or inability to use the
+//      Work (including but not limited to damages for loss of goodwill,
+//      work stoppage, computer failure or malfunction, or any and all
+//      other commercial damages or losses), even if such Contributor
+//      has been advised of the possibility of such damages.
+//
+//   9. Accepting Warranty or Additional Liability. While redistributing
+//      the Work or Derivative Works thereof, You may choose to offer,
+//      and charge a fee for, acceptance of support, warranty, indemnity,
+//      or other liability obligations and/or rights consistent with this
+//      License. However, in accepting such obligations, You may act only
+//      on Your own behalf and on Your sole responsibility, not on behalf
+//      of any other Contributor, and only if You agree to indemnify,
+//      defend, and hold each Contributor harmless for any liability
+//      incurred by, or claims asserted against, such Contributor by reason
+//      of your accepting any such warranty or additional liability.
+//
+//   END OF TERMS AND CONDITIONS
+//
+//   APPENDIX: How to apply the Apache License to your work.
+//
+//      To apply the Apache License to your work, attach the following
+//      boilerplate notice, with the fields enclosed by brackets "{}"
+//      replaced with your own identifying information. (Don't include
+//      the brackets!)  The text should be enclosed in the appropriate
+//      comment syntax for the file format. We also recommend that a
+//      file or class name and description of purpose be included on the
+//      same "printed page" as the copyright notice for easier
+//      identification within third-party archives.
+//
+//   Copyright (c) 2017 Cisco
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+
+syntax = "proto3";
+
+package cisco_ios_xr_ipv4_bgp_oper.bgp.instances.instance.instance_active.default_vrf.afs.af.af_process_info;
+
+message bgp_process_info_af_bag_KEYS {
+	string instance_name = 1;
+	string af_name = 2;
+}
+
+message bgp_timespec {
+	uint32 seconds = 1;
+	uint32 nanoseconds = 2;
+}
+
+message bgp_thread_trigger_info_stat {
+	uint64 trigger_version = 1;
+	uint64 trigger_table_version = 2;
+	bgp_timespec trigger_time_spec = 3;
+}
+
+message bgp_thread_trigger_info {
+	uint32 triggers = 1;
+	repeated bgp_thread_trigger_info_stat statistics = 2;
+}
+
+message bgp_rib_install_time_info {
+	bgp_timespec update_time = 1;
+	bgp_timespec install_time = 2;
+	uint32 installed_count = 3;
+	uint32 modified_count = 4;
+	uint32 skipped_count = 5;
+	uint32 withdrawn_count = 6;
+	uint64 start_version = 7;
+	uint64 target_version = 8;
+}
+
+message bgp_process_info_af_gbl {
+	string router_state = 1;
+	uint64 table_version = 2;
+	uint64 max_active_pelem_version = 3;
+	uint64 merged_table_version = 4;
+	uint32 route_download_go_active_done_pending = 5;
+	uint64 rib_brib_received_version = 6;
+	uint64 table_brib_version = 7;
+	uint64 label_version = 8;
+	uint64 import_version = 9;
+	uint64 standby_version = 10;
+	uint64 send_version = 11;
+	uint32 num_init_sync_pfx = 12;
+	uint32 max_label_stack_depth_v4_next_hop = 13;
+	uint32 max_label_stack_depth_v6_next_hop = 14;
+	uint32 local_networks_num = 15;
+	uint64 local_networks_memory = 16;
+	uint32 local_networks_malloced_num = 17;
+	uint32 local_networks_freed_num = 18;
+	uint32 local_paths_num = 19;
+	uint64 local_paths_memory = 20;
+	uint32 local_paths_malloced_num = 21;
+	uint32 local_paths_freed_num = 22;
+	uint32 imported_paths_num = 23;
+	uint64 imported_paths_memory = 24;
+	uint32 networks_num = 25;
+	uint64 networks_memory = 26;
+	uint32 networks_malloced_num = 27;
+	uint32 networks_freed_num = 28;
+	uint32 paths_num = 29;
+	uint64 paths_memory = 30;
+	uint32 paths_malloced_num = 31;
+	uint32 paths_freed_num = 32;
+	uint32 path_elems_num = 33;
+	uint64 path_elems_memory = 34;
+	uint32 path_elems_malloced_num = 35;
+	uint32 path_elems_freed_num = 36;
+	uint64 label_last_trigger = 37;
+	uint64 last_label_version = 38;
+	uint64 label_bgp_version = 39;
+	uint32 label_triggers = 40;
+	uint64 rib_last_trigger = 41;
+	uint64 last_rib_version = 42;
+	uint64 ribbgp_version = 43;
+	uint32 rib_triggers = 44;
+	uint64 import_last_trigger = 45;
+	uint64 last_import_version = 46;
+	uint64 import_bgp_version = 47;
+	uint32 import_triggers = 48;
+	uint64 update_gen_last_trigger = 49;
+	uint64 update_gen_bgp_version = 50;
+	uint32 update_triggers = 51;
+	uint32 total_r_ds_num = 52;
+	uint32 total_remote_r_ds_num = 53;
+	uint32 total_same_r_ds_num = 54;
+	uint32 malloced_rd_count = 55;
+	uint32 freed_rd_count = 56;
+	uint64 rd_memory = 57;
+	uint32 multipath_network_entry_count = 58;
+	uint64 multipath_network_entry_memory = 59;
+	uint32 multipath_paths_count = 60;
+	uint64 multipath_paths_memory = 61;
+	bgp_thread_trigger_info trigger_rib = 62;
+	bgp_thread_trigger_info trigger_import = 63;
+	bgp_thread_trigger_info trigger_update = 64;
+	bgp_thread_trigger_info trigger_label = 65;
+	uint32 update_wait_install_enabled = 66;
+	uint32 update_wait_install_startup_delay = 67;
+	uint64 rib_acked_table_version = 68;
+	uint32 rib_ack_requests = 69;
+	uint32 rib_acks_received = 70;
+	uint32 rib_slow_acks = 71;
+	bgp_rib_install_time_info rib_install = 72;
+}
+
+message bgp_process_info_af_vrf {
+	uint32 network_entry_count = 1;
+	uint32 paths_count = 2;
+	uint32 imported_paths = 3;
+	uint32 local_paths = 4;
+	uint32 path_elems_count = 5;
+	uint64 path_memory = 6;
+	uint64 imported_path_memory = 7;
+	uint64 local_path_memory = 8;
+	uint64 prefix_memory = 9;
+	uint64 path_elem_memory = 10;
+	uint32 received_path_count = 11;
+	uint32 history_path_count = 12;
+	uint32 damped_path_count = 13;
+	uint32 malloced_prefix_count = 14;
+	uint32 freed_prefix_count = 15;
+	uint32 malloced_path_count = 16;
+	uint32 freed_path_count = 17;
+	uint32 malloced_path_elem_count = 18;
+	uint32 freed_path_elem_count = 19;
+	bool any_ebgp_neighbor_missing_policy = 20;
+	bool attribute_download = 21;
+	bool route_target_download = 22;
+	bool srms_prefix_sid = 23;
+	bool add_path_install_enable = 24;
+	bool add_path_install_disable = 25;
+	bool best_external = 26;
+	bool best_external_disable = 27;
+	bool best_external_labeled_unicast = 28;
+	bool label_retain = 29;
+	uint32 label_retain_value = 30;
+	uint32 tbl_bitf_size = 31;
+	uint32 tbl_chunk_bitf_size = 32;
+	bool tbl_filter_group_bitf_resize_pending = 33;
+	bool is_route_reflector = 34;
+	bool asbr = 35;
+	bool retain_rt_all = 36;
+	uint32 ibgp_nexthop_self_count = 37;
+	bool use_igpsr_label = 38;
+	uint32 bmp_network_entry_count = 39;
+	uint32 bmp_paths_count = 40;
+	uint64 bmp_prefix_memory = 41;
+	uint64 bmp_path_memory = 42;
+	uint32 path_lookup_path_count = 43;
+	repeated uint32 net_path_distribution = 44;
+	uint32 path_denied_count = 45;
+	uint32 path_accepted_count = 46;
+	uint32 path_modified_count = 47;
+	uint32 path_modified_count_hwm = 48;
+	uint64 path_modified_memory_hwm = 49;
+	uint64 path_modified_count_hwm_time = 50;
+	uint64 path_modified_memory = 51;
+	bool policy_has_nexthop_self = 52;
+}
+
+message bgp_total_bumps_ {
+	string bump_event_count = 1;
+	uint64 version_bumps_count = 2;
+}
+
+message bgp_int_bumpcount_ {
+	string bump_count_event = 1;
+	uint32 version_bump_count = 2;
+}
+
+message bgp_ver_rate_ {
+	string interval_info = 1;
+	uint32 main_table_version_bump_count = 2;
+	repeated bgp_int_bumpcount_ version_bump_count_interval = 3;
+	bgp_timespec version_bump_count_interval_start = 4;
+	bgp_timespec version_bump_count_interval_end = 5;
+}
+
+message bgp_perf_process_af_gbl_ {
+	bool has_converged = 1;
+	uint32 first_nbr_up_time = 2;
+	repeated uint32 mode_enter_time = 3;
+	uint32 total_pim_install = 4;
+	repeated uint32 total_pim_install_add = 5;
+	repeated uint32 total_pim_install_del = 6;
+	uint32 total_pim_callbacks = 7;
+	repeated uint32 total_pim_callback_add = 8;
+	repeated uint32 total_pim_callback_del = 9;
+	repeated uint32 total_pim_callback_add_local = 10;
+	repeated uint32 total_pim_callback_del_local = 11;
+	uint32 total_pim_callback_batch = 12;
+	uint64 update_main_table_version = 13;
+	repeated bgp_total_bumps_ total_version_bump_count = 14;
+	repeated bgp_ver_rate_ version_rate_stats = 15;
+}
+
+message bgp_delayed_bp_queue_ {
+	bgp_timespec expiry_time = 1;
+	uint32 queue_size = 2;
+}
+
+message platform_oor_state_ {
+	uint32 oor_state = 1;
+	bgp_timespec time_of_oor_state_change = 2;
+}
+
+message bgp_ecmp_prefix_tuple {
+	uint32 numof_ecmp = 1;
+	uint32 prefixes_processed = 2;
+}
+
+message bgp_ecmp_path_info {
+	bgp_timespec processing_time = 1;
+	repeated bgp_ecmp_prefix_tuple ecmp_prefix_list = 2;
+}
+
+message bgp_nbr_path_info {
+	string nbr_name = 1;
+	uint32 numof_paths = 2;
+}
+
+message bgp_all_nbr_path_info {
+	bgp_timespec processing_time = 1;
+	uint32 num_of_nbrs = 2;
+	uint32 num_of_paths = 3;
+	repeated bgp_nbr_path_info nbr_path_list = 4;
+}
+
+message bgp_perf_process_af_vrf_ {
+	uint32 update_generation_calls = 1;
+	uint32 update_generation_prefixes_count = 2;
+	uint32 update_generation_be_prefixes_count = 3;
+	uint32 update_generation_messages_count = 4;
+	uint32 update_generation_time = 5;
+	uint32 rib_update_calls = 6;
+	uint32 rib_update_time = 7;
+	uint32 prefixes_sent_to_rib = 8;
+	uint32 prefixes_resent_to_rib = 9;
+	uint32 prefixes_not_sent_to_rib = 10;
+	uint32 prefixes_removed_from_rib = 11;
+	uint32 attributes_sent_to_rib = 12;
+	uint32 attributes_removed_from_rib = 13;
+	uint32 attributes_recover_from_rib = 14;
+	uint32 scanner_runs = 15;
+	uint32 scanner_time = 16;
+	uint32 rib_tbl_del_calls = 17;
+	uint32 rib_tbl_invalid_calls = 18;
+	uint32 rib_tbl_skip_calls = 19;
+	uint32 rib_tbl_local_label = 20;
+	uint32 rib_tbl_retry = 21;
+	uint32 time_last_update_sent = 22;
+	bgp_timespec time_rib_coverged = 23;
+	bgp_timespec time_rib_down = 24;
+	bool is_rib_table_full = 25;
+	uint64 rib_table_full_version = 26;
+	uint64 first_rib_table_full_version = 27;
+	uint64 last_rib_table_full_version = 28;
+	bgp_timespec first_rib_table_full_timestamp = 29;
+	bgp_timespec last_rib_table_full_timestamp = 30;
+	uint32 last_rib_table_full_age = 31;
+	uint64 first_rib_table_has_space_version = 32;
+	uint64 last_rib_table_has_space_version = 33;
+	bgp_timespec first_rib_table_has_space_timestamp = 34;
+	bgp_timespec last_rib_table_has_space_timestamp = 35;
+	uint32 last_rib_table_has_space_age = 36;
+	bgp_timespec time_label_retain = 37;
+	bool rib_trigger = 38;
+	uint32 vrf_flags = 39;
+	uint32 label_calls = 40;
+	uint32 label_time = 41;
+	uint32 label_rewrite_count = 42;
+	uint32 label_release_count = 43;
+	uint32 label_added_count = 44;
+	uint32 import_calls = 45;
+	uint32 import_time = 46;
+	uint32 import_src_net_processed_count = 47;
+	uint32 import_dest_net_processed_count = 48;
+	uint32 import_added_path_count = 49;
+	uint32 import_removed_path_count = 50;
+	uint32 import_replaced_path_count = 51;
+	uint32 update_group_count = 52;
+	uint32 subgroup_count = 53;
+	uint32 oldest_queue_number = 54;
+	uint32 recent_queue_number = 55;
+	uint32 prefix_count_hwm = 56;
+	uint32 net_delayed_count = 57;
+	uint32 path_delayed_count = 58;
+	uint32 net_processed_count = 59;
+	repeated bgp_delayed_bp_queue_ delayed_bp_queue_list = 60;
+	repeated platform_oor_state_ oor_state_list = 61;
+	bgp_timespec last_bpq_delayed = 62;
+	bgp_timespec last_processed_bpq_delayed = 63;
+	repeated bgp_ecmp_path_info ribecmp_path_download_info = 64;
+	repeated bgp_ecmp_path_info delay_queue_ecmp_path_info = 65;
+	repeated bgp_all_nbr_path_info nbr_path_stats = 66;
+	bgp_timespec last_oor_recovery = 67;
+}
+
+message bgp_perf_process_af_ {
+	bgp_perf_process_af_gbl_ global = 1;
+	bgp_perf_process_af_vrf_ vrf = 2;
+}
+
+message bgp_process_info_af_bag {
+	string af_name = 50;
+	uint32 process_instance = 51;
+	string vrf_name = 52;
+	bool vrf_totals = 53;
+	bgp_process_info_af_gbl global = 54;
+	bgp_process_info_af_vrf vrf = 55;
+	bgp_perf_process_af_ performance_statistics = 56;
+}
+
