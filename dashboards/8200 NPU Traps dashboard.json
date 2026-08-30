@@ -1,0 +1,2560 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "alias": "[[tag_trap_id]]",
+          "groupBy": [
+            {
+              "params": [
+                "trap_id"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "NPU-TRAPS",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT derivative(\"packet_accepted\", 1s) FROM \"NPU-TRAPS\" WHERE (\"source\" = '10.89.202.78' AND \"node_name\" = '0/RP0/CPU0' AND \"npu_id\" = 0) AND $timeFilter GROUP BY \"trap_id\"",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "packet_accepted"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  "1s"
+                ],
+                "type": "derivative"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "source",
+              "operator": "=",
+              "value": "10.89.202.78"
+            },
+            {
+              "condition": "AND",
+              "key": "node_name",
+              "operator": "=",
+              "value": "0/RP0/CPU0"
+            },
+            {
+              "condition": "AND",
+              "key": "npu_id",
+              "operator": "=",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "title": "Cisco 8200 NPU accepted traps (pps)",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(0)$",
+            "renamePattern": "DOT1X_LEARN"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(1)$",
+            "renamePattern": "ETHERNET_DOT1X_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(2)$",
+            "renamePattern": "ETHERNET_ACL_DROP(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(3)$",
+            "renamePattern": "ETHERNET_ACL_FORCE_PUNT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(4)$",
+            "renamePattern": "ETHERNET_ACCEPTABLE_FORMAT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(5)$",
+            "renamePattern": "UNKNOWN_VLAN_OR_BUNDLE_MEMBER(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(6)$",
+            "renamePattern": "NOT_MY_MAC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(7)$",
+            "renamePattern": "ETHERNET_NO_SIP_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(8)$",
+            "renamePattern": "ETHERNET_NO_VNI_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(9)$",
+            "renamePattern": "ETHERNET_NO_VSID_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(10)$",
+            "renamePattern": "ARP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(12)$",
+            "renamePattern": "ETHERNET_SA_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(13)$",
+            "renamePattern": "ETHERNET_DA_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(14)$",
+            "renamePattern": "ETHERNET_SA_MULTICAST(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(15)$",
+            "renamePattern": "DHCPV4_SERVER"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(16)$",
+            "renamePattern": "DHCPV4_CLIENT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(19)$",
+            "renamePattern": "ETHERNET_INGRESS_STP_BLOCK(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(20)$",
+            "renamePattern": "PTP_OVER_ETHERNET"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(22)$",
+            "renamePattern": "LLDP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(23)$",
+            "renamePattern": "PFC"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(24)$",
+            "renamePattern": "MSTP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(25)$",
+            "renamePattern": "MACSEC_FIPS_POST"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(26)$",
+            "renamePattern": "ETHERNET_L2CP4(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(27)$",
+            "renamePattern": "ONLINE_DIAG"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(28)$",
+            "renamePattern": "LLDP_SNOOP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(29)$",
+            "renamePattern": "ETHERNET_L2CP7(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(30)$",
+            "renamePattern": "SLOW_PROTO(LACP/SYNCE/EOAM)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(31)$",
+            "renamePattern": "CISCOPROTOCOLS(CDP,VTP,DTP,PAGP,UDLD)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(32)$",
+            "renamePattern": "MACSEC"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(33)$",
+            "renamePattern": "UNKNOWN_L3_PROTOCOL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(34)$",
+            "renamePattern": "CFML2AC"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(35)$",
+            "renamePattern": "ETHERNET_TEST_OAM_AC_MIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(36)$",
+            "renamePattern": "CFMMCAST"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(37)$",
+            "renamePattern": "ETHERNET_SYSTEM_MYMAC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(38)$",
+            "renamePattern": "ETHERNET_UNKNOWN_BC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(39)$",
+            "renamePattern": "ETHERNET_UNKNOWN_MC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(40)$",
+            "renamePattern": "ETHERNET_UNKNOWN_UC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(41)$",
+            "renamePattern": "ETHERNET_LEARN"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(44)$",
+            "renamePattern": "ETHERNET_SMAC_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(46)$",
+            "renamePattern": "ETHERNET_MC_SNOOP_LOOKUP_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(47)$",
+            "renamePattern": "ETHERNET_UNPROTECTED_DATA_PKT_ON_MACSEC_EN_PORT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(48)$",
+            "renamePattern": "ETHERNET_MACSEC_PROCESSING_ERR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(49)$",
+            "renamePattern": "ETHERNET_L2_DLP_NOT_FOUND(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(50)$",
+            "renamePattern": "ETHERNET_SAME_INTERFACE(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(51)$",
+            "renamePattern": "ETHERNET_DSPA_MC_TRIM(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(52)$",
+            "renamePattern": "ETHERNET_EGRESS_STP_BLOCK(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(53)$",
+            "renamePattern": "ETHERNET_SPLIT_HORIZON(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(54)$",
+            "renamePattern": "ETHERNET_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(55)$",
+            "renamePattern": "ETHERNET_INCOMPATIBLE_EVE_CMD(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(56)$",
+            "renamePattern": "ETHERNET_PADDING_RESIDUE_IN_SECOND_LINE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(58)$",
+            "renamePattern": "ETHERNET_SVI_EGRESS_DHCP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(59)$",
+            "renamePattern": "ETHERNET_NO_PWE_L3_DEST(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(60)$",
+            "renamePattern": "ETHERNET_DSP_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(61)$",
+            "renamePattern": "V4_MCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(62)$",
+            "renamePattern": "V4_UCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(63)$",
+            "renamePattern": "V4_CHECKSUM_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(64)$",
+            "renamePattern": "V4_HEADER_ERROR_OR_TTL0(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(65)$",
+            "renamePattern": "GRE_NEXT_PROTO_UNKNOWN(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(66)$",
+            "renamePattern": "V4_OPTIONS"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(67)$",
+            "renamePattern": "IPV4_NON_COMP_MC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(68)$",
+            "renamePattern": "V6_MCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(69)$",
+            "renamePattern": "V6_UCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(70)$",
+            "renamePattern": "V6_HOP_BY_HOP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(71)$",
+            "renamePattern": "V6_HEADER_ERROR_OR_HOPCOUNT0(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(72)$",
+            "renamePattern": "IPV6_ILLEGAL_DIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(73)$",
+            "renamePattern": "IPV6_ZERO_PAYLOAD(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(74)$",
+            "renamePattern": "IPV6_NEXT_HEADER_CHECK(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(75)$",
+            "renamePattern": "IPV6_NON_COMP_MC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(76)$",
+            "renamePattern": "MPLS_UNKNOWN_PROTOCOL_AFTER_BOS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(77)$",
+            "renamePattern": "MPLS_TTL_0(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(78)$",
+            "renamePattern": "MPLS_MPLS_TP_OVER_PWE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(79)$",
+            "renamePattern": "MPLS_MPLS_TP_OVER_LSP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(80)$",
+            "renamePattern": "MPLS_OAM_ALERT_LABEL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(81)$",
+            "renamePattern": "MPLS_EXTENSION_LABEL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(82)$",
+            "renamePattern": "MPLS_ROUTER_ALERT_LABEL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(83)$",
+            "renamePattern": "UNEXPECTED_RESERVED_LABEL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(84)$",
+            "renamePattern": "MPLS_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(85)$",
+            "renamePattern": "LABEL_LOOKUP_FAIL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(86)$",
+            "renamePattern": "MPLS_IPV4_OVER_IPV6_EXPLICIT_NULL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(87)$",
+            "renamePattern": "MPLS_TTL_EXPIRED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(88)$",
+            "renamePattern": "MPLS_TE_MIDPOINT_LDP_LABELS_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(89)$",
+            "renamePattern": "MPLS_ILM_VRF_LABEL_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(90)$",
+            "renamePattern": "MPLS_PWE_PWACH"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(91)$",
+            "renamePattern": "MPLS_VPN_TTL_ONE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(92)$",
+            "renamePattern": "MPLS_MISSING_FWD_LABEL_AFTER_POP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(93)$",
+            "renamePattern": "MLDP_INGRESS_PUNT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(94)$",
+            "renamePattern": "L3_IP_UNICAST_RPF(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(95)$",
+            "renamePattern": "L3_IP_MULTICAST_RPF"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(96)$",
+            "renamePattern": "L3_IP_MC_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(97)$",
+            "renamePattern": "L3_IP_MC_PUNT_DC_PASS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(100)$",
+            "renamePattern": "L3_IP_MC_PUNT_RPF_FAIL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(102)$",
+            "renamePattern": "L3_IP_MULTICAST_NOT_FOUND(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(103)$",
+            "renamePattern": "L3_IP_MC_S_G_PUNT_MEMBER"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(104)$",
+            "renamePattern": "L3_IP_MC_G_PUNT_MEMBER"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(105)$",
+            "renamePattern": "L3_IP_MC_EGRESS_PUNT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(106)$",
+            "renamePattern": "ISIS/L3"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(107)$",
+            "renamePattern": "L3_ISIS_DRAIN(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(108)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_DIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(109)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_SIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(110)$",
+            "renamePattern": "L3_LPM_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(111)$",
+            "renamePattern": "L3_LPM_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(112)$",
+            "renamePattern": "L3_LOCAL_SUBNET"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(114)$",
+            "renamePattern": "L3_NO_LP_OVER_LAG_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(116)$",
+            "renamePattern": "L3_EGRESS_MONITOR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(117)$",
+            "renamePattern": "L3_INT_HOP_LIMIT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(118)$",
+            "renamePattern": "L3_ACL_DROP(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(119)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(120)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT1"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(121)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT2"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(122)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT3"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(123)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT4"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(124)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT5"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(125)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT6"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(126)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT7"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(127)$",
+            "renamePattern": "GLEAN_ADJACENCY"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(128)$",
+            "renamePattern": "INJECT_UP_L3_LOOKUP_FAIL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(129)$",
+            "renamePattern": "L3_ROUTE_LOOKUP_FAILED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(130)$",
+            "renamePattern": "L3_NULL_ADJ(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(131)$",
+            "renamePattern": "L3_USER_TRAP1(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(132)$",
+            "renamePattern": "L3_USER_TRAP2(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(133)$",
+            "renamePattern": "L3_LPM_DEFAULT_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(134)$",
+            "renamePattern": "L3_BFD_MICRO_IP_DISABLED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(135)$",
+            "renamePattern": "L3_NO_VNI_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(136)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_OG_SIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(137)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_OG_DIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(138)$",
+            "renamePattern": "L3_NO_L3_DLP_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(139)$",
+            "renamePattern": "L3_L3_DLP_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(140)$",
+            "renamePattern": "L3_SPLIT_HORIZON(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(141)$",
+            "renamePattern": "L3_MC_SAME_INTERFACE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(142)$",
+            "renamePattern": "L3_NO_VPN_LABEL_FOUND(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(143)$",
+            "renamePattern": "TTL_OR_HOP_COUNT_1"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(144)$",
+            "renamePattern": "MTU_EXCEEDED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(145)$",
+            "renamePattern": "L3_TX_FRR_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(146)$",
+            "renamePattern": "L3_ENCAP_TABLE_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(147)$",
+            "renamePattern": "L3_TUNNEL_SIP_INVALID(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(148)$",
+            "renamePattern": "L3_L3_SAME_TUNNEL_INTF(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(149)$",
+            "renamePattern": "OAMP_ETH_UNKNOWN_PUNT_REASON(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(150)$",
+            "renamePattern": "OAMP_ETH_MEP_MAPPING_FAILED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(151)$",
+            "renamePattern": "OAMP_ETH_MP_TYPE_MISMATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(152)$",
+            "renamePattern": "OAMP_ETH_MEG_LEVEL_MISMATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(153)$",
+            "renamePattern": "OAMP_ETH_BAD_MD_NAME_FORMAT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(154)$",
+            "renamePattern": "OAMP_ETH_UNICAST_DA_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(155)$",
+            "renamePattern": "OAMP_ETH_MULTICAST_DA_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(156)$",
+            "renamePattern": "OAMP_ETH_WRONG_MEG_ID_FORMAT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(157)$",
+            "renamePattern": "OAMP_ETH_MEG_ID_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(158)$",
+            "renamePattern": "OAMP_ETH_CCM_PERIOD_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(159)$",
+            "renamePattern": "OAMP_ETH_CCM_TLV_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(160)$",
+            "renamePattern": "OAMP_ETH_LMM_TLV_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(161)$",
+            "renamePattern": "OAMP_ETH_NOT_SUPPORTED_OAM_OPCODE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(162)$",
+            "renamePattern": "OAMP_BFD_TRANSPORT_NOT_SUPPORTED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(163)$",
+            "renamePattern": "OAMP_BFD_SESSION_LOOKUP_FAILED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(164)$",
+            "renamePattern": "OAMP_BFD_INCORRECT_TTL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(165)$",
+            "renamePattern": "OAMP_BFD_INVALID_PROTOCOL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(166)$",
+            "renamePattern": "OAMP_BFD_INVALID_UDP_PORT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(167)$",
+            "renamePattern": "OAMP_BFD_INCORRECT_VERSION(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(168)$",
+            "renamePattern": "OAMP_BFD_INCORRECT_ADDRESS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(169)$",
+            "renamePattern": "OAMP_BFD_MISMATCH_DISCR"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(170)$",
+            "renamePattern": "OAMP_BFD_STATE_FLAG_CHANGE"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(171)$",
+            "renamePattern": "OAMP_BFD_SESSION_RECEIVED(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(172)$",
+            "renamePattern": "OAMP_PFC_LOOKUP_FAILED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(173)$",
+            "renamePattern": "OAMP_PFC_DROP_INVALID_RX(D*)"
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "alias": "[[tag_trap_id]]",
+          "groupBy": [
+            {
+              "params": [
+                "trap_id"
+              ],
+              "type": "tag"
+            }
+          ],
+          "hide": false,
+          "measurement": "NPU-TRAPS",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT derivative(\"packet_dropped\", 1s) FROM \"NPU-TRAPS\" WHERE (\"source\" = '10.89.202.78' AND \"node_name\" = '0/RP0/CPU0' AND \"npu_id\" = 0) AND $timeFilter GROUP BY \"trap_id\"",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "packet_dropped"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  "1s"
+                ],
+                "type": "derivative"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "source",
+              "operator": "=",
+              "value": "10.89.202.78"
+            },
+            {
+              "condition": "AND",
+              "key": "node_name",
+              "operator": "=",
+              "value": "0/RP0/CPU0"
+            },
+            {
+              "condition": "AND",
+              "key": "npu_id",
+              "operator": "=",
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "title": "Cisco 8200 NPU dropped traps (pps)",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(0)$",
+            "renamePattern": "DOT1X_LEARN"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(1)$",
+            "renamePattern": "ETHERNET_DOT1X_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(2)$",
+            "renamePattern": "ETHERNET_ACL_DROP(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(3)$",
+            "renamePattern": "ETHERNET_ACL_FORCE_PUNT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(4)$",
+            "renamePattern": "ETHERNET_ACCEPTABLE_FORMAT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(5)$",
+            "renamePattern": "UNKNOWN_VLAN_OR_BUNDLE_MEMBER(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(6)$",
+            "renamePattern": "NOT_MY_MAC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(7)$",
+            "renamePattern": "ETHERNET_NO_SIP_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(8)$",
+            "renamePattern": "ETHERNET_NO_VNI_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(9)$",
+            "renamePattern": "ETHERNET_NO_VSID_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(10)$",
+            "renamePattern": "ARP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(12)$",
+            "renamePattern": "ETHERNET_SA_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(13)$",
+            "renamePattern": "ETHERNET_DA_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(14)$",
+            "renamePattern": "ETHERNET_SA_MULTICAST(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(15)$",
+            "renamePattern": "DHCPV4_SERVER"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(16)$",
+            "renamePattern": "DHCPV4_CLIENT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(19)$",
+            "renamePattern": "ETHERNET_INGRESS_STP_BLOCK(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(20)$",
+            "renamePattern": "PTP_OVER_ETHERNET"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(22)$",
+            "renamePattern": "LLDP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(23)$",
+            "renamePattern": "PFC"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(24)$",
+            "renamePattern": "MSTP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(25)$",
+            "renamePattern": "MACSEC_FIPS_POST"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(26)$",
+            "renamePattern": "ETHERNET_L2CP4(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(27)$",
+            "renamePattern": "ONLINE_DIAG"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(28)$",
+            "renamePattern": "LLDP_SNOOP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(29)$",
+            "renamePattern": "ETHERNET_L2CP7(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(30)$",
+            "renamePattern": "SLOW_PROTO(LACP/SYNCE/EOAM)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(31)$",
+            "renamePattern": "CISCOPROTOCOLS(CDP,VTP,DTP,PAGP,UDLD)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(32)$",
+            "renamePattern": "MACSEC"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(33)$",
+            "renamePattern": "UNKNOWN_L3_PROTOCOL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(34)$",
+            "renamePattern": "CFML2AC"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(35)$",
+            "renamePattern": "ETHERNET_TEST_OAM_AC_MIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(36)$",
+            "renamePattern": "CFMMCAST"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(37)$",
+            "renamePattern": "ETHERNET_SYSTEM_MYMAC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(38)$",
+            "renamePattern": "ETHERNET_UNKNOWN_BC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(39)$",
+            "renamePattern": "ETHERNET_UNKNOWN_MC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(40)$",
+            "renamePattern": "ETHERNET_UNKNOWN_UC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(41)$",
+            "renamePattern": "ETHERNET_LEARN"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(44)$",
+            "renamePattern": "ETHERNET_SMAC_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(46)$",
+            "renamePattern": "ETHERNET_MC_SNOOP_LOOKUP_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(47)$",
+            "renamePattern": "ETHERNET_UNPROTECTED_DATA_PKT_ON_MACSEC_EN_PORT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(48)$",
+            "renamePattern": "ETHERNET_MACSEC_PROCESSING_ERR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(49)$",
+            "renamePattern": "ETHERNET_L2_DLP_NOT_FOUND(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(50)$",
+            "renamePattern": "ETHERNET_SAME_INTERFACE(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(51)$",
+            "renamePattern": "ETHERNET_DSPA_MC_TRIM(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(52)$",
+            "renamePattern": "ETHERNET_EGRESS_STP_BLOCK(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(53)$",
+            "renamePattern": "ETHERNET_SPLIT_HORIZON(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(54)$",
+            "renamePattern": "ETHERNET_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(55)$",
+            "renamePattern": "ETHERNET_INCOMPATIBLE_EVE_CMD(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(56)$",
+            "renamePattern": "ETHERNET_PADDING_RESIDUE_IN_SECOND_LINE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(58)$",
+            "renamePattern": "ETHERNET_SVI_EGRESS_DHCP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(59)$",
+            "renamePattern": "ETHERNET_NO_PWE_L3_DEST(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(60)$",
+            "renamePattern": "ETHERNET_DSP_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(61)$",
+            "renamePattern": "V4_MCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(62)$",
+            "renamePattern": "V4_UCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(63)$",
+            "renamePattern": "V4_CHECKSUM_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(64)$",
+            "renamePattern": "V4_HEADER_ERROR_OR_TTL0(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(65)$",
+            "renamePattern": "GRE_NEXT_PROTO_UNKNOWN(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(66)$",
+            "renamePattern": "V4_OPTIONS"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(67)$",
+            "renamePattern": "IPV4_NON_COMP_MC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(68)$",
+            "renamePattern": "V6_MCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(69)$",
+            "renamePattern": "V6_UCAST_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(70)$",
+            "renamePattern": "V6_HOP_BY_HOP"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(71)$",
+            "renamePattern": "V6_HEADER_ERROR_OR_HOPCOUNT0(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(72)$",
+            "renamePattern": "IPV6_ILLEGAL_DIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(73)$",
+            "renamePattern": "IPV6_ZERO_PAYLOAD(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(74)$",
+            "renamePattern": "IPV6_NEXT_HEADER_CHECK(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(75)$",
+            "renamePattern": "IPV6_NON_COMP_MC(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(76)$",
+            "renamePattern": "MPLS_UNKNOWN_PROTOCOL_AFTER_BOS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(77)$",
+            "renamePattern": "MPLS_TTL_0(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(78)$",
+            "renamePattern": "MPLS_MPLS_TP_OVER_PWE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(79)$",
+            "renamePattern": "MPLS_MPLS_TP_OVER_LSP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(80)$",
+            "renamePattern": "MPLS_OAM_ALERT_LABEL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(81)$",
+            "renamePattern": "MPLS_EXTENSION_LABEL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(82)$",
+            "renamePattern": "MPLS_ROUTER_ALERT_LABEL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(83)$",
+            "renamePattern": "UNEXPECTED_RESERVED_LABEL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(84)$",
+            "renamePattern": "MPLS_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(85)$",
+            "renamePattern": "LABEL_LOOKUP_FAIL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(86)$",
+            "renamePattern": "MPLS_IPV4_OVER_IPV6_EXPLICIT_NULL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(87)$",
+            "renamePattern": "MPLS_TTL_EXPIRED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(88)$",
+            "renamePattern": "MPLS_TE_MIDPOINT_LDP_LABELS_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(89)$",
+            "renamePattern": "MPLS_ILM_VRF_LABEL_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(90)$",
+            "renamePattern": "MPLS_PWE_PWACH"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(91)$",
+            "renamePattern": "MPLS_VPN_TTL_ONE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(92)$",
+            "renamePattern": "MPLS_MISSING_FWD_LABEL_AFTER_POP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(93)$",
+            "renamePattern": "MLDP_INGRESS_PUNT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(94)$",
+            "renamePattern": "L3_IP_UNICAST_RPF(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(95)$",
+            "renamePattern": "L3_IP_MULTICAST_RPF"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(96)$",
+            "renamePattern": "L3_IP_MC_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(97)$",
+            "renamePattern": "L3_IP_MC_PUNT_DC_PASS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(100)$",
+            "renamePattern": "L3_IP_MC_PUNT_RPF_FAIL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(102)$",
+            "renamePattern": "L3_IP_MULTICAST_NOT_FOUND(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(103)$",
+            "renamePattern": "L3_IP_MC_S_G_PUNT_MEMBER"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(104)$",
+            "renamePattern": "L3_IP_MC_G_PUNT_MEMBER"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(105)$",
+            "renamePattern": "L3_IP_MC_EGRESS_PUNT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(106)$",
+            "renamePattern": "ISIS/L3"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(107)$",
+            "renamePattern": "L3_ISIS_DRAIN(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(108)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_DIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(109)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_SIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(110)$",
+            "renamePattern": "L3_LPM_ERROR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(111)$",
+            "renamePattern": "L3_LPM_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(112)$",
+            "renamePattern": "L3_LOCAL_SUBNET"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(114)$",
+            "renamePattern": "L3_NO_LP_OVER_LAG_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(116)$",
+            "renamePattern": "L3_EGRESS_MONITOR(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(117)$",
+            "renamePattern": "L3_INT_HOP_LIMIT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(118)$",
+            "renamePattern": "L3_ACL_DROP(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(119)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(120)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT1"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(121)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT2"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(122)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT3"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(123)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT4"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(124)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT5"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(125)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT6"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(126)$",
+            "renamePattern": "L3_ACL_FORCE_PUNT7"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(127)$",
+            "renamePattern": "GLEAN_ADJACENCY"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(128)$",
+            "renamePattern": "INJECT_UP_L3_LOOKUP_FAIL"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(129)$",
+            "renamePattern": "L3_ROUTE_LOOKUP_FAILED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(130)$",
+            "renamePattern": "L3_NULL_ADJ(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(131)$",
+            "renamePattern": "L3_USER_TRAP1(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(132)$",
+            "renamePattern": "L3_USER_TRAP2(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(133)$",
+            "renamePattern": "L3_LPM_DEFAULT_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(134)$",
+            "renamePattern": "L3_BFD_MICRO_IP_DISABLED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(135)$",
+            "renamePattern": "L3_NO_VNI_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(136)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_OG_SIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(137)$",
+            "renamePattern": "L3_NO_HBM_ACCESS_OG_DIP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(138)$",
+            "renamePattern": "L3_NO_L3_DLP_MAPPING(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(139)$",
+            "renamePattern": "L3_L3_DLP_DISABLED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(140)$",
+            "renamePattern": "L3_SPLIT_HORIZON(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(141)$",
+            "renamePattern": "L3_MC_SAME_INTERFACE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(142)$",
+            "renamePattern": "L3_NO_VPN_LABEL_FOUND(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(143)$",
+            "renamePattern": "TTL_OR_HOP_COUNT_1"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(144)$",
+            "renamePattern": "MTU_EXCEEDED"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(145)$",
+            "renamePattern": "L3_TX_FRR_DROP(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(146)$",
+            "renamePattern": "L3_ENCAP_TABLE_MISS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(147)$",
+            "renamePattern": "L3_TUNNEL_SIP_INVALID(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(148)$",
+            "renamePattern": "L3_L3_SAME_TUNNEL_INTF(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(149)$",
+            "renamePattern": "OAMP_ETH_UNKNOWN_PUNT_REASON(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(150)$",
+            "renamePattern": "OAMP_ETH_MEP_MAPPING_FAILED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(151)$",
+            "renamePattern": "OAMP_ETH_MP_TYPE_MISMATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(152)$",
+            "renamePattern": "OAMP_ETH_MEG_LEVEL_MISMATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(153)$",
+            "renamePattern": "OAMP_ETH_BAD_MD_NAME_FORMAT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(154)$",
+            "renamePattern": "OAMP_ETH_UNICAST_DA_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(155)$",
+            "renamePattern": "OAMP_ETH_MULTICAST_DA_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(156)$",
+            "renamePattern": "OAMP_ETH_WRONG_MEG_ID_FORMAT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(157)$",
+            "renamePattern": "OAMP_ETH_MEG_ID_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(158)$",
+            "renamePattern": "OAMP_ETH_CCM_PERIOD_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(159)$",
+            "renamePattern": "OAMP_ETH_CCM_TLV_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(160)$",
+            "renamePattern": "OAMP_ETH_LMM_TLV_NO_MATCH(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(161)$",
+            "renamePattern": "OAMP_ETH_NOT_SUPPORTED_OAM_OPCODE(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(162)$",
+            "renamePattern": "OAMP_BFD_TRANSPORT_NOT_SUPPORTED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(163)$",
+            "renamePattern": "OAMP_BFD_SESSION_LOOKUP_FAILED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(164)$",
+            "renamePattern": "OAMP_BFD_INCORRECT_TTL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(165)$",
+            "renamePattern": "OAMP_BFD_INVALID_PROTOCOL(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(166)$",
+            "renamePattern": "OAMP_BFD_INVALID_UDP_PORT(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(167)$",
+            "renamePattern": "OAMP_BFD_INCORRECT_VERSION(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(168)$",
+            "renamePattern": "OAMP_BFD_INCORRECT_ADDRESS(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(169)$",
+            "renamePattern": "OAMP_BFD_MISMATCH_DISCR"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(170)$",
+            "renamePattern": "OAMP_BFD_STATE_FLAG_CHANGE"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(171)$",
+            "renamePattern": "OAMP_BFD_SESSION_RECEIVED(D)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(172)$",
+            "renamePattern": "OAMP_PFC_LOOKUP_FAILED(D*)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "^(173)$",
+            "renamePattern": "OAMP_PFC_DROP_INVALID_RX(D*)"
+          }
+        }
+      ],
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 32,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Cisco 8200 NPU traps",
+  "uid": "NK4op4Q7z",
+  "version": 12
+}
